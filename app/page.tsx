@@ -190,54 +190,62 @@ export default function Home() {
 
           {/* Product Categories Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15" />
-                </svg>
+            <Link href="/shop/aluminum-fencing/" className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow aspect-[3/4]">
+              <Image
+                src="/images/shop-aluminum-fencing.jpg"
+                alt="Aluminum fencing"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-xl font-bold mb-1">Aluminum Fencing</h3>
+                <p className="text-gray-200 text-sm mb-2">Durable, low-maintenance aluminum fence systems</p>
+                <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Aluminum →</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Aluminum Fencing</h3>
-              <p className="text-gray-600 mb-4">Durable, low-maintenance aluminum fence systems</p>
-              <Link href="/shop/aluminum-fencing/" className="text-brand-green hover:underline font-semibold">
-                Shop Aluminum →
-              </Link>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
+            </Link>
+            <Link href="/shop/vinyl-fencing/" className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow aspect-[3/4]">
+              <Image
+                src="/images/shop-vinyl-fencing.jpg"
+                alt="Vinyl fencing"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-xl font-bold mb-1">Vinyl Fencing</h3>
+                <p className="text-gray-200 text-sm mb-2">Classic vinyl fencing that never needs painting</p>
+                <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Vinyl →</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Vinyl Fencing</h3>
-              <p className="text-gray-600 mb-4">Classic vinyl fencing that never needs painting</p>
-              <Link href="/shop/vinyl-fencing/" className="text-brand-green hover:underline font-semibold">
-                Shop Vinyl →
-              </Link>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H18.75m-7.5-2.25h7.5m-7.5 0l-1 1.5m1-1.5l1 1.5M3.375 7.5h1.5L6 5.25M3.375 7.5h7.5m0 0l1-1.5m-1 1.5l-1-1.5" />
-                </svg>
+            </Link>
+            <Link href="/shop/driveway-gates/" className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow aspect-[3/4]">
+              <Image
+                src="/images/shop-driveway-gates.jpg"
+                alt="Driveway gates"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-xl font-bold mb-1">Driveway Gates</h3>
+                <p className="text-gray-200 text-sm mb-2">Automated and manual driveway gate systems</p>
+                <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Gates →</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Driveway Gates</h3>
-              <p className="text-gray-600 mb-4">Automated and manual driveway gate systems</p>
-              <Link href="/shop/driveway-gates/" className="text-brand-green hover:underline font-semibold">
-                Shop Gates →
-              </Link>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
-                </svg>
+            </Link>
+            <Link href="/shop/walk-gates/" className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow aspect-[3/4]">
+              <Image
+                src="/images/shop-walk-gates.jpg"
+                alt="Walk gates"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-xl font-bold mb-1">Walk Gates</h3>
+                <p className="text-gray-200 text-sm mb-2">Pedestrian gates for residential properties</p>
+                <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Walk Gates →</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Walk Gates</h3>
-              <p className="text-gray-600 mb-4">Pedestrian gates for residential properties</p>
-              <Link href="/shop/walk-gates/" className="text-brand-green hover:underline font-semibold">
-                Shop Walk Gates →
-              </Link>
-            </div>
+            </Link>
           </div>
 
           <div className="text-center">
