@@ -266,6 +266,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
+              <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Why FenceWorkshop</p>
               <h2 className="text-4xl font-bold text-gray-900 mb-2">
                 Built by Installers.
               </h2>
@@ -283,7 +284,7 @@ export default function Home() {
                   </svg>
                   <div>
                     <p className="font-semibold text-gray-900">Better material specifications</p>
-                    <p className="text-gray-600">We know which materials perform in the field because we install them every day.</p>
+                    <p className="text-gray-600">We know what works because we install it every day.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -292,7 +293,7 @@ export default function Home() {
                   </svg>
                   <div>
                     <p className="font-semibold text-gray-900">Practical system designs</p>
-                    <p className="text-gray-600">Our fencing systems are engineered for real-world conditions and easier installation.</p>
+                    <p className="text-gray-600">Products built for real-world performance and longevity.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -300,8 +301,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                   <div>
-                    <p className="font-semibold text-gray-900">Support from people who actually install fences</p>
-                    <p className="text-gray-600">When you call, you talk to fencing professionals — not a call center.</p>
+                    <p className="font-semibold text-gray-900">Support from actual installers</p>
+                    <p className="text-gray-600">Questions? Talk to people who build fences for a living.</p>
                   </div>
                 </div>
               </div>
@@ -320,7 +321,7 @@ export default function Home() {
       </section>
 
       {/* Real Fences Real Results Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
