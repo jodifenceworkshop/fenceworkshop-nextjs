@@ -26,7 +26,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
-                src="https://fenceworkshop.com/wp-content/uploads/2023/03/logo-1.jpg"
+                src="https://fenceworkshop.com/wp-content/uploads/2016/06/FW-Logo-Transparent.png"
                 alt="FenceWorkshop Logo"
                 width={200}
                 height={60}
@@ -50,7 +50,7 @@ export default function Navbar() {
             <span className="text-brand-orange font-semibold text-lg">(404) 314-4419</span>
             <Link
               href="/contact/"
-              className="bg-brand-green hover:bg-emerald-800 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors"
+              className="bg-brand-orange hover:bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors"
             >
               Get A Quote
             </Link>
