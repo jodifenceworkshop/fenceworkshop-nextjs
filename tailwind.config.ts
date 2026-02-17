@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         'brand-orange': '#e18f31',
-        'brand-green': '#10b981',
+        'brand-green': '#0f5c52',
       },
     },
   },

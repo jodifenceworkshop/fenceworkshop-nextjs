@@ -1,67 +1,50 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Navbar from '@/components/Navbar'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex-shrink-0">
-              <Image
-                src="https://fenceworkshop.com/wp-content/uploads/2023/03/logo-1.jpg"
-                alt="FenceWorkshop Logo"
-                width={200}
-                height={60}
-                className="h-12 w-auto"
-              />
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/installation/georgia" className="text-gray-700 hover:text-brand-orange">Installation</Link>
-              <Link href="/shop" className="text-gray-700 hover:text-brand-orange">Shop</Link>
-              <Link href="/about" className="text-gray-700 hover:text-brand-orange">About</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-brand-orange">Contact</Link>
-            </div>
-            <div className="text-brand-orange font-semibold text-lg">
-              (404) 314-4419
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
+
+      {/* Spacer for fixed navbar */}
+      <div className="h-20" />
 
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://fenceworkshop.com/wp-content/uploads/2011/09/Hero-Yellow-Flowers.jpg"
-            alt="Professional fence installation"
+            src="/images/hero-fence-installation.jpg"
+            alt="Professional fence installation crew working on iron fence with stone pillars"
             fill
-            className="object-cover brightness-75"
+            className="object-cover"
             priority
           />
+          {/* Dark gray gradient from left */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/60 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Fence Installation in Georgia — Plus Fencing Products Shipped Nationwide
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Fence Installation in Georgia —{' '}
+              <span className="text-brand-orange">Plus Fencing Products Shipped Nationwide</span>
             </h1>
-            <p className="text-xl text-white mb-8">
+            <p className="text-lg md:text-xl text-gray-200 mb-8">
               FenceWorkshop provides professional fence installation throughout Metro Atlanta and across Georgia,
-              along with high-quality aluminum and vinyl fencing available for online purchase and nationwide delivery.
+              along with high-quality aluminum fencing and vinyl fencing available for online purchase and nationwide delivery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/installation/georgia"
-                className="inline-block bg-brand-orange hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg"
+                href="/installation/georgia/"
+                className="inline-block bg-brand-orange hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
               >
-                Get Fence Installation →
+                Get Fence Installation
               </Link>
               <Link
-                href="/shop"
-                className="inline-block bg-brand-green hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg"
+                href="/shop/"
+                className="inline-block bg-brand-green/80 hover:bg-brand-green text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
               >
-                Shop Fencing & Gates →
+                Shop Fencing &amp; Gates
               </Link>
             </div>
           </div>
@@ -71,22 +54,30 @@ export default function Home() {
       {/* Trust & Authority Bar */}
       <section className="bg-gray-50 py-6 border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start">
-              <span className="text-green-600 mr-2">✔</span>
-              <span className="text-gray-700">Licensed & insured fence installers in Georgia</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-3">
+              <svg className="w-6 h-6 text-brand-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span className="text-gray-700 font-medium">Licensed &amp; insured fence installers in Georgia</span>
             </div>
-            <div className="flex items-center justify-center md:justify-start">
-              <span className="text-green-600 mr-2">✔</span>
-              <span className="text-gray-700">20+ Years of hands-on installation experience</span>
+            <div className="flex items-center justify-center md:justify-start gap-3">
+              <svg className="w-6 h-6 text-brand-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="text-gray-700 font-medium">15+ Years in Business</span>
             </div>
-            <div className="flex items-center justify-center md:justify-start">
-              <span className="text-green-600 mr-2">✔</span>
-              <span className="text-gray-700">Commercial & Custom Residential Fencing</span>
+            <div className="flex items-center justify-center md:justify-start gap-3">
+              <svg className="w-6 h-6 text-brand-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+              <span className="text-gray-700 font-medium">Commercial &amp; Custom Residential Fencing</span>
             </div>
-            <div className="flex items-center justify-center md:justify-start">
-              <span className="text-green-600 mr-2">✔</span>
-              <span className="text-gray-700">Durable, code-compliant fence systems</span>
+            <div className="flex items-center justify-center md:justify-start gap-3">
+              <svg className="w-6 h-6 text-brand-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+              <span className="text-gray-700 font-medium">Durable, code-compliant fence systems</span>
             </div>
           </div>
         </div>
@@ -95,8 +86,9 @@ export default function Home() {
       {/* Installation Services Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
+              <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Installation Services</p>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Professional Fence Installation Across Georgia
               </h2>
@@ -107,23 +99,23 @@ export default function Home() {
                 and compliance with local codes and HOA requirements.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                Whether you're replacing an old fence or installing a new system, we manage the process from
+                Whether you&#39;re replacing an old fence or installing a new system, we manage the process from
                 layout and materials to final installation.
               </p>
               <div className="space-y-3">
-                <Link href="/installation/georgia" className="block text-brand-orange hover:underline">
+                <Link href="/installation/georgia/" className="block text-brand-orange hover:underline">
                   → Fence Installation in Georgia
                 </Link>
-                <Link href="/installation/process" className="block text-brand-orange hover:underline">
+                <Link href="/installation/process/" className="block text-brand-orange hover:underline">
                   → Our Installation Process
                 </Link>
-                <Link href="/installation/service-areas" className="block text-brand-orange hover:underline">
+                <Link href="/installation/service-areas/" className="block text-brand-orange hover:underline">
                   → View Service Areas
                 </Link>
               </div>
               <div className="mt-8">
                 <Link
-                  href="/installation/georgia"
+                  href="/installation/georgia/"
                   className="inline-block bg-brand-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
                 >
                   Learn More
@@ -182,11 +174,12 @@ export default function Home() {
       </section>
 
       {/* Shop Fencing Online Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <p className="text-brand-green font-semibold uppercase tracking-wide mb-2">Shop Online</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Buy Fencing & Gates Online — Shipped Nationwide
+              Buy Fencing &amp; Gates Online — Shipped Nationwide
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               In addition to installation services, FenceWorkshop sells premium fencing and gates online to homeowners,
@@ -198,34 +191,50 @@ export default function Home() {
           {/* Product Categories Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-brand-green text-4xl mb-4">🏗️</div>
+              <div className="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15" />
+                </svg>
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Aluminum Fencing</h3>
               <p className="text-gray-600 mb-4">Durable, low-maintenance aluminum fence systems</p>
-              <Link href="/shop/aluminum-fencing" className="text-brand-green hover:underline font-semibold">
+              <Link href="/shop/aluminum-fencing/" className="text-brand-green hover:underline font-semibold">
                 Shop Aluminum →
               </Link>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-brand-green text-4xl mb-4">🏡</div>
+              <div className="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Vinyl Fencing</h3>
               <p className="text-gray-600 mb-4">Classic vinyl fencing that never needs painting</p>
-              <Link href="/shop/vinyl-fencing" className="text-brand-green hover:underline font-semibold">
+              <Link href="/shop/vinyl-fencing/" className="text-brand-green hover:underline font-semibold">
                 Shop Vinyl →
               </Link>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-brand-green text-4xl mb-4">🚗</div>
+              <div className="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H18.75m-7.5-2.25h7.5m-7.5 0l-1 1.5m1-1.5l1 1.5M3.375 7.5h1.5L6 5.25M3.375 7.5h7.5m0 0l1-1.5m-1 1.5l-1-1.5" />
+                </svg>
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Driveway Gates</h3>
               <p className="text-gray-600 mb-4">Automated and manual driveway gate systems</p>
-              <Link href="/shop/driveway-gates" className="text-brand-green hover:underline font-semibold">
+              <Link href="/shop/driveway-gates/" className="text-brand-green hover:underline font-semibold">
                 Shop Gates →
               </Link>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-brand-green text-4xl mb-4">🚶</div>
+              <div className="w-12 h-12 bg-brand-green/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                </svg>
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Walk Gates</h3>
               <p className="text-gray-600 mb-4">Pedestrian gates for residential properties</p>
-              <Link href="/shop/walk-gates" className="text-brand-green hover:underline font-semibold">
+              <Link href="/shop/walk-gates/" className="text-brand-green hover:underline font-semibold">
                 Shop Walk Gates →
               </Link>
             </div>
@@ -233,50 +242,67 @@ export default function Home() {
 
           <div className="text-center">
             <Link
-              href="/shop"
-              className="inline-block bg-brand-green hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg"
+              href="/shop/"
+              className="inline-block bg-brand-green hover:bg-emerald-800 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg"
             >
-              Shop Now
+              Browse All Products
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Why FenceWorkshop Section */}
+      {/* Built By Installers Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Built by Installers. <span className="text-brand-orange">Designed to Last.</span>
+              <h2 className="text-4xl font-bold text-gray-900 mb-2">
+                Built by Installers.
+              </h2>
+              <h2 className="text-4xl font-bold text-brand-orange mb-6">
+                Designed to Last.
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 Unlike big-box retailers, FenceWorkshop is built on real installation experience. The same knowledge
                 that goes into installing fences across Georgia informs the products we sell nationwide.
               </p>
-              <p className="text-lg font-semibold text-gray-900 mb-4">That means:</p>
-              <ul className="space-y-3 text-lg text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-brand-orange mr-2">•</span>
-                  Better material specifications
-                </li>
-                <li className="flex items-start">
-                  <span className="text-brand-orange mr-2">•</span>
-                  Practical system designs
-                </li>
-                <li className="flex items-start">
-                  <span className="text-brand-orange mr-2">•</span>
-                  Support from people who actually install fences
-                </li>
-              </ul>
-              <p className="text-lg text-gray-700 mt-6">
-                Whether you're hiring us to install or purchasing materials directly, you're working with fencing
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="font-semibold text-gray-900">Better material specifications</p>
+                    <p className="text-gray-600">We know which materials perform in the field because we install them every day.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="font-semibold text-gray-900">Practical system designs</p>
+                    <p className="text-gray-600">Our fencing systems are engineered for real-world conditions and easier installation.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="font-semibold text-gray-900">Support from people who actually install fences</p>
+                    <p className="text-gray-600">When you call, you talk to fencing professionals — not a call center.</p>
+                  </div>
+                </div>
+              </div>
+              <p className="text-lg text-gray-700">
+                Whether you&#39;re hiring us to install or purchasing materials directly, you&#39;re working with fencing
                 specialists — not just a storefront.
               </p>
             </div>
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <div className="aspect-video bg-gray-300 rounded-lg mb-4 flex items-center justify-center">
-                <span className="text-gray-500">Image placeholder</span>
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-[4/3] bg-gray-200 flex items-center justify-center">
+                <span className="text-gray-500">Fence project image</span>
               </div>
             </div>
           </div>
@@ -286,20 +312,32 @@ export default function Home() {
       {/* Real Fences Real Results Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-            Real Fences. Real Results.
-          </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Real Fences. Real Results.
+            </h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              See what our customers and partners have to say about working with FenceWorkshop.
+            </p>
+          </div>
 
           {/* Testimonials */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
               <p className="text-gray-700 mb-6 italic">
-                "As a contractor and exterior services provider, having a strong partner network is critical to
+                &quot;As a contractor and exterior services provider, having a strong partner network is critical to
                 delivering great outcomes for our clients. Working with the Fence Workshop team has been a standout
                 for everyone at Terra CPS. They handle the full scope of fencing and gates (design, build, and repair)
-                across any material or requirement we throw at them, and we still haven't found a problem they can't
+                across any material or requirement we throw at them, and we still haven&#39;t found a problem they can&#39;t
                 solve (though we plan to keep trying). Their communication is professional, their pricing is fair,
-                and most importantly, their work is high quality and built to last. Best in the business!"
+                and most importantly, their work is high quality and built to last. Best in the business!&quot;
               </p>
               <div>
                 <p className="font-bold text-gray-900">Todd</p>
@@ -307,12 +345,19 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
               <p className="text-gray-700 mb-6 italic">
-                "I love working with Fence Workshop. When I put them on a job, I know it will be completed exactly
+                &quot;I love working with Fence Workshop. When I put them on a job, I know it will be completed exactly
                 as scheduled and for the quoted amount. They have never come back mid-project asking for additional
                 funds, which speaks volumes about their integrity and planning. The quality of their work is outstanding.
                 They consistently go above and beyond to ensure every project is completed professionally and is
-                aesthetically pleasing. Adam and Blair are both fantastic to work with and truly make my job easier."
+                aesthetically pleasing. Adam and Blair are both fantastic to work with and truly make my job easier.&quot;
               </p>
               <div>
                 <p className="font-bold text-gray-900">Eddie Jensen</p>
@@ -346,8 +391,9 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Resources</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Fence Guides & Planning Resources
+              Fence Guides &amp; Planning Resources
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               Choosing the right fence matters. We provide clear, practical guidance to help you plan your
@@ -356,14 +402,14 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <Link
-              href="/guides/aluminum-vs-steel"
+              href="/guides/aluminum-vs-steel/"
               className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-orange hover:shadow-md transition-all"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-2">→ Aluminum vs Steel Fencing</h3>
               <p className="text-gray-600">Compare materials to choose the right fence for your needs</p>
             </Link>
             <Link
-              href="/guides/diy-installation"
+              href="/guides/diy-installation/"
               className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-orange hover:shadow-md transition-all"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-2">→ Installation Guides for DIY-ers</h3>
@@ -381,10 +427,10 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Installation</h3>
               <ul className="space-y-2">
-                <li><Link href="/installation/georgia" className="hover:underline">Fence Installation in Georgia</Link></li>
-                <li><Link href="/installation/atlanta" className="hover:underline">Atlanta Fence Installation</Link></li>
-                <li><Link href="/installation/marietta" className="hover:underline">Marietta Fence Installation</Link></li>
-                <li><Link href="/installation/alpharetta" className="hover:underline">Alpharetta Fence Installation</Link></li>
+                <li><Link href="/installation/georgia/" className="hover:underline">Fence Installation in Georgia</Link></li>
+                <li><Link href="/installation/atlanta/" className="hover:underline">Atlanta Fence Installation</Link></li>
+                <li><Link href="/installation/marietta/" className="hover:underline">Marietta Fence Installation</Link></li>
+                <li><Link href="/installation/alpharetta/" className="hover:underline">Alpharetta Fence Installation</Link></li>
               </ul>
             </div>
 
@@ -392,10 +438,10 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Shop</h3>
               <ul className="space-y-2">
-                <li><Link href="/shop/aluminum-fencing" className="hover:underline">Aluminum Fencing</Link></li>
-                <li><Link href="/shop/vinyl-fencing" className="hover:underline">Vinyl Fencing</Link></li>
-                <li><Link href="/shop/driveway-gates" className="hover:underline">Driveway Gates</Link></li>
-                <li><Link href="/shop/walk-gates" className="hover:underline">Walk Gates</Link></li>
+                <li><Link href="/shop/aluminum-fencing/" className="hover:underline">Aluminum Fencing</Link></li>
+                <li><Link href="/shop/vinyl-fencing/" className="hover:underline">Vinyl Fencing</Link></li>
+                <li><Link href="/shop/driveway-gates/" className="hover:underline">Driveway Gates</Link></li>
+                <li><Link href="/shop/walk-gates/" className="hover:underline">Walk Gates</Link></li>
               </ul>
             </div>
 
@@ -403,8 +449,8 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Resources</h3>
               <ul className="space-y-2">
-                <li><Link href="/guides" className="hover:underline">Fence Guides</Link></li>
-                <li><Link href="/maintenance" className="hover:underline">Maintenance Tips</Link></li>
+                <li><Link href="/guides/" className="hover:underline">Fence Guides</Link></li>
+                <li><Link href="/maintenance/" className="hover:underline">Maintenance Tips</Link></li>
               </ul>
             </div>
 
@@ -412,9 +458,9 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Company</h3>
               <ul className="space-y-2">
-                <li><Link href="/about" className="hover:underline">About FenceWorkshop</Link></li>
-                <li><Link href="/contact" className="hover:underline">Contact</Link></li>
-                <li><Link href="/reviews" className="hover:underline">Reviews</Link></li>
+                <li><Link href="/about/" className="hover:underline">About FenceWorkshop</Link></li>
+                <li><Link href="/contact/" className="hover:underline">Contact</Link></li>
+                <li><Link href="/reviews/" className="hover:underline">Reviews</Link></li>
               </ul>
             </div>
           </div>
@@ -423,8 +469,8 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <p className="font-semibold mb-2">FenceWorkshop</p>
-                <p>[Your Physical Address Here]</p>
-                <p>Atlanta, GA [ZIP]</p>
+                <p>1522 Huber St NW</p>
+                <p>Atlanta, GA 30318</p>
                 <p className="mt-2">(404) 314-4419</p>
               </div>
               <div className="md:text-right">
