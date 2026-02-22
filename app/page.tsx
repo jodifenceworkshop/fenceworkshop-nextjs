@@ -192,60 +192,64 @@ export default function Home() {
 
           {/* Product Categories Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <Link href="/shop/aluminum-fencing/" className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow aspect-[3/4]">
-              <Image
-                src="/images/shop-aluminum-fencing.jpg"
-                alt="Aluminum fencing"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="text-xl font-bold mb-1">Aluminum Fencing</h3>
-                <p className="text-gray-200 text-sm mb-2">Durable, low-maintenance aluminum fence systems</p>
+            <Link href="/shop/aluminum-fencing/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="aspect-square relative overflow-hidden">
+                <Image
+                  src="/images/shop-aluminum-fencing.jpg"
+                  alt="Aluminum fence kit"
+                  fill
+                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Aluminum Fencing</h3>
+                <p className="text-gray-600 text-sm mb-2">Durable, low-maintenance aluminum fence systems</p>
                 <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Aluminum →</span>
               </div>
             </Link>
-            <Link href="/shop/vinyl-fencing/" className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow aspect-[3/4]">
-              <Image
-                src="/images/shop-vinyl-fencing.jpg"
-                alt="Vinyl fencing"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="text-xl font-bold mb-1">Vinyl Fencing</h3>
-                <p className="text-gray-200 text-sm mb-2">Classic vinyl fencing that never needs painting</p>
-                <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Vinyl →</span>
+            <Link href="/shop/driveway-gates/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="aspect-square relative overflow-hidden">
+                <Image
+                  src="/images/shop-driveway-gates.jpg"
+                  alt="Aluminum driveway gate"
+                  fill
+                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-            </Link>
-            <Link href="/shop/driveway-gates/" className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow aspect-[3/4]">
-              <Image
-                src="/images/shop-driveway-gates.jpg"
-                alt="Driveway gates"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="text-xl font-bold mb-1">Driveway Gates</h3>
-                <p className="text-gray-200 text-sm mb-2">Automated and manual driveway gate systems</p>
+              <div className="p-5">
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Driveway Gates</h3>
+                <p className="text-gray-600 text-sm mb-2">Automated and manual driveway gate systems</p>
                 <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Gates →</span>
               </div>
             </Link>
-            <Link href="/shop/walk-gates/" className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow aspect-[3/4]">
-              <Image
-                src="/images/shop-walk-gates.jpg"
-                alt="Walk gates"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="text-xl font-bold mb-1">Walk Gates</h3>
-                <p className="text-gray-200 text-sm mb-2">Pedestrian gates for residential properties</p>
+            <Link href="/shop/walk-gates/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="aspect-square relative overflow-hidden">
+                <Image
+                  src="/images/shop-walk-gates.jpg"
+                  alt="Aluminum walk gate"
+                  fill
+                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Walk Gates</h3>
+                <p className="text-gray-600 text-sm mb-2">Pedestrian gates for residential properties</p>
                 <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Walk Gates →</span>
+              </div>
+            </Link>
+            <Link href="/shop/vinyl-fencing/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="aspect-square relative overflow-hidden">
+                <Image
+                  src="/images/shop-vinyl-fencing.jpg"
+                  alt="Vinyl fencing"
+                  fill
+                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Vinyl Fencing</h3>
+                <p className="text-gray-600 text-sm mb-2">Classic vinyl fencing that never needs painting</p>
+                <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Vinyl →</span>
               </div>
             </Link>
           </div>
