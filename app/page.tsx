@@ -316,8 +316,13 @@ export default function Home() {
               </p>
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <div className="aspect-[4/3] bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">Fence project image</span>
+              <div className="aspect-[4/3] relative">
+                <Image
+                  src="/images/aluminum-fence-installation.jpg"
+                  alt="Aluminum fence installation by FenceWorkshop"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -384,20 +389,29 @@ export default function Home() {
 
           {/* Project Photos */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="aspect-video bg-gray-300 rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-gray-500">
-                Project Photo 1
-              </div>
+            <div className="aspect-video relative rounded-lg overflow-hidden">
+              <Image
+                src="/images/project-ornamental-gate.png"
+                alt="Commercial ornamental gate installation in Atlanta, GA"
+                fill
+                className="object-cover"
+              />
             </div>
-            <div className="aspect-video bg-gray-300 rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-gray-500">
-                Project Photo 2
-              </div>
+            <div className="aspect-video relative rounded-lg overflow-hidden">
+              <Image
+                src="/images/project-dumpster-gates.png"
+                alt="Dumpster gates installation in Atlanta, GA"
+                fill
+                className="object-cover"
+              />
             </div>
-            <div className="aspect-video bg-gray-300 rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-gray-500">
-                Project Photo 3
-              </div>
+            <div className="aspect-video relative rounded-lg overflow-hidden">
+              <Image
+                src="/images/project-chain-link-fence.png"
+                alt="Commercial chain link fence installation in Atlanta, GA"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
