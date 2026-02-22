@@ -30,7 +30,7 @@ export default function Navbar() {
                 alt="FenceWorkshop Logo"
                 width={200}
                 height={32}
-                className="h-10 w-auto"
+                className="h-10 w-auto contrast-125 brightness-75"
               />
             </Link>
           </div>
