@@ -26,11 +26,11 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
-                src="https://fenceworkshop.com/wp-content/uploads/2016/06/FW-Logo-Transparent.png"
+                src="/images/fenceworkshop-logo.png"
                 alt="FenceWorkshop Logo"
                 width={200}
-                height={60}
-                className="h-12 w-auto"
+                height={32}
+                className="h-10 w-auto"
               />
             </Link>
           </div>
