@@ -32,7 +32,7 @@ export default function Home() {
               Plus Fencing Products Shipped Nationwide
             </p>
             <p className="text-lg md:text-xl text-gray-200 mb-8">
-              FenceWorkshop provides professional fence installation throughout Metro Atlanta and across Georgia,
+              Fence Workshop provides professional fence installation throughout Metro Atlanta and across Georgia,
               along with high-quality aluminum fencing and vinyl fencing available for online purchase and nationwide delivery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -95,7 +95,7 @@ export default function Home() {
                 Professional Fence Installation Across Georgia
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                FenceWorkshop specializes in professional commercial fence installation throughout Metro Atlanta
+                Fence Workshop specializes in professional commercial fence installation throughout Metro Atlanta
                 and surrounding Georgia communities. Our experienced crews fabricate and install chain link, steel,
                 and aluminum security gates and fencing with a focus on long-term durability, clean workmanship,
                 and compliance with local codes and HOA requirements.
@@ -184,7 +184,7 @@ export default function Home() {
               Hassle-Free Fence Expertise
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              See what our customers and partners have to say about working with FenceWorkshop.
+              See what our customers and partners have to say about working with Fence Workshop.
             </p>
           </div>
 
@@ -263,8 +263,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Shop Fencing Online Section */}
+      {/* Built By Installers Section */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Why Fence Workshop</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-2">
+                Built by Installers.
+              </h2>
+              <h2 className="text-4xl font-bold text-brand-orange mb-6">
+                Designed to Last.
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Unlike big-box retailers, Fence Workshop is built on real installation experience. The same knowledge
+                that goes into installing fences across Georgia informs the products we sell nationwide.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="font-semibold text-gray-900">Better material specifications</p>
+                    <p className="text-gray-600">We know what works because we install it every day.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="font-semibold text-gray-900">Practical system designs</p>
+                    <p className="text-gray-600">Products built for real-world performance and longevity.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <p className="font-semibold text-gray-900">Support from actual installers</p>
+                    <p className="text-gray-600">Questions? Talk to people who build fences for a living.</p>
+                  </div>
+                </div>
+              </div>
+              <p className="text-lg text-gray-700">
+                Whether you&#39;re hiring us to install or purchasing materials directly, you&#39;re working with fencing
+                specialists — not just a storefront.
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-[4/3] relative">
+                <Image
+                  src="/images/aluminum-fence-installation.jpg"
+                  alt="Aluminum fence installation by Fence Workshop"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Shop Fencing Online Section */}
+      <section className="py-20 bg-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-brand-green font-semibold uppercase tracking-wide mb-2">Shop Online</p>
@@ -272,7 +336,7 @@ export default function Home() {
               Buy Fencing &amp; Gates Online — Shipped Nationwide
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              In addition to installation services, FenceWorkshop sells premium fencing and gates online to homeowners,
+              In addition to installation services, Fence Workshop sells premium fencing and gates online to homeowners,
               contractors, and property managers across the U.S. Our fencing systems are designed using real-world
               installation experience, ensuring reliable performance and easier installs.
             </p>
@@ -353,70 +417,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Built By Installers Section */}
-      <section className="py-20 bg-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Why FenceWorkshop</p>
-              <h2 className="text-4xl font-bold text-gray-900 mb-2">
-                Built by Installers.
-              </h2>
-              <h2 className="text-4xl font-bold text-brand-orange mb-6">
-                Designed to Last.
-              </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Unlike big-box retailers, FenceWorkshop is built on real installation experience. The same knowledge
-                that goes into installing fences across Georgia informs the products we sell nationwide.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div>
-                    <p className="font-semibold text-gray-900">Better material specifications</p>
-                    <p className="text-gray-600">We know what works because we install it every day.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div>
-                    <p className="font-semibold text-gray-900">Practical system designs</p>
-                    <p className="text-gray-600">Products built for real-world performance and longevity.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div>
-                    <p className="font-semibold text-gray-900">Support from actual installers</p>
-                    <p className="text-gray-600">Questions? Talk to people who build fences for a living.</p>
-                  </div>
-                </div>
-              </div>
-              <p className="text-lg text-gray-700">
-                Whether you&#39;re hiring us to install or purchasing materials directly, you&#39;re working with fencing
-                specialists — not just a storefront.
-              </p>
-            </div>
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <div className="aspect-[4/3] relative">
-                <Image
-                  src="/images/aluminum-fence-installation.jpg"
-                  alt="Aluminum fence installation by FenceWorkshop"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Resources Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -488,7 +488,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Company</h3>
               <ul className="space-y-2">
-                <li><Link href="/about/" className="hover:underline">About FenceWorkshop</Link></li>
+                <li><Link href="/about/" className="hover:underline">About Fence Workshop</Link></li>
                 <li><Link href="/contact/" className="hover:underline">Contact</Link></li>
                 <li><Link href="/reviews/" className="hover:underline">Reviews</Link></li>
               </ul>
@@ -498,13 +498,13 @@ export default function Home() {
           <div className="border-t border-orange-400 pt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <p className="font-semibold mb-2">FenceWorkshop</p>
+                <p className="font-semibold mb-2">Fence Workshop</p>
                 <p>1522 Huber St NW</p>
                 <p>Atlanta, GA 30318</p>
                 <p className="mt-2">(404) 314-4419</p>
               </div>
               <div className="md:text-right">
-                <p>&copy; 2026 FenceWorkshop. All rights reserved.</p>
+                <p>&copy; 2026 Fence Workshop. All rights reserved.</p>
               </div>
             </div>
           </div>
