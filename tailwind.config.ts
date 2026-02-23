@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'brand-orange': '#e18f31',
+        'brand-orange': '#de903b',
         'brand-green': '#0f5c52',
       },
     },
