@@ -4,6 +4,10 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Fence Installation Georgia | Metro Atlanta Fencing | Fence Workshop',
   description: 'Professional fence installation in Metro Atlanta & Georgia, plus quality aluminum and vinyl fencing shipped nationwide. Licensed & insured. 20+ years experience.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export default function RootLayout({
