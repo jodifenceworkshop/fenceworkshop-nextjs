@@ -100,10 +100,13 @@ export default function GeorgiaInstallationPage() {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
-          {/* Image placeholder */}
-          <div className="w-full h-full bg-gray-400 flex items-center justify-center">
-            <span className="text-gray-500 text-sm">Hero image placeholder</span>
-          </div>
+          <Image
+            src="/images/hero-georgia-installation.jpg"
+            alt="Commercial fence and drive gate installation in Georgia"
+            fill
+            className="object-cover"
+            priority
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/60 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
