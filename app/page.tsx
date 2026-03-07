@@ -184,7 +184,7 @@ export default function Home() {
               Hassle-Free Fence Expertise
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              See what our customers and partners have to say about working with Fence Workshop.
+              Don't ask us. See what our customers and partners have to say about working with Fence Workshop.
             </p>
           </div>
 
@@ -207,7 +207,7 @@ export default function Home() {
                 and most importantly, their work is high quality and built to last. Best in the business!&quot;
               </p>
               <div>
-                <p className="font-bold text-gray-900">Todd</p>
+                <p className="font-bold text-gray-900">Todd Hanner</p>
                 <p className="text-gray-600">President, TerraCPS</p>
               </div>
             </div>
