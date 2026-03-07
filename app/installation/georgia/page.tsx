@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import type { Metadata } from 'next'
@@ -11,34 +12,42 @@ const installationServices = [
   {
     title: 'Chain Link Fence Installation',
     description: 'Heavy-duty commercial and industrial chain link for perimeter security, job sites, and property boundaries. Available in galvanized or vinyl-coated finishes.',
+    image: null,
   },
   {
     title: 'Security Fence Installation',
     description: 'High-security fencing systems including anti-climb designs, barbed wire, and razor ribbon topping for facilities requiring maximum perimeter protection.',
+    image: '/images/service-security-fence.jpg',
   },
   {
     title: 'Ornamental & Aluminum Fence Installation',
     description: 'Architectural-grade ornamental and aluminum fencing for commercial properties, municipalities, and high-end residential projects through general contractors.',
+    image: null,
   },
   {
     title: 'Dumpster Gate Installation',
     description: 'Custom dumpster enclosure gates built to local code. We work with property managers, HOAs, and commercial facilities for new installs and replacements.',
+    image: null,
   },
   {
     title: 'Roll Gate & Slide Gate Installation',
     description: 'Manual and motorized roll gates for commercial driveways and facility entrances. Includes gate opener systems integrated into your gate installation.',
+    image: null,
   },
   {
     title: 'Warehouse & Industrial Fencing',
     description: 'Interior and exterior fencing for warehouses, distribution centers, and industrial facilities. Partition fencing, cage systems, and perimeter security.',
+    image: null,
   },
   {
     title: 'Parking Deck & Garage Fencing',
     description: 'Perimeter cable systems, guard rails, and safety fencing for parking structures. Code-compliant installations with durable powder-coat finishes.',
+    image: null,
   },
   {
     title: 'Security Gate Systems',
     description: 'Swing gates, slide gates, and access control integration for commercial and industrial facilities. Gate openers and operators included with gate system installations.',
+    image: null,
   },
 ]
 
@@ -175,8 +184,14 @@ export default function GeorgiaInstallationPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {installationServices.map((service) => (
               <div key={service.title} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                <div className="aspect-video bg-gray-300 flex items-center justify-center">
-                  <span className="text-gray-400 text-xs">Image placeholder</span>
+                <div className="aspect-video relative bg-gray-300">
+                  {service.image ? (
+                    <Image src={service.image} alt={service.title} fill className="object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-gray-400 text-xs">Image placeholder</span>
+                    </div>
+                  )}
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">{service.title}</h3>
