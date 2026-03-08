@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Commercial Fence Installation in Georgia | Fence Workshop',
-  description: 'Licensed commercial fence installation across Georgia and Metro Atlanta. Chain link, security fence, ornamental, dumpster gates, roll gates, and more. Get a free quote.',
+  description: 'Fence Workshop installs commercial chain link, security, ornamental, and gate systems throughout Metro Atlanta and Georgia. Licensed & insured. Free quotes.',
 }
 
 const installationServices = [
@@ -13,41 +13,49 @@ const installationServices = [
     title: 'Chain Link Fence Installation',
     description: 'Heavy-duty commercial and industrial chain link for perimeter security, job sites, and property boundaries. Available in galvanized or vinyl-coated finishes.',
     image: '/images/service-chain-link-fence.jpg',
+    alt: 'Commercial galvanized chain link fence installation in Georgia',
   },
   {
     title: 'Security Fence Installation',
     description: 'High-security fencing systems including anti-climb designs, barbed wire, and razor ribbon topping for facilities requiring maximum perimeter protection.',
     image: '/images/service-security-fence.jpg',
+    alt: 'Industrial security fence installation in Atlanta, GA',
   },
   {
     title: 'Ornamental & Aluminum Fence Installation',
     description: 'Architectural-grade ornamental and aluminum fencing for commercial properties, municipalities, and high-end residential projects through general contractors.',
     image: '/images/service-ornamental-gate.jpg',
+    alt: 'Ornamental fence installation in Atlanta, GA',
   },
   {
     title: 'Dumpster Gate Installation',
     description: 'Custom dumpster enclosure gates built to local code. We work with property managers, HOAs, and commercial facilities for new installs and replacements.',
     image: '/images/service-dumpster-gate.jpg',
+    alt: 'Commercial dumpster gate installation in Atlanta, GA',
   },
   {
     title: 'Roll Gate & Slide Gate Installation',
     description: 'Manual and motorized roll gates for commercial driveways and facility entrances. Includes gate opener systems integrated into your gate installation.',
     image: '/images/service-roll-gate.jpg',
+    alt: 'Commercial roll gate and slide gate installation in Atlanta, GA',
   },
   {
     title: 'Warehouse & Industrial Fencing',
     description: 'Interior and exterior fencing for warehouses, distribution centers, and industrial facilities. Partition fencing, cage systems, and perimeter security.',
     image: '/images/service-warehouse-fencing.jpg',
+    alt: 'Commercial chain link fence installation for warehouse in Georgia',
   },
   {
     title: 'Parking Deck & Garage Fencing',
     description: 'Perimeter cable systems, guard rails, and safety fencing for parking structures. Code-compliant installations with durable powder-coat finishes.',
     image: '/images/service-parking-deck.jpg',
+    alt: 'Parking deck gate and fencing installation in Atlanta, GA',
   },
   {
     title: 'Security Gate Systems',
     description: 'Swing gates, slide gates, and access control integration for commercial and industrial facilities. Gate openers and operators included with gate system installations.',
     image: '/images/service-security-gate.jpg',
+    alt: 'Commercial ornamental security gate installation in Atlanta, GA',
   },
 ]
 
@@ -56,21 +64,25 @@ const repairServices = [
     title: 'Dumpster Gate Repair',
     description: 'Fast repair for broken hinges, damaged frames, and sagging dumpster enclosure gates. We service commercial properties throughout Metro Atlanta.',
     image: '/images/repair-dumpster-gate.jpg',
+    alt: 'Commercial dumpster gate repair near Atlanta, GA',
   },
   {
     title: 'Chain Link Fence Repair',
     description: 'Fabric repair, post replacement, tension wire, and top rail repairs for commercial chain link systems. Quick turnaround to restore your perimeter security.',
     image: '/images/repair-chain-link.jpg',
+    alt: 'Chain link fence repair in Atlanta, GA',
   },
   {
     title: 'Security Fence & Gate Repair',
     description: 'Repairs to high-security fencing, crash-damaged sections, and compromised perimeter systems. Emergency response available for facilities with urgent security needs.',
     image: '/images/repair-security-fence.jpg',
+    alt: 'Security fence and gate repair in Georgia',
   },
   {
     title: 'Roll Gate & Slide Gate Repair',
     description: 'Track repair, roller replacement, gate operator service, and frame straightening for commercial roll and slide gates.',
     image: '/images/repair-roll-gate.jpg',
+    alt: 'Commercial roll gate and slide gate repair in Atlanta, GA',
   },
 ]
 
@@ -106,7 +118,7 @@ export default function GeorgiaInstallationPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-georgia-installation.jpg"
-            alt="Commercial fence and drive gate installation in Georgia"
+            alt="Custom commercial fencing and drive gate installed by Fence Workshop in Atlanta, GA"
             fill
             className="object-cover"
             priority
@@ -193,7 +205,7 @@ export default function GeorgiaInstallationPage() {
               <div key={service.title} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <div className="aspect-video relative bg-gray-300">
                   {service.image ? (
-                    <Image src={service.image} alt={service.title} fill className="object-cover" />
+                    <Image src={service.image} alt={service.alt ?? service.title} fill className="object-cover" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
                       <span className="text-gray-400 text-xs">Image placeholder</span>
@@ -228,7 +240,7 @@ export default function GeorgiaInstallationPage() {
               <div key={service.title} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <div className="aspect-video relative bg-gray-300">
                   {service.image ? (
-                    <Image src={service.image} alt={service.title} fill className="object-cover" />
+                    <Image src={service.image} alt={service.alt ?? service.title} fill className="object-cover" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
                       <span className="text-gray-400 text-xs">Image placeholder</span>
@@ -256,7 +268,7 @@ export default function GeorgiaInstallationPage() {
                 Serving Metro Atlanta &amp; Georgia
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Fence Workshop has been installing commercial and industrial fencing across Georgia for over 20 years.
+                Fence Workshop has been installing commercial and industrial fencing across Georgia for over 15 years.
                 We work with property managers, general contractors, municipalities, and business owners to deliver
                 code-compliant fence installations on time and on budget.
               </p>
