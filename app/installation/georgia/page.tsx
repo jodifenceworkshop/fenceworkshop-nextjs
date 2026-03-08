@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     question: 'Are you licensed and insured for commercial fence work in Georgia?',
-    answer: 'Yes. Fence Workshop is fully licensed and insured for commercial fence installation in Georgia. We\'ve been in business for 20+ years and stand behind our work.',
+    answer: 'Yes. Fence Workshop is fully licensed and insured for commercial fence installation in Georgia. We\'ve been in business for 15+ years and stand behind our work.',
   },
   {
     question: 'How do I get a quote for a fence installation project?',
@@ -123,7 +123,7 @@ export default function GeorgiaInstallationPage() {
             </p>
             <p className="text-lg md:text-xl text-gray-200 mb-8">
               Fence Workshop provides professional commercial and industrial fence installation throughout Metro Atlanta
-              and across Georgia. Licensed &amp; insured. 20+ years experience.
+              and across Georgia. Licensed &amp; insured. 15+ years experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -157,7 +157,7 @@ export default function GeorgiaInstallationPage() {
               <svg className="w-6 h-6 text-brand-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="text-white font-medium">20+ Years in Business</span>
+              <span className="text-white font-medium">15+ Years in Business</span>
             </div>
             <div className="flex items-center gap-3">
               <svg className="w-6 h-6 text-brand-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
