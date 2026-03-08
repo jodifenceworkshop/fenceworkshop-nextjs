@@ -55,18 +55,22 @@ const repairServices = [
   {
     title: 'Dumpster Gate Repair',
     description: 'Fast repair for broken hinges, damaged frames, and sagging dumpster enclosure gates. We service commercial properties throughout Metro Atlanta.',
+    image: '/images/repair-dumpster-gate.jpg',
   },
   {
     title: 'Chain Link Fence Repair',
     description: 'Fabric repair, post replacement, tension wire, and top rail repairs for commercial chain link systems. Quick turnaround to restore your perimeter security.',
+    image: '/images/repair-chain-link.jpg',
   },
   {
     title: 'Security Fence & Gate Repair',
     description: 'Repairs to high-security fencing, crash-damaged sections, and compromised perimeter systems. Emergency response available for facilities with urgent security needs.',
+    image: null,
   },
   {
     title: 'Roll Gate & Slide Gate Repair',
     description: 'Track repair, roller replacement, gate operator service, and frame straightening for commercial roll and slide gates.',
+    image: null,
   },
 ]
 
@@ -222,8 +226,14 @@ export default function GeorgiaInstallationPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {repairServices.map((service) => (
               <div key={service.title} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                <div className="aspect-video bg-gray-300 flex items-center justify-center">
-                  <span className="text-gray-400 text-xs">Image placeholder</span>
+                <div className="aspect-video relative bg-gray-300">
+                  {service.image ? (
+                    <Image src={service.image} alt={service.title} fill className="object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-gray-400 text-xs">Image placeholder</span>
+                    </div>
+                  )}
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">{service.title}</h3>
