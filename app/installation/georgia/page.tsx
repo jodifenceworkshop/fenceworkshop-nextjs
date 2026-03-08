@@ -12,7 +12,7 @@ const installationServices = [
   {
     title: 'Chain Link Fence Installation',
     description: 'Heavy-duty commercial and industrial chain link for perimeter security, job sites, and property boundaries. Available in galvanized or vinyl-coated finishes.',
-    image: null,
+    image: '/images/service-chain-link-fence.jpg',
   },
   {
     title: 'Security Fence Installation',
@@ -22,17 +22,17 @@ const installationServices = [
   {
     title: 'Ornamental & Aluminum Fence Installation',
     description: 'Architectural-grade ornamental and aluminum fencing for commercial properties, municipalities, and high-end residential projects through general contractors.',
-    image: null,
+    image: '/images/service-ornamental-gate.jpg',
   },
   {
     title: 'Dumpster Gate Installation',
     description: 'Custom dumpster enclosure gates built to local code. We work with property managers, HOAs, and commercial facilities for new installs and replacements.',
-    image: null,
+    image: '/images/service-dumpster-gate.jpg',
   },
   {
     title: 'Roll Gate & Slide Gate Installation',
     description: 'Manual and motorized roll gates for commercial driveways and facility entrances. Includes gate opener systems integrated into your gate installation.',
-    image: null,
+    image: '/images/service-chain-link-fence.jpg',
   },
   {
     title: 'Warehouse & Industrial Fencing',
