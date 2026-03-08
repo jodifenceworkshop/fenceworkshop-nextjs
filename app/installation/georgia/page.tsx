@@ -140,7 +140,7 @@ export default function GeorgiaInstallationPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#quote"
-                className="inline-block bg-brand-orange hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
+                className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
               >
                 Get a Free Quote
               </a>
@@ -367,7 +367,7 @@ export default function GeorgiaInstallationPage() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-brand-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                  className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
                 >
                   Request Free Quote
                 </button>

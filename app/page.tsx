@@ -38,7 +38,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/installation/georgia/"
-                className="inline-block bg-brand-orange hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
+                className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
               >
                 Get Fence Installation
               </Link>
@@ -118,7 +118,7 @@ export default function Home() {
               <div className="mt-8">
                 <Link
                   href="/installation/georgia/"
-                  className="inline-block bg-brand-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                  className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
                 >
                   Learn More
                 </Link>
@@ -165,7 +165,7 @@ export default function Home() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-brand-orange hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                  className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
                 >
                   Request Quote
                 </button>

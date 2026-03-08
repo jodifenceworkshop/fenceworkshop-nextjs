@@ -53,7 +53,7 @@ export default function Navbar() {
             <a href="tel:4043144419" className="text-brand-orange font-semibold text-lg">(404) 314-4419</a>
             <Link
               href="/contact/"
-              className="bg-brand-orange hover:bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors"
+              className="bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-5 py-2.5 rounded-lg transition-colors"
             >
               Get A Quote
             </Link>
