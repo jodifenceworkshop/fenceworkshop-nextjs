@@ -32,7 +32,7 @@ const installationServices = [
   {
     title: 'Roll Gate & Slide Gate Installation',
     description: 'Manual and motorized roll gates for commercial driveways and facility entrances. Includes gate opener systems integrated into your gate installation.',
-    image: '/images/service-chain-link-fence.jpg',
+    image: null,
   },
   {
     title: 'Warehouse & Industrial Fencing',
@@ -42,7 +42,7 @@ const installationServices = [
   {
     title: 'Parking Deck & Garage Fencing',
     description: 'Perimeter cable systems, guard rails, and safety fencing for parking structures. Code-compliant installations with durable powder-coat finishes.',
-    image: null,
+    image: '/images/service-parking-deck.jpg',
   },
   {
     title: 'Security Gate Systems',
