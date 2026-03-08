@@ -1,7 +1,47 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+import LocalBusinessSchema from '@/components/LocalBusinessSchema'
 import type { Metadata } from 'next'
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you install fences for residential customers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our primary focus is commercial fence installation. We occasionally work on residential projects that come through general contractors — typically high-end custom or ornamental installations. If you have a commercial project, we'd love to connect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas of Georgia do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We're based in Metro Atlanta and serve clients throughout Georgia. Our most active service areas include Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, and surrounding communities. We also take on larger projects statewide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you licensed and insured for commercial fence work in Georgia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Fence Workshop is a fully licensed and insured commercial fencing contractor in Georgia. We have been in business for 15+ years and stand behind our work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a quote for a fence installation project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the form on this page or give us a call. We'll ask a few questions about your project and schedule a site visit if needed. Most commercial projects receive a detailed quote within a few business days."
+      }
+    }
+  ]
+}
 
 export const metadata: Metadata = {
   title: 'Commercial Fence Installation in Georgia | Fence Workshop',
@@ -97,7 +137,7 @@ const faqs = [
   },
   {
     question: 'Are you licensed and insured for commercial fence work in Georgia?',
-    answer: 'Yes. Fence Workshop is fully licensed and insured for commercial fence installation in Georgia. We\'ve been in business for 15+ years and stand behind our work.',
+    answer: 'Yes. Fence Workshop is a fully licensed and insured commercial fencing contractor in Georgia. We\'ve been in business for 15+ years and stand behind our work.',
   },
   {
     question: 'How do I get a quote for a fence installation project?',
@@ -108,6 +148,11 @@ const faqs = [
 export default function GeorgiaInstallationPage() {
   return (
     <main className="min-h-screen">
+      <LocalBusinessSchema />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
 
       {/* Spacer for fixed navbar */}
@@ -257,6 +302,52 @@ export default function GeorgiaInstallationPage() {
         </div>
       </section>
 
+      {/* How We Work */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Process</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              How Our Fence Installation Process Works
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              As a commercial fencing contractor, we manage every step — from initial site visit to final walkthrough.
+              No surprises. No change orders mid-project.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {[
+              {
+                step: '01',
+                title: 'Request a Quote',
+                description: 'Fill out our form or call us directly. We\'ll gather project details — scope, materials, site conditions, and your timeline — and follow up within one business day.',
+              },
+              {
+                step: '02',
+                title: 'Site Visit & Design',
+                description: 'We visit your property, take measurements, and confirm specifications. Our team handles permit research and can coordinate directly with your general contractor or property manager.',
+              },
+              {
+                step: '03',
+                title: 'Fabrication & Materials',
+                description: 'Materials are sourced and fabricated to your exact specifications. Commercial fencing is cut, welded, and assembled to fit your property layout before installation begins.',
+              },
+              {
+                step: '04',
+                title: 'Installation & Walkthrough',
+                description: 'Our experienced crews install on schedule, coordinating around your operations to minimize disruption. Every job ends with a final walkthrough to confirm it meets code and your expectations.',
+              },
+            ].map((item) => (
+              <div key={item.step}>
+                <div className="text-6xl font-bold text-brand-orange/20 mb-2 leading-none">{item.step}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Service Areas + Quote Form */}
       <section id="quote" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -268,9 +359,9 @@ export default function GeorgiaInstallationPage() {
                 Serving Metro Atlanta &amp; Georgia
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Fence Workshop has been installing commercial and industrial fencing across Georgia for over 15 years.
-                We work with property managers, general contractors, municipalities, and business owners to deliver
-                code-compliant fence installations on time and on budget.
+                Fence Workshop is a commercial fencing contractor based in Atlanta, serving clients across Georgia
+                for over 15 years. We work with property managers, general contractors, municipalities, and business
+                owners to deliver code-compliant fence installations on time and on budget.
               </p>
               <p className="text-lg text-gray-700 mb-8">
                 Our most active service areas include Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs,
