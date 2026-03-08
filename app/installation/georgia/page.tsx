@@ -47,7 +47,7 @@ const installationServices = [
   {
     title: 'Security Gate Systems',
     description: 'Swing gates, slide gates, and access control integration for commercial and industrial facilities. Gate openers and operators included with gate system installations.',
-    image: null,
+    image: '/images/service-security-gate.jpg',
   },
 ]
 
