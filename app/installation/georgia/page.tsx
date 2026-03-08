@@ -37,7 +37,7 @@ const installationServices = [
   {
     title: 'Warehouse & Industrial Fencing',
     description: 'Interior and exterior fencing for warehouses, distribution centers, and industrial facilities. Partition fencing, cage systems, and perimeter security.',
-    image: null,
+    image: '/images/service-warehouse-fencing.jpg',
   },
   {
     title: 'Parking Deck & Garage Fencing',
