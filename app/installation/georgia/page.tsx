@@ -65,12 +65,12 @@ const repairServices = [
   {
     title: 'Security Fence & Gate Repair',
     description: 'Repairs to high-security fencing, crash-damaged sections, and compromised perimeter systems. Emergency response available for facilities with urgent security needs.',
-    image: null,
+    image: '/images/repair-security-fence.jpg',
   },
   {
     title: 'Roll Gate & Slide Gate Repair',
     description: 'Track repair, roller replacement, gate operator service, and frame straightening for commercial roll and slide gates.',
-    image: null,
+    image: '/images/repair-roll-gate.jpg',
   },
 ]
 
