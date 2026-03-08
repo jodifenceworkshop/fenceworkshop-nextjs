@@ -32,7 +32,7 @@ const installationServices = [
   {
     title: 'Roll Gate & Slide Gate Installation',
     description: 'Manual and motorized roll gates for commercial driveways and facility entrances. Includes gate opener systems integrated into your gate installation.',
-    image: null,
+    image: '/images/service-roll-gate.jpg',
   },
   {
     title: 'Warehouse & Industrial Fencing',
