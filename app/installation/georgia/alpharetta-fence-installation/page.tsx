@@ -10,142 +10,142 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Do you pull permits for fence installation in Atlanta?",
+      "name": "Do you pull permits for fence installation in Alpharetta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Fence Workshop handles permit research and coordination for commercial fence installations in Atlanta. Requirements vary by zone and project type — we confirm what's needed before work begins so there are no surprises at inspection."
+        "text": "Yes. Fence Workshop researches and coordinates permit requirements for commercial fence installations in Alpharetta, Milton, and the surrounding North Fulton area. Requirements vary by municipality and project type — we confirm what's needed before work starts so there are no delays at inspection."
       }
     },
     {
       "@type": "Question",
-      "name": "What neighborhoods and areas of Atlanta do you serve?",
+      "name": "What areas of Alpharetta and North Fulton do you serve?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We serve commercial clients throughout Atlanta, including Buckhead, Midtown, Downtown, West Midtown, Old Fourth Ward, Inman Park, Grant Park, East Atlanta, and surrounding areas. We also work in adjacent communities including Decatur, College Park, and East Point."
+        "text": "We serve commercial clients throughout Alpharetta, Johns Creek, Milton, Roswell, Sandy Springs, and Cumming. We regularly work on office parks, tech campuses, distribution facilities, and commercial properties throughout the GA-400 corridor."
       }
     },
     {
       "@type": "Question",
-      "name": "Do you work with general contractors and property managers in Atlanta?",
+      "name": "Do you work with general contractors and property managers in Alpharetta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — a significant portion of our work comes through general contractors and property management companies. We're experienced at coordinating with project managers, fitting into construction schedules, and delivering clean, code-compliant installations on commercial properties."
+        "text": "Yes — we work with general contractors, commercial property managers, and corporate facilities teams throughout North Fulton County. We're experienced coordinating with construction schedules on active commercial sites and delivering code-compliant installations with minimal disruption."
       }
     },
     {
       "@type": "Question",
-      "name": "How quickly can you start a commercial fence project in Atlanta?",
+      "name": "How quickly can you start a commercial fence project in Alpharetta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "After an initial site visit and quote approval, most commercial projects are scheduled within 1–3 weeks depending on material lead times and crew availability. Emergency repairs can often be handled faster — call us directly to discuss your timeline."
+        "text": "After a site visit and quote approval, most commercial projects are scheduled within 1–3 weeks depending on material lead times and crew availability. Emergency fence and gate repairs can often be handled faster — call us to discuss your timeline."
       }
     }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Commercial Fence Installation in Atlanta, GA | Fence Workshop',
-  description: 'Fence Workshop provides commercial fence installation throughout Atlanta, GA — chain link, security, ornamental, and gate systems. Licensed & insured. Free quotes.',
+  title: 'Commercial Fence Installation in Alpharetta, GA | Fence Workshop',
+  description: 'Fence Workshop provides commercial fence installation throughout Alpharetta and North Fulton County, GA — chain link, security, ornamental, and gate systems. Licensed & insured. Free quotes.',
 }
 
 const installationServices = [
   {
     title: 'Chain Link Fence Installation',
-    description: 'Heavy-duty commercial and industrial chain link for perimeter security, job sites, and property boundaries throughout Atlanta. Available in galvanized or vinyl-coated finishes.',
+    description: 'Heavy-duty commercial and industrial chain link for Alpharetta-area perimeter security, job sites, and property boundaries. Available in galvanized or vinyl-coated finishes with multiple height options.',
     image: '/images/service-chain-link-fence.jpg',
-    alt: 'Commercial chain link fence installation in Atlanta, GA',
+    alt: 'Commercial chain link fence installation in Alpharetta, GA',
   },
   {
     title: 'Security Fence Installation',
-    description: 'High-security fencing systems including anti-climb designs, barbed wire, and razor ribbon topping for Atlanta facilities requiring maximum perimeter protection.',
+    description: 'High-security fencing systems for North Fulton commercial and industrial facilities — anti-climb designs, barbed wire, and razor ribbon topping for maximum perimeter protection.',
     image: '/images/service-security-fence.jpg',
-    alt: 'Industrial security fence installation in Atlanta, GA',
+    alt: 'Industrial security fence installation in Alpharetta, GA',
   },
   {
     title: 'Ornamental & Aluminum Fence Installation',
-    description: 'Architectural-grade ornamental and aluminum fencing for Atlanta commercial properties, municipalities, and high-end residential projects through general contractors.',
+    description: 'Architectural-grade ornamental and aluminum fencing for Alpharetta office parks, tech campuses, and HOA communities through general contractors and property managers.',
     image: '/images/service-ornamental-gate.jpg',
-    alt: 'Ornamental aluminum fence installation in Atlanta, GA',
+    alt: 'Ornamental aluminum fence installation in Alpharetta, GA',
   },
   {
     title: 'Dumpster Gate Installation',
-    description: 'Custom dumpster enclosure gates built to Atlanta city code. We work with property managers, HOAs, and commercial facilities for new installs and replacements.',
+    description: 'Custom dumpster enclosure gates built to North Fulton County code. We work with property managers, HOAs, and commercial facilities throughout Alpharetta for new installs and replacements.',
     image: '/images/service-dumpster-gate.jpg',
-    alt: 'Commercial dumpster gate installation in Atlanta, GA',
+    alt: 'Commercial dumpster gate installation in Alpharetta, GA',
   },
   {
     title: 'Roll Gate & Slide Gate Installation',
-    description: 'Manual and motorized roll gates for Atlanta commercial driveways and facility entrances. Includes gate opener systems integrated into your installation.',
+    description: 'Manual and motorized roll gates for Alpharetta commercial driveways and facility entrances. Includes gate opener systems integrated into your installation.',
     image: '/images/service-roll-gate.jpg',
-    alt: 'Commercial roll gate and slide gate installation in Atlanta, GA',
+    alt: 'Commercial roll gate and slide gate installation in Alpharetta, GA',
   },
   {
     title: 'Warehouse & Industrial Fencing',
-    description: 'Interior and exterior fencing for Atlanta-area warehouses, distribution centers, and industrial facilities. Partition fencing, cage systems, and perimeter security.',
+    description: 'Interior and exterior fencing for Alpharetta-area warehouses, distribution centers, and tech facilities along the GA-400 corridor. Partition fencing, cage systems, and perimeter security.',
     image: '/images/service-warehouse-fencing.jpg',
-    alt: 'Warehouse and industrial fence installation in Atlanta, GA',
+    alt: 'Warehouse and industrial fence installation in Alpharetta, GA',
   },
   {
     title: 'Parking Deck & Garage Fencing',
-    description: 'Perimeter cable systems, guard rails, and safety fencing for Atlanta parking structures. Code-compliant installations with durable powder-coat finishes.',
+    description: 'Perimeter cable systems, guard rails, and safety fencing for North Fulton parking structures. Code-compliant installations with durable powder-coat finishes.',
     image: '/images/service-parking-deck.jpg',
-    alt: 'Parking deck gate and fencing installation in Atlanta, GA',
+    alt: 'Parking deck gate and fencing installation in Alpharetta, GA',
   },
   {
     title: 'Security Gate Systems',
-    description: 'Swing gates, slide gates, and access control integration for Atlanta commercial and industrial facilities. Gate openers and operators included with installations.',
+    description: 'Swing gates, slide gates, and access control integration for Alpharetta commercial and corporate facilities. Gate openers and operators included with installations.',
     image: '/images/service-security-gate.jpg',
-    alt: 'Commercial security gate system installation in Atlanta, GA',
+    alt: 'Commercial security gate system installation in Alpharetta, GA',
   },
 ]
 
 const repairServices = [
   {
     title: 'Dumpster Gate Repair',
-    description: 'Fast repair for broken hinges, damaged frames, and sagging dumpster enclosure gates. We service commercial properties throughout Atlanta.',
+    description: 'Fast repair for broken hinges, damaged frames, and sagging dumpster enclosure gates at commercial properties throughout Alpharetta and North Fulton County.',
     image: '/images/repair-dumpster-gate.jpg',
-    alt: 'Commercial dumpster gate repair in Atlanta, GA',
+    alt: 'Commercial dumpster gate repair in Alpharetta, GA',
   },
   {
     title: 'Chain Link Fence Repair',
-    description: 'Fabric repair, post replacement, tension wire, and top rail repairs for commercial chain link systems in Atlanta. Quick turnaround to restore perimeter security.',
+    description: 'Fabric repair, post replacement, tension wire, and top rail repairs for commercial chain link systems in Alpharetta. Quick turnaround to restore perimeter security.',
     image: '/images/repair-chain-link.jpg',
-    alt: 'Chain link fence repair in Atlanta, GA',
+    alt: 'Chain link fence repair in Alpharetta, GA',
   },
   {
     title: 'Security Fence & Gate Repair',
-    description: 'Repairs to high-security fencing, crash-damaged sections, and compromised perimeter systems. Emergency response available for Atlanta facilities with urgent security needs.',
+    description: 'Repairs to high-security fencing, crash-damaged sections, and compromised perimeter systems. Emergency response available for North Fulton facilities with urgent security needs.',
     image: '/images/repair-security-fence.jpg',
-    alt: 'Security fence and gate repair in Atlanta, GA',
+    alt: 'Security fence and gate repair in Alpharetta, GA',
   },
   {
     title: 'Roll Gate & Slide Gate Repair',
-    description: 'Track repair, roller replacement, gate operator service, and frame straightening for commercial roll and slide gates throughout Atlanta.',
+    description: 'Track repair, roller replacement, gate operator service, and frame straightening for commercial roll and slide gates throughout Alpharetta and North Fulton County.',
     image: '/images/repair-roll-gate.jpg',
-    alt: 'Commercial roll gate and slide gate repair in Atlanta, GA',
+    alt: 'Commercial roll gate and slide gate repair in Alpharetta, GA',
   },
 ]
 
 const faqs = [
   {
-    question: 'Do you pull permits for fence installation in Atlanta?',
-    answer: 'Yes. Fence Workshop handles permit research and coordination for commercial fence installations in Atlanta. Requirements vary by zone and project type — we confirm what\'s needed before work begins so there are no surprises at inspection.',
+    question: 'Do you pull permits for fence installation in Alpharetta?',
+    answer: 'Yes. Fence Workshop researches and coordinates permit requirements for commercial fence installations in Alpharetta, Milton, and the surrounding North Fulton area. Requirements vary by municipality and project type — we confirm what\'s needed before work starts so there are no delays at inspection.',
   },
   {
-    question: 'What neighborhoods and areas of Atlanta do you serve?',
-    answer: 'We serve commercial clients throughout Atlanta, including Buckhead, Midtown, Downtown, West Midtown, Old Fourth Ward, Inman Park, Grant Park, East Atlanta, and surrounding areas. We also work in adjacent communities including Decatur, College Park, and East Point.',
+    question: 'What areas of Alpharetta and North Fulton do you serve?',
+    answer: 'We serve commercial clients throughout Alpharetta, Johns Creek, Milton, Roswell, Sandy Springs, and Cumming. We regularly work on office parks, tech campuses, distribution facilities, and commercial properties throughout the GA-400 corridor.',
   },
   {
-    question: 'Do you work with general contractors and property managers in Atlanta?',
-    answer: 'Yes — a significant portion of our work comes through general contractors and property management companies. We\'re experienced at coordinating with project managers, fitting into construction schedules, and delivering clean, code-compliant installations on commercial properties.',
+    question: 'Do you work with general contractors and property managers in Alpharetta?',
+    answer: 'Yes — we work with general contractors, commercial property managers, and corporate facilities teams throughout North Fulton County. We\'re experienced coordinating with construction schedules on active commercial sites and delivering code-compliant installations with minimal disruption.',
   },
   {
-    question: 'How quickly can you start a commercial fence project in Atlanta?',
-    answer: 'After an initial site visit and quote approval, most commercial projects are scheduled within 1–3 weeks depending on material lead times and crew availability. Emergency repairs can often be handled faster — call us directly to discuss your timeline.',
+    question: 'How quickly can you start a commercial fence project in Alpharetta?',
+    answer: 'After a site visit and quote approval, most commercial projects are scheduled within 1–3 weeks depending on material lead times and crew availability. Emergency fence and gate repairs can often be handled faster — call us to discuss your timeline.',
   },
 ]
 
-export default function AtlantaInstallationPage() {
+export default function AlpharettaInstallationPage() {
   return (
     <main className="min-h-screen">
       <LocalBusinessSchema />
@@ -163,7 +163,7 @@ export default function AtlantaInstallationPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-georgia-installation.jpg"
-            alt="Commercial fence and gate installation by Fence Workshop in Atlanta, GA"
+            alt="Commercial fence and gate installation by Fence Workshop in Alpharetta, GA"
             fill
             className="object-cover"
             priority
@@ -178,17 +178,17 @@ export default function AtlantaInstallationPage() {
                 Georgia Installation
               </Link>
               <span>/</span>
-              <span className="text-white">Atlanta</span>
+              <span className="text-white">Alpharetta</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">
-              Commercial Fence Installation in Atlanta, GA
+              Commercial Fence Installation in Alpharetta, GA
             </h1>
             <p className="text-2xl md:text-3xl font-bold text-brand-orange mb-6 leading-tight">
-              Atlanta&rsquo;s Trusted Commercial Fence Contractor
+              North Fulton&rsquo;s Trusted Commercial Fence Contractor
             </p>
             <p className="text-lg md:text-xl text-gray-200 mb-8">
               Fence Workshop provides professional commercial and industrial fence installation
-              throughout Atlanta and surrounding communities. Licensed &amp; insured. 15+ years experience.
+              throughout Alpharetta and North Fulton County. Licensed &amp; insured. 15+ years experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -216,7 +216,7 @@ export default function AtlantaInstallationPage() {
               <svg className="w-6 h-6 text-brand-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
-              <span className="text-white font-medium">Licensed &amp; insured fence contractor in Atlanta</span>
+              <span className="text-white font-medium">Licensed &amp; insured fence contractor in Alpharetta</span>
             </div>
             <div className="flex items-center gap-3">
               <svg className="w-6 h-6 text-brand-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -246,10 +246,10 @@ export default function AtlantaInstallationPage() {
           <div className="text-center mb-12">
             <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Installation Services</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Commercial Fence Installation Services in Atlanta
+              Commercial Fence Installation Services in Alpharetta
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              We specialize in commercial and industrial fence installations throughout Atlanta and Metro.
+              We specialize in commercial and industrial fence installations throughout Alpharetta and North Fulton County.
               Every project is managed by experienced crews from permit to final inspection.
             </p>
           </div>
@@ -275,10 +275,10 @@ export default function AtlantaInstallationPage() {
           <div className="text-center mb-12">
             <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Repair Services</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Commercial Fence Repair in Atlanta
+              Commercial Fence Repair in Alpharetta
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              We handle fence and gate repairs for commercial facilities throughout Atlanta.
+              We handle fence and gate repairs for commercial facilities throughout Alpharetta and North Fulton County.
               Whether it&rsquo;s storm damage, wear, or a gate that&rsquo;s off the track &mdash; we can help.
             </p>
           </div>
@@ -304,11 +304,11 @@ export default function AtlantaInstallationPage() {
           <div className="text-center mb-12">
             <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Process</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              How Our Atlanta Fence Installation Process Works
+              How Our Alpharetta Fence Installation Process Works
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              As a commercial fencing contractor serving Atlanta, we manage every step — from initial site
-              visit to final walkthrough. No surprises. No change orders mid-project.
+              As a commercial fencing contractor serving Alpharetta and North Fulton County, we manage every step —
+              from initial site visit to final walkthrough. No surprises. No change orders mid-project.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -321,7 +321,7 @@ export default function AtlantaInstallationPage() {
               {
                 step: '02',
                 title: 'Site Visit & Design',
-                description: 'We visit your Atlanta property, take measurements, and confirm specifications. Our team handles permit research with the City of Atlanta and coordinates with your general contractor or property manager.',
+                description: 'We visit your Alpharetta property, take measurements, and confirm specifications. Our team handles permit research for the City of Alpharetta, City of Milton, or North Fulton County and coordinates with your general contractor or property manager.',
               },
               {
                 step: '03',
@@ -352,21 +352,21 @@ export default function AtlantaInstallationPage() {
             <div>
               <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Service Areas</p>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Atlanta Neighborhoods We Serve
+                Alpharetta &amp; North Fulton Areas We Serve
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Fence Workshop is a commercial fencing company based in Atlanta, with our shop located
-                at 1522 Huber St NW. We serve commercial clients throughout the city and surrounding communities,
-                including property managers, general contractors, municipalities, and business owners.
+                Fence Workshop is based in Atlanta and regularly serves commercial clients throughout Alpharetta
+                and North Fulton County — including tech companies, office parks, property management firms,
+                and general contractors working along the GA-400 corridor.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                Our active Atlanta service area includes:
+                Our active Alpharetta service area includes:
               </p>
               <ul className="grid grid-cols-2 gap-2 mb-8">
                 {[
-                  'Buckhead', 'Midtown Atlanta', 'Downtown Atlanta', 'West Midtown',
-                  'Old Fourth Ward', 'Inman Park', 'Grant Park', 'East Atlanta',
-                  'Westside', 'College Park', 'East Point', 'Decatur',
+                  'Alpharetta', 'Johns Creek', 'Milton', 'Roswell',
+                  'Sandy Springs', 'Cumming', 'Duluth', 'Suwanee',
+                  'Peachtree Corners', 'Norcross', 'Dunwoody', 'Brookhaven',
                 ].map((area) => (
                   <li key={area} className="flex items-center gap-2 text-gray-700">
                     <span className="text-brand-orange font-bold">→</span>
@@ -378,11 +378,11 @@ export default function AtlantaInstallationPage() {
                 <Link href="/installation/georgia/" className="block text-brand-orange hover:underline font-medium">
                   ← Back to Georgia Fence Installation
                 </Link>
+                <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">
+                  → Commercial Fence Installation in Atlanta, GA
+                </Link>
                 <Link href="/installation/georgia/marietta-fence-installation/" className="block text-brand-orange hover:underline font-medium">
                   → Commercial Fence Installation in Marietta, GA
-                </Link>
-                <Link href="/installation/georgia/alpharetta-fence-installation/" className="block text-brand-orange hover:underline font-medium">
-                  → Commercial Fence Installation in Alpharetta, GA
                 </Link>
               </div>
             </div>
@@ -390,7 +390,7 @@ export default function AtlantaInstallationPage() {
             {/* Right: Quote form */}
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Get a Free Quote</h3>
-              <p className="text-gray-600 mb-6">Tell us about your Atlanta project and we&rsquo;ll respond within one business day.</p>
+              <p className="text-gray-600 mb-6">Tell us about your Alpharetta project and we&rsquo;ll respond within one business day.</p>
               <form className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -539,7 +539,7 @@ export default function AtlantaInstallationPage() {
           <div className="text-center mb-12">
             <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">FAQ</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Atlanta Fence Installation — Frequently Asked Questions
+              Alpharetta Fence Installation — Frequently Asked Questions
             </h2>
           </div>
           <ul className="space-y-8">
