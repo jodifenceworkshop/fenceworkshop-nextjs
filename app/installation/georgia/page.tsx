@@ -368,13 +368,13 @@ export default function GeorgiaInstallationPage() {
                 Kennesaw, and surrounding communities. We also take on larger projects statewide.
               </p>
               <div className="space-y-3">
-                <Link href="/installation/georgia/atlanta/" className="block text-brand-orange hover:underline font-medium">
+                <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">
                   → Commercial Fence Installation in Atlanta, GA
                 </Link>
-                <Link href="/installation/georgia/marietta/" className="block text-brand-orange hover:underline font-medium">
+                <Link href="/installation/georgia/marietta-fence-installation/" className="block text-brand-orange hover:underline font-medium">
                   → Commercial Fence Installation in Marietta, GA
                 </Link>
-                <Link href="/installation/georgia/alpharetta/" className="block text-brand-orange hover:underline font-medium">
+                <Link href="/installation/georgia/alpharetta-fence-installation/" className="block text-brand-orange hover:underline font-medium">
                   → Commercial Fence Installation in Alpharetta, GA
                 </Link>
               </div>
