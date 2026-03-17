@@ -1,0 +1,143 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import Navbar from '@/components/Navbar'
+import LocalBusinessSchema from '@/components/LocalBusinessSchema'
+import type { Metadata } from 'next'
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What type of fencing is used in parking garages?", "acceptedAnswer": { "@type": "Answer", "text": "Parking garage fencing typically includes cable railing systems, welded wire mesh panels, expanded metal screens, and steel guard rails. The specific system depends on whether the goal is fall protection, vehicle containment, pedestrian safety, or a combination. We assess your garage and recommend the right system for your application." } },
+    { "@type": "Question", "name": "Does parking garage fencing need to meet building codes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Parking garage barriers and guard systems must comply with the International Building Code (IBC), which sets requirements for vehicle barrier height, impact resistance, and fall protection. In Georgia, local jurisdictions may have additional requirements. We design and install systems that meet all applicable codes." } },
+    { "@type": "Question", "name": "Can you install cable railing systems in parking garages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cable railing systems are a popular choice for parking garages because they provide fall protection and vehicle containment while maintaining visibility and airflow. We install stainless steel cable systems with steel or aluminum posts designed for commercial parking structure applications." } },
+    { "@type": "Question", "name": "What is the difference between a vehicle barrier and a pedestrian guard rail?", "acceptedAnswer": { "@type": "Answer", "text": "Vehicle barriers are designed to withstand vehicle impact and prevent cars from breaking through garage openings. They must meet IBC impact-load requirements. Pedestrian guard rails protect people from falls and need to meet height and spacing requirements but are not designed for vehicle impact. Many garages need both systems in different locations." } },
+    { "@type": "Question", "name": "Do you repair existing parking garage fencing and barriers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We repair and replace damaged cable systems, guard rails, mesh panels, and vehicle barriers in parking garages throughout Georgia. Impact damage, corrosion, and code upgrades are the most common repair needs we handle." } }
+  ]
+}
+
+export const metadata: Metadata = {
+  title: 'Parking Garage Fencing & Barrier Installation in Georgia | Fence Workshop',
+  description: 'Parking garage fencing, cable railing systems, vehicle barriers, and guard rails in Metro Atlanta and Georgia. IBC compliant. Licensed & insured. Free quotes.',
+}
+
+const faqs = [
+  { question: 'What type of fencing is used in parking garages?', answer: 'Parking garage fencing typically includes cable railing systems, welded wire mesh panels, expanded metal screens, and steel guard rails. The specific system depends on whether the goal is fall protection, vehicle containment, pedestrian safety, or a combination. We assess your garage and recommend the right system for your application.' },
+  { question: 'Does parking garage fencing need to meet building codes?', answer: 'Yes. Parking garage barriers and guard systems must comply with the International Building Code (IBC), which sets requirements for vehicle barrier height, impact resistance, and fall protection. In Georgia, local jurisdictions may have additional requirements. We design and install systems that meet all applicable codes.' },
+  { question: 'Can you install cable railing systems in parking garages?', answer: 'Yes. Cable railing systems are a popular choice for parking garages because they provide fall protection and vehicle containment while maintaining visibility and airflow. We install stainless steel cable systems with steel or aluminum posts designed for commercial parking structure applications.' },
+  { question: 'What is the difference between a vehicle barrier and a pedestrian guard rail?', answer: 'Vehicle barriers are designed to withstand vehicle impact and prevent cars from breaking through garage openings. They must meet IBC impact-load requirements. Pedestrian guard rails protect people from falls and need to meet height and spacing requirements but are not designed for vehicle impact. Many garages need both systems in different locations.' },
+  { question: 'Do you repair existing parking garage fencing and barriers?', answer: 'Yes. We repair and replace damaged cable systems, guard rails, mesh panels, and vehicle barriers in parking garages throughout Georgia. Impact damage, corrosion, and code upgrades are the most common repair needs we handle.' },
+]
+
+export default function ParkingGarageFencingPage() {
+  return (
+    <main className="min-h-screen">
+      <LocalBusinessSchema />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Navbar />
+      <div className="h-20" />
+
+      <section className="relative bg-gray-900 py-20 lg:py-28">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2 text-sm text-gray-400 mb-4"><Link href="/installation/georgia/commercial-fence-installation/" className="hover:text-white transition-colors">Georgia Installation</Link><span>/</span><span className="text-gray-200">Parking Garage Fencing</span></div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">Parking Garage Fencing &amp; Barrier Installation in Georgia</h1>
+            <p className="text-2xl md:text-3xl font-bold text-brand-orange mb-6 leading-tight">Cable Systems, Guard Rails &amp; Vehicle Barriers</p>
+            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">Professional parking garage fencing and barrier installation throughout Georgia. Cable railing systems, vehicle barriers, fall protection, and guard rails for commercial parking structures. IBC compliant, licensed &amp; insured with 15+ years experience.</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#quote" className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center">Get a Free Quote</a>
+              <a href="tel:+14043144419" className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg border border-white/30 transition-colors text-center">Call (404) 314-4419</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-orange py-6"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left"><div className="flex items-center gap-3"><svg className="w-6 h-6 text-brand-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg><span className="text-white font-medium">Licensed &amp; insured fence installers in Georgia</span></div><div className="flex items-center gap-3"><svg className="w-6 h-6 text-brand-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span className="text-white font-medium">15+ Years in Business</span></div><div className="flex items-center gap-3"><svg className="w-6 h-6 text-brand-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg><span className="text-white font-medium">Commercial &amp; Industrial Specialists</span></div><div className="flex items-center gap-3"><svg className="w-6 h-6 text-brand-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg><span className="text-white font-medium">Best Customer Service from Start to Finish</span></div></div></div></section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Why Parking Garage Fencing</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Professional Parking Garage Fencing?</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Parking structures require specialized fencing and barrier systems for safety, code compliance, and liability protection — not standard perimeter fencing.</p>
+          </div>
+          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/service-parking-garage-feature.jpg" alt="Parking garage cable railing and barrier system installed by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: 'Fall Protection', description: 'Cable railing and mesh systems prevent pedestrian falls from elevated decks, ramps, and open edges of parking structures.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>) },
+              { title: 'Vehicle Containment', description: 'IBC-compliant vehicle barriers rated for impact loads to prevent vehicles from breaching garage openings and edges.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>) },
+              { title: 'Code Compliance', description: 'Systems designed to meet IBC, local building codes, and ADA requirements for parking structure barriers and guard systems.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>) },
+              { title: 'Ventilation & Visibility', description: 'Open cable and mesh systems maintain natural airflow and sightlines while providing the required level of protection.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>) },
+              { title: 'Corrosion Resistance', description: 'Galvanized steel, stainless steel cable, and powder-coat finishes engineered for the moisture and chemical exposure found in parking structures.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-3.5a.42.42 0 01-.06-.57l3.19-3.5a.42.42 0 01.58-.06l5.1 3.5a.42.42 0 01.06.57l-3.19 3.5a.42.42 0 01-.58.06zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>) },
+              { title: 'Repair & Replacement', description: 'Impact damage repair, cable retensioning, and full replacement of aging or non-compliant barrier systems in existing garages.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-3.5m0 0l3.19-3.5m-3.19 3.5l5.1 3.5m-5.1-3.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5" /></svg>) },
+            ].map((f) => (<div key={f.title} className="bg-gray-50 p-6 rounded-lg"><div className="mb-4">{f.icon}</div><h3 className="text-lg font-bold text-gray-900 mb-2">{f.title}</h3><p className="text-gray-600 leading-relaxed">{f.description}</p></div>))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-100"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-12"><p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Applications</p><h2 className="text-4xl font-bold text-gray-900 mb-4">Parking Garage Fencing Applications</h2><p className="text-lg text-gray-700 max-w-3xl mx-auto">Barrier and fencing systems for every type of commercial parking structure in Georgia.</p></div><div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {[
+          { title: 'Multi-Level Parking Decks', description: 'Cable railing, guard rails, and vehicle barriers for open-air and enclosed multi-story parking structures.' },
+          { title: 'Hospital & Medical Center Garages', description: 'Fall protection and vehicle containment systems for high-traffic healthcare facility parking structures.' },
+          { title: 'Airport & Transit Parking', description: 'Heavy-duty barrier systems for airport garages, transit centers, and high-volume public parking facilities.' },
+          { title: 'Office & Mixed-Use Developments', description: 'Architecturally designed cable and mesh systems that complement modern commercial building aesthetics.' },
+          { title: 'Retail & Entertainment Venues', description: 'Barrier and guard systems for shopping center garages, stadium parking, and entertainment venue structures.' },
+          { title: 'University & Institutional Garages', description: 'Code-compliant fencing and barrier systems for campus parking structures at universities and government buildings.' },
+        ].map((a) => (<div key={a.title} className="flex gap-4"><span className="text-brand-orange font-bold text-2xl mt-1 flex-shrink-0">&bull;</span><div><h3 className="text-lg font-bold text-gray-900 mb-2">{a.title}</h3><p className="text-gray-600 leading-relaxed">{a.description}</p></div></div>))}
+      </div></div></section>
+
+      <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-12"><p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Materials</p><h2 className="text-4xl font-bold text-gray-900 mb-4">Parking Garage Fencing Materials &amp; Systems</h2></div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div><h3 className="text-2xl font-bold text-gray-900 mb-4">Barrier &amp; Railing Systems</h3><ul className="space-y-3">{['Stainless steel cable railing systems', 'Welded wire mesh panel barriers', 'Expanded metal screen systems', 'Steel tube guard rails', 'Concrete and steel vehicle barriers', 'Combination cable and rail systems'].map((i) => (<li key={i} className="flex items-start gap-3"><svg className="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg><span className="text-gray-700">{i}</span></li>))}</ul></div>
+        <div><h3 className="text-2xl font-bold text-gray-900 mb-4">Finishes &amp; Standards</h3><ul className="space-y-3">{['Hot-dip galvanized steel for corrosion resistance', 'Powder-coat finishes in custom colors', '316 stainless steel for coastal and high-moisture areas', 'IBC-compliant vehicle barrier ratings', 'ADA-compliant guard rail heights and spacing', 'Impact-tested cable tensioning systems'].map((i) => (<li key={i} className="flex items-start gap-3"><svg className="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg><span className="text-gray-700">{i}</span></li>))}</ul></div>
+      </div></div></section>
+
+      <section className="py-20 bg-gray-100"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-12"><p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Process</p><h2 className="text-4xl font-bold text-gray-900 mb-4">How Parking Garage Fencing Installation Works</h2><p className="text-lg text-gray-700 max-w-3xl mx-auto">From code review to final inspection, we manage every step of your parking structure fencing project.</p></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        {[
+          { step: '01', title: 'Request a Quote', description: 'Tell us about your project — garage type, number of levels, current barrier condition, and compliance needs. We\'ll follow up within one business day.' },
+          { step: '02', title: 'Site Assessment & Design', description: 'We inspect your parking structure, identify code requirements, and design the barrier system. We coordinate with your architect or property manager on specifications.' },
+          { step: '03', title: 'Fabrication & Materials', description: 'Systems are fabricated to your structure\'s dimensions. All materials are sourced for durability and code compliance in parking garage environments.' },
+          { step: '04', title: 'Installation & Inspection', description: 'Our crews install the barrier system with minimal disruption to parking operations. Every installation is inspected for code compliance and structural integrity.' },
+        ].map((item) => (<div key={item.step}><div className="text-6xl font-bold text-brand-orange/20 mb-2 leading-none">{item.step}</div><h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3><p className="text-gray-600 leading-relaxed">{item.description}</p></div>))}
+      </div></div></section>
+
+      <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-12"><p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Related Services</p><h2 className="text-4xl font-bold text-gray-900 mb-4">Other Commercial Fence Services</h2><p className="text-lg text-gray-700 max-w-3xl mx-auto">Complete your property&rsquo;s security with our other commercial fencing services.</p></div><div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { title: 'Commercial Security Fence Installation', description: 'High-security perimeter fencing for parking facilities and surrounding commercial properties.', href: '/installation/georgia/commercial-security-fence/' },
+          { title: 'Security Gate Systems & Access Control', description: 'Automated gate systems for controlled vehicle entry and exit at parking facilities.', href: '/installation/georgia/security-gate-systems/' },
+          { title: 'Warehouse & Industrial Fencing', description: 'Interior partition systems and cage enclosures for parking-adjacent storage and utility areas.', href: '/installation/georgia/warehouse-industrial-fencing/' },
+        ].map((s) => (<Link key={s.title} href={s.href} className="block bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow group"><h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-orange transition-colors">{s.title}</h3><p className="text-gray-600 text-sm leading-relaxed mb-3">{s.description}</p><span className="text-brand-orange font-semibold text-sm">Learn More &rarr;</span></Link>))}
+      </div></div></section>
+
+      <section id="quote" className="py-20 bg-gray-100"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Service Areas</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Parking Garage Fencing Across Georgia</h2>
+          <p className="text-lg text-gray-700 mb-6">We install and repair parking garage fencing, cable systems, and vehicle barriers throughout Metro Atlanta and across the state of Georgia.</p>
+          <p className="text-lg text-gray-700 mb-8">Our most active service areas include Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, and surrounding communities.</p>
+          <div className="space-y-3">
+            <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Parking Garage Fencing in Atlanta, GA</Link>
+            <Link href="/installation/georgia/marietta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Parking Garage Fencing in Marietta, GA</Link>
+            <Link href="/installation/georgia/alpharetta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Parking Garage Fencing in Alpharetta, GA</Link>
+            <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium mt-6">&larr; All Commercial Fence Services in Georgia</Link>
+          </div>
+        </div>
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">Get a Free Quote</h3>
+          <p className="text-gray-600 mb-6">Tell us about your parking garage fencing project and we&rsquo;ll respond within one business day.</p>
+          <form className="space-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name *</label><input type="text" id="name" name="name" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent" /></div><div><label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company</label><input type="text" id="company" name="company" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent" /></div></div>
+            <div><label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email *</label><input type="email" id="email" name="email" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent" /></div>
+            <div><label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label><input type="tel" id="phone" name="phone" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent" /></div>
+            <div><label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Project Details</label><textarea id="message" name="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent resize-none" placeholder="Garage type, number of levels, barrier type needed, etc."></textarea></div>
+            <button type="submit" className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">Request Free Quote</button>
+          </form>
+        </div>
+      </div></div></section>
+
+      <section className="py-20 bg-white"><div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-12"><p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">FAQ</p><h2 className="text-4xl font-bold text-gray-900 mb-4">Parking Garage Fencing — Frequently Asked Questions</h2></div><ul className="space-y-8">{faqs.map((faq) => (<li key={faq.question} className="flex gap-4"><span className="text-brand-orange font-bold text-xl mt-0.5">&bull;</span><div><h3 className="text-lg font-bold text-gray-900 mb-2">{faq.question}</h3><p className="text-gray-600 leading-relaxed">{faq.answer}</p></div></li>))}</ul></div></section>
+
+      <footer className="bg-brand-orange text-white py-12"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8"><div><h3 className="font-bold text-lg mb-4">Installation</h3><ul className="space-y-2"><li><Link href="/installation/georgia/commercial-fence-installation/" className="hover:underline">Fence Installation in Georgia</Link></li><li><Link href="/installation/georgia/atlanta-fence-installation/" className="hover:underline">Atlanta Fence Installation</Link></li><li><Link href="/installation/georgia/marietta-fence-installation/" className="hover:underline">Marietta Fence Installation</Link></li><li><Link href="/installation/georgia/alpharetta-fence-installation/" className="hover:underline">Alpharetta Fence Installation</Link></li></ul></div><div><h3 className="font-bold text-lg mb-4">Shop</h3><ul className="space-y-2"><li><Link href="/shop/aluminum-fencing/" className="hover:underline">Aluminum Fencing</Link></li><li><Link href="/shop/vinyl-fencing/" className="hover:underline">Vinyl Fencing</Link></li><li><Link href="/shop/driveway-gates/" className="hover:underline">Driveway Gates</Link></li><li><Link href="/shop/walk-gates/" className="hover:underline">Walk Gates</Link></li></ul></div><div><h3 className="font-bold text-lg mb-4">Resources</h3><ul className="space-y-2"><li><Link href="/guides/" className="hover:underline">Fence Guides</Link></li><li><Link href="/maintenance/" className="hover:underline">Maintenance Tips</Link></li></ul></div><div><h3 className="font-bold text-lg mb-4">Company</h3><ul className="space-y-2"><li><Link href="/about/" className="hover:underline">About Fence Workshop</Link></li><li><Link href="/contact/" className="hover:underline">Contact</Link></li><li><Link href="/reviews/" className="hover:underline">Reviews</Link></li></ul></div></div><div className="border-t border-orange-400 pt-8"><div className="grid grid-cols-1 md:grid-cols-2 gap-4"><div><p className="font-semibold mb-2">Fence Workshop</p><p>1522 Huber St NW</p><p>Atlanta, GA 30318</p><p className="mt-2">(404) 314-4419</p></div><div className="md:text-right"><p>&copy; 2026 Fence Workshop. All rights reserved.</p></div></div></div></div></footer>
+    </main>
+  )
+}
