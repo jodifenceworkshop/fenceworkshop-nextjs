@@ -518,15 +518,13 @@ export default function MariettaInstallationPage() {
                 ))}
               </div>
               <p className="text-gray-700 mb-6 italic">
-                &quot;I love working with Fence Workshop. When I put them on a job, I know it will be completed exactly
-                as scheduled and for the quoted amount. They have never come back mid-project asking for additional
-                funds, which speaks volumes about their integrity and planning. The quality of their work is outstanding.
-                They consistently go above and beyond to ensure every project is completed professionally and is
-                aesthetically pleasing. Adam and Blair are both fantastic to work with and truly make my job easier.&quot;
+                &quot;I had a terrific experience with Fence Workshop. Their team was professional, responsive, and clearly
+                takes pride in their work. The installation was efficient, craftsmanship was excellent, and the finished
+                fence looks fantastic. It&rsquo;s refreshing to work with a company that delivers exactly what they promise.&quot;
               </p>
               <div>
-                <p className="font-bold text-gray-900">Eddie Jensen</p>
-                <p className="text-gray-600">Account Executive, Miner, LTD. - Southeast Region</p>
+                <p className="font-bold text-gray-900">Joseph Donini</p>
+                <p className="text-gray-600">Commercial Property Owner</p>
               </div>
             </div>
           </div>

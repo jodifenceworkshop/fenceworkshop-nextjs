@@ -497,16 +497,13 @@ export default function AlpharettaInstallationPage() {
                 ))}
               </div>
               <p className="text-gray-700 mb-6 italic">
-                &quot;As a contractor and exterior services provider, having a strong partner network is critical to
-                delivering great outcomes for our clients. Working with the Fence Workshop team has been a standout
-                for everyone at Terra CPS. They handle the full scope of fencing and gates (design, build, and repair)
-                across any material or requirement we throw at them, and we still haven&rsquo;t found a problem they can&rsquo;t
-                solve (though we plan to keep trying). Their communication is professional, their pricing is fair,
-                and most importantly, their work is high quality and built to last. Best in the business!&quot;
+                &quot;I had a terrific experience with Fence Workshop. Their team was professional, responsive, and clearly
+                takes pride in their work. The installation was efficient, craftsmanship was excellent, and the finished
+                fence looks fantastic. It&rsquo;s refreshing to work with a company that delivers exactly what they promise.&quot;
               </p>
               <div>
-                <p className="font-bold text-gray-900">Todd Hanner</p>
-                <p className="text-gray-600">President, TerraCPS</p>
+                <p className="font-bold text-gray-900">Joseph Donini</p>
+                <p className="text-gray-600">Commercial Property Owner</p>
               </div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md">
