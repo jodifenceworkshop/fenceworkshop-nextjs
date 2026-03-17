@@ -556,10 +556,10 @@ export default function GeorgiaInstallationPage() {
             <div>
               <h3 className="font-bold text-lg mb-4">Installation</h3>
               <ul className="space-y-2">
-                <li><Link href="/installation/georgia/" className="hover:underline">Fence Installation in Georgia</Link></li>
-                <li><Link href="/installation/georgia/atlanta/" className="hover:underline">Atlanta Fence Installation</Link></li>
-                <li><Link href="/installation/georgia/marietta/" className="hover:underline">Marietta Fence Installation</Link></li>
-                <li><Link href="/installation/georgia/alpharetta/" className="hover:underline">Alpharetta Fence Installation</Link></li>
+                <li><Link href="/installation/georgia/commercial-fence-installation/" className="hover:underline">Fence Installation in Georgia</Link></li>
+                <li><Link href="/installation/georgia/atlanta-fence-installation/" className="hover:underline">Atlanta Fence Installation</Link></li>
+                <li><Link href="/installation/georgia/marietta-fence-installation/" className="hover:underline">Marietta Fence Installation</Link></li>
+                <li><Link href="/installation/georgia/alpharetta-fence-installation/" className="hover:underline">Alpharetta Fence Installation</Link></li>
               </ul>
             </div>
             <div>

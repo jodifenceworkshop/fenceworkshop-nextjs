@@ -37,7 +37,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/installation/georgia/"
+                href="/installation/georgia/commercial-fence-installation/"
                 className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
               >
                 Get Fence Installation
@@ -105,7 +105,7 @@ export default function Home() {
                 layout and materials to final installation.
               </p>
               <div className="space-y-3">
-                <Link href="/installation/georgia/" className="block text-brand-orange hover:underline">
+                <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline">
                   → Fence Installation in Georgia
                 </Link>
                 <Link href="/installation/process/" className="block text-brand-orange hover:underline">
@@ -117,7 +117,7 @@ export default function Home() {
               </div>
               <div className="mt-8">
                 <Link
-                  href="/installation/georgia/"
+                  href="/installation/georgia/commercial-fence-installation/"
                   className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
                 >
                   Learn More
@@ -457,7 +457,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Installation</h3>
               <ul className="space-y-2">
-                <li><Link href="/installation/georgia/" className="hover:underline">Fence Installation in Georgia</Link></li>
+                <li><Link href="/installation/georgia/commercial-fence-installation/" className="hover:underline">Fence Installation in Georgia</Link></li>
                 <li><Link href="/installation/georgia/atlanta-fence-installation/" className="hover:underline">Atlanta Fence Installation</Link></li>
                 <li><Link href="/installation/georgia/marietta-fence-installation/" className="hover:underline">Marietta Fence Installation</Link></li>
                 <li><Link href="/installation/georgia/alpharetta-fence-installation/" className="hover:underline">Alpharetta Fence Installation</Link></li>

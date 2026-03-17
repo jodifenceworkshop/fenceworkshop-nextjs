@@ -38,7 +38,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/installation/georgia/" className="text-gray-700 hover:text-brand-orange font-medium">
+            <Link href="/installation/georgia/commercial-fence-installation/" className="text-gray-700 hover:text-brand-orange font-medium">
               Installation
             </Link>
             <Link href="/shop/" className="text-gray-700 hover:text-brand-orange font-medium">
@@ -98,7 +98,7 @@ export default function Navbar() {
         }`}
       >
         <div className="bg-white px-4 py-4 space-y-3">
-          <Link href="/installation/georgia/" className="block text-gray-700 hover:text-brand-orange font-medium py-2" onClick={() => setMenuOpen(false)}>
+          <Link href="/installation/georgia/commercial-fence-installation/" className="block text-gray-700 hover:text-brand-orange font-medium py-2" onClick={() => setMenuOpen(false)}>
             Installation
           </Link>
           <Link href="/shop/" className="block text-gray-700 hover:text-brand-orange font-medium py-2" onClick={() => setMenuOpen(false)}>

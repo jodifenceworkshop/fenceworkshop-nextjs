@@ -174,7 +174,7 @@ export default function AlpharettaInstallationPage() {
           <div className="max-w-2xl">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-sm text-gray-300 mb-4">
-              <Link href="/installation/georgia/" className="hover:text-white transition-colors">
+              <Link href="/installation/georgia/commercial-fence-installation/" className="hover:text-white transition-colors">
                 Georgia Installation
               </Link>
               <span>/</span>
@@ -375,7 +375,7 @@ export default function AlpharettaInstallationPage() {
                 ))}
               </ul>
               <div className="space-y-3">
-                <Link href="/installation/georgia/" className="block text-brand-orange hover:underline font-medium">
+                <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium">
                   ← Back to Georgia Fence Installation
                 </Link>
                 <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">
@@ -560,7 +560,7 @@ export default function AlpharettaInstallationPage() {
             <div>
               <h3 className="font-bold text-lg mb-4">Installation</h3>
               <ul className="space-y-2">
-                <li><Link href="/installation/georgia/" className="hover:underline">Fence Installation in Georgia</Link></li>
+                <li><Link href="/installation/georgia/commercial-fence-installation/" className="hover:underline">Fence Installation in Georgia</Link></li>
                 <li><Link href="/installation/georgia/atlanta-fence-installation/" className="hover:underline">Atlanta Fence Installation</Link></li>
                 <li><Link href="/installation/georgia/marietta-fence-installation/" className="hover:underline">Marietta Fence Installation</Link></li>
                 <li><Link href="/installation/georgia/alpharetta-fence-installation/" className="hover:underline">Alpharetta Fence Installation</Link></li>
