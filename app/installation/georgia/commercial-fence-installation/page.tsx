@@ -113,24 +113,28 @@ const repairServices = [
     description: 'Fast repair for broken hinges, damaged frames, and sagging dumpster enclosure gates. We service commercial properties throughout Metro Atlanta.',
     image: '/images/repair-dumpster-gate.jpg',
     alt: 'Commercial dumpster gate repair near Atlanta, GA',
+    href: '/installation/georgia/dumpster-gate-repair/',
   },
   {
     title: 'Chain Link Fence Repair',
     description: 'Fabric repair, post replacement, tension wire, and top rail repairs for commercial chain link systems. Quick turnaround to restore your perimeter security.',
     image: '/images/repair-chain-link.jpg',
     alt: 'Chain link fence repair in Atlanta, GA',
+    href: '/installation/georgia/chain-link-fence-repair/',
   },
   {
     title: 'Security Fence & Gate Repair',
     description: 'Repairs to high-security fencing, crash-damaged sections, and compromised perimeter systems. Emergency response available for facilities with urgent security needs.',
     image: '/images/repair-security-fence.jpg',
     alt: 'Security fence and gate repair in Georgia',
+    href: '/installation/georgia/security-fence-gate-repair/',
   },
   {
     title: 'Roll Gate & Slide Gate Repair',
     description: 'Track repair, roller replacement, gate operator service, and frame straightening for commercial roll and slide gates.',
     image: '/images/repair-roll-gate.jpg',
     alt: 'Commercial roll gate and slide gate repair in Atlanta, GA',
+    href: '/installation/georgia/roll-gate-slide-gate-repair/',
   },
 ]
 
@@ -290,7 +294,7 @@ export default function GeorgiaInstallationPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {repairServices.map((service) => (
-              <div key={service.title} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <Link key={service.title} href={service.href} className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow group">
                 <div className="aspect-video relative bg-gray-300">
                   {service.image ? (
                     <Image src={service.image} alt={service.alt ?? service.title} fill className="object-cover" />
@@ -301,10 +305,10 @@ export default function GeorgiaInstallationPage() {
                   )}
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">{service.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight group-hover:text-brand-orange transition-colors">{service.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
