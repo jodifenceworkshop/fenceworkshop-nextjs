@@ -54,48 +54,56 @@ const installationServices = [
     description: 'Heavy-duty commercial and industrial chain link for Alpharetta-area perimeter security, job sites, and property boundaries. Available in galvanized or vinyl-coated finishes with multiple height options.',
     image: '/images/service-chain-link-fence.jpg',
     alt: 'Commercial chain link fence installation in Alpharetta, GA',
+    href: '/installation/georgia/commercial-chain-link-fence/',
   },
   {
     title: 'Security Fence Installation',
     description: 'High-security fencing systems for North Fulton commercial and industrial facilities — anti-climb designs, barbed wire, and razor ribbon topping for maximum perimeter protection.',
     image: '/images/service-security-fence.jpg',
     alt: 'Industrial security fence installation in Alpharetta, GA',
+    href: '/installation/georgia/commercial-security-fence/',
   },
   {
     title: 'Ornamental & Aluminum Fence Installation',
     description: 'Architectural-grade ornamental and aluminum fencing for Alpharetta office parks, tech campuses, and HOA communities through general contractors and property managers.',
     image: '/images/service-ornamental-gate.jpg',
     alt: 'Ornamental aluminum fence installation in Alpharetta, GA',
+    href: '/installation/georgia/ornamental-aluminum-fence/',
   },
   {
     title: 'Dumpster Gate Installation',
     description: 'Custom dumpster enclosure gates built to North Fulton County code. We work with property managers, HOAs, and commercial facilities throughout Alpharetta for new installs and replacements.',
     image: '/images/service-dumpster-gate.jpg',
     alt: 'Commercial dumpster gate installation in Alpharetta, GA',
+    href: '/installation/georgia/dumpster-enclosure-gates/',
   },
   {
     title: 'Roll Gate & Slide Gate Installation',
     description: 'Manual and motorized roll gates for Alpharetta commercial driveways and facility entrances. Includes gate opener systems integrated into your installation.',
     image: '/images/service-roll-gate.jpg',
     alt: 'Commercial roll gate and slide gate installation in Alpharetta, GA',
+    href: '/installation/georgia/slide-gates/',
   },
   {
     title: 'Warehouse & Industrial Fencing',
     description: 'Interior and exterior fencing for Alpharetta-area warehouses, distribution centers, and tech facilities along the GA-400 corridor. Partition fencing, cage systems, and perimeter security.',
     image: '/images/service-warehouse-fencing.jpg',
     alt: 'Warehouse and industrial fence installation in Alpharetta, GA',
+    href: '/installation/georgia/warehouse-industrial-fencing/',
   },
   {
     title: 'Parking Deck & Garage Fencing',
     description: 'Perimeter cable systems, guard rails, and safety fencing for North Fulton parking structures. Code-compliant installations with durable powder-coat finishes.',
     image: '/images/service-parking-deck.jpg',
     alt: 'Parking deck gate and fencing installation in Alpharetta, GA',
+    href: '/installation/georgia/parking-garage-fencing/',
   },
   {
     title: 'Security Gate Systems',
     description: 'Swing gates, slide gates, and access control integration for Alpharetta commercial and corporate facilities. Gate openers and operators included with installations.',
     image: '/images/service-security-gate.jpg',
     alt: 'Commercial security gate system installation in Alpharetta, GA',
+    href: '/installation/georgia/security-gate-systems/',
   },
 ]
 
@@ -255,15 +263,15 @@ export default function AlpharettaInstallationPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {installationServices.map((service) => (
-              <div key={service.title} className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <Link key={service.title} href={service.href} className="block bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow group">
                 <div className="aspect-video relative bg-gray-300">
                   <Image src={service.image} alt={service.alt} fill className="object-cover" />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">{service.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight group-hover:text-brand-orange transition-colors">{service.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
