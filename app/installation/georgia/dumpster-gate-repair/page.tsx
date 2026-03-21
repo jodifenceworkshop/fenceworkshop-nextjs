@@ -62,7 +62,7 @@ export default function DumpsterGateRepairPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Dumpster Gate Problems We Fix</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">Dumpster gates take a beating from waste haulers, weather, and daily use. We fix all of it — usually in a single visit.</p>
           </div>
-          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/repair-dumpster-gate-feature.jpg" alt="Commercial dumpster gate repair by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
+          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/repair-dumpster-gate.jpg" alt="Commercial dumpster gate repair by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: 'Broken & Worn Hinges', description: 'Heavy steel gates and daily hauler use destroy hinges fast. We replace commercial-grade hinges and reset posts so the gate swings freely and latches properly.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-3.5a.42.42 0 01-.06-.57l3.19-3.5a.42.42 0 01.58-.06l5.1 3.5a.42.42 0 01.06.57l-3.19 3.5a.42.42 0 01-.58.06zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>) },

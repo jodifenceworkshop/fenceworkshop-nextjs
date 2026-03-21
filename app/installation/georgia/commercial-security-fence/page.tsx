@@ -184,7 +184,7 @@ export default function CommercialSecurityFencePage() {
           <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto">
             <div className="aspect-[16/7] relative bg-gray-200">
               <Image
-                src="/images/service-security-fence-feature.jpg"
+                src="/images/service-security-fence.jpg"
                 alt="High-security commercial fence installation by Fence Workshop in Georgia"
                 fill
                 className="object-cover"

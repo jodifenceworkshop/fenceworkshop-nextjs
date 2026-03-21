@@ -62,7 +62,7 @@ export default function SecurityGateSystemsPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Commercial Security Gate Systems?</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">Automated security gates and access control give commercial facilities managed entry, enhanced security, and a professional first impression — all in one system.</p>
           </div>
-          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/service-security-gate-feature.jpg" alt="Commercial automated security gate system with access control installed by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
+          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/service-security-gate.jpg" alt="Commercial automated security gate system with access control installed by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: 'Controlled Vehicle Access', description: 'Manage who enters and exits your property with automated gates and access control — keypads, card readers, telephone entry, and remote controls.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>) },

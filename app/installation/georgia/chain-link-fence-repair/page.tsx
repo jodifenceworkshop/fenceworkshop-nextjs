@@ -62,7 +62,7 @@ export default function ChainLinkFenceRepairPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Chain Link Fence Problems We Fix</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">From minor fabric patches to full section replacements — we handle every type of commercial chain link fence repair.</p>
           </div>
-          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/repair-chain-link-feature.jpg" alt="Commercial chain link fence repair by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
+          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/repair-chain-link.jpg" alt="Commercial chain link fence repair by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: 'Fabric Replacement & Patching', description: 'Cut, torn, or stretched chain link fabric compromises your perimeter. We replace damaged sections with matching gauge and coating — galvanized or vinyl-coated.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>) },

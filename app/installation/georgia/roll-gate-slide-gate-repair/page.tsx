@@ -62,7 +62,7 @@ export default function RollGateSlideGateRepairPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Roll Gate &amp; Slide Gate Problems We Fix</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">From gates off the track to dead operators — we troubleshoot and fix every type of commercial roll gate and slide gate issue.</p>
           </div>
-          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/repair-roll-gate-feature.jpg" alt="Commercial roll gate and slide gate repair by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
+          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/repair-roll-gate.jpg" alt="Commercial roll gate and slide gate repair by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: 'Track & Roller Repair', description: 'Bent tracks, worn rollers, and debris buildup cause gates to derail or bind. We repair V-tracks, replace rollers, and clean and realign the entire track system.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.1-3.5a.42.42 0 01-.06-.57l3.19-3.5a.42.42 0 01.58-.06l5.1 3.5a.42.42 0 01.06.57l-3.19 3.5a.42.42 0 01-.58.06zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>) },
