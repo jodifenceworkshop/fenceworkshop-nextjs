@@ -62,7 +62,7 @@ export default function SecurityFenceGateRepairPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Security Fence &amp; Gate Problems We Fix</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">From emergency breach repairs to gate operator service — we handle every type of security fence and gate repair for commercial and industrial facilities.</p>
           </div>
-          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/repair-security-fence.jpg" alt="Security fence and gate repair by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
+          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/commercial-aluminum-security-gate-fencing.png" alt="Commercial aluminum security gate and fencing repair by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: 'Crash & Impact Damage', description: 'Vehicle impact can take out gates, posts, and entire fence sections. We respond fast to secure the breach and rebuild the damaged area to original specifications.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>) },
