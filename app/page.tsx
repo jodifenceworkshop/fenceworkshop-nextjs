@@ -417,38 +417,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Resources Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Resources</p>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Fence Guides &amp; Planning Resources
-            </h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Choosing the right fence matters. We provide clear, practical guidance to help you plan your
-              project and choose the right materials.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Link
-              href="/guides/aluminum-vs-steel/"
-              className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-orange hover:shadow-md transition-all"
-            >
-              <h3 className="text-xl font-bold text-gray-900 mb-2">→ Aluminum vs Steel Fencing</h3>
-              <p className="text-gray-600">Compare materials to choose the right fence for your needs</p>
-            </Link>
-            <Link
-              href="/guides/diy-installation/"
-              className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-orange hover:shadow-md transition-all"
-            >
-              <h3 className="text-xl font-bold text-gray-900 mb-2">→ Installation Guides for DIY-ers</h3>
-              <p className="text-gray-600">Step-by-step instructions for installing your own fence</p>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-brand-orange text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
