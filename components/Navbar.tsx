@@ -47,7 +47,7 @@ export default function Navbar() {
             <Link href="/resources/" className="text-gray-700 hover:text-brand-orange font-medium">
               Resources
             </Link>
-            <Link href="/about/" className="text-gray-700 hover:text-brand-orange font-medium">
+            <Link href="/about-us/" className="text-gray-700 hover:text-brand-orange font-medium">
               About
             </Link>
             <a href="tel:4043144419" className="text-brand-orange font-semibold text-lg">(404) 314-4419</a>
@@ -107,7 +107,7 @@ export default function Navbar() {
           <Link href="/resources/" className="block text-gray-700 hover:text-brand-orange font-medium py-2" onClick={() => setMenuOpen(false)}>
             Resources
           </Link>
-          <Link href="/about/" className="block text-gray-700 hover:text-brand-orange font-medium py-2" onClick={() => setMenuOpen(false)}>
+          <Link href="/about-us/" className="block text-gray-700 hover:text-brand-orange font-medium py-2" onClick={() => setMenuOpen(false)}>
             About
           </Link>
           <a href="tel:4043144419" className="block text-brand-orange font-semibold py-2">

@@ -608,7 +608,7 @@ export default function CommercialChainLinkFencePage() {
             <div>
               <h3 className="font-bold text-lg mb-4">Company</h3>
               <ul className="space-y-2">
-                <li><Link href="/about/" className="hover:underline">About Fence Workshop</Link></li>
+                <li><Link href="/about-us/" className="hover:underline">About Fence Workshop</Link></li>
                 <li><Link href="/contact/" className="hover:underline">Contact</Link></li>
                 <li><Link href="/reviews/" className="hover:underline">Reviews</Link></li>
               </ul>
