@@ -26,14 +26,14 @@ export default function ShopPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/50 to-gray-900/20" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">
               Shop Fencing &amp; Gates Online
             </h1>
-            <p className="text-2xl md:text-3xl font-bold text-brand-green mb-6 leading-tight">
+            <p className="text-2xl md:text-3xl font-bold text-brand-orange mb-6 leading-tight">
               Premium Aluminum Fencing — Shipped Nationwide
             </p>
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
@@ -45,7 +45,7 @@ export default function ShopPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="#products"
-                className="inline-block bg-brand-green hover:bg-emerald-800 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
+                className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
               >
                 Browse Products
               </Link>
