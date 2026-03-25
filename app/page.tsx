@@ -269,11 +269,9 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Why Fence Workshop</p>
-              <h2 className="text-4xl font-bold text-gray-900 mb-2">
-                Built by Installers.
-              </h2>
-              <h2 className="text-4xl font-bold text-brand-orange mb-6">
-                Designed to Last.
+              <h2 className="text-4xl font-bold mb-6">
+                <span className="text-gray-900">Built by Installers.</span>{' '}
+                <span className="text-brand-orange">Designed to Last.</span>
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 Unlike big-box retailers, Fence Workshop is built on real installation experience. The same knowledge
@@ -348,7 +346,7 @@ export default function Home() {
               <div className="aspect-square relative overflow-hidden">
                 <Image
                   src="/images/shop-aluminum-fencing.jpg"
-                  alt="Aluminum fence kit"
+                  alt="Buy aluminum fence panels and posts online from Fence Workshop"
                   fill
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                 />
@@ -363,7 +361,7 @@ export default function Home() {
               <div className="aspect-square relative overflow-hidden">
                 <Image
                   src="/images/shop-driveway-gates.jpg"
-                  alt="Aluminum driveway gate"
+                  alt="Aluminum driveway gate for sale — single and double swing options"
                   fill
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                 />
@@ -378,7 +376,7 @@ export default function Home() {
               <div className="aspect-square relative overflow-hidden">
                 <Image
                   src="/images/shop-walk-gates.jpg"
-                  alt="Aluminum walk gate"
+                  alt="Aluminum walk gate kit for residential properties"
                   fill
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                 />
