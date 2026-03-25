@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
-import LocalBusinessSchema from '@/components/LocalBusinessSchema'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function AboutUsPage() {
   return (
     <main className="min-h-screen">
-      <LocalBusinessSchema />
       <Navbar />
 
       {/* Spacer for fixed navbar */}

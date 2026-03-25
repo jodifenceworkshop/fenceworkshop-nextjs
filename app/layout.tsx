@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import LocalBusinessSchema from '@/components/LocalBusinessSchema'
 
 export const metadata: Metadata = {
   title: 'Fence Installation Georgia | Metro Atlanta Fencing | Fence Workshop',
@@ -17,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <LocalBusinessSchema />
+        {children}
+      </body>
     </html>
   )
 }

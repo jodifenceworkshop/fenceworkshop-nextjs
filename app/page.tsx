@@ -1,6 +1,12 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+
+export const metadata: Metadata = {
+  title: 'Fence Installation Georgia | Metro Atlanta Fencing | Fence Workshop',
+  description: 'Professional fence installation in Metro Atlanta and throughout Georgia. Commercial & residential fencing — chain link, aluminum, security gates, and more. Licensed & insured. 15+ years experience.',
+}
 
 export default function Home() {
   return (

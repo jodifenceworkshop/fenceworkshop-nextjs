@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
-import LocalBusinessSchema from '@/components/LocalBusinessSchema'
 import type { Metadata } from 'next'
 
 const faqSchema = {
@@ -67,7 +66,6 @@ const faqs = [
 export default function DumpsterEnclosureGatesPage() {
   return (
     <main className="min-h-screen">
-      <LocalBusinessSchema />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <div className="h-20" />
