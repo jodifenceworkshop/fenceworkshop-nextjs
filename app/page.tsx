@@ -343,7 +343,7 @@ export default function Home() {
           </div>
 
           {/* Product Categories Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <Link href="/shop/aluminum-fencing/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
               <div className="aspect-square relative overflow-hidden">
                 <Image
@@ -387,21 +387,6 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-gray-900 mb-1">Walk Gates</h3>
                 <p className="text-gray-600 text-sm mb-2">Pedestrian gates for residential properties</p>
                 <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Walk Gates →</span>
-              </div>
-            </Link>
-            <Link href="/shop/vinyl-fencing/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-              <div className="aspect-square relative overflow-hidden">
-                <Image
-                  src="/images/shop-vinyl-fencing.jpg"
-                  alt="Vinyl fencing"
-                  fill
-                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="text-xl font-bold text-gray-900 mb-1">Vinyl Fencing</h3>
-                <p className="text-gray-600 text-sm mb-2">Classic vinyl fencing that never needs painting</p>
-                <span className="text-brand-green font-semibold text-sm group-hover:underline">Shop Vinyl →</span>
               </div>
             </Link>
           </div>
