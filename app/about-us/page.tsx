@@ -231,7 +231,7 @@ export default function AboutUsPage() {
               {
                 number: '04',
                 title: 'Competitive Pricing',
-                description: 'Direct relationships with manufacturers like Ameristar and Bufftech allow us to offer fair, transparent pricing without sacrificing quality.',
+                description: <span>Direct relationships with manufacturers like <Link href="/ameristar/" className="text-brand-orange hover:underline">Ameristar</Link> and Bufftech allow us to offer fair, transparent pricing without sacrificing quality.</span>,
               },
               {
                 number: '05',
