@@ -18,7 +18,16 @@ export default function ShopPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-20 lg:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-shop-aluminum-fencing.jpg"
+            alt="Aluminum fence panels and gates available for online purchase from Fence Workshop"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/40" />
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">
