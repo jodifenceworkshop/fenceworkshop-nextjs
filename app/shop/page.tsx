@@ -245,18 +245,18 @@ export default function ShopPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <Link
-              href="/guides/aluminum-vs-steel/"
+              href="/shop/resources/how-to-install-aluminum-fence/"
+              className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"
+            >
+              <h3 className="text-xl font-bold text-gray-900 mb-2">→ How to Install Aluminum Fence Panels</h3>
+              <p className="text-gray-600">Step-by-step guide from professional installers</p>
+            </Link>
+            <Link
+              href="/shop/resources/aluminum-vs-steel-fencing/"
               className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-2">→ Aluminum vs Steel Fencing</h3>
               <p className="text-gray-600">Compare materials to choose the right fence for your needs</p>
-            </Link>
-            <Link
-              href="/guides/diy-installation/"
-              className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"
-            >
-              <h3 className="text-xl font-bold text-gray-900 mb-2">→ Installation Guides for DIY-ers</h3>
-              <p className="text-gray-600">Step-by-step instructions for installing your own fence</p>
             </Link>
           </div>
         </div>
