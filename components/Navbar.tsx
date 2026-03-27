@@ -44,9 +44,6 @@ export default function Navbar() {
             <Link href="/shop/" className="text-gray-700 hover:text-brand-orange font-medium">
               Shop Fencing
             </Link>
-            <Link href="/resources/" className="text-gray-700 hover:text-brand-orange font-medium">
-              Resources
-            </Link>
             <Link href="/about-us/" className="text-gray-700 hover:text-brand-orange font-medium">
               About
             </Link>
@@ -103,9 +100,6 @@ export default function Navbar() {
           </Link>
           <Link href="/shop/" className="block text-gray-700 hover:text-brand-orange font-medium py-2" onClick={() => setMenuOpen(false)}>
             Shop Fencing
-          </Link>
-          <Link href="/resources/" className="block text-gray-700 hover:text-brand-orange font-medium py-2" onClick={() => setMenuOpen(false)}>
-            Resources
           </Link>
           <Link href="/about-us/" className="block text-gray-700 hover:text-brand-orange font-medium py-2" onClick={() => setMenuOpen(false)}>
             About
