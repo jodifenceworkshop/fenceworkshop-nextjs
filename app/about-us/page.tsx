@@ -92,7 +92,7 @@ export default function AboutUsPage() {
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Fence Workshop was founded in 2011 by graduates of Georgia Tech and Georgia State University
-                with backgrounds in architecture, real estate development, building construction, and urban planning.
+                with backgrounds in architecture, real estate development, building construction, and business administration.
                 What started as a local Atlanta fencing operation has grown into a regional leader in{' '}
                 <Link href="/installation/georgia/commercial-fence-installation/" className="text-brand-orange hover:underline font-medium">
                   commercial fence installation
