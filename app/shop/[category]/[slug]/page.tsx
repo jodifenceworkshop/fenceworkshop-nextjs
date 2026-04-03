@@ -14,6 +14,8 @@ const CATEGORY_LABELS: Record<string, string> = {
   'accessories': 'Accessories',
 }
 
+export const revalidate = 60
+
 interface ProductPageProps {
   params: Promise<{ category: string; slug: string }>
 }

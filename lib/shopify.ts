@@ -9,22 +9,33 @@ type ShopifyResponse<T> = {
 }
 
 async function shopifyFetch<T>(query: string, variables: Record<string, unknown> = {}): Promise<T> {
-  const res = await fetch(endpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Shopify-Storefront-Access-Token': storefrontAccessToken,
-    },
-    body: JSON.stringify({ query, variables }),
-  })
-
-  const json: ShopifyResponse<T> = await res.json()
-
-  if (json.errors) {
-    throw new Error(json.errors.map((e) => e.message).join('\n'))
+  if (!storefrontAccessToken) {
+    console.error('Missing SHOPIFY_STOREFRONT_ACCESS_TOKEN')
+    return {} as T
   }
 
-  return json.data
+  try {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Shopify-Storefront-Access-Token': storefrontAccessToken,
+      },
+      body: JSON.stringify({ query, variables }),
+    })
+
+    const json: ShopifyResponse<T> = await res.json()
+
+    if (json.errors) {
+      console.error('Shopify API errors:', json.errors)
+      return {} as T
+    }
+
+    return json.data
+  } catch (error) {
+    console.error('Shopify fetch failed:', error)
+    return {} as T
+  }
 }
 
 // ── Types ─────────────────────────────────────────────────────────
@@ -146,7 +157,7 @@ const PRODUCT_FRAGMENT = `
 // ── Queries ───────────────────────────────────────────────────────
 
 export async function getProductByHandle(handle: string): Promise<ShopifyProduct | null> {
-  const { product } = await shopifyFetch<{ product: ShopifyProduct | null }>(`
+  const data = await shopifyFetch<{ product: ShopifyProduct | null }>(`
     ${PRODUCT_FRAGMENT}
     query GetProduct($handle: String!) {
       product(handle: $handle) {
@@ -155,7 +166,7 @@ export async function getProductByHandle(handle: string): Promise<ShopifyProduct
     }
   `, { handle })
 
-  return product
+  return data?.product ?? null
 }
 
 export async function getProducts(first = 50, query?: string): Promise<ShopifyProduct[]> {
@@ -172,7 +183,7 @@ export async function getProducts(first = 50, query?: string): Promise<ShopifyPr
     }
   `, { first, query })
 
-  return products.edges.map((e) => e.node)
+  return products?.edges?.map((e) => e.node) ?? []
 }
 
 export async function getProductsByType(productType: string): Promise<ShopifyProduct[]> {
@@ -199,7 +210,7 @@ export async function getAllProductHandles(): Promise<{ handle: string; productT
     }
   `)
 
-  return products.edges.map((e) => e.node)
+  return products?.edges?.map((e) => e.node) ?? []
 }
 
 // ── Cart / Checkout ───────────────────────────────────────────────

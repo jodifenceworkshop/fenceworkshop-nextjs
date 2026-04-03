@@ -198,6 +198,8 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   return { title: cat.title, description: cat.description }
 }
 
+export const revalidate = 60
+
 export function generateStaticParams() {
   return Object.keys(categories).map((category) => ({ category }))
 }
