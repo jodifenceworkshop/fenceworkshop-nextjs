@@ -1,4 +1,4 @@
-const domain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN!
+const domain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN || 'fenceworkshop-com-shop.myshopify.com'
 const storefrontAccessToken = process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN!
 
 const endpoint = `https://${domain}/api/2024-10/graphql.json`
