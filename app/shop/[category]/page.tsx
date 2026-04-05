@@ -34,7 +34,7 @@ const categories: Record<string, CategoryConfig> = {
       },
       {
         heading: 'Choosing the Right Driveway Gate Size',
-        body: 'Driveway gates are measured by the total opening width — the clear distance between your two gate posts. Our most popular sizes are 10ft and 12ft openings, which accommodate standard residential driveways. For wider driveways or RV access, 14ft and 16ft options are available. Gate height matches your fence panel height (3ft, 4ft, or 5ft), creating a seamless look across your property line. If you\'re unsure which size fits your driveway, our team of professional installers can help — call (404) 314-4419.',
+        body: 'Driveway gates are measured by the total opening width — the clear distance between your two gate posts. Our most popular sizes are 10ft and 12ft openings, which accommodate standard residential driveways. For wider driveways or RV access, 14ft and 16ft options are available. Gate height matches your fence panel height (3ft, 4ft, or 5ft), creating a seamless look across your property line. Need a custom size? We build custom driveway gates for an additional charge — call (404) 314-4419 for custom pricing. If you\'re unsure which size fits your driveway, our team of professional installers can help.',
       },
       {
         heading: 'Aluminum vs. Iron Driveway Gates',
@@ -43,6 +43,7 @@ const categories: Record<string, CategoryConfig> = {
     ],
     faqs: [
       { q: 'How wide should a driveway gate be?', a: 'Most residential driveways need a 10ft or 12ft total opening. Measure the clear distance between where your posts will be set. For RV or boat access, choose a 14ft or 16ft opening.' },
+      { q: 'Can I order a custom-size driveway gate?', a: 'Yes. We build custom driveway gates in any size for an additional charge. Call (404) 314-4419 for custom pricing.' },
       { q: 'Do driveway gate kits include posts?', a: 'Yes. Every driveway gate kit includes two gate posts along with the gate panels, hinges, latch, and drop rod — everything you need for a complete installation.' },
       { q: 'Can aluminum driveway gates be automated?', a: 'Yes. When ordering, select the "Automation" option to get gate panels built with an oversized bottom rail designed to accept gate operator arms. This ensures a clean, factory-engineered mounting point for your automatic opener. The lightweight aluminum also puts less strain on motors compared to heavy iron or steel gates.' },
       { q: 'What maintenance do aluminum driveway gates need?', a: 'Virtually none. The TGIC powder-coated finish won\'t rust, fade, or peel. An occasional rinse with a garden hose is all that\'s needed to keep your gate looking new.' },
@@ -67,18 +68,19 @@ const categories: Record<string, CategoryConfig> = {
       },
       {
         heading: 'Walk Gate Sizes and How to Measure',
-        body: 'Walk gates are available in standard widths of 3ft, 4ft, and 5ft. The width you need depends on your opening — measure the clear distance between your gate posts and subtract approximately 3 inches for hinge and latch clearance. Height options match our fence panels at 3ft, 4ft, and 5ft. For most pedestrian entries, a 4ft-wide gate provides comfortable access. If you need to move lawn equipment or wheelbarrows through the gate, consider a 5ft-wide panel.',
+        body: 'Walk gates are available in standard widths of 3ft, 4ft, and 5ft. Each gate is built 1 inch narrower than its nominal width to allow exactly 1 inch of total clearance between the gate posts for hinge and latch hardware. For example, order a 4ft-wide gate and the actual gate panel measures 47 inches, designed to fit a 48-inch rough opening between posts. Height options match our fence panels at 3ft, 4ft, and 5ft. For most pedestrian entries, a 4ft-wide gate provides comfortable access. If you need to move lawn equipment or wheelbarrows through the gate, consider a 5ft-wide panel. Need a custom size? We build custom walk gates for an additional charge — call (404) 314-4419 for custom pricing.',
       },
       {
         heading: 'Pool Fence Gate Requirements',
-        body: 'Most local building codes require pool enclosure gates to be self-closing and self-latching with the latch positioned at least 54 inches from the ground on the pool side. Our walk gate kits include self-closing hinges, but for pool code compliance you\'ll need to upgrade to a MagnaLatch — a key-lockable, magnetic gate latch specifically designed to meet pool barrier codes. We carry the D&D Series 3 MagnaLatch in our accessories section. Always check your local code requirements before installation, and feel free to call us at (404) 314-4419 if you need help with pool fence compliance.',
+        body: 'Most local building codes require pool enclosure gates to be self-closing and self-latching with the latch positioned at least 54 inches from the ground on the pool side. Our walk gate kits include self-closing hinges, but for pool code compliance you\'ll need to upgrade to a MagnaLatch — a key-lockable, magnetic gate latch specifically designed to meet pool barrier codes. We carry the D&D Series 3 MagnaLatch in our accessories section. See our pool code aluminum fence guide for the full list of styles and heights that meet typical pool barrier requirements, including the 45-inch rail spacing rule. Always check your local code requirements before installation, and feel free to call us at (404) 314-4419 if you need help with pool fence compliance.',
       },
     ],
     faqs: [
       { q: 'Are walk gates self-closing?', a: 'Yes. Every walk gate kit includes spring-loaded self-closing hinges that automatically return the gate to the closed position.' },
       { q: 'Do walk gates meet pool code requirements?', a: 'Walk gate kits include self-closing hinges, which is one requirement. For full pool code compliance, you\'ll also need a MagnaLatch — a key-lockable magnetic latch that mounts at least 54 inches from the ground. We carry the D&D Series 3 MagnaLatch in our accessories section.' },
       { q: 'Can I match my walk gate to my fence panels?', a: 'Absolutely. Every fence style we carry has a matching walk gate in the same design, height options, and color choices.' },
-      { q: 'What width walk gate should I choose?', a: 'A 4ft gate works well for standard pedestrian access. Choose 5ft if you need to move lawn equipment, strollers, or wheelchairs through the opening.' },
+      { q: 'What width walk gate should I choose?', a: 'A 4ft gate works well for standard pedestrian access. Choose 5ft if you need to move lawn equipment, strollers, or wheelchairs through the opening. Keep in mind that gates are built 1 inch narrower than the nominal width — a 4ft gate actually measures 47 inches to fit a 48-inch rough opening between posts.' },
+      { q: 'Can I order a custom-size walk gate?', a: 'Yes. We build custom walk gates in any size for an additional charge. Call (404) 314-4419 for custom pricing.' },
       { q: 'Do walk gate kits include posts?', a: 'Yes. Every walk gate kit includes two gate posts along with the gate panel, self-closing hinges, and gravity latch — everything you need for installation.' },
     ],
   },
@@ -104,16 +106,17 @@ const categories: Record<string, CategoryConfig> = {
       },
       {
         heading: 'Choosing the Right Fence Height',
-        body: 'Our aluminum fence panels are available in three standard heights: 3ft, 4ft, and 5ft. A 3ft fence works well for garden borders and decorative property lines. The 4ft height is our most popular — it defines your property while maintaining an open, welcoming feel. Choose 5ft for added privacy and security, pool enclosures (check local code for minimum height requirements), or anywhere you need a more substantial barrier. All heights use standard 6ft-wide sections.',
+        body: 'Our aluminum fence panels are available in three standard heights: 3ft, 4ft, and 5ft. A 3ft fence works well for garden borders and decorative property lines. The 4ft height is our most popular — it defines your property while maintaining an open, welcoming feel. Choose 5ft for added privacy and security, pool enclosures (check local code for minimum height requirements), or anywhere you need a more substantial barrier. All heights use standard 6ft-wide sections, and the panels can easily be cut down on-site with a standard hacksaw or miter saw for custom widths — ideal for finishing out a run, fitting tight spaces, or adjusting around obstacles.',
       },
       {
         heading: 'Aluminum Fence Styles Explained',
-        body: 'Our fence panels come in three main design categories. Flat-top styles have level picket tops for a clean, modern look — popular in contemporary homes and commercial settings. Spear-top (or pointed-top) styles feature traditional finial points for a classic wrought-iron appearance and added security. Staggered-top designs alternate picket heights for a distinctive, elegant profile. Within each category, you\'ll find variations in picket spacing, rail design, and decorative elements to match your property\'s architecture.',
+        body: 'Our fence panels come in three main design categories. Flat-top styles have level picket tops for a clean, modern look — popular in contemporary homes and commercial settings. Spear-top (or pointed-top) styles feature traditional finial points for a classic wrought-iron appearance and added security. Staggered-top designs alternate picket heights for a distinctive, elegant profile. Within each category, you\'ll find variations in picket spacing, rail design, and decorative elements to match your property\'s architecture. Shopping for a specific use case? See our pool code aluminum fence guide for pool barrier compliance, or our pet fence guide for styles with tighter picket spacing to contain small dogs, puppies, and cats.',
       },
     ],
     faqs: [
       { q: 'How long do aluminum fence panels last?', a: 'With virtually zero maintenance, aluminum fence panels typically last 30+ years. The aluminum won\'t rust and the TGIC powder coating resists fading and peeling far longer than paint.' },
-      { q: 'How wide is each fence panel?', a: 'Each panel spans 6 feet between posts. This is the standard width used across the aluminum fencing industry and makes layout and installation straightforward.' },
+      { q: 'How wide is each fence panel?', a: 'Each panel spans 6 feet between posts. This is the standard width used across the aluminum fencing industry and makes layout and installation straightforward. Panels can easily be cut down on-site with a hacksaw or miter saw for custom widths.' },
+      { q: 'Can aluminum fence panels be cut to a custom width?', a: 'Yes. Our 6ft panels can be cut down on-site using a standard hacksaw or miter saw. This is useful for finishing the end of a run, fitting between tight obstacles, or adjusting around existing landscaping.' },
       { q: 'Can aluminum fencing be installed on a slope?', a: 'Yes. Aluminum fence panels can be "racked" (angled) to follow the slope of your yard. Most of our panels rack up to a certain degree without modification. For steep slopes, stair-stepping panels is another common approach.' },
       { q: 'Is aluminum fencing strong enough for security?', a: 'Commercial-grade aluminum panels with 3/4-inch pickets provide excellent security. The aluminum alloy is strong enough that pickets cannot be easily bent or broken. Spear-top styles add additional deterrence.' },
       { q: 'What colors are available?', a: 'Our aluminum fence panels are available in Black, Bronze, and White. All colors use the same TGIC powder coating process for consistent durability.' },
