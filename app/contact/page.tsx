@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -89,68 +90,7 @@ export default function ContactPage() {
               <p className="text-gray-700 mb-6">
                 Fill out the form and we&apos;ll get back to you within one business day.
               </p>
-              <form className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="project-type" className="block text-sm font-medium text-gray-700 mb-1">Project Type</label>
-                  <select
-                    id="project-type"
-                    name="project-type"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent bg-white"
-                  >
-                    <option value="">Select one…</option>
-                    <option value="installation-ga">Fence Installation (Georgia)</option>
-                    <option value="residential-product">Residential Fence Product Order</option>
-                    <option value="commercial-product">Commercial Grade Custom Quote</option>
-                    <option value="custom-gate">Custom Gate Sizing</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Project Details</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    placeholder="Tell us about your project — style, height, linear footage, timeline, or any specs you have."
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-                >
-                  Request Quote
-                </button>
-              </form>
+              <QuoteForm showProjectType subject="Quote Request — Contact Page" />
             </div>
           </div>
         </div>
