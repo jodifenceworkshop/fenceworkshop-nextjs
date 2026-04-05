@@ -258,6 +258,20 @@ export default function ShopPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">→ Aluminum vs Steel Fencing</h3>
               <p className="text-gray-600">Compare materials to choose the right fence for your needs</p>
             </Link>
+            <Link
+              href="/shop/resources/pool-code-aluminum-fence/"
+              className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"
+            >
+              <h3 className="text-xl font-bold text-gray-900 mb-2">→ Pool Code Aluminum Fence Guide</h3>
+              <p className="text-gray-600">Which styles and heights meet pool barrier code requirements</p>
+            </Link>
+            <Link
+              href="/shop/resources/pet-fence/"
+              className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"
+            >
+              <h3 className="text-xl font-bold text-gray-900 mb-2">→ Pet &amp; Puppy Fence Guide</h3>
+              <p className="text-gray-600">Best aluminum fence styles to contain small dogs, puppies, and cats</p>
+            </Link>
           </div>
         </div>
       </section>
