@@ -54,6 +54,29 @@ const faqSchema = {
   ],
 }
 
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Pet & Puppy Aluminum Fence: Best Styles for Dogs',
+  description: 'Guide to aluminum fence styles with tight picket spacing designed to keep puppies and small pets safely contained.',
+  author: {
+    '@type': 'Organization',
+    name: 'Fence Workshop',
+    url: 'https://www.fenceworkshop.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fence Workshop',
+    url: 'https://www.fenceworkshop.com',
+  },
+  datePublished: '2026-04-05',
+  dateModified: '2026-04-05',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://www.fenceworkshop.com/shop/resources/pet-fence/',
+  },
+}
+
 const petStyles = [
   { style: 'Athens', note: 'Spear-top with puppy picket variant available' },
   { style: 'Avalon', note: 'Flat-top with integrated tight picket spacing' },
@@ -71,6 +94,10 @@ export default function PetFencePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <Navbar />
       <div className="h-20" />

@@ -14,6 +14,37 @@ const CATEGORY_LABELS: Record<string, string> = {
   'accessories': 'Accessories',
 }
 
+// Pool-code compliant style + height combos (45" rail spacing rule)
+const POOL_CODE_COMBOS: Array<{ style: string; heights: string[] }> = [
+  { style: 'athens', heights: ['6'] },
+  { style: 'atlanta', heights: ['6'] },
+  { style: 'brookhaven', heights: ['5', '6'] },
+  { style: 'buford', heights: ['5', '6'] },
+  { style: 'candler', heights: ['5', '6'] },
+  { style: 'chamblee', heights: ['5', '6'] },
+  { style: 'dawson', heights: ['6'] },
+  { style: 'dunwoody', heights: ['6'] },
+  { style: 'savannah', heights: ['4', '5'] },
+]
+
+// Pet-friendly styles (tight picket spacing / puppy picket variants)
+const PET_FRIENDLY_STYLES = [
+  'athens', 'avalon', 'berkley', 'buford', 'chamblee', 'cobb', 'dublin', 'dunwoody',
+]
+
+function detectUseCases(title: string): { poolCode: boolean; petFriendly: boolean } {
+  const lower = title.toLowerCase()
+  const heightMatch = lower.match(/(\d+)\s*ft/)
+  const height = heightMatch ? heightMatch[1] : null
+
+  const poolCode = POOL_CODE_COMBOS.some(
+    ({ style, heights }) => lower.includes(style) && height !== null && heights.includes(height),
+  )
+  const petFriendly = PET_FRIENDLY_STYLES.some((style) => lower.includes(style))
+
+  return { poolCode, petFriendly }
+}
+
 export const revalidate = 60
 
 interface ProductPageProps {
@@ -42,6 +73,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const images = product.images.edges.map((e) => e.node)
   const variants = product.variants.edges.map((e) => e.node)
   const categoryLabel = CATEGORY_LABELS[category] || 'Shop'
+  const { poolCode, petFriendly } = detectUseCases(product.title)
 
   return (
     <main className="min-h-screen bg-white">
@@ -135,6 +167,34 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </span>
             </div>
 
+            {/* Use-Case Badges */}
+            {(poolCode || petFriendly) && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {poolCode && (
+                  <Link
+                    href="/shop/resources/pool-code-aluminum-fence/"
+                    className="inline-flex items-center gap-1.5 bg-blue-50 border border-blue-200 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Meets Pool Code
+                  </Link>
+                )}
+                {petFriendly && (
+                  <Link
+                    href="/shop/resources/pet-fence/"
+                    className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-amber-100 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Pet &amp; Puppy Friendly
+                  </Link>
+                )}
+              </div>
+            )}
+
             {/* Variant Selector + Add to Cart (client component) */}
             <ProductOptions
               options={product.options}
@@ -204,6 +264,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div>
               <h3 className="font-bold text-lg mb-4">Resources</h3>
               <ul className="space-y-2">
+                <li><Link href="/shop/resources/pool-code-aluminum-fence/" className="hover:underline">Pool Code Fence Guide</Link></li>
+                <li><Link href="/shop/resources/pet-fence/" className="hover:underline">Pet &amp; Puppy Fence Guide</Link></li>
                 <li><Link href="/shop/resources/how-to-install-aluminum-fence/" className="hover:underline">Installation Guide</Link></li>
                 <li><Link href="/shop/resources/aluminum-vs-steel-fencing/" className="hover:underline">Aluminum vs Steel</Link></li>
               </ul>

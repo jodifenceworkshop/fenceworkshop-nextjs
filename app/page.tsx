@@ -402,6 +402,17 @@ export default function Home() {
             >
               Browse All Products
             </Link>
+            <p className="mt-6 text-gray-700">
+              Planning a specific project? See our{' '}
+              <Link href="/shop/resources/pool-code-aluminum-fence/" className="text-brand-green font-semibold hover:underline">
+                Pool Code Fence Guide
+              </Link>{' '}
+              or{' '}
+              <Link href="/shop/resources/pet-fence/" className="text-brand-green font-semibold hover:underline">
+                Pet &amp; Puppy Fence Guide
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>
@@ -436,8 +447,10 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Resources</h3>
               <ul className="space-y-2">
-                <li><Link href="/guides/" className="hover:underline">Fence Guides</Link></li>
-                <li><Link href="/maintenance/" className="hover:underline">Maintenance Tips</Link></li>
+                <li><Link href="/shop/resources/pool-code-aluminum-fence/" className="hover:underline">Pool Code Fence Guide</Link></li>
+                <li><Link href="/shop/resources/pet-fence/" className="hover:underline">Pet &amp; Puppy Fence Guide</Link></li>
+                <li><Link href="/shop/resources/how-to-install-aluminum-fence/" className="hover:underline">Installation Guide</Link></li>
+                <li><Link href="/shop/resources/aluminum-vs-steel-fencing/" className="hover:underline">Aluminum vs Steel</Link></li>
               </ul>
             </div>
 

@@ -54,6 +54,29 @@ const faqSchema = {
   ],
 }
 
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Pool Code Aluminum Fence: Which Styles & Heights Qualify?',
+  description: 'Complete guide to aluminum fence styles and heights that meet typical pool code requirements, including the 45-inch "no climbable footholds" rail spacing rule.',
+  author: {
+    '@type': 'Organization',
+    name: 'Fence Workshop',
+    url: 'https://www.fenceworkshop.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Fence Workshop',
+    url: 'https://www.fenceworkshop.com',
+  },
+  datePublished: '2026-04-05',
+  dateModified: '2026-04-05',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://www.fenceworkshop.com/shop/resources/pool-code-aluminum-fence/',
+  },
+}
+
 const compliantStyles = [
   { style: 'Athens', heights: '6ft', note: 'Spear-top, residential grade' },
   { style: 'Atlanta', heights: '6ft', note: 'Spear-top, commercial grade' },
@@ -72,6 +95,10 @@ export default function PoolCodeFencePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <Navbar />
       <div className="h-20" />
