@@ -272,6 +272,13 @@ export default function ShopPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">→ Pet &amp; Puppy Fence Guide</h3>
               <p className="text-gray-600">Best aluminum fence styles to contain small dogs, puppies, and cats</p>
             </Link>
+            <Link
+              href="/shop/resources/residential-vs-commercial-aluminum-fence/"
+              className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-green hover:shadow-md transition-all"
+            >
+              <h3 className="text-xl font-bold text-gray-900 mb-2">→ Residential vs Commercial Grade</h3>
+              <p className="text-gray-600">Compare aluminum fence grades and learn which one your project needs</p>
+            </Link>
           </div>
         </div>
       </section>

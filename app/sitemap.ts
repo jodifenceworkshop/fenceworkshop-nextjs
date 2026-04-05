@@ -15,6 +15,7 @@ const STATIC_PATHS = [
   '/shop/accessories/',
   '/shop/resources/pool-code-aluminum-fence/',
   '/shop/resources/pet-fence/',
+  '/shop/resources/residential-vs-commercial-aluminum-fence/',
   '/shop/resources/how-to-install-aluminum-fence/',
   '/shop/resources/aluminum-vs-steel-fencing/',
   '/installation/georgia/commercial-fence-installation/',
