@@ -78,14 +78,14 @@ const articleSchema = {
 }
 
 const petStyles = [
-  { style: 'Athens', note: 'Spear-top with puppy picket variant available' },
-  { style: 'Avalon', note: 'Flat-top with integrated tight picket spacing' },
+  { style: 'Athens', note: 'Spear-top with double picket — tight spacing from top to bottom' },
+  { style: 'Avalon', note: 'Spear-top with puppy picket — tight spacing only along the bottom' },
   { style: 'Berkley', note: 'Classic residential style with puppy picket option' },
-  { style: 'Buford', note: 'Flat-top commercial grade with puppy picket variant' },
-  { style: 'Chamblee', note: 'Staggered-top with tight bottom picket spacing' },
-  { style: 'Cobb', note: 'Residential flat-top with pet picket option' },
+  { style: 'Buford', note: 'Smooth/flat-top with double picket — tight spacing from top to bottom' },
+  { style: 'Chamblee', note: 'Smooth/flat-top with double picket — tight spacing from top to bottom' },
+  { style: 'Cobb', note: 'Smooth/flat-top with puppy picket — tight spacing only along the bottom' },
   { style: 'Dublin', note: 'Staggered spear-top with puppy picket variant' },
-  { style: 'Dunwoody', note: 'Staggered spear-top commercial grade with pet picket option' },
+  { style: 'Dunwoody', note: 'Staggered spear-top, residential grade, with double picket from top to bottom' },
 ]
 
 export default function PetFencePage() {
@@ -145,19 +145,24 @@ export default function PetFencePage() {
             A standard aluminum fence panel has vertical pickets spaced roughly 4 inches apart.
             That&apos;s narrow enough to keep children and larger dogs contained, but small dogs,
             puppies, and cats can easily fit through — especially along the bottom of the fence
-            where the gap is most accessible.
+            where the gap is most accessible. There are two ways to solve this:
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            A <strong>puppy picket fence</strong> (also called a pet picket or pet fence) solves
-            this by adding a second row of shorter vertical pickets between the main pickets, but
-            only in the bottom section of the panel. This tightens the spacing to about
-            1-1/2 to 2 inches — small enough to contain even the smallest breeds and kittens —
-            while keeping the clean look of a standard aluminum fence above dog-eye level.
+            A <strong>puppy picket fence</strong> (also called a pet picket) adds a second row of
+            shorter vertical pickets between the main pickets, but <em>only along the bottom section</em>
+            of the panel. This tightens the spacing to about 1-1/2 to 2 inches right where pets try to
+            slip through, while keeping the standard aluminum-fence look above dog-eye level.
+            Styles like <strong>Avalon</strong> and <strong>Cobb</strong> use this configuration.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            A <strong>double picket fence</strong> runs the extra pickets the full height of the panel,
+            from top to bottom, creating tight spacing throughout. This gives maximum security and a
+            denser visual look. Styles like <strong>Athens</strong>, <strong>Buford</strong>,
+            <strong> Chamblee</strong>, and <strong>Dunwoody</strong> use double picket construction.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Some of our styles use naturally tight picket spacing throughout the panel; others
-            offer a puppy picket variant as an option. Either way, the result is a secure barrier
-            that keeps pets where they belong without sacrificing aesthetics.
+            Both configurations result in roughly 1-1/2 to 2 inches between pickets — small enough
+            to contain even toy breeds, puppies, and kittens.
           </p>
         </div>
       </section>
