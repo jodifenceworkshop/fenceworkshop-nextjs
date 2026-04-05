@@ -24,7 +24,7 @@ const faqSchema = {
       name: 'What does "no climbable footholds" mean for a pool fence?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Pool codes restrict horizontal rails from being placed where a child could use them as a foothold to climb the fence. The standard rule is that horizontal rails must be spaced at least 45 inches apart, measured from the top of one rail to the top of the next. This means typical 2-rail fence panels only qualify for pool code when they are tall enough to keep the rails that far apart — which is why most pool-code-compliant panels are 5ft or 6ft tall.',
+        text: 'Pool codes restrict horizontal rails from being placed where a child could use them as a foothold to climb the fence. The standard rule is that any two adjacent horizontal rails must be at least 45 inches apart, measured from the top of one rail to the top of the next. Most of our styles are 3-rail panels (top, middle, and bottom rail), and on those the middle rail only clears the top rail by 45 inches at 5ft or 6ft panel heights — which is why most pool-code-compliant panels are 5ft or 6ft tall. Our Savannah style is our only 2-rail panel, so it qualifies at 4ft and 5ft heights.',
       },
     },
     {
@@ -86,7 +86,7 @@ const compliantStyles = [
   { style: 'Chamblee', heights: '5ft, 6ft', note: 'Staggered-top, commercial grade' },
   { style: 'Dawson', heights: '6ft', note: 'Spear-top with finials' },
   { style: 'Dunwoody', heights: '6ft', note: 'Staggered spear-top' },
-  { style: 'Savannah', heights: '4ft, 5ft', note: '3-rail design maintains 45" spacing at 4ft+' },
+  { style: 'Savannah', heights: '4ft, 5ft', note: 'Our only 2-rail design — qualifies at 4ft and 5ft heights' },
 ]
 
 export default function PoolCodeFencePage() {
@@ -195,21 +195,27 @@ export default function PoolCodeFencePage() {
             an aluminum fence from pool code. Here&apos;s how it works:
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            Standard aluminum fence panels have two horizontal rails — one near the top and one near the
-            bottom — with vertical pickets between them. Pool code requires that these two rails be at
-            least <strong>45 inches apart</strong>, measured from the top of one rail to the top of the other.
-            If they&apos;re closer than 45 inches, a child could potentially use the lower rail as a foothold
-            to climb over.
+            Aluminum fence panels have horizontal rails running across them — and every horizontal rail
+            is a potential foothold. Pool code requires that <strong>any two adjacent horizontal rails
+            be at least 45 inches apart</strong>, measured from the top of one rail to the top of the next.
+            If they&apos;re closer than 45 inches, a child could use the lower rail as a foothold to climb over.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            On a 3ft panel, the rails are typically about 28 inches apart — too close. On a 4ft panel,
-            rails are usually 38–40 inches apart — still not enough. It&apos;s only at 5ft and 6ft panel
-            heights (or on specific 3-rail designs like our Savannah at 4ft+) that most aluminum panels
-            achieve the required 45-inch spacing.
+            Most of our styles — Athens, Atlanta, Brookhaven, Buford, Candler, Chamblee, Dawson, and
+            Dunwoody — are <strong>3-rail panels</strong> (top, middle, and bottom rail). The middle rail
+            is the one that has to sit at least 45 inches below the top rail, which is only geometrically
+            possible on 5ft and 6ft panels. On shorter 3-rail panels, the middle rail ends up too close
+            to the top rail, creating a climbable foothold.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            <strong>Savannah is our only 2-rail panel</strong> — it has just a top rail and a bottom rail
+            with no middle rail. Because there&apos;s no middle rail to worry about, the top-to-bottom
+            spacing hits 45 inches at a lower overall panel height, which is why Savannah qualifies at
+            4ft and 5ft heights.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            This is why our pool-code-compliant catalog is dominated by 5ft and 6ft panels — it&apos;s a
-            geometry requirement, not a quality issue with shorter panels.
+            This is why our pool-code-compliant catalog is mostly 5ft and 6ft panels — it&apos;s a
+            geometry requirement of the 3-rail design, not a quality issue with shorter panels.
           </p>
         </div>
       </section>
