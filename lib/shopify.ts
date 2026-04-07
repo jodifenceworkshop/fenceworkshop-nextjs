@@ -277,6 +277,19 @@ const CATEGORY_TO_TYPES: Record<string, string[]> = {
   'accessories': ['Accessory'],
 }
 
+export async function getRelatedProductsByStyle(
+  style: string,
+  excludeHandle: string
+): Promise<ShopifyProduct[]> {
+  const products = await getProducts(20, `title:${style}`)
+  return products.filter(
+    (p) =>
+      p.handle !== excludeHandle &&
+      p.productType !== 'Accessory' &&
+      p.title.toLowerCase().includes(style.toLowerCase())
+  )
+}
+
 export async function getProductsByCategory(categorySlug: string): Promise<ShopifyProduct[]> {
   const types = CATEGORY_TO_TYPES[categorySlug]
   if (!types) return []

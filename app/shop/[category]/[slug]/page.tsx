@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import ProductOptions from '@/components/ProductOptions'
-import { getProductByHandle, formatPrice } from '@/lib/shopify'
+import { getProductByHandle, getRelatedProductsByStyle, getProductUrl, formatPrice } from '@/lib/shopify'
 import type { Metadata } from 'next'
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -12,6 +12,17 @@ const CATEGORY_LABELS: Record<string, string> = {
   'aluminum-fencing': 'Aluminum Fencing',
   'fence-posts': 'Fence Posts',
   'accessories': 'Accessories',
+}
+
+// Known fence styles for related product matching
+const FENCE_STYLES = [
+  'athens', 'atlanta', 'avalon', 'berkley', 'brookhaven', 'buford', 'candler',
+  'chamblee', 'cobb', 'dawson', 'dublin', 'dunwoody', 'ellijay', 'emory',
+  'savannah', 'sharpsburg',
+]
+
+function detectStyle(slug: string): string | null {
+  return FENCE_STYLES.find((s) => slug.startsWith(s)) ?? null
 }
 
 // Pool-code compliant style + height combos (45" rail spacing rule)
@@ -74,6 +85,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const variants = product.variants.edges.map((e) => e.node)
   const categoryLabel = CATEGORY_LABELS[category] || 'Shop'
   const { poolCode, petFriendly } = detectUseCases(product.title)
+
+  const style = detectStyle(slug)
+  const relatedProducts = style
+    ? await getRelatedProductsByStyle(style, slug)
+    : []
 
   return (
     <main className="min-h-screen bg-white">
@@ -239,6 +255,53 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
         </div>
       </div>
+
+      {/* Related Products */}
+      {relatedProducts.length > 0 && (
+        <section className="py-16 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">
+              Complete Your {style ? style.charAt(0).toUpperCase() + style.slice(1) : ''} Fence System
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {relatedProducts.map((related) => {
+                const relatedUrl = getProductUrl(related)
+                const relatedImage = related.images.edges[0]?.node
+                return (
+                  <Link
+                    key={related.handle}
+                    href={relatedUrl}
+                    className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-200"
+                  >
+                    <div className="aspect-square relative bg-gray-100">
+                      {relatedImage && (
+                        <Image
+                          src={relatedImage.url}
+                          alt={relatedImage.altText || related.title}
+                          fill
+                          className="object-contain p-3 group-hover:scale-105 transition-transform duration-300"
+                          sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        />
+                      )}
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-sm font-semibold text-gray-900 mb-1 group-hover:text-brand-orange transition-colors leading-snug">
+                        {related.title}
+                      </h3>
+                      <p className="text-sm text-gray-600">
+                        {formatPrice(related.priceRange.minVariantPrice)}
+                        {related.priceRange.minVariantPrice.amount !== related.priceRange.maxVariantPrice.amount && (
+                          <span> &ndash; {formatPrice(related.priceRange.maxVariantPrice)}</span>
+                        )}
+                      </p>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Footer */}
       <footer className="bg-brand-orange text-white py-12">
