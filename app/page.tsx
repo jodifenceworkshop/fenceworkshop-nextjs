@@ -113,21 +113,13 @@ export default function Home() {
               </p>
               <div className="space-y-3">
                 <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline">
-                  → Fence Installation in Georgia
+                  → Commercial Fence Installation in Georgia
                 </Link>
-                <Link href="/installation/process/" className="block text-brand-orange hover:underline">
-                  → Our Installation Process
+                <Link href="/installation/georgia/fence-repair/" className="block text-brand-orange hover:underline">
+                  → Fence &amp; Gate Repair Services
                 </Link>
                 <Link href="/installation/service-areas/" className="block text-brand-orange hover:underline">
                   → View Service Areas
-                </Link>
-              </div>
-              <div className="mt-8">
-                <Link
-                  href="/installation/georgia/commercial-fence-installation/"
-                  className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-                >
-                  Learn More
                 </Link>
               </div>
             </div>
