@@ -269,7 +269,7 @@ export default function GeorgiaInstallationPage() {
               by experienced installers from permit to final inspection.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {installationServices.map((service) => (
               <Link key={service.title} href={service.href} className="block bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow group">
                 <div className="aspect-video relative bg-gray-300">
@@ -304,7 +304,7 @@ export default function GeorgiaInstallationPage() {
               Whether it&rsquo;s storm damage, wear, or a gate that&rsquo;s off the track — we can help.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {repairServices.map((service) => (
               <Link key={service.title} href={service.href} className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow group">
                 <div className="aspect-video relative bg-gray-300">
