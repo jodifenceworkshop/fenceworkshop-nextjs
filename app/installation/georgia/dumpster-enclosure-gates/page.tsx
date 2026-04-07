@@ -217,9 +217,9 @@ export default function DumpsterEnclosureGatesPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
+              { title: 'Bollard Installation', description: 'Steel pipe bollards installed around dumpster enclosures protect gate hinges, posts, and walls from waste hauler truck damage — extending enclosure life significantly.', href: '/installation/georgia/bollard-installation/' },
+              { title: 'Dumpster Gate Repair', description: 'Fast repair for broken hinges, sagging gates, latch failure, and frame damage on commercial dumpster enclosures throughout Georgia.', href: '/installation/georgia/dumpster-gate-repair/' },
               { title: 'Commercial Chain Link Fence Installation', description: 'Heavy-duty commercial chain link for perimeter security, job sites, and property boundaries.', href: '/installation/georgia/commercial-chain-link-fence/' },
-              { title: 'Ornamental & Aluminum Fence Installation', description: 'Architectural-grade ornamental fencing for commercial properties requiring aesthetics and perimeter definition.', href: '/installation/georgia/ornamental-aluminum-fence/' },
-              { title: 'Slide Gate & Rolling Gate Installation', description: 'Manual and motorized slide gates for commercial driveways and facility entrances.', href: '/installation/georgia/slide-gates/' },
             ].map((service) => (
               <Link key={service.title} href={service.href} className="block bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow group">
                 <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-orange transition-colors">{service.title}</h3>

@@ -101,9 +101,9 @@ export default function ParkingGarageFencingPage() {
 
       <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-12"><p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Related Services</p><h2 className="text-4xl font-bold text-gray-900 mb-4">Other Commercial Fence Services</h2><p className="text-lg text-gray-700 max-w-3xl mx-auto">Complete your property&rsquo;s security with our other commercial fencing services.</p></div><div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
+          { title: 'Bollard Installation', description: 'Steel pipe bollards and vehicle barriers for parking columns, pedestrian pathways, and building perimeters — frequently installed alongside parking garage fencing projects.', href: '/installation/georgia/bollard-installation/' },
           { title: 'Commercial Security Fence Installation', description: 'High-security perimeter fencing for parking facilities and surrounding commercial properties.', href: '/installation/georgia/commercial-security-fence/' },
           { title: 'Security Gate Systems & Access Control', description: 'Automated gate systems for controlled vehicle entry and exit at parking facilities.', href: '/installation/georgia/security-gate-systems/' },
-          { title: 'Warehouse & Industrial Fencing', description: 'Interior partition systems and cage enclosures for parking-adjacent storage and utility areas.', href: '/installation/georgia/warehouse-industrial-fencing/' },
         ].map((s) => (<Link key={s.title} href={s.href} className="block bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow group"><h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-orange transition-colors">{s.title}</h3><p className="text-gray-600 text-sm leading-relaxed mb-3">{s.description}</p><span className="text-brand-orange font-semibold text-sm">Learn More &rarr;</span></Link>))}
       </div></div></section>
 

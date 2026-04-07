@@ -104,6 +104,13 @@ const installationServices = [
     alt: 'Commercial ornamental security gate installation in Atlanta, GA',
     href: '/installation/georgia/security-gate-systems/',
   },
+  {
+    title: 'Bollard Installation',
+    description: 'Steel pipe bollards, removable bollards, and vehicle barriers for storefronts, dumpster enclosures, parking lots, loading docks, and access control points throughout Georgia.',
+    image: '/images/project-dumpster-gates.png',
+    alt: 'Commercial bollard installation in Georgia by Fence Workshop',
+    href: '/installation/georgia/bollard-installation/',
+  },
 ]
 
 const repairServices = [
@@ -134,6 +141,13 @@ const repairServices = [
     image: '/images/repair-roll-gate.jpg',
     alt: 'Commercial roll gate and slide gate repair in Atlanta, GA',
     href: '/installation/georgia/roll-gate-slide-gate-repair/',
+  },
+  {
+    title: 'Bollard Repair & Replacement',
+    description: 'Vehicle-damaged, leaning, and knocked-over bollards repaired or replaced throughout Georgia. Post replacement, footing repair, and cover replacement.',
+    image: '/images/project-dumpster-gates.png',
+    alt: 'Commercial bollard repair in Georgia by Fence Workshop',
+    href: '/installation/georgia/bollard-repair/',
   },
 ]
 

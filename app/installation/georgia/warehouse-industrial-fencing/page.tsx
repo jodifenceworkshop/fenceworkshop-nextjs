@@ -101,9 +101,9 @@ export default function WarehouseIndustrialFencingPage() {
 
       <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-12"><p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Related Services</p><h2 className="text-4xl font-bold text-gray-900 mb-4">Other Commercial Fence Services</h2><p className="text-lg text-gray-700 max-w-3xl mx-auto">Complete your facility security with our other commercial fencing services.</p></div><div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
+          { title: 'Bollard Installation', description: 'Steel pipe bollards for dock doors, building corners, rack systems, and pedestrian walkways — protecting equipment and structure from forklift and truck traffic.', href: '/installation/georgia/bollard-installation/' },
           { title: 'Commercial Chain Link Fence Installation', description: 'Heavy-duty commercial chain link for exterior perimeter security around warehouses and industrial facilities.', href: '/installation/georgia/commercial-chain-link-fence/' },
           { title: 'Commercial Security Fence Installation', description: 'High-security perimeter fencing with anti-climb designs and razor ribbon for maximum facility protection.', href: '/installation/georgia/commercial-security-fence/' },
-          { title: 'Security Gate Systems & Access Control', description: 'Automated gate systems and access control to secure vehicle and pedestrian entry points at industrial facilities.', href: '/installation/georgia/security-gate-systems/' },
         ].map((s) => (<Link key={s.title} href={s.href} className="block bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow group"><h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-orange transition-colors">{s.title}</h3><p className="text-gray-600 text-sm leading-relaxed mb-3">{s.description}</p><span className="text-brand-orange font-semibold text-sm">Learn More &rarr;</span></Link>))}
       </div></div></section>
 
