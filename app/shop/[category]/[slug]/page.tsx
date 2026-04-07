@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import ProductOptions from '@/components/ProductOptions'
 import { getProductByHandle, getRelatedProductsByStyle, getProductUrl, formatPrice } from '@/lib/shopify'
+import ProductGallery from '@/components/ProductGallery'
 import type { Metadata } from 'next'
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -113,33 +114,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
           {/* Image Gallery */}
           <div>
-            {images.length > 0 && (
-              <div className="aspect-square relative rounded-lg overflow-hidden bg-gray-100 mb-4">
-                <Image
-                  src={images[0].url}
-                  alt={images[0].altText || product.title}
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
-                />
-              </div>
-            )}
-            {images.length > 1 && (
-              <div className="grid grid-cols-4 gap-3">
-                {images.slice(1, 5).map((img, i) => (
-                  <div key={i} className="aspect-square relative rounded-md overflow-hidden bg-gray-100">
-                    <Image
-                      src={img.url}
-                      alt={img.altText || product.title}
-                      fill
-                      className="object-contain"
-                      sizes="(max-width: 1024px) 25vw, 12vw"
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
+            <ProductGallery images={images} productTitle={product.title} />
           </div>
 
           {/* Product Info */}
