@@ -582,10 +582,12 @@ export default function GeorgiaInstallationPage() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4">Resources</h3>
+              <h3 className="font-bold text-lg mb-4">Repair Services</h3>
               <ul className="space-y-2">
-                <li><Link href="/guides/" className="hover:underline">Fence Guides</Link></li>
-                <li><Link href="/maintenance/" className="hover:underline">Maintenance Tips</Link></li>
+                <li><Link href="/installation/georgia/fence-repair/" className="hover:underline">All Repair Services</Link></li>
+                <li><Link href="/installation/georgia/dumpster-gate-repair/" className="hover:underline">Dumpster Gate Repair</Link></li>
+                <li><Link href="/installation/georgia/chain-link-fence-repair/" className="hover:underline">Chain Link Repair</Link></li>
+                <li><Link href="/installation/georgia/roll-gate-slide-gate-repair/" className="hover:underline">Roll &amp; Slide Gate Repair</Link></li>
               </ul>
             </div>
             <div>
