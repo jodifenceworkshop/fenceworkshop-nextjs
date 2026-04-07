@@ -52,9 +52,9 @@ const categories: Record<string, CategoryConfig> = {
   },
   'walk-gates': {
     title: 'Aluminum Walk Gates | Pedestrian Gate Kits | Fence Workshop',
-    description: 'Shop American-made aluminum walk gates for pedestrian entry. Complete kits with gate panel, self-closing hinges, and latch. Multiple styles and sizes.',
+    description: 'Shop American-made aluminum walk gates for pedestrian entry. Complete kits with gate panel, gate posts, self-closing hinges, and latch. Multiple styles and sizes.',
     heading: 'Aluminum Walk Gates',
-    intro: 'Pedestrian walk gate kits complete with gate panel, self-closing hinges, and gravity latch. Available in multiple styles and sizes to match your fence panels.',
+    intro: 'Pedestrian walk gate kits complete with gate panel, gate posts, self-closing hinges, and gravity latch. Available in multiple styles and sizes to match your fence panels.',
     features: [
       { label: 'Self-Closing Hinges', detail: 'Spring-loaded hinges automatically close the gate behind you' },
       { label: 'Gravity Latch', detail: 'Included latch engages automatically when the gate swings shut' },
