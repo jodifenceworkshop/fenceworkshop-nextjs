@@ -65,6 +65,14 @@ const repairServices = [
     imageAlt: 'Security fence and gate repair in Georgia by Fence Workshop',
     tags: ['Crash Damage', 'Razor Ribbon', 'Gate Operators', 'Access Control', 'Emergency Response'],
   },
+  {
+    title: 'Bollard Repair & Replacement',
+    description: 'Vehicle-damaged, leaning, and knocked-over bollards repaired or replaced. Post replacement, footing repair, cover replacement, and removable sleeve repair for commercial properties throughout Georgia.',
+    href: '/installation/georgia/bollard-repair/',
+    image: '/images/project-dumpster-gates.png',
+    imageAlt: 'Commercial bollard repair in Georgia by Fence Workshop',
+    tags: ['Vehicle Damage', 'Leaning Bollards', 'Post Replacement', 'Cover Replacement', 'Footing Repair'],
+  },
 ]
 
 export default function FenceRepairHubPage() {
