@@ -3,6 +3,39 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import type { Metadata } from 'next'
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Commercial Fence Installation in Atlanta, GA",
+  "description": "Commercial and industrial fence installation throughout Atlanta, GA — chain link, security, ornamental, gate systems, and fence repair. Licensed and insured with 15+ years experience.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Fence Workshop",
+    "telephone": "+14043144419",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1522 Huber St NW",
+      "addressLocality": "Atlanta",
+      "addressRegion": "GA",
+      "postalCode": "30318",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Atlanta", "addressRegion": "GA" },
+    { "@type": "City", "name": "Marietta", "addressRegion": "GA" },
+    { "@type": "City", "name": "Alpharetta", "addressRegion": "GA" },
+    { "@type": "City", "name": "Roswell", "addressRegion": "GA" },
+    { "@type": "City", "name": "Smyrna", "addressRegion": "GA" },
+    { "@type": "City", "name": "Sandy Springs", "addressRegion": "GA" },
+    { "@type": "City", "name": "Kennesaw", "addressRegion": "GA" },
+    { "@type": "City", "name": "Duluth", "addressRegion": "GA" },
+    { "@type": "City", "name": "Decatur", "addressRegion": "GA" },
+    { "@type": "City", "name": "Norcross", "addressRegion": "GA" }
+  ],
+  "serviceType": "Fence Installation"
+}
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -159,6 +192,10 @@ const faqs = [
 export default function AtlantaInstallationPage() {
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -354,6 +391,56 @@ export default function AtlantaInstallationPage() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Reviews</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Commercial property owners, developers, and contractors throughout Atlanta trust Fence Workshop for installation and repair.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { quote: "We've hired Fence Workshop for three projects in the Buckhead corridor. They understand Atlanta commercial property requirements, handle the permits, and deliver quality work on time.", name: "Chris F.", role: "Commercial Developer, Buckhead GA" },
+              { quote: "We needed a dumpster enclosure and perimeter chain link installed at our restaurant in West Midtown. Fence Workshop coordinated with our GC and had both done before our opening date.", name: "Maria E.", role: "Restaurant Owner, West Midtown Atlanta" },
+              { quote: "As a property manager for several Atlanta HOAs, I rely on Fence Workshop for all fence repair and installation work. They're responsive, professional, and their pricing is consistent.", name: "Paul D.", role: "HOA Property Manager, Atlanta GA" },
+            ].map((t) => (
+              <div key={t.name} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-4 italic">&ldquo;{t.quote}&rdquo;</p>
+                <div>
+                  <p className="font-semibold text-gray-900">{t.name}</p>
+                  <p className="text-sm text-gray-500">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workmanship Guarantee */}
+      <section className="py-12 bg-brand-green">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+            <div className="flex-shrink-0">
+              <svg className="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <div className="flex-grow">
+              <h2 className="text-2xl font-bold text-white mb-2">Done Right, Guaranteed</h2>
+              <p className="text-white/90 text-lg">Every fence and gate installation we complete in Atlanta is backed by our workmanship guarantee. If anything we installed doesn&rsquo;t perform correctly, we come back and make it right — no questions asked.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Service Areas + Quote Form */}
       <section id="quote" className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -369,21 +456,15 @@ export default function AtlantaInstallationPage() {
                 at 1522 Huber St NW. We serve commercial clients throughout the city and surrounding communities,
                 including property managers, general contractors, municipalities, and business owners.
               </p>
-              <p className="text-lg text-gray-700 mb-6">
-                Our active Atlanta service area includes:
-              </p>
-              <ul className="grid grid-cols-2 gap-2 mb-8">
-                {[
-                  'Buckhead', 'Midtown Atlanta', 'Downtown Atlanta', 'West Midtown',
-                  'Old Fourth Ward', 'Inman Park', 'Grant Park', 'East Atlanta',
-                  'Westside', 'College Park', 'East Point', 'Decatur',
-                ].map((area) => (
-                  <li key={area} className="flex items-center gap-2 text-gray-700">
-                    <span className="text-brand-orange font-bold">→</span>
-                    {area}
-                  </li>
+              <p className="text-lg text-gray-700 mb-4">Serving commercial properties throughout Metro Atlanta including:</p>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
+                {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Smyrna', 'Kennesaw', 'Decatur', 'Tucker', 'Chamblee', 'Duluth', 'Norcross', 'Johns Creek', 'Woodstock', 'Stone Mountain', 'Lawrenceville'].map((city) => (
+                  <span key={city} className="flex items-center gap-1.5 py-0.5">
+                    <svg className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {city}, GA
+                  </span>
                 ))}
-              </ul>
+              </div>
               <div className="space-y-3">
                 <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium">
                   ← Back to Georgia Fence Installation

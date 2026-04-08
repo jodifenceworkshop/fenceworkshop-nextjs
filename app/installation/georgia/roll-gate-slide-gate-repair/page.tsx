@@ -3,6 +3,39 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import type { Metadata } from 'next'
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Commercial Roll Gate & Slide Gate Repair",
+  "description": "Track repair, operator service, vehicle damage, and full gate restoration for commercial roll and slide gates throughout Georgia.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Fence Workshop",
+    "telephone": "+14043144419",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1522 Huber St NW",
+      "addressLocality": "Atlanta",
+      "addressRegion": "GA",
+      "postalCode": "30318",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Atlanta", "addressRegion": "GA" },
+    { "@type": "City", "name": "Marietta", "addressRegion": "GA" },
+    { "@type": "City", "name": "Alpharetta", "addressRegion": "GA" },
+    { "@type": "City", "name": "Roswell", "addressRegion": "GA" },
+    { "@type": "City", "name": "Smyrna", "addressRegion": "GA" },
+    { "@type": "City", "name": "Sandy Springs", "addressRegion": "GA" },
+    { "@type": "City", "name": "Kennesaw", "addressRegion": "GA" },
+    { "@type": "City", "name": "Duluth", "addressRegion": "GA" },
+    { "@type": "City", "name": "Decatur", "addressRegion": "GA" },
+    { "@type": "City", "name": "Norcross", "addressRegion": "GA" }
+  ],
+  "serviceType": "Roll Gate and Slide Gate Repair"
+}
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -31,6 +64,7 @@ const faqs = [
 export default function RollGateSlideGateRepairPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <div className="h-20" />
@@ -85,6 +119,56 @@ export default function RollGateSlideGateRepairPage() {
         ].map((a) => (<div key={a.title} className="flex gap-4"><span className="text-brand-orange font-bold text-2xl mt-1 flex-shrink-0">&bull;</span><div><h3 className="text-lg font-bold text-gray-900 mb-2">{a.title}</h3><p className="text-gray-600 leading-relaxed">{a.description}</p></div></div>))}
       </div></div></section>
 
+      {/* Testimonials */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Reviews</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Warehouse operators, facility managers, and gated community associations throughout Georgia trust Fence Workshop for commercial gate repair.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { quote: "Our main entrance gate failed on a Monday morning with trucks backed up trying to get in. Fence Workshop diagnosed it over the phone, had a tech on site within two hours, and had the gate operational before noon. Outstanding service.", name: "Marcus D.", role: "Distribution Center Manager, Kennesaw GA" },
+              { quote: "We've used Fence Workshop for gate operator repairs at our HOA for three years. They know LiftMaster inside and out, they carry parts on their trucks, and they've never had to come back for the same issue twice.", name: "Elaine H.", role: "HOA Property Manager, Roswell GA" },
+              { quote: "A delivery truck hit our slide gate and bent the frame and knocked it off the track. Fence Workshop came out, straightened what they could, and fabricated a replacement section for the rest. Everything works perfectly now.", name: "Antonio S.", role: "Fleet Yard Manager, Atlanta GA" },
+            ].map((t) => (
+              <div key={t.name} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-4 italic">&ldquo;{t.quote}&rdquo;</p>
+                <div>
+                  <p className="font-semibold text-gray-900">{t.name}</p>
+                  <p className="text-sm text-gray-500">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workmanship Guarantee */}
+      <section className="py-12 bg-brand-green">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+            <div className="flex-shrink-0">
+              <svg className="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <div className="flex-grow">
+              <h2 className="text-2xl font-bold text-white mb-2">Done Right, Guaranteed</h2>
+              <p className="text-white/90 text-lg">Every gate repair we complete is backed by our workmanship guarantee. We test the gate through multiple full cycles before leaving — proper travel, safety devices, operator function. If it doesn&rsquo;t work right, we come back and make it right.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-12"><p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Process</p><h2 className="text-4xl font-bold text-gray-900 mb-4">How Gate Repair Works</h2><p className="text-lg text-gray-700 max-w-3xl mx-auto">Fast diagnosis, clear communication, and repairs that last.</p></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {[
           { step: '01', title: 'Call or Request Service', description: 'Tell us what\'s happening — gate won\'t move, off-track, operator not responding, vehicle damage. Photos help us prepare the right parts for the first visit.' },
@@ -107,12 +191,21 @@ export default function RollGateSlideGateRepairPage() {
           <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Service Areas</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Gate Repair Across Georgia</h2>
           <p className="text-lg text-gray-700 mb-6">We repair commercial roll gates and slide gates throughout Metro Atlanta and across the state of Georgia. Fast response for gates that are stuck or non-operational.</p>
-          <p className="text-lg text-gray-700 mb-8">Our most active service areas include Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, and surrounding communities.</p>
-          <div className="space-y-3">
-            <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Gate Repair in Atlanta, GA</Link>
-            <Link href="/installation/georgia/marietta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Gate Repair in Marietta, GA</Link>
-            <Link href="/installation/georgia/alpharetta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Gate Repair in Alpharetta, GA</Link>
-            <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium mt-6">&larr; All Commercial Fence Services in Georgia</Link>
+          <p className="text-lg text-gray-700 mb-4">Serving commercial properties throughout Metro Atlanta including:</p>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
+                {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Smyrna', 'Kennesaw', 'Decatur', 'Tucker', 'Chamblee', 'Duluth', 'Norcross', 'Johns Creek', 'Woodstock', 'Stone Mountain', 'Lawrenceville'].map((city) => (
+                  <span key={city} className="flex items-center gap-1.5 py-0.5">
+                    <svg className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {city}, GA
+                  </span>
+                ))}
+              </div>
+              <div className="space-y-3">
+                <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Gate Repair in Atlanta, GA</Link>
+                <Link href="/installation/georgia/marietta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Gate Repair in Marietta, GA</Link>
+                <Link href="/installation/georgia/alpharetta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Gate Repair in Alpharetta, GA</Link>
+                <Link href="/installation/service-areas/" className="block text-brand-orange hover:underline font-medium">&rarr; View All Service Areas</Link>
+                <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium mt-2">&larr; All Commercial Fence Services in Georgia</Link>
           </div>
         </div>
         <div className="bg-gray-50 p-8 rounded-lg shadow-lg">

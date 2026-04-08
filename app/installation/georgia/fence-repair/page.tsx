@@ -234,6 +234,56 @@ export default function FenceRepairHubPage() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Reviews</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Property managers, facility directors, and commercial operators throughout Metro Atlanta trust Fence Workshop for all types of fence and gate repair.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { quote: "We manage over 20 commercial properties in Metro Atlanta and Fence Workshop handles all our fence and gate repairs. They respond fast, the pricing is fair, and the work holds up. That's all we ask for.", name: "Sandra L.", role: "Regional Property Manager, Atlanta GA" },
+              { quote: "I've called Fence Workshop for dumpster gate repairs, chain link repairs, and gate operator service over the past few years. Different types of work, same quality every time. Reliable vendor.", name: "Tim H.", role: "Facilities Director, Alpharetta GA" },
+              { quote: "Fence Workshop repaired our security perimeter fence after a storm and had it back to code faster than I expected. They also helped us document the damage for our insurance claim. Above and beyond.", name: "Natalie B.", role: "Property Operations Manager, Decatur GA" },
+            ].map((t) => (
+              <div key={t.name} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-4 italic">&ldquo;{t.quote}&rdquo;</p>
+                <div>
+                  <p className="font-semibold text-gray-900">{t.name}</p>
+                  <p className="text-sm text-gray-500">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workmanship Guarantee */}
+      <section className="py-12 bg-brand-green">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+            <div className="flex-shrink-0">
+              <svg className="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <div className="flex-grow">
+              <h2 className="text-2xl font-bold text-white mb-2">Done Right, Guaranteed</h2>
+              <p className="text-white/90 text-lg">Every repair we complete — dumpster gates, chain link, roll gates, security fencing, bollards — is backed by our workmanship guarantee. If anything we repaired doesn&rsquo;t hold up, we come back and make it right. We&rsquo;ve built this business on commercial clients who need a vendor they can count on.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Quote Form */}
       <section id="quote" className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -242,7 +292,15 @@ export default function FenceRepairHubPage() {
               <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Service Areas</p>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Fence Repair Across Georgia</h2>
               <p className="text-lg text-gray-700 mb-6">We repair commercial fencing and gate systems throughout Metro Atlanta and across the state of Georgia. Fast scheduling for urgent repairs — emergency response available.</p>
-              <p className="text-lg text-gray-700 mb-8">Our most active service areas include Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, and surrounding communities.</p>
+              <p className="text-lg text-gray-700 mb-4">Serving commercial properties throughout Metro Atlanta including:</p>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
+                {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Smyrna', 'Kennesaw', 'Decatur', 'Tucker', 'Chamblee', 'Duluth', 'Norcross', 'Johns Creek', 'Woodstock', 'Stone Mountain', 'Lawrenceville'].map((city) => (
+                  <span key={city} className="flex items-center gap-1.5 py-0.5">
+                    <svg className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {city}, GA
+                  </span>
+                ))}
+              </div>
               <div className="space-y-3">
                 <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Fence Repair in Atlanta, GA</Link>
                 <Link href="/installation/georgia/marietta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Fence Repair in Marietta, GA</Link>
