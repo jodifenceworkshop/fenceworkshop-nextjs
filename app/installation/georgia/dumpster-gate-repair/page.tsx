@@ -3,6 +3,39 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import type { Metadata } from 'next'
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Commercial Dumpster Gate Repair",
+  "description": "Fast repair for broken hinges, sagging gates, latch failure, and frame damage on commercial dumpster enclosures throughout Metro Atlanta and Georgia.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Fence Workshop",
+    "telephone": "+14043144419",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1522 Huber St NW",
+      "addressLocality": "Atlanta",
+      "addressRegion": "GA",
+      "postalCode": "30318",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Atlanta", "addressRegion": "GA" },
+    { "@type": "City", "name": "Marietta", "addressRegion": "GA" },
+    { "@type": "City", "name": "Alpharetta", "addressRegion": "GA" },
+    { "@type": "City", "name": "Roswell", "addressRegion": "GA" },
+    { "@type": "City", "name": "Smyrna", "addressRegion": "GA" },
+    { "@type": "City", "name": "Sandy Springs", "addressRegion": "GA" },
+    { "@type": "City", "name": "Kennesaw", "addressRegion": "GA" },
+    { "@type": "City", "name": "Duluth", "addressRegion": "GA" },
+    { "@type": "City", "name": "Decatur", "addressRegion": "GA" },
+    { "@type": "City", "name": "Norcross", "addressRegion": "GA" }
+  ],
+  "serviceType": "Dumpster Gate Repair"
+}
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -31,6 +64,7 @@ const faqs = [
 export default function DumpsterGateRepairPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <div className="h-20" />
@@ -85,6 +119,68 @@ export default function DumpsterGateRepairPage() {
         ].map((a) => (<div key={a.title} className="flex gap-4"><span className="text-brand-orange font-bold text-2xl mt-1 flex-shrink-0">&bull;</span><div><h3 className="text-lg font-bold text-gray-900 mb-2">{a.title}</h3><p className="text-gray-600 leading-relaxed">{a.description}</p></div></div>))}
       </div></div></section>
 
+      {/* Testimonials */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Reviews</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Property Managers Say</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">We handle dumpster gate repair for commercial properties, HOAs, and multi-family communities across Metro Atlanta.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "Got a code enforcement notice on a Friday afternoon about our dumpster gate. Fence Workshop was on-site Monday morning and had it fixed same day. That kind of response time is hard to find.",
+                name: "Rachel M.",
+                role: "Property Manager, Smyrna GA"
+              },
+              {
+                quote: "We have 8 properties in the Atlanta area and Fence Workshop handles dumpster gate repairs for all of them. Fast, reliable, and they know what they're doing. No need to call around for quotes.",
+                name: "David P.",
+                role: "Multi-Family Portfolio Manager, Atlanta"
+              },
+              {
+                quote: "The waste hauler completely destroyed our gate hinges. Fence Workshop came out, diagnosed the issue, and recommended we add bollards to prevent it from happening again. Smart advice — saved us money long-term.",
+                name: "Teresa H.",
+                role: "Facilities Manager, Decatur GA"
+              },
+            ].map((t) => (
+              <div key={t.name} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-4 italic">&ldquo;{t.quote}&rdquo;</p>
+                <div>
+                  <p className="font-semibold text-gray-900">{t.name}</p>
+                  <p className="text-sm text-gray-500">{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workmanship Guarantee */}
+      <section className="py-12 bg-brand-green">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+            <div className="flex-shrink-0">
+              <svg className="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <div className="flex-grow">
+              <h2 className="text-2xl font-bold text-white mb-2">Done Right, Guaranteed</h2>
+              <p className="text-white/90 text-lg">Every repair we complete is backed by our workmanship guarantee. We test the gate before we leave — proper swing, latch, and closure. If the repair doesn&rsquo;t hold, we come back and make it right at no charge. No runaround, no excuses.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-12"><p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Process</p><h2 className="text-4xl font-bold text-gray-900 mb-4">How Dumpster Gate Repair Works</h2><p className="text-lg text-gray-700 max-w-3xl mx-auto">Simple, fast, and transparent — from your first call to a gate that works.</p></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {[
           { step: '01', title: 'Call or Request Service', description: 'Tell us what\'s wrong — sagging gate, broken hinge, won\'t latch, hauler damage. Include a photo if you can. We\'ll respond quickly with next steps.' },
@@ -106,13 +202,22 @@ export default function DumpsterGateRepairPage() {
         <div>
           <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Service Areas</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Dumpster Gate Repair Across Georgia</h2>
-          <p className="text-lg text-gray-700 mb-6">We repair commercial dumpster gates throughout Metro Atlanta and across the state of Georgia. Fast scheduling for urgent repairs.</p>
-          <p className="text-lg text-gray-700 mb-8">Our most active service areas include Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, and surrounding communities.</p>
+          <p className="text-lg text-gray-700 mb-6">We repair commercial dumpster gates throughout Metro Atlanta and across the state of Georgia. Fast scheduling for urgent repairs — code enforcement notices and broken gates that won&rsquo;t close get priority.</p>
+          <p className="text-lg text-gray-700 mb-4">Serving commercial properties in:</p>
+          <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
+            {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Smyrna', 'Kennesaw', 'Decatur', 'Duluth', 'Norcross', 'Johns Creek', 'Peachtree City', 'Woodstock', 'Canton', 'Gainesville', 'Lawrenceville'].map((city) => (
+              <span key={city} className="flex items-center gap-1.5 py-0.5">
+                <svg className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                {city}, GA
+              </span>
+            ))}
+          </div>
           <div className="space-y-3">
             <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Dumpster Gate Repair in Atlanta, GA</Link>
             <Link href="/installation/georgia/marietta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Dumpster Gate Repair in Marietta, GA</Link>
             <Link href="/installation/georgia/alpharetta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Dumpster Gate Repair in Alpharetta, GA</Link>
-            <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium mt-6">&larr; All Commercial Fence Services in Georgia</Link>
+            <Link href="/installation/service-areas/" className="block text-brand-orange hover:underline font-medium">&rarr; View All Service Areas</Link>
+            <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium mt-2">&larr; All Commercial Fence Services in Georgia</Link>
           </div>
         </div>
         <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
