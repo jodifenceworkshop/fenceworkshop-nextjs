@@ -115,7 +115,7 @@ export default function DumpsterEnclosureGatesPage() {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">Commercial Dumpster Enclosure &amp; Gate Installation in Georgia</h1>
             <p className="text-2xl md:text-3xl font-bold text-brand-orange mb-6 leading-tight">Code-Compliant Enclosures for Commercial Properties</p>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">Custom dumpster enclosures and gates for commercial properties, HOAs, apartment communities, and retail centers. Built to local code with durable materials designed for heavy daily use. Licensed &amp; insured with 15+ years experience.</p>
+            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">One of the only fence companies in Georgia that specializes in both supplying and installing dumpster gates and enclosures. Custom enclosures for commercial properties, HOAs, apartment communities, and retail centers. Built to local code with durable materials designed for heavy daily use. Licensed &amp; insured with 15+ years experience.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#quote" className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center">Get a Free Quote</a>
               <a href="tel:+14043144419" className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg border border-white/30 transition-colors text-center">Call (404) 314-4419</a>
@@ -336,7 +336,7 @@ export default function DumpsterEnclosureGatesPage() {
               <p className="text-lg text-gray-700 mb-6">We install and repair dumpster enclosures throughout Metro Atlanta and across the state of Georgia for commercial properties, apartment communities, and retail centers.</p>
               <p className="text-lg text-gray-700 mb-4">Our crews are active throughout Metro Atlanta including:</p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
-                {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Smyrna', 'Kennesaw', 'Decatur', 'Duluth', 'Norcross', 'Johns Creek', 'Peachtree City', 'Woodstock', 'Canton', 'Gainesville', 'Lawrenceville'].map((city) => (
+                {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Smyrna', 'Kennesaw', 'Decatur', 'Tucker', 'Chamblee', 'Stone Mountain', 'Duluth', 'Norcross', 'Johns Creek', 'Woodstock', 'Lawrenceville'].map((city) => (
                   <span key={city} className="flex items-center gap-1.5 py-0.5">
                     <svg className="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                     {city}, GA
