@@ -258,7 +258,87 @@ export default function DumpsterEnclosureGatesPage() {
           <div className="text-center mb-12">
             <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Materials</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Dumpster Enclosure Materials &amp; Options</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">The right material depends on your budget, property aesthetic, and how much abuse the enclosure will take. Here&rsquo;s how the most common options compare.</p>
           </div>
+
+          {/* Material Comparison Table */}
+          <div className="overflow-x-auto mb-16">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-gray-900 text-white">
+                  <th className="text-left px-4 py-3 font-semibold rounded-tl-lg">Material</th>
+                  <th className="text-center px-4 py-3 font-semibold">Cost</th>
+                  <th className="text-center px-4 py-3 font-semibold">Durability</th>
+                  <th className="text-center px-4 py-3 font-semibold">Maintenance</th>
+                  <th className="text-center px-4 py-3 font-semibold">Appearance</th>
+                  <th className="text-center px-4 py-3 font-semibold rounded-tr-lg">Best For</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  {
+                    material: 'Steel Panel',
+                    cost: '$$$',
+                    durability: 'Excellent',
+                    maintenance: 'Low',
+                    appearance: 'Industrial / Professional',
+                    bestFor: 'High-traffic commercial, compactor enclosures',
+                    highlight: true,
+                  },
+                  {
+                    material: 'Chain Link + Privacy Slats',
+                    cost: '$',
+                    durability: 'Good',
+                    maintenance: 'Low',
+                    appearance: 'Functional',
+                    bestFor: 'Budget installs, back-of-property locations',
+                    highlight: false,
+                  },
+                  {
+                    material: 'Wood Composite',
+                    cost: '$$',
+                    durability: 'Moderate',
+                    maintenance: 'Medium',
+                    appearance: 'Natural / Upscale',
+                    bestFor: 'HOAs, retail centers, hospitality properties',
+                    highlight: false,
+                  },
+                  {
+                    material: 'Vinyl',
+                    cost: '$$',
+                    durability: 'Moderate',
+                    maintenance: 'Very Low',
+                    appearance: 'Clean / Modern',
+                    bestFor: 'Properties needing low-maintenance screening',
+                    highlight: false,
+                  },
+                  {
+                    material: 'Ornamental Steel',
+                    cost: '$$$',
+                    durability: 'Excellent',
+                    maintenance: 'Low',
+                    appearance: 'Decorative / High-End',
+                    bestFor: 'Upscale properties, HOAs with aesthetic requirements',
+                    highlight: false,
+                  },
+                ].map((row, i) => (
+                  <tr key={row.material} className={`border-b border-gray-200 ${row.highlight ? 'bg-orange-50' : i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                    <td className="px-4 py-3 font-semibold text-gray-900">
+                      {row.material}
+                      {row.highlight && <span className="ml-2 text-xs bg-brand-orange text-white px-2 py-0.5 rounded-full">Most Popular</span>}
+                    </td>
+                    <td className="px-4 py-3 text-center text-gray-700">{row.cost}</td>
+                    <td className="px-4 py-3 text-center text-gray-700">{row.durability}</td>
+                    <td className="px-4 py-3 text-center text-gray-700">{row.maintenance}</td>
+                    <td className="px-4 py-3 text-center text-gray-700">{row.appearance}</td>
+                    <td className="px-4 py-3 text-center text-gray-600 text-xs">{row.bestFor}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="text-xs text-gray-500 mt-2">$ = lowest cost &nbsp;·&nbsp; $$$ = highest cost &nbsp;·&nbsp; All gates use heavy-gauge steel tube frames regardless of screen material</p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Gate &amp; Frame Options</h3>
