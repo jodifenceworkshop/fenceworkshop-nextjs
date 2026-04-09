@@ -44,85 +44,6 @@ const PET_FRIENDLY_STYLES = [
   'athens', 'avalon', 'berkley', 'buford', 'chamblee', 'cobb', 'dublin', 'dunwoody',
 ]
 
-// Shared gate dimension diagrams (same for all styles)
-const DRIVEWAY_GATE_DIAGRAMS: { src: string; alt: string }[] = [
-  { src: '/spec-diagrams/DOUBLE-ARCHED-GATE-KIT-DIMENSIONS_STRAIGHT-TOP-GATE-pdf.jpg', alt: 'Double Gate Kit Dimensions - Straight Top' },
-  { src: '/spec-diagrams/DOUBLE-ARCHED-GATE-KIT-DIMENSIONS_RAINBOW-ARCH-TOP-GATE-pdf.jpg', alt: 'Double Gate Kit Dimensions - Rainbow Arch Top' },
-  { src: '/spec-diagrams/DOUBLE-ARCHED-GATE-KIT-DIMENSIONS_ESTATE-ARCH-TOP-GATE-pdf.jpg', alt: 'Double Gate Kit Dimensions - Estate Arch Top' },
-]
-
-const WALK_GATE_DIAGRAMS: { src: string; alt: string }[] = [
-  { src: '/spec-diagrams/SINGLE-FLAT-GATE-KIT-DIMENSIONS-pdf.jpg', alt: 'Walk Gate Kit Dimensions - Flat Top' },
-  { src: '/spec-diagrams/SINGLE-ARCHED-GATE-KIT-DIMENSIONS-pdf.jpg', alt: 'Walk Gate Kit Dimensions - Arched Top' },
-]
-
-// Style-specific spec diagrams hosted in /public/spec-diagrams
-const SPEC_DIAGRAMS: Record<string, { src: string; alt: string }[]> = {
-  athens: [
-    { src: '/spec-diagrams/ATHENS-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Athens Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/ATHENS-DOUBLE-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Athens Double Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/ATHENS-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Athens Aluminum Fence DIY Installation Specs' },
-  ],
-  atlanta: [
-    { src: '/spec-diagrams/ATLANTA-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Atlanta Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/ATLANTA-STANDARD-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Atlanta Standard Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/ATLANTA-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Atlanta Aluminum Fence DIY Installation Specs' },
-  ],
-  avalon: [
-    { src: '/spec-diagrams/AVALON-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Avalon Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/AVALON-PUPPY-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Avalon Puppy Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/AVALON-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Avalon Aluminum Fence DIY Installation Specs' },
-  ],
-  berkley: [
-    { src: '/spec-diagrams/BERKLEY-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Berkley Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/BERKLEY-STANDARD-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Berkley Standard Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/BERKLEY-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Berkley Aluminum Fence DIY Installation Specs' },
-  ],
-  brookhaven: [
-    { src: '/spec-diagrams/BROOKHAVEN-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Brookhaven Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/BROOKHAVEN-STANDARD-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Brookhaven Standard Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/BROOKHAVEN-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Brookhaven Aluminum Fence DIY Installation Specs' },
-  ],
-  buford: [
-    { src: '/spec-diagrams/BUFORD-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Buford Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/BUFORD-STANDARD-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Buford Standard Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/BUFORD-ALUMINUM-FENCING-DIY-SPECS-600x464.jpg', alt: 'Buford Aluminum Fence DIY Installation Specs' },
-  ],
-  candler: [
-    { src: '/spec-diagrams/CANDLER-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Candler Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/CANDLER-STANDARD-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Candler Standard Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/CANDLER-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Candler Aluminum Fence DIY Installation Specs' },
-  ],
-  chamblee: [
-    { src: '/spec-diagrams/CHAMBLEE-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Chamblee Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/CHAMBLEE-STANDARD-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Chamblee Standard Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/CHAMBLEE-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Chamblee Aluminum Fence DIY Installation Specs' },
-  ],
-  cobb: [
-    { src: '/spec-diagrams/COBB-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Cobb Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/COBB-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Cobb Aluminum Fence DIY Installation Specs' },
-  ],
-  dawson: [
-    { src: '/spec-diagrams/DAWSON-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Dawson Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/DAWSON-STANDARD-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Dawson Standard Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/DAWSON-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Dawson Aluminum Fence DIY Installation Specs' },
-  ],
-  dublin: [
-    { src: '/spec-diagrams/DUBLIN-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Dublin Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/DUBLIN-PUPPY-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Dublin Puppy Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/DUBLIN-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Dublin Aluminum Fence DIY Installation Specs' },
-  ],
-  dunwoody: [
-    { src: '/spec-diagrams/DUNWOODY-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Dunwoody Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/DUNWOODY-DOUBLE-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Dunwoody Double Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/DUNWOODY-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Dunwoody Aluminum Fence DIY Installation Specs' },
-  ],
-  savannah: [
-    { src: '/spec-diagrams/SAVANNAH-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Savannah Fence Panel Height Specifications' },
-    { src: '/spec-diagrams/SAVANNAH-STANDARD-PICKET-RACKABLE-ALUMINUM-FENCING-pdf.jpg', alt: 'Savannah Standard Picket Rackable Fence Specifications' },
-    { src: '/spec-diagrams/SAVANNAH-ALUMINUM-FENCING-DIY-SPECS-pdf.jpg', alt: 'Savannah Aluminum Fence DIY Installation Specs' },
-  ],
-}
 
 function detectUseCases(title: string): { poolCode: boolean; petFriendly: boolean } {
   const lower = title.toLowerCase()
@@ -172,19 +93,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
     ? await getRelatedProductsByStyle(style, slug)
     : []
 
-  // Append spec diagrams (gate dimension diagrams + style-specific panel diagrams)
-  const gateDiagrams =
-    category === 'driveway-gates' ? DRIVEWAY_GATE_DIAGRAMS :
-    category === 'walk-gates' ? WALK_GATE_DIAGRAMS : []
-  const styleDiagrams = style ? (SPEC_DIAGRAMS[style] ?? []) : []
-  const specDiagrams = [...gateDiagrams, ...styleDiagrams]
-  const specImages: import('@/lib/shopify').ShopifyImage[] = specDiagrams.map((d) => ({
-    url: d.src,
-    altText: d.alt,
-    width: 800,
-    height: 618,
-  }))
-  const allImages = [...images, ...specImages]
 
   return (
     <main className="min-h-screen bg-white">
@@ -208,7 +116,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
           {/* Image Gallery */}
           <div>
-            <ProductGallery images={allImages} productTitle={product.title} />
+            <ProductGallery images={images} productTitle={product.title} />
           </div>
 
           {/* Product Info */}
