@@ -44,7 +44,19 @@ const PET_FRIENDLY_STYLES = [
   'athens', 'avalon', 'berkley', 'buford', 'chamblee', 'cobb', 'dublin', 'dunwoody',
 ]
 
-// Spec diagrams hosted in /public/spec-diagrams, keyed by style
+// Shared gate dimension diagrams (same for all styles)
+const DRIVEWAY_GATE_DIAGRAMS: { src: string; alt: string }[] = [
+  { src: '/spec-diagrams/DOUBLE-ARCHED-GATE-KIT-DIMENSIONS_STRAIGHT-TOP-GATE-pdf.jpg', alt: 'Double Gate Kit Dimensions - Straight Top' },
+  { src: '/spec-diagrams/DOUBLE-ARCHED-GATE-KIT-DIMENSIONS_RAINBOW-ARCH-TOP-GATE-pdf.jpg', alt: 'Double Gate Kit Dimensions - Rainbow Arch Top' },
+  { src: '/spec-diagrams/DOUBLE-ARCHED-GATE-KIT-DIMENSIONS_ESTATE-ARCH-TOP-GATE-pdf.jpg', alt: 'Double Gate Kit Dimensions - Estate Arch Top' },
+]
+
+const WALK_GATE_DIAGRAMS: { src: string; alt: string }[] = [
+  { src: '/spec-diagrams/SINGLE-FLAT-GATE-KIT-DIMENSIONS-pdf.jpg', alt: 'Walk Gate Kit Dimensions - Flat Top' },
+  { src: '/spec-diagrams/SINGLE-ARCHED-GATE-KIT-DIMENSIONS-pdf.jpg', alt: 'Walk Gate Kit Dimensions - Arched Top' },
+]
+
+// Style-specific spec diagrams hosted in /public/spec-diagrams
 const SPEC_DIAGRAMS: Record<string, { src: string; alt: string }[]> = {
   athens: [
     { src: '/spec-diagrams/ATHENS-RESIDENTIAL-ALUMINUM-FENCE-HEIGHTS-pdf.jpg', alt: 'Athens Fence Panel Height Specifications' },
@@ -160,8 +172,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
     ? await getRelatedProductsByStyle(style, slug)
     : []
 
-  // Append spec diagrams for this style (stored in /public/spec-diagrams)
-  const specDiagrams = style ? (SPEC_DIAGRAMS[style] ?? []) : []
+  // Append spec diagrams (gate dimension diagrams + style-specific panel diagrams)
+  const gateDiagrams =
+    category === 'driveway-gates' ? DRIVEWAY_GATE_DIAGRAMS :
+    category === 'walk-gates' ? WALK_GATE_DIAGRAMS : []
+  const styleDiagrams = style ? (SPEC_DIAGRAMS[style] ?? []) : []
+  const specDiagrams = [...gateDiagrams, ...styleDiagrams]
   const specImages: import('@/lib/shopify').ShopifyImage[] = specDiagrams.map((d) => ({
     url: d.src,
     altText: d.alt,
