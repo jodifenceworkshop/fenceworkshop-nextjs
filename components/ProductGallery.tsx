@@ -68,8 +68,8 @@ export default function ProductGallery({ images, productTitle }: ProductGalleryP
 
       {/* Thumbnails */}
       {images.length > 1 && (
-        <div className="grid grid-cols-4 gap-3">
-          {images.slice(0, 8).map((img, i) => (
+        <div className="grid grid-cols-6 gap-2">
+          {images.slice(0, 12).map((img, i) => (
             <button
               key={i}
               onClick={() => { setActiveIndex(i); openLightbox(i) }}
