@@ -10,92 +10,93 @@
   </defs>
 <text x="30" y="33" font-size="20" font-weight="bold" fill="#1a1a1a" font-family="Arial,sans-serif">DOUBLE GATE KIT DIMENSIONS</text>
 <text x="30" y="53" font-size="12" fill="#444" font-family="Arial,sans-serif">ESTATE ARCH TOP</text>
-<line x1="108" y1="400" x2="731" y2="400" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="8,4"/>
+<line x1="80" y1="400" x2="694" y2="400" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="8,4"/>
 <text x="30" y="404" font-size="8" fill="#cc0000" font-family="Arial,sans-serif">LINE OF GROUND</text>
-<rect x="156" y="76" width="14" height="354" fill="#2a2a2a"/>
-<rect x="153" y="68" width="20" height="10" fill="#2a2a2a"/>
-<rect x="414" y="76" width="14" height="354" fill="#2a2a2a"/>
-<rect x="411" y="68" width="20" height="10" fill="#2a2a2a"/>
-<rect x="672" y="76" width="14" height="354" fill="#2a2a2a"/>
-<rect x="669" y="68" width="20" height="10" fill="#2a2a2a"/>
-<rect x="170" y="98" width="244" height="11" fill="#2a2a2a"/>
-<rect x="170" y="220" width="244" height="10" fill="#2a2a2a"/>
-<rect x="170" y="352" width="244" height="11" fill="#2a2a2a"/>
-<rect x="178.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="195.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="212.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="229.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="246.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="263.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="280.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="297.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="314.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="331.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="348.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="365.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="382.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="399.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="428" y="98" width="244" height="11" fill="#2a2a2a"/>
-<rect x="428" y="220" width="244" height="10" fill="#2a2a2a"/>
-<rect x="428" y="352" width="244" height="11" fill="#2a2a2a"/>
-<rect x="436.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="453.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="470.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="487.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="504.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="521.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="538.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="555.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="572.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="589.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="606.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="623.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="640.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="657.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="170" y="98" width="244" height="11" fill="#2a2a2a"/>
-<path d="M170,103 Q292,68 414,103" stroke="#2a2a2a" stroke-width="9" fill="none"/>
-<polygon points="178.5,109 184.5,109 181.5,96" fill="#2a2a2a"/>
-<polygon points="195.5,109 201.5,109 198.5,96" fill="#2a2a2a"/>
-<polygon points="212.5,109 218.5,109 215.5,96" fill="#2a2a2a"/>
-<polygon points="229.5,109 235.5,109 232.5,96" fill="#2a2a2a"/>
-<polygon points="246.5,109 252.5,109 249.5,96" fill="#2a2a2a"/>
-<polygon points="263.5,109 269.5,109 266.5,96" fill="#2a2a2a"/>
-<polygon points="280.5,109 286.5,109 283.5,96" fill="#2a2a2a"/>
-<polygon points="297.5,109 303.5,109 300.5,96" fill="#2a2a2a"/>
-<polygon points="314.5,109 320.5,109 317.5,96" fill="#2a2a2a"/>
-<polygon points="331.5,109 337.5,109 334.5,96" fill="#2a2a2a"/>
-<polygon points="348.5,109 354.5,109 351.5,96" fill="#2a2a2a"/>
-<polygon points="365.5,109 371.5,109 368.5,96" fill="#2a2a2a"/>
-<polygon points="382.5,109 388.5,109 385.5,96" fill="#2a2a2a"/>
-<polygon points="399.5,109 405.5,109 402.5,96" fill="#2a2a2a"/>
-<rect x="428" y="98" width="244" height="11" fill="#2a2a2a"/>
-<path d="M428,103 Q550,68 672,103" stroke="#2a2a2a" stroke-width="9" fill="none"/>
-<polygon points="436.5,109 442.5,109 439.5,96" fill="#2a2a2a"/>
-<polygon points="453.5,109 459.5,109 456.5,96" fill="#2a2a2a"/>
-<polygon points="470.5,109 476.5,109 473.5,96" fill="#2a2a2a"/>
-<polygon points="487.5,109 493.5,109 490.5,96" fill="#2a2a2a"/>
-<polygon points="504.5,109 510.5,109 507.5,96" fill="#2a2a2a"/>
-<polygon points="521.5,109 527.5,109 524.5,96" fill="#2a2a2a"/>
-<polygon points="538.5,109 544.5,109 541.5,96" fill="#2a2a2a"/>
-<polygon points="555.5,109 561.5,109 558.5,96" fill="#2a2a2a"/>
-<polygon points="572.5,109 578.5,109 575.5,96" fill="#2a2a2a"/>
-<polygon points="589.5,109 595.5,109 592.5,96" fill="#2a2a2a"/>
-<polygon points="606.5,109 612.5,109 609.5,96" fill="#2a2a2a"/>
-<polygon points="623.5,109 629.5,109 626.5,96" fill="#2a2a2a"/>
-<polygon points="640.5,109 646.5,109 643.5,96" fill="#2a2a2a"/>
-<polygon points="657.5,109 663.5,109 660.5,96" fill="#2a2a2a"/>
-<line x1="92" y1="98" x2="92" y2="363" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
-<text x="92" y="230" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif" transform="rotate(-90 92 230)">FENCE HEIGHT</text>
-<line x1="100" y1="98" x2="156" y2="98" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
-<line x1="100" y1="363" x2="156" y2="363" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
-<line x1="62" y1="76" x2="62" y2="400" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
-<text x="62" y="238" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif" transform="rotate(-90 62 238)">POST HEIGHT = FENCE HEIGHT + 2"</text>
-<line x1="70" y1="76" x2="156" y2="76" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
-<line x1="70" y1="400" x2="156" y2="400" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
-<line x1="163" y1="458" x2="679" y2="458" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
-<text x="421" y="451" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif">* 8', 10' or 12' GATE WIDTH  [INNER POST TO INNER POST]</text>
-<line x1="163" y1="408" x2="163" y2="458" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
-<line x1="679" y1="408" x2="679" y2="458" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
-<text x="158" y="418" font-size="8" fill="#555" font-family="Arial,sans-serif">2½" POST</text>
+<rect x="120" y="78" width="14" height="352" fill="#2a2a2a"/>
+<rect x="117" y="70" width="20" height="10" fill="#2a2a2a"/>
+<rect x="650" y="78" width="14" height="352" fill="#2a2a2a"/>
+<rect x="647" y="70" width="20" height="10" fill="#2a2a2a"/>
+<line x1="392" y1="50" x2="392" y2="365" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+<rect x="134" y="222" width="258" height="10" fill="#2a2a2a"/>
+<rect x="134" y="354" width="258" height="11" fill="#2a2a2a"/>
+<rect x="141.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="158.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="175.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="192.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="209.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="226.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="243.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="260.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="277.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="294.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="311.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="328.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="345.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="362.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="379.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<polygon points="141.0,103.7248062015504 147.0,103.7248062015504 144.0,97.7248062015504" fill="#2a2a2a"/>
+<polygon points="158.0,100.62790697674419 164.0,100.62790697674419 161.0,94.62790697674419" fill="#2a2a2a"/>
+<polygon points="175.0,97.53100775193798 181.0,97.53100775193798 178.0,91.53100775193798" fill="#2a2a2a"/>
+<polygon points="192.0,94.43410852713178 198.0,94.43410852713178 195.0,88.43410852713178" fill="#2a2a2a"/>
+<polygon points="209.0,91.33720930232558 215.0,91.33720930232558 212.0,84.33720930232558" fill="#2a2a2a"/>
+<polygon points="226.0,88.24031007751938 232.0,88.24031007751938 229.0,80.24031007751938" fill="#2a2a2a"/>
+<polygon points="243.0,85.14341085271317 249.0,85.14341085271317 246.0,76.14341085271317" fill="#2a2a2a"/>
+<polygon points="260.0,82.04651162790698 266.0,82.04651162790698 263.0,73.04651162790698" fill="#2a2a2a"/>
+<polygon points="277.0,78.94961240310077 283.0,78.94961240310077 280.0,68.94961240310077" fill="#2a2a2a"/>
+<polygon points="294.0,75.85271317829458 300.0,75.85271317829458 297.0,64.85271317829458" fill="#2a2a2a"/>
+<polygon points="311.0,72.75581395348837 317.0,72.75581395348837 314.0,60.75581395348837" fill="#2a2a2a"/>
+<polygon points="328.0,69.65891472868216 334.0,69.65891472868216 331.0,56.65891472868216" fill="#2a2a2a"/>
+<polygon points="345.0,66.56201550387597 351.0,66.56201550387597 348.0,53.56201550387597" fill="#2a2a2a"/>
+<polygon points="362.0,63.46511627906977 368.0,63.46511627906977 365.0,49.46511627906977" fill="#2a2a2a"/>
+<polygon points="379.0,60.36821705426357 385.0,60.36821705426357 382.0,45.36821705426357" fill="#2a2a2a"/>
+<rect x="392" y="222" width="258" height="10" fill="#2a2a2a"/>
+<rect x="392" y="354" width="258" height="11" fill="#2a2a2a"/>
+<rect x="399.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="416.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="433.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="450.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="467.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="484.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="501.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="518.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="535.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="552.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="569.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="586.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="603.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="620.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="637.0" y="111" width="6" height="243" fill="#2a2a2a"/>
+<polygon points="399.0,59.275193798449614 405.0,59.275193798449614 402.0,44.275193798449614" fill="#2a2a2a"/>
+<polygon points="416.0,62.372093023255815 422.0,62.372093023255815 419.0,48.372093023255815" fill="#2a2a2a"/>
+<polygon points="433.0,65.46899224806202 439.0,65.46899224806202 436.0,51.46899224806202" fill="#2a2a2a"/>
+<polygon points="450.0,68.56589147286822 456.0,68.56589147286822 453.0,55.565891472868216" fill="#2a2a2a"/>
+<polygon points="467.0,71.66279069767442 473.0,71.66279069767442 470.0,59.662790697674424" fill="#2a2a2a"/>
+<polygon points="484.0,74.75968992248062 490.0,74.75968992248062 487.0,63.75968992248062" fill="#2a2a2a"/>
+<polygon points="501.0,77.85658914728683 507.0,77.85658914728683 504.0,67.85658914728683" fill="#2a2a2a"/>
+<polygon points="518.0,80.95348837209302 524.0,80.95348837209302 521.0,70.95348837209302" fill="#2a2a2a"/>
+<polygon points="535.0,84.05038759689923 541.0,84.05038759689923 538.0,75.05038759689923" fill="#2a2a2a"/>
+<polygon points="552.0,87.14728682170542 558.0,87.14728682170542 555.0,79.14728682170542" fill="#2a2a2a"/>
+<polygon points="569.0,90.24418604651163 575.0,90.24418604651163 572.0,83.24418604651163" fill="#2a2a2a"/>
+<polygon points="586.0,93.34108527131784 592.0,93.34108527131784 589.0,87.34108527131784" fill="#2a2a2a"/>
+<polygon points="603.0,96.43798449612403 609.0,96.43798449612403 606.0,90.43798449612403" fill="#2a2a2a"/>
+<polygon points="620.0,99.53488372093024 626.0,99.53488372093024 623.0,93.53488372093024" fill="#2a2a2a"/>
+<polygon points="637.0,102.63178294573643 643.0,102.63178294573643 640.0,96.63178294573643" fill="#2a2a2a"/>
+<path d="M134,105 Q315,66 392,58" stroke="#2a2a2a" stroke-width="9" fill="none" stroke-linecap="round"/>
+<path d="M392,58 Q469,66 650,105" stroke="#2a2a2a" stroke-width="9" fill="none" stroke-linecap="round"/>
+<rect x="134" y="100" width="20" height="11" fill="#2a2a2a"/>
+<rect x="630" y="100" width="20" height="11" fill="#2a2a2a"/>
+<line x1="72" y1="100" x2="72" y2="365" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
+<text x="72" y="232" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif" transform="rotate(-90 72 232)">FENCE HEIGHT</text>
+<line x1="80" y1="100" x2="120" y2="100" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="80" y1="365" x2="120" y2="365" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="44" y1="78" x2="44" y2="400" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
+<text x="44" y="239" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif" transform="rotate(-90 44 239)">POST HEIGHT = FENCE HEIGHT + 2"</text>
+<line x1="52" y1="78" x2="120" y2="78" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="52" y1="400" x2="120" y2="400" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="127" y1="458" x2="657" y2="458" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
+<text x="392" y="451" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif">* 8', 10' or 12' GATE WIDTH  [INNER POST TO INNER POST]</text>
+<line x1="127" y1="408" x2="127" y2="458" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="657" y1="408" x2="657" y2="458" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<text x="122" y="418" font-size="8" fill="#555" font-family="Arial,sans-serif">2½" POST</text>
 <text x="30" y="508" font-size="9" fill="#666" font-family="Arial,sans-serif">*ACTUAL GATE WIDTHS ARE 1" LESS THAN NOTED TO ALLOW FOR HINGE, ROD, &amp; LATCH TOLERANCES</text>
 </svg>

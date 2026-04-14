@@ -10,45 +10,44 @@
   </defs>
 <text x="30" y="33" font-size="20" font-weight="bold" fill="#1a1a1a" font-family="Arial,sans-serif">WALK GATE KIT DIMENSIONS</text>
 <text x="30" y="53" font-size="12" fill="#444" font-family="Arial,sans-serif">ARCHED TOP</text>
-<line x1="108" y1="400" x2="631" y2="400" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="8,4"/>
+<line x1="80" y1="400" x2="616" y2="400" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="8,4"/>
 <text x="30" y="404" font-size="8" fill="#cc0000" font-family="Arial,sans-serif">LINE OF GROUND</text>
-<rect x="212" y="76" width="14" height="354" fill="#2a2a2a"/>
-<rect x="209" y="68" width="20" height="10" fill="#2a2a2a"/>
-<rect x="572" y="76" width="14" height="354" fill="#2a2a2a"/>
-<rect x="569" y="68" width="20" height="10" fill="#2a2a2a"/>
-<rect x="226" y="98" width="346" height="11" fill="#2a2a2a"/>
-<rect x="226" y="220" width="346" height="10" fill="#2a2a2a"/>
-<rect x="226" y="352" width="346" height="11" fill="#2a2a2a"/>
-<rect x="234.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="251.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="268.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="285.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="302.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="319.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="336.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="353.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="370.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="387.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="404.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="421.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="438.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="455.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="472.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="489.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="506.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="523.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="540.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="557.5" y="109" width="6" height="243" fill="#2a2a2a"/>
-<rect x="226" y="98" width="346" height="11" fill="#2a2a2a"/>
-<path d="M226,104 Q399,56 572,104" stroke="#2a2a2a" stroke-width="11" fill="none" stroke-linecap="butt"/>
-<line x1="150" y1="98" x2="150" y2="363" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
-<text x="150" y="230" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif" transform="rotate(-90 150 230)">FENCE HEIGHT</text>
-<line x1="158" y1="98" x2="212" y2="98" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
-<line x1="158" y1="363" x2="212" y2="363" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
-<line x1="120" y1="76" x2="120" y2="400" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
-<text x="120" y="238" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif" transform="rotate(-90 120 238)">POST HEIGHT = FENCE HEIGHT + 2"</text>
-<line x1="128" y1="76" x2="212" y2="76" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
-<line x1="128" y1="400" x2="212" y2="400" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<rect x="212" y="78" width="14" height="352" fill="#2a2a2a"/>
+<rect x="209" y="70" width="20" height="10" fill="#2a2a2a"/>
+<rect x="572" y="78" width="14" height="352" fill="#2a2a2a"/>
+<rect x="569" y="70" width="20" height="10" fill="#2a2a2a"/>
+<rect x="226" y="100" width="346" height="11" fill="#2a2a2a"/>
+<rect x="226" y="222" width="346" height="10" fill="#2a2a2a"/>
+<rect x="226" y="354" width="346" height="11" fill="#2a2a2a"/>
+<rect x="234.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="251.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="268.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="285.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="302.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="319.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="336.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="353.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="370.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="387.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="404.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="421.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="438.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="455.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="472.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="489.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="506.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="523.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="540.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<rect x="557.5" y="111" width="6" height="243" fill="#2a2a2a"/>
+<path d="M226,105 Q399,56 572,105" stroke="#2a2a2a" stroke-width="11" fill="none" stroke-linecap="butt"/>
+<line x1="164" y1="100" x2="164" y2="365" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
+<text x="164" y="232" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif" transform="rotate(-90 164 232)">FENCE HEIGHT</text>
+<line x1="172" y1="100" x2="212" y2="100" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="172" y1="365" x2="212" y2="365" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="136" y1="78" x2="136" y2="400" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
+<text x="136" y="239" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif" transform="rotate(-90 136 239)">POST HEIGHT = FENCE HEIGHT + 2"</text>
+<line x1="144" y1="78" x2="212" y2="78" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="144" y1="400" x2="212" y2="400" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
 <line x1="219" y1="458" x2="579" y2="458" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
 <text x="399" y="451" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif">* 3', 4' or 5' GATE WIDTH  [INNER POST TO INNER POST]</text>
 <line x1="219" y1="408" x2="219" y2="458" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
