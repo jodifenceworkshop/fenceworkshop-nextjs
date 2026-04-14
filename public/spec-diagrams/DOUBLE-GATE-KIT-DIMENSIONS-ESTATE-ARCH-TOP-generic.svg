@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+<rect width="800" height="520" fill="white"/>
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0,0 8,3 0,6" fill="#cc0000"/>
+    </marker>
+    <marker id="ahr" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <polygon points="0,0 8,3 0,6" fill="#cc0000"/>
+    </marker>
+  </defs>
+<text x="30" y="33" font-size="20" font-weight="bold" fill="#1a1a1a" font-family="Arial,sans-serif">DOUBLE GATE KIT DIMENSIONS</text>
+<text x="30" y="53" font-size="12" fill="#444" font-family="Arial,sans-serif">ESTATE ARCH TOP</text>
+<line x1="108" y1="400" x2="731" y2="400" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="8,4"/>
+<text x="30" y="404" font-size="8" fill="#cc0000" font-family="Arial,sans-serif">LINE OF GROUND</text>
+<rect x="156" y="76" width="14" height="354" fill="#2a2a2a"/>
+<rect x="153" y="68" width="20" height="10" fill="#2a2a2a"/>
+<rect x="414" y="76" width="14" height="354" fill="#2a2a2a"/>
+<rect x="411" y="68" width="20" height="10" fill="#2a2a2a"/>
+<rect x="672" y="76" width="14" height="354" fill="#2a2a2a"/>
+<rect x="669" y="68" width="20" height="10" fill="#2a2a2a"/>
+<rect x="170" y="98" width="244" height="11" fill="#2a2a2a"/>
+<rect x="170" y="220" width="244" height="10" fill="#2a2a2a"/>
+<rect x="170" y="352" width="244" height="11" fill="#2a2a2a"/>
+<rect x="178.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="195.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="212.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="229.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="246.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="263.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="280.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="297.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="314.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="331.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="348.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="365.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="382.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="399.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="428" y="98" width="244" height="11" fill="#2a2a2a"/>
+<rect x="428" y="220" width="244" height="10" fill="#2a2a2a"/>
+<rect x="428" y="352" width="244" height="11" fill="#2a2a2a"/>
+<rect x="436.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="453.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="470.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="487.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="504.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="521.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="538.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="555.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="572.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="589.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="606.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="623.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="640.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="657.5" y="109" width="6" height="243" fill="#2a2a2a"/>
+<rect x="170" y="98" width="244" height="11" fill="#2a2a2a"/>
+<path d="M170,103 Q292,68 414,103" stroke="#2a2a2a" stroke-width="9" fill="none"/>
+<polygon points="178.5,109 184.5,109 181.5,96" fill="#2a2a2a"/>
+<polygon points="195.5,109 201.5,109 198.5,96" fill="#2a2a2a"/>
+<polygon points="212.5,109 218.5,109 215.5,96" fill="#2a2a2a"/>
+<polygon points="229.5,109 235.5,109 232.5,96" fill="#2a2a2a"/>
+<polygon points="246.5,109 252.5,109 249.5,96" fill="#2a2a2a"/>
+<polygon points="263.5,109 269.5,109 266.5,96" fill="#2a2a2a"/>
+<polygon points="280.5,109 286.5,109 283.5,96" fill="#2a2a2a"/>
+<polygon points="297.5,109 303.5,109 300.5,96" fill="#2a2a2a"/>
+<polygon points="314.5,109 320.5,109 317.5,96" fill="#2a2a2a"/>
+<polygon points="331.5,109 337.5,109 334.5,96" fill="#2a2a2a"/>
+<polygon points="348.5,109 354.5,109 351.5,96" fill="#2a2a2a"/>
+<polygon points="365.5,109 371.5,109 368.5,96" fill="#2a2a2a"/>
+<polygon points="382.5,109 388.5,109 385.5,96" fill="#2a2a2a"/>
+<polygon points="399.5,109 405.5,109 402.5,96" fill="#2a2a2a"/>
+<rect x="428" y="98" width="244" height="11" fill="#2a2a2a"/>
+<path d="M428,103 Q550,68 672,103" stroke="#2a2a2a" stroke-width="9" fill="none"/>
+<polygon points="436.5,109 442.5,109 439.5,96" fill="#2a2a2a"/>
+<polygon points="453.5,109 459.5,109 456.5,96" fill="#2a2a2a"/>
+<polygon points="470.5,109 476.5,109 473.5,96" fill="#2a2a2a"/>
+<polygon points="487.5,109 493.5,109 490.5,96" fill="#2a2a2a"/>
+<polygon points="504.5,109 510.5,109 507.5,96" fill="#2a2a2a"/>
+<polygon points="521.5,109 527.5,109 524.5,96" fill="#2a2a2a"/>
+<polygon points="538.5,109 544.5,109 541.5,96" fill="#2a2a2a"/>
+<polygon points="555.5,109 561.5,109 558.5,96" fill="#2a2a2a"/>
+<polygon points="572.5,109 578.5,109 575.5,96" fill="#2a2a2a"/>
+<polygon points="589.5,109 595.5,109 592.5,96" fill="#2a2a2a"/>
+<polygon points="606.5,109 612.5,109 609.5,96" fill="#2a2a2a"/>
+<polygon points="623.5,109 629.5,109 626.5,96" fill="#2a2a2a"/>
+<polygon points="640.5,109 646.5,109 643.5,96" fill="#2a2a2a"/>
+<polygon points="657.5,109 663.5,109 660.5,96" fill="#2a2a2a"/>
+<line x1="92" y1="98" x2="92" y2="363" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
+<text x="92" y="230" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif" transform="rotate(-90 92 230)">FENCE HEIGHT</text>
+<line x1="100" y1="98" x2="156" y2="98" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="100" y1="363" x2="156" y2="363" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="62" y1="76" x2="62" y2="400" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
+<text x="62" y="238" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif" transform="rotate(-90 62 238)">POST HEIGHT = FENCE HEIGHT + 2"</text>
+<line x1="70" y1="76" x2="156" y2="76" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="70" y1="400" x2="156" y2="400" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="163" y1="458" x2="679" y2="458" stroke="#cc0000" stroke-width="1.5" marker-start="url(#ahr)" marker-end="url(#ah)"/>
+<text x="421" y="451" text-anchor="middle" font-size="9" fill="#cc0000" font-family="Arial,sans-serif">* 8', 10' or 12' GATE WIDTH  [INNER POST TO INNER POST]</text>
+<line x1="163" y1="408" x2="163" y2="458" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<line x1="679" y1="408" x2="679" y2="458" stroke="#cc0000" stroke-width="0.8" stroke-dasharray="4,3"/>
+<text x="158" y="418" font-size="8" fill="#555" font-family="Arial,sans-serif">2½" POST</text>
+<text x="30" y="508" font-size="9" fill="#666" font-family="Arial,sans-serif">*ACTUAL GATE WIDTHS ARE 1" LESS THAN NOTED TO ALLOW FOR HINGE, ROD, &amp; LATCH TOLERANCES</text>
+</svg>
