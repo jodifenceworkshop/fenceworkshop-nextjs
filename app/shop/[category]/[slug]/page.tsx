@@ -44,22 +44,6 @@ const PET_FRIENDLY_STYLES = [
   'athens', 'avalon', 'berkley', 'buford', 'chamblee', 'cobb', 'dublin', 'dunwoody',
 ]
 
-// Generic gate dimension diagrams (SVGs, style-neutral)
-const DRIVEWAY_GATE_DIAGRAMS: import('@/lib/shopify').ShopifyImage[] = [
-  { url: '/spec-diagrams/DOUBLE-GATE-KIT-DIMENSIONS-STRAIGHT-TOP-generic.svg', altText: 'Double Gate Kit Dimensions – Straight Top', width: 800, height: 520 },
-  { url: '/spec-diagrams/DOUBLE-GATE-KIT-DIMENSIONS-RAINBOW-ARCH-TOP-generic.svg', altText: 'Double Gate Kit Dimensions – Rainbow Arch Top', width: 800, height: 520 },
-  { url: '/spec-diagrams/DOUBLE-GATE-KIT-DIMENSIONS-ESTATE-ARCH-TOP-generic.svg', altText: 'Double Gate Kit Dimensions – Estate Arch Top', width: 800, height: 520 },
-]
-
-const WALK_GATE_DIAGRAMS: import('@/lib/shopify').ShopifyImage[] = [
-  { url: '/spec-diagrams/SINGLE-GATE-KIT-DIMENSIONS-FLAT-TOP-generic.svg', altText: 'Walk Gate Kit Dimensions – Flat Top', width: 800, height: 520 },
-  { url: '/spec-diagrams/SINGLE-GATE-KIT-DIMENSIONS-ARCHED-TOP-generic.svg', altText: 'Walk Gate Kit Dimensions – Arched Top', width: 800, height: 520 },
-]
-
-// Filter out old photorealistic gate dimension images from Shopify
-function isOldGateDiagram(url: string): boolean {
-  return url.includes('GATE-KIT-DIMENSIONS') || url.includes('ARCHED-GATE-KIT')
-}
 
 
 function detectUseCases(title: string): { poolCode: boolean; petFriendly: boolean } {
@@ -100,7 +84,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     notFound()
   }
 
-  const rawImages = product.images.edges.map((e) => e.node)
+  const images = product.images.edges.map((e) => e.node)
   const variants = product.variants.edges.map((e) => e.node)
   const categoryLabel = CATEGORY_LABELS[category] || 'Shop'
   const { poolCode, petFriendly } = detectUseCases(product.title)
@@ -109,14 +93,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const relatedProducts = style
     ? await getRelatedProductsByStyle(style, slug)
     : []
-
-  // Replace old photorealistic gate diagrams with new generic SVG diagrams
-  const filteredImages = (category === 'driveway-gates' || category === 'walk-gates')
-    ? rawImages.filter((img) => !isOldGateDiagram(img.url))
-    : rawImages
-  const gateDiagrams = category === 'driveway-gates' ? DRIVEWAY_GATE_DIAGRAMS
-    : category === 'walk-gates' ? WALK_GATE_DIAGRAMS : []
-  const images = [...filteredImages, ...gateDiagrams]
 
 
   return (
