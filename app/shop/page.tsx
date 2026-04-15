@@ -107,7 +107,7 @@ export default function ShopPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {/* Aluminum Fencing */}
             <Link href="/shop/aluminum-fencing/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
               <div className="aspect-square relative overflow-hidden bg-gray-50">
@@ -165,6 +165,25 @@ export default function ShopPage() {
                   lockable options available to match your aluminum fence.
                 </p>
                 <span className="text-brand-green font-semibold group-hover:underline">Shop Walk Gates →</span>
+              </div>
+            </Link>
+
+            {/* Fence Kits */}
+            <Link href="/shop/fence-kits/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
+              <div className="aspect-square relative overflow-hidden bg-gray-50 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <svg className="w-16 h-16 text-gray-300 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                  <p className="text-sm text-gray-400">Photo coming soon</p>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Fence Kits</h3>
+                <p className="text-gray-600 mb-3">
+                  All-inclusive fence kits with panels, posts, gate, and hardware — everything needed for a complete DIY installation.
+                </p>
+                <span className="text-brand-green font-semibold group-hover:underline">Shop Fence Kits →</span>
               </div>
             </Link>
           </div>
@@ -373,6 +392,7 @@ export default function ShopPage() {
                 <li><Link href="/shop/aluminum-fencing/" className="hover:underline">Aluminum Fencing</Link></li>
                 <li><Link href="/shop/driveway-gates/" className="hover:underline">Driveway Gates</Link></li>
                 <li><Link href="/shop/walk-gates/" className="hover:underline">Walk Gates</Link></li>
+                <li><Link href="/shop/fence-kits/" className="hover:underline">Fence Kits</Link></li>
               </ul>
             </div>
 

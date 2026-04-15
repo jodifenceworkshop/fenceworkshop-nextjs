@@ -261,6 +261,7 @@ const TYPE_TO_CATEGORY: Record<string, string> = {
   'Fence Post': 'fence-posts',
   'Gate Post': 'fence-posts',
   'Accessory': 'accessories',
+  'Fence Kit': 'fence-kits',
 }
 
 export function getProductUrl(product: { handle: string; productType: string }): string {
@@ -275,6 +276,7 @@ const CATEGORY_TO_TYPES: Record<string, string[]> = {
   'aluminum-fencing': ['Fence Panel'],
   'fence-posts': ['Fence Post', 'Gate Post'],
   'accessories': ['Accessory'],
+  'fence-kits': ['Fence Kit'],
 }
 
 export async function getRelatedProductsByStyle(
