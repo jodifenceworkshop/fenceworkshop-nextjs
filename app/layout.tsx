@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import LocalBusinessSchema from '@/components/LocalBusinessSchema'
+import { CartProvider } from '@/context/CartContext'
+import CartDrawer from '@/components/CartDrawer'
 
 export const metadata: Metadata = {
   title: 'Fence Installation Georgia | Metro Atlanta Fencing | Fence Workshop',
@@ -20,7 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <LocalBusinessSchema />
-        {children}
+        <CartProvider>
+          <CartDrawer />
+          {children}
+        </CartProvider>
       </body>
     </html>
   )

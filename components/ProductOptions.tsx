@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import type { ShopifyVariant, ShopifyPrice } from '@/lib/shopify'
+import { useCart } from '@/context/CartContext'
 
 interface ProductOptionsProps {
   options: { name: string; values: string[] }[]
@@ -16,7 +17,8 @@ function formatPrice(price: ShopifyPrice): string {
 }
 
 export default function ProductOptions({ options, variants }: ProductOptionsProps) {
-  // Initialize selected options with the first value of each option
+  const { addToCart, loading } = useCart()
+
   const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>(() => {
     const initial: Record<string, string> = {}
     for (const opt of options) {
@@ -25,14 +27,10 @@ export default function ProductOptions({ options, variants }: ProductOptionsProp
     return initial
   })
   const [quantity, setQuantity] = useState(1)
-  const [adding, setAdding] = useState(false)
 
-  // Find the variant matching current selections
   const selectedVariant = useMemo(() => {
     return variants.find((v) =>
-      v.selectedOptions.every(
-        (so) => selectedOptions[so.name] === so.value
-      )
+      v.selectedOptions.every((so) => selectedOptions[so.name] === so.value)
     ) ?? null
   }, [selectedOptions, variants])
 
@@ -41,24 +39,10 @@ export default function ProductOptions({ options, variants }: ProductOptionsProp
   }
 
   const handleAddToCart = async () => {
-    if (!selectedVariant || !selectedVariant.availableForSale) return
-
-    setAdding(true)
-    try {
-      const { createCheckout } = await import('@/lib/shopify')
-      const checkout = await createCheckout([
-        { variantId: selectedVariant.id, quantity },
-      ])
-      window.location.href = checkout.webUrl
-    } catch (err) {
-      console.error('Checkout error:', err)
-      alert('Something went wrong. Please try again or call us at (404) 314-4419.')
-    } finally {
-      setAdding(false)
-    }
+    if (!selectedVariant?.availableForSale || loading) return
+    await addToCart(selectedVariant.id, quantity)
   }
 
-  // Skip rendering if only one variant with "Default Title"
   const hasOptions = !(variants.length === 1 && variants[0].title === 'Default Title')
 
   return (
@@ -126,20 +110,20 @@ export default function ProductOptions({ options, variants }: ProductOptionsProp
 
         <button
           onClick={handleAddToCart}
-          disabled={!selectedVariant?.availableForSale || adding}
+          disabled={!selectedVariant?.availableForSale || loading}
           className={`flex-1 py-3 px-6 rounded-lg font-semibold text-white transition-colors ${
-            selectedVariant?.availableForSale
+            selectedVariant?.availableForSale && !loading
               ? 'bg-brand-orange hover:bg-brand-orange-dark'
               : 'bg-gray-300 cursor-not-allowed'
           }`}
         >
-          {adding
-            ? 'Redirecting to Checkout…'
+          {loading
+            ? 'Adding…'
             : !selectedVariant
               ? 'Select Options'
               : !selectedVariant.availableForSale
                 ? 'Out of Stock'
-                : 'Buy Now'}
+                : 'Add to Cart'}
         </button>
       </div>
 

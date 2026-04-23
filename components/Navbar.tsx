@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useCart } from '@/context/CartContext'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const { itemCount, openCart } = useCart()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,9 +56,23 @@ export default function Navbar() {
             >
               Get A Quote
             </Link>
+            <button
+              onClick={openCart}
+              className="relative text-gray-700 hover:text-brand-orange transition-colors p-1"
+              aria-label="Open cart"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              {itemCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-brand-orange text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center leading-none">
+                  {itemCount > 99 ? '99+' : itemCount}
+                </span>
+              )}
+            </button>
           </div>
 
-          {/* Mobile: Phone + Quote + Hamburger */}
+          {/* Mobile: Phone + Quote + Cart + Hamburger */}
           <div className="flex md:hidden items-center gap-3">
             <a href="tel:4043144419" className="text-brand-orange" aria-label="Call Fence Workshop">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -69,6 +85,20 @@ export default function Navbar() {
             >
               Quote
             </Link>
+            <button
+              onClick={openCart}
+              className="relative text-gray-700 hover:text-brand-orange transition-colors p-1"
+              aria-label="Open cart"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              {itemCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-brand-orange text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center leading-none">
+                  {itemCount > 99 ? '99+' : itemCount}
+                </span>
+              )}
+            </button>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-gray-700 p-1"
