@@ -13,6 +13,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   'aluminum-fencing': 'Aluminum Fencing',
   'fence-posts': 'Fence Posts',
   'accessories': 'Accessories',
+  'fence-kits': 'Fence Kits',
 }
 
 // Known fence styles for related product matching

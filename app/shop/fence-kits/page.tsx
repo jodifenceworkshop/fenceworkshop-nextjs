@@ -1,11 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
+import { getProductsByCategory, formatPrice, getProductUrl } from '@/lib/shopify'
 
 export const metadata: Metadata = {
   title: 'Aluminum Fence Kits — Complete DIY Fence Systems | Fence Workshop',
   description: 'Shop all-inclusive aluminum fence kits from Fence Workshop. Everything you need — panels, posts, gates, and hardware — in one package. Available in 100ft, 150ft, 200ft, and 250ft. Ships nationwide.',
 }
+
+export const revalidate = 60
 
 const faqItems = [
   {
@@ -43,25 +47,37 @@ const faqSchema = {
   })),
 }
 
-const kitStyles = [
-  {
-    name: 'Brookhaven',
-    description: 'Classic flat-top aluminum fence with wide picket spacing — clean, open look for residential properties.',
-  },
-  {
-    name: 'Atlanta',
-    description: 'Standard picket spear-top aluminum fence — timeless style for yards, pools, and light commercial applications.',
-  },
-]
+const STYLE_ORDER = ['brookhaven', 'atlanta']
 
-const kitFootages = [
-  { footage: '100ft', price: '$2,434' },
-  { footage: '150ft', price: '$3,591' },
-  { footage: '200ft', price: '$4,897' },
-  { footage: '250ft', price: '$5,997' },
-]
+function detectKitStyle(handle: string): string | null {
+  return STYLE_ORDER.find((s) => handle.startsWith(s)) ?? null
+}
 
-export default function FenceKitsPage() {
+function detectKitFootage(handle: string): string {
+  const match = handle.match(/(\d+)ft/)
+  return match ? `${match[1]}ft` : ''
+}
+
+export default async function FenceKitsPage() {
+  const allKits = await getProductsByCategory('fence-kits')
+
+  // Group products by style
+  const kitsByStyle = STYLE_ORDER.map((styleName) => {
+    const products = allKits
+      .filter((p) => detectKitStyle(p.handle) === styleName)
+      .sort((a, b) => {
+        const aFt = parseInt(a.handle.match(/(\d+)ft/)?.[1] ?? '0')
+        const bFt = parseInt(b.handle.match(/(\d+)ft/)?.[1] ?? '0')
+        return aFt - bFt
+      })
+    return { styleName, products }
+  }).filter((group) => group.products.length > 0)
+
+  const styleDescriptions: Record<string, string> = {
+    brookhaven: 'Classic flat-top aluminum fence with wide picket spacing — clean, open look for residential properties.',
+    atlanta: 'Standard picket spear-top aluminum fence — timeless style for yards, pools, and light commercial applications.',
+  }
+
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -154,37 +170,66 @@ export default function FenceKitsPage() {
             </p>
           </div>
 
-          <div className="space-y-16">
-            {kitStyles.map((style) => (
-              <div key={style.name}>
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1">{style.name}</h3>
-                  <p className="text-gray-600">{style.description}</p>
+          {kitsByStyle.length > 0 ? (
+            <div className="space-y-16">
+              {kitsByStyle.map(({ styleName, products }) => (
+                <div key={styleName}>
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-1 capitalize">{styleName}</h3>
+                    <p className="text-gray-600">{styleDescriptions[styleName]}</p>
+                  </div>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    {products.map((product) => {
+                      const productUrl = getProductUrl(product)
+                      const footage = detectKitFootage(product.handle)
+                      const image = product.images.edges[0]?.node
+                      return (
+                        <Link
+                          key={product.handle}
+                          href={productUrl}
+                          className="group bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow flex flex-col"
+                        >
+                          {image ? (
+                            <div className="aspect-square relative bg-gray-100">
+                              <Image
+                                src={image.url}
+                                alt={image.altText || product.title}
+                                fill
+                                className="object-contain p-3 group-hover:scale-105 transition-transform duration-300"
+                                sizes="(max-width: 768px) 50vw, 25vw"
+                              />
+                            </div>
+                          ) : (
+                            <div className="aspect-square bg-gray-100 flex items-center justify-center">
+                              <span className="text-4xl font-bold text-gray-300">{footage}</span>
+                            </div>
+                          )}
+                          <div className="p-5 flex flex-col items-center text-center flex-1">
+                            <p className="text-2xl font-bold text-gray-900 mb-1">{footage}</p>
+                            <p className="text-lg font-semibold text-brand-orange mb-1">
+                              {formatPrice(product.priceRange.minVariantPrice)}
+                              {product.priceRange.minVariantPrice.amount !== product.priceRange.maxVariantPrice.amount && (
+                                <span className="text-base"> &ndash; {formatPrice(product.priceRange.maxVariantPrice)}</span>
+                              )}
+                            </p>
+                            <p className="text-xs text-gray-500 mb-4">Starting price, varies by height/options</p>
+                            <span className="w-full bg-brand-orange group-hover:bg-brand-orange-dark text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors text-center">
+                              View Kit
+                            </span>
+                          </div>
+                        </Link>
+                      )
+                    })}
+                  </div>
+                  <p className="text-sm text-gray-500 mt-3">
+                    Prices shown start at 4ft height, black, straight top. Height, color, and gate options affect final price.
+                  </p>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                  {kitFootages.map((kit) => (
-                    <div
-                      key={`${style.name}-${kit.footage}`}
-                      className="bg-white rounded-lg shadow-md border border-gray-100 p-6 flex flex-col items-center text-center"
-                    >
-                      <p className="text-2xl font-bold text-gray-900 mb-2">{kit.footage}</p>
-                      <p className="text-xl font-semibold text-brand-orange mb-1">{kit.price}</p>
-                      <p className="text-xs text-gray-500 mb-4">Starting price, varies by height/options</p>
-                      <Link
-                        href="/contact/"
-                        className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors text-center"
-                      >
-                        Get a Quote
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm text-gray-500 mt-3">
-                  Prices shown are for 4ft height, black, straight top. Height, color, and gate options affect final price.
-                </p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-gray-500 py-12">Fence kits coming soon — contact us for availability.</p>
+          )}
 
           <p className="text-center text-gray-600 mt-12 text-sm">
             More styles coming soon — Avalon, Athens, Berkley, and others. Contact us to ask about a specific style.
