@@ -74,8 +74,8 @@ export default async function FenceKitsPage() {
   }).filter((group) => group.products.length > 0)
 
   const styleDescriptions: Record<string, string> = {
-    brookhaven: 'Classic flat-top aluminum fence with wide picket spacing — clean, open look for residential properties.',
-    atlanta: 'Standard picket spear-top aluminum fence — timeless style for yards, pools, and light commercial applications.',
+    brookhaven: '3-rail smooth top aluminum fence — HOA-friendly, residential and commercial. Pool-code approved at 5ft and 6ft heights.',
+    atlanta: '3-rail spear-top aluminum fence — classic picket style for residential and commercial properties. Pool-code approved at 6ft height.',
   }
 
   return (
