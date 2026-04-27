@@ -95,9 +95,39 @@ export default async function ProductPage({ params }: ProductPageProps) {
     ? await getRelatedProductsByStyle(style, slug)
     : []
 
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.title,
+    description: product.description,
+    image: images.map((img) => img.url),
+    brand: {
+      '@type': 'Brand',
+      name: 'Fence Workshop',
+    },
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: product.priceRange.minVariantPrice.currencyCode,
+      lowPrice: product.priceRange.minVariantPrice.amount,
+      highPrice: product.priceRange.maxVariantPrice.amount,
+      offerCount: variants.length,
+      availability: variants.some((v) => v.availableForSale)
+        ? 'https://schema.org/InStock'
+        : 'https://schema.org/OutOfStock',
+      seller: {
+        '@type': 'Organization',
+        name: 'Fence Workshop',
+      },
+    },
+  }
+
 
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       <Navbar />
       <div className="h-20" />
 

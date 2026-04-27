@@ -5,8 +5,8 @@ import Navbar from '@/components/Navbar'
 import { getProductsByCategory, formatPrice, getProductUrl } from '@/lib/shopify'
 
 export const metadata: Metadata = {
-  title: 'Aluminum Fence Kits — Complete DIY Fence Systems | Fence Workshop',
-  description: 'Shop all-inclusive aluminum fence kits from Fence Workshop. Everything you need — panels, posts, gates, and hardware — in one package. Available in 100ft, 150ft, 200ft, and 250ft. Ships nationwide.',
+  title: 'Aluminum Fence Kits — Buy Online, Ships Nationwide | Fence Workshop',
+  description: 'Buy a complete aluminum fence kit online — panels, posts, gate, and all hardware included. 100ft to 250ft kits for DIY homeowners and contractors. Ships nationwide via freight.',
 }
 
 export const revalidate = 60
