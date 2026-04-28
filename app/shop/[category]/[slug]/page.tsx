@@ -237,36 +237,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
             )}
 
-            {/* Looking to Automate? — Driveway Gates only */}
-            {category === 'driveway-gates' && (
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Looking to Automate?</h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  Standard gate panels are not built for automation. You&apos;ll need the <strong>Automation Prep Upgrade</strong> to reinforce your gate for an operator. Want a complete solution? Add the <strong>LiftMaster LA400DC package</strong> and you&apos;ll have everything needed to open your gate with the click of a button.
-                </p>
-                <div className="flex flex-col gap-2">
-                  <Link
-                    href="/shop/accessories/driveway-gate-automation-prep-upgrade/"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-brand-orange hover:underline"
-                  >
-                    <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                    Automation Prep Upgrade
-                  </Link>
-                  <Link
-                    href="/shop/accessories/liftmaster-la400dc-dual-swing-basic-automation-package/"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-brand-orange hover:underline"
-                  >
-                    <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                    LiftMaster LA400DC Automation Package
-                  </Link>
-                </div>
-              </div>
-            )}
-
             {/* Need Help? */}
             <div className="mt-8 bg-gray-50 rounded-lg p-6 border border-gray-200">
               <h3 className="font-semibold text-gray-900 mb-2">Need Help Choosing?</h3>
