@@ -66,53 +66,47 @@ export default function VinylFencingPage() {
       <div className="h-20" />
 
       {/* Hero Section */}
-      <section className="bg-gray-900 py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Text and CTAs */}
-            <div>
-              <p className="text-brand-orange font-semibold uppercase tracking-wide mb-3 text-sm">
-                Vinyl Fencing
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-                Vinyl Fencing: Privacy, Picket &amp; Post-and-Rail
-              </h1>
-              <p className="text-xl md:text-2xl font-semibold text-brand-orange mb-5 leading-snug">
-                The Look of Wood — Without the Maintenance
-              </p>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                Fence Workshop supplies vinyl fencing (PVC fence) in privacy, semi-privacy, picket,
-                post-and-rail, and split-rail styles. Ships nationwide. Installation available throughout
-                Georgia. No painting, no staining, no rotting — just a beautiful fence that lasts
-                20–30 years. Contact us for a written quote.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="tel:+14043144419"
-                  className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
-                >
-                  Call (404) 314-4419
-                </a>
-                <Link
-                  href="/contact/"
-                  className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg border border-white/30 transition-colors text-center"
-                >
-                  Request a Quote
-                </Link>
-              </div>
-            </div>
-
-            {/* Right: Image */}
-            <div>
-              <div className="aspect-[16/9] relative rounded-lg overflow-hidden">
-                <Image
-                  src="/images/shop-vinyl-fencing-hero.png"
-                  alt="White vinyl privacy fencing"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+      <section className="relative py-16 lg:py-24">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-vinyl-fencing.jpg"
+            alt="Vinyl fencing installed on residential property"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/85 via-gray-900/60 to-gray-900/30" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-3 text-sm">
+              Vinyl Fencing
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+              Vinyl Fencing: Privacy, Picket &amp; Post-and-Rail
+            </h1>
+            <p className="text-xl md:text-2xl font-semibold text-brand-orange mb-5 leading-snug">
+              The Look of Wood — Without the Maintenance
+            </p>
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+              Fence Workshop supplies vinyl fencing (PVC fence) in privacy, semi-privacy, picket,
+              post-and-rail, and split-rail styles. Ships nationwide. Installation available throughout
+              Georgia. No painting, no staining, no rotting — just a beautiful fence that lasts
+              20–30 years. Contact us for a written quote.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="tel:+14043144419"
+                className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
+              >
+                Call (404) 314-4419
+              </a>
+              <Link
+                href="/contact/"
+                className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg border border-white/30 transition-colors text-center"
+              >
+                Request a Quote
+              </Link>
             </div>
           </div>
         </div>
@@ -198,8 +192,8 @@ export default function VinylFencingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
             <Image
-              src="/images/hero-vinyl-fencing.jpg"
-              alt="Vinyl privacy fencing installed on residential property"
+              src="/images/shop-vinyl-fencing-hero.png"
+              alt="White vinyl privacy fencing"
               fill
               className="object-cover"
             />
