@@ -25,6 +25,7 @@ export default function Footer() {
               <li><Link href="/shop/aluminum-fencing/" className="hover:underline">Aluminum Fencing</Link></li>
               <li><Link href="/shop/driveway-gates/" className="hover:underline">Driveway Gates</Link></li>
               <li><Link href="/shop/walk-gates/" className="hover:underline">Walk Gates</Link></li>
+              <li><Link href="/shop/accessories/" className="hover:underline">Fence Accessories</Link></li>
               <li><Link href="/shop/fence-kits/" className="hover:underline">Fence Kits</Link></li>
               <li><Link href="/shop/vinyl-fencing/" className="hover:underline">Vinyl Fencing</Link></li>
               <li><Link href="/shop/chain-link-fencing/" className="hover:underline">Chain Link Fencing</Link></li>
