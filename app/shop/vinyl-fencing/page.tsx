@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import type { Metadata } from 'next'
 
@@ -101,12 +102,16 @@ export default function VinylFencingPage() {
               </div>
             </div>
 
-            {/* Right: Image placeholder */}
+            {/* Right: Image */}
             <div>
-              <div className="aspect-[16/9] relative rounded-lg overflow-hidden bg-gray-700 flex items-center justify-center">
-                <p className="text-white text-lg font-medium text-center px-4">
-                  Photo coming soon — vinyl fencing
-                </p>
+              <div className="aspect-[16/9] relative rounded-lg overflow-hidden">
+                <Image
+                  src="/images/shop-vinyl-fencing-hero.png"
+                  alt="White vinyl privacy fencing"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
