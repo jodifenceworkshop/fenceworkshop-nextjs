@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-brand-orange text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
 
           {/* Installation */}
           <div>
@@ -40,6 +40,17 @@ export default function Footer() {
               <li><Link href="/installation/georgia/dumpster-gate-repair/" className="hover:underline">Dumpster Gate Repair</Link></li>
               <li><Link href="/installation/georgia/chain-link-fence-repair/" className="hover:underline">Chain Link Repair</Link></li>
               <li><Link href="/installation/georgia/roll-gate-slide-gate-repair/" className="hover:underline">Roll &amp; Slide Gate Repair</Link></li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="font-bold text-lg mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link href="/shop/resources/how-to-install-aluminum-fence/" className="hover:underline">How to Install Aluminum Fence</Link></li>
+              <li><Link href="/shop/resources/pool-code-aluminum-fence/" className="hover:underline">Pool Code Fence Guide</Link></li>
+              <li><Link href="/shop/resources/pet-fence/" className="hover:underline">Pet &amp; Puppy Fence Guide</Link></li>
+              <li><Link href="/shop/resources/residential-vs-commercial-aluminum-fence/" className="hover:underline">Residential vs Commercial Grade</Link></li>
             </ul>
           </div>
 
