@@ -324,8 +324,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Looking to Automate?</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Add gate automation to your driveway gate order. Choose the upgrade kit for your gate panels, or go with a complete LiftMaster automation package.
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Standard driveway gate panels are not built for automation. To automate your gate, you&apos;ll need the <strong>Automation Prep Upgrade</strong> — it replaces the standard bottom rail with a reinforced version engineered to accept gate operator arms. Already have an operator or plan to source your own? The Prep Upgrade is all you need. Want a complete automated solution? Add the <strong>LiftMaster LA400DC package</strong> and you&apos;ll have everything required to open your gate with the click of a button.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -345,9 +345,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   </h3>
                 </div>
                 <p className="text-gray-600 text-sm flex-1">
-                  Upgrade your gate panels with an oversized bottom rail engineered to accept gate operator arms. Order this with your gate for a clean, factory-ready mounting point — no field modifications needed.
+                  Reinforces your gate panels with an oversized bottom rail engineered to accept gate operator arms. Required for any automated gate — order with your gate for a clean, factory-ready mounting point. Bring your own operator, or add the LiftMaster package below.
                 </p>
-                <span className="mt-4 text-brand-orange font-semibold text-sm group-hover:underline">View Upgrade →</span>
+                <span className="mt-4 text-brand-orange font-semibold text-sm group-hover:underline">View Automation Prep Upgrade →</span>
               </Link>
 
               <Link
@@ -365,9 +365,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   </h3>
                 </div>
                 <p className="text-gray-600 text-sm flex-1">
-                  Complete dual swing gate automation package from LiftMaster — one of the most trusted names in gate operators. Includes two operators, remotes, and all hardware needed for automated entry.
+                  Complete dual swing gate automation package from LiftMaster — one of the most trusted names in gate operators. Add this alongside the Automation Prep Upgrade and you&apos;ll have everything needed for a fully automated driveway gate, straight from us.
                 </p>
-                <span className="mt-4 text-brand-orange font-semibold text-sm group-hover:underline">View Package →</span>
+                <span className="mt-4 text-brand-orange font-semibold text-sm group-hover:underline">View LiftMaster Package →</span>
               </Link>
             </div>
           </div>

@@ -265,6 +265,127 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </div>
       </div>
 
+      {/* Automation Upsell — Driveway Gates only */}
+      {category === 'driveway-gates' && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Looking to Automate?</h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Standard driveway gate panels are not built for automation. To automate your gate, you&apos;ll need the <strong>Automation Prep Upgrade</strong> — it replaces the standard bottom rail with a reinforced version engineered to accept gate operator arms. Already have an operator or plan to source your own? The Prep Upgrade is all you need. Want a complete automated solution? Add the <strong>LiftMaster LA400DC package</strong> and you&apos;ll have everything required to open your gate with the click of a button.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <Link
+                href="/shop/accessories/driveway-gate-automation-prep-upgrade/"
+                className="group bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors">
+                    Automation Prep Upgrade
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm flex-1">
+                  Reinforces your gate panels with an oversized bottom rail engineered to accept gate operator arms. Required for any automated gate — order with your gate for a clean, factory-ready mounting point. Bring your own operator, or add the LiftMaster package below.
+                </p>
+                <span className="mt-4 text-brand-orange font-semibold text-sm group-hover:underline">View Automation Prep Upgrade →</span>
+              </Link>
+              <Link
+                href="/shop/accessories/liftmaster-la400dc-dual-swing-basic-automation-package/"
+                className="group bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors">
+                    LiftMaster LA400DC Automation Package
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm flex-1">
+                  Complete dual swing gate automation package from LiftMaster. Add this alongside the Automation Prep Upgrade and you&apos;ll have everything needed for a fully automated driveway gate, straight from us.
+                </p>
+                <span className="mt-4 text-brand-orange font-semibold text-sm group-hover:underline">View LiftMaster Package →</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Cross-link: Automation Prep ↔ LiftMaster */}
+      {slug === 'driveway-gate-automation-prep-upgrade' && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Complete Your Automation Setup</h2>
+            <p className="text-gray-600 mb-8 max-w-3xl">
+              The Automation Prep Upgrade reinforces your gate for an operator — but you&apos;ll still need a gate operator to automate it. Add the LiftMaster LA400DC package and you&apos;ll have everything you need for a fully automated driveway gate.
+            </p>
+            <div className="max-w-sm">
+              <Link
+                href="/shop/accessories/liftmaster-la400dc-dual-swing-basic-automation-package/"
+                className="group bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors">
+                    LiftMaster LA400DC Automation Package
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm flex-1">
+                  Complete dual swing gate automation package — two operators, remotes, and all mounting hardware. Pairs directly with the Automation Prep Upgrade.
+                </p>
+                <span className="mt-4 text-brand-orange font-semibold text-sm group-hover:underline">View LiftMaster Package →</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {slug === 'liftmaster-la400dc-dual-swing-basic-automation-package' && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Don&apos;t Forget the Automation Prep Upgrade</h2>
+            <p className="text-gray-600 mb-8 max-w-3xl">
+              The LiftMaster package includes the operator, remotes, and hardware — but your gate panels must be ordered with the Automation Prep Upgrade to accept the operator arms. Standard gate panels are not built for automation.
+            </p>
+            <div className="max-w-sm">
+              <Link
+                href="/shop/accessories/driveway-gate-automation-prep-upgrade/"
+                className="group bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors">
+                    Automation Prep Upgrade
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm flex-1">
+                  Required gate panel upgrade — replaces the standard bottom rail with a reinforced version engineered to accept gate operator arms. Must be ordered with your driveway gate panels.
+                </p>
+                <span className="mt-4 text-brand-orange font-semibold text-sm group-hover:underline">View Automation Prep Upgrade →</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Related Products */}
       {relatedProducts.length > 0 && (
         <section className="py-16 bg-gray-50 border-t border-gray-200">
