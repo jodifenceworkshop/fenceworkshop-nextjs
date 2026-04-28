@@ -212,7 +212,18 @@ export default async function FenceKitsPage() {
                                 <span className="text-base"> &ndash; {formatPrice(product.priceRange.maxVariantPrice)}</span>
                               )}
                             </p>
-                            <p className="text-xs text-gray-500 mb-4">Starting price, varies by height/options</p>
+                            {(() => {
+                              const lowestCompare = product.variants.edges
+                                .map((e) => e.node.compareAtPrice)
+                                .filter((p): p is NonNullable<typeof p> => p !== null && parseFloat(p.amount) > 0)
+                                .sort((a, b) => parseFloat(a.amount) - parseFloat(b.amount))[0]
+                              return lowestCompare ? (
+                                <p className="text-sm text-gray-400 line-through mb-1">
+                                  from {formatPrice(lowestCompare)}
+                                </p>
+                              ) : null
+                            })()}
+                            <p className="text-xs text-gray-500 mb-4">Kit savings vs. buying separately</p>
                             <span className="w-full bg-brand-orange group-hover:bg-brand-orange-dark text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors text-center">
                               View Kit
                             </span>
