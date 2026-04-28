@@ -318,6 +318,62 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
       </section>
 
+      {/* Automation Upsell — Driveway Gates only */}
+      {category === 'driveway-gates' && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Looking to Automate?</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Add gate automation to your driveway gate order. Choose the upgrade kit for your gate panels, or go with a complete LiftMaster automation package.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <Link
+                href="/shop/accessories/driveway-gate-automation-prep-upgrade/"
+                className="group bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors">
+                    Automation Prep Upgrade
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm flex-1">
+                  Upgrade your gate panels with an oversized bottom rail engineered to accept gate operator arms. Order this with your gate for a clean, factory-ready mounting point — no field modifications needed.
+                </p>
+                <span className="mt-4 text-brand-orange font-semibold text-sm group-hover:underline">View Upgrade →</span>
+              </Link>
+
+              <Link
+                href="/shop/accessories/liftmaster-la400dc-dual-swing-basic-automation-package/"
+                className="group bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 flex flex-col"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors">
+                    LiftMaster LA400DC Automation Package
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm flex-1">
+                  Complete dual swing gate automation package from LiftMaster — one of the most trusted names in gate operators. Includes two operators, remotes, and all hardware needed for automated entry.
+                </p>
+                <span className="mt-4 text-brand-orange font-semibold text-sm group-hover:underline">View Package →</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Feature Highlights */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
