@@ -196,11 +196,16 @@ export default function ChainLinkFencingPage() {
         </div>
       </section>
 
-      {/* In-content image placeholder */}
+      {/* In-content image */}
       <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="aspect-[4/3] relative bg-gray-200 rounded-lg flex items-center justify-center">
-            <p className="text-gray-500 font-medium text-lg">Add photo here</p>
+          <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
+            <Image
+              src="/images/shop-chain-link-galvanized.jpg"
+              alt="Galvanized chain link fence installation"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
