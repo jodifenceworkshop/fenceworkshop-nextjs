@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
@@ -96,45 +97,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-brand-orange text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="font-bold text-lg mb-4">Installation</h3>
-              <ul className="space-y-2">
-                <li><Link href="/installation/georgia/commercial-fence-installation/" className="hover:underline">Fence Installation in Georgia</Link></li>
-                <li><Link href="/installation/georgia/atlanta-fence-installation/" className="hover:underline">Atlanta Fence Installation</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Shop</h3>
-              <ul className="space-y-2">
-                <li><Link href="/shop/aluminum-fencing/" className="hover:underline">Aluminum Fencing</Link></li>
-                <li><Link href="/shop/driveway-gates/" className="hover:underline">Driveway Gates</Link></li>
-                <li><Link href="/shop/walk-gates/" className="hover:underline">Walk Gates</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Resources</h3>
-              <ul className="space-y-2">
-                <li><Link href="/shop/resources/residential-vs-commercial-aluminum-fence/" className="hover:underline">Residential vs Commercial</Link></li>
-                <li><Link href="/shop/resources/pool-code-aluminum-fence/" className="hover:underline">Pool Code Fence Guide</Link></li>
-                <li><Link href="/shop/resources/pet-fence/" className="hover:underline">Pet &amp; Puppy Fence Guide</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Company</h3>
-              <ul className="space-y-2">
-                <li><Link href="/about-us/" className="hover:underline">About Fence Workshop</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-orange-400 pt-8">
-            <p className="md:text-right">&copy; 2026 Fence Workshop. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 }
