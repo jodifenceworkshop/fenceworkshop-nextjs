@@ -218,7 +218,7 @@ export default function CommercialChainLinkFencePage() {
           <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto">
             <div className="aspect-[16/7] relative bg-gray-200">
               <Image
-                src="/images/service-chain-link-fence.jpg"
+                src="/images/commercial-chain-link-fence-atlanta-ga.jpg"
                 alt="Commercial chain link fence installed by Fence Workshop in Metro Atlanta"
                 fill
                 className="object-cover"

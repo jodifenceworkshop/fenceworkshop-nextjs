@@ -85,56 +85,56 @@ const installationServices = [
   {
     title: 'Chain Link Fence Installation',
     description: 'Heavy-duty commercial and industrial chain link for Marietta-area perimeter security, job sites, and property boundaries. Available in galvanized or vinyl-coated finishes with multiple height options.',
-    image: '/images/service-chain-link-fence.jpg',
+    image: '/images/commercial-chain-link-fence-atlanta-ga.jpg',
     alt: 'Commercial chain link fence installation in Marietta, GA',
     href: '/installation/georgia/commercial-chain-link-fence/',
   },
   {
     title: 'Security Fence Installation',
     description: 'High-security fencing systems for Cobb County industrial and commercial facilities — anti-climb designs, barbed wire, and razor ribbon topping for maximum perimeter protection.',
-    image: '/images/service-security-fence.jpg',
+    image: '/images/commercial-security-fence-atlanta-ga.jpg',
     alt: 'Industrial security fence installation in Marietta, GA',
     href: '/installation/georgia/commercial-security-fence/',
   },
   {
     title: 'Ornamental & Aluminum Fence Installation',
     description: 'Architectural-grade ornamental and aluminum fencing for Marietta commercial properties, office parks, and HOA communities through general contractors and property managers.',
-    image: '/images/service-ornamental-gate.jpg',
+    image: '/images/commercial-ornamental-fence-atlanta-ga.jpg',
     alt: 'Ornamental aluminum fence installation in Marietta, GA',
     href: '/installation/georgia/ornamental-aluminum-fence/',
   },
   {
     title: 'Dumpster Gate Installation',
     description: 'Custom dumpster enclosure gates built to Cobb County code. We work with property managers, HOAs, and commercial facilities throughout Marietta for new installs and replacements.',
-    image: '/images/service-dumpster-gate.jpg',
+    image: '/images/dumpster-enclosure-gate-installation-atlanta-ga.jpg',
     alt: 'Commercial dumpster gate installation in Marietta, GA',
     href: '/installation/georgia/dumpster-enclosure-gates/',
   },
   {
     title: 'Roll Gate & Slide Gate Installation',
     description: 'Manual and motorized roll gates for Marietta commercial driveways and facility entrances. Includes gate opener systems integrated into your installation.',
-    image: '/images/service-roll-gate.jpg',
+    image: '/images/commercial-roll-gate-installation-atlanta-ga.jpg',
     alt: 'Commercial roll gate and slide gate installation in Marietta, GA',
     href: '/installation/georgia/slide-gates/',
   },
   {
     title: 'Warehouse & Industrial Fencing',
     description: 'Interior and exterior fencing for Marietta-area warehouses, distribution centers, and industrial facilities along the I-75 corridor. Partition fencing, cage systems, and perimeter security.',
-    image: '/images/service-warehouse-fencing.jpg',
+    image: '/images/warehouse-industrial-fencing-atlanta-ga.jpg',
     alt: 'Warehouse and industrial fence installation in Marietta, GA',
     href: '/installation/georgia/warehouse-industrial-fencing/',
   },
   {
     title: 'Parking Deck & Garage Fencing',
     description: 'Perimeter cable systems, guard rails, and safety fencing for Cobb County parking structures. Code-compliant installations with durable powder-coat finishes.',
-    image: '/images/service-parking-deck.jpg',
+    image: '/images/parking-deck-fencing-atlanta-ga.jpg',
     alt: 'Parking deck gate and fencing installation in Marietta, GA',
     href: '/installation/georgia/parking-garage-fencing/',
   },
   {
     title: 'Security Gate Systems',
     description: 'Swing gates, slide gates, and access control integration for Marietta commercial and industrial facilities. Gate openers and operators included with installations.',
-    image: '/images/service-security-gate.jpg',
+    image: '/images/commercial-security-gate-atlanta-ga.jpg',
     alt: 'Commercial security gate system installation in Marietta, GA',
     href: '/installation/georgia/security-gate-systems/',
   },
@@ -144,28 +144,28 @@ const repairServices = [
   {
     title: 'Dumpster Gate Repair',
     description: 'Fast repair for broken hinges, damaged frames, and sagging dumpster enclosure gates at commercial properties throughout Marietta and Cobb County.',
-    image: '/images/repair-dumpster-gate.jpg',
+    image: '/images/dumpster-gate-repair-atlanta-ga.jpg',
     alt: 'Commercial dumpster gate repair in Marietta, GA',
     href: '/installation/georgia/dumpster-gate-repair/',
   },
   {
     title: 'Chain Link Fence Repair',
     description: 'Fabric repair, post replacement, tension wire, and top rail repairs for commercial chain link systems in Marietta. Quick turnaround to restore perimeter security.',
-    image: '/images/repair-chain-link.jpg',
+    image: '/images/chain-link-fence-repair-atlanta-ga.jpg',
     alt: 'Chain link fence repair in Marietta, GA',
     href: '/installation/georgia/chain-link-fence-repair/',
   },
   {
     title: 'Security Fence & Gate Repair',
     description: 'Repairs to high-security fencing, crash-damaged sections, and compromised perimeter systems. Emergency response available for Cobb County facilities with urgent security needs.',
-    image: '/images/repair-security-fence.jpg',
+    image: '/images/security-fence-repair-atlanta-ga.jpg',
     alt: 'Security fence and gate repair in Marietta, GA',
     href: '/installation/georgia/security-fence-gate-repair/',
   },
   {
     title: 'Roll Gate & Slide Gate Repair',
     description: 'Track repair, roller replacement, gate operator service, and frame straightening for commercial roll and slide gates throughout Marietta and Cobb County.',
-    image: '/images/repair-roll-gate.jpg',
+    image: '/images/roll-gate-repair-atlanta-ga.jpg',
     alt: 'Commercial roll gate and slide gate repair in Marietta, GA',
     href: '/installation/georgia/roll-gate-slide-gate-repair/',
   },
@@ -210,7 +210,7 @@ export default function MariettaInstallationPage() {
       <section className="relative h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-georgia-installation.jpg"
+            src="/images/commercial-fence-installation-georgia.jpg"
             alt="Commercial fence and gate installation by Fence Workshop in Marietta, GA"
             fill
             className="object-cover"

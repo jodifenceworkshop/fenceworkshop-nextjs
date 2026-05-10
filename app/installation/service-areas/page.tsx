@@ -43,21 +43,21 @@ const primaryAreas = [
     city: 'Atlanta',
     description: 'Our home base and most active service area. We install and repair commercial chain link, ornamental aluminum, security fencing, dumpster gates, and automated gate systems throughout Atlanta — Buckhead, Midtown, Downtown, West Midtown, Old Fourth Ward, and beyond.',
     href: '/installation/georgia/atlanta-fence-installation/',
-    image: '/images/hero-georgia-installation.jpg',
+    image: '/images/commercial-fence-installation-georgia.jpg',
     imageAlt: 'Commercial fence installation in Atlanta, GA',
   },
   {
     city: 'Marietta',
     description: 'Commercial fence installation and repair throughout Marietta and Cobb County. Chain link, security fencing, ornamental gates, dumpster enclosures, and slide gate systems for commercial and industrial properties.',
     href: '/installation/georgia/marietta-fence-installation/',
-    image: '/images/service-chain-link-fence.jpg',
+    image: '/images/commercial-chain-link-fence-atlanta-ga.jpg',
     imageAlt: 'Commercial fence installation in Marietta, GA',
   },
   {
     city: 'Alpharetta',
     description: 'Fence installation and repair for commercial properties, office parks, warehouses, and mixed-use developments in Alpharetta and north Fulton County. All fence types and gate systems.',
     href: '/installation/georgia/alpharetta-fence-installation/',
-    image: '/images/service-security-fence.jpg',
+    image: '/images/commercial-security-fence-atlanta-ga.jpg',
     imageAlt: 'Commercial fence installation in Alpharetta, GA',
   },
 ]
@@ -94,7 +94,7 @@ export default function ServiceAreasPage() {
       <section className="relative h-[480px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-georgia-installation.jpg"
+            src="/images/commercial-fence-installation-georgia.jpg"
             alt="Commercial fence installation across Metro Atlanta and Georgia"
             fill
             className="object-cover"

@@ -115,7 +115,7 @@ export default function AboutUsPage() {
             <div className="rounded-xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] relative bg-gray-200">
                 <Image
-                  src="/images/hero-georgia-installation.jpg"
+                  src="/images/commercial-fence-installation-georgia.jpg"
                   alt="Commercial fence and gate installation by Fence Workshop in Atlanta, GA"
                   fill
                   className="object-cover"

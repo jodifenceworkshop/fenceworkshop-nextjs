@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { useRouter } from 'next/navigation'
 
 const PROJECT_TYPES: { value: string; label: string }[] = [
   { value: 'installation-ga', label: 'Fence Installation (Georgia)' },
@@ -19,33 +20,36 @@ export default function QuoteForm({
   showProjectType = false,
   subject = 'Quote Request from fenceworkshop.com',
 }: QuoteFormProps) {
+  const router = useRouter()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [projectType, setProjectType] = useState('')
   const [message, setMessage] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setSubmitting(true)
+    setError('')
 
-    const lines = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Phone: ${phone || '(not provided)'}`,
-    ]
-    if (showProjectType) {
-      const projectLabel =
-        PROJECT_TYPES.find((p) => p.value === projectType)?.label || '(not selected)'
-      lines.push(`Project Type: ${projectLabel}`)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, projectType, message, subject }),
+      })
+
+      if (!res.ok) {
+        throw new Error('Failed to send')
+      }
+
+      router.push('/thank-you/')
+    } catch {
+      setError('Something went wrong. Please call us at (404) 314-4419 or email atlanta@fenceworkshop.com.')
+      setSubmitting(false)
     }
-    lines.push('', 'Project Details:', message || '(none)')
-
-    const body = lines.join('\n')
-    const mailto = `mailto:atlanta@fenceworkshop.com?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`
-
-    window.location.href = mailto
   }
 
   return (
@@ -114,11 +118,15 @@ export default function QuoteForm({
           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
         />
       </div>
+      {error && (
+        <p className="text-red-600 text-sm">{error}</p>
+      )}
       <button
         type="submit"
-        className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+        disabled={submitting}
+        className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Request Quote
+        {submitting ? 'Sending…' : 'Request Quote'}
       </button>
     </form>
   )

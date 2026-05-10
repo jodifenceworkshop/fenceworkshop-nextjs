@@ -194,7 +194,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="aspect-video relative rounded-lg overflow-hidden">
               <Image
-                src="/images/project-ornamental-gate.png"
+                src="/images/commercial-ornamental-fence-gate-atlanta-ga.jpg"
                 alt="Commercial ornamental gate installation in Atlanta, GA"
                 fill
                 className="object-cover"
@@ -202,7 +202,7 @@ export default function Home() {
             </div>
             <div className="aspect-video relative rounded-lg overflow-hidden">
               <Image
-                src="/images/project-dumpster-gates.png"
+                src="/images/dumpster-enclosure-gate-atlanta-ga.jpg"
                 alt="Dumpster gates installation in Atlanta, GA"
                 fill
                 className="object-cover"
@@ -210,7 +210,7 @@ export default function Home() {
             </div>
             <div className="aspect-video relative rounded-lg overflow-hidden">
               <Image
-                src="/images/project-chain-link-fence.png"
+                src="/images/commercial-chain-link-fence-installation-atlanta-ga.jpg"
                 alt="Commercial chain link fence installation in Atlanta, GA"
                 fill
                 className="object-cover"

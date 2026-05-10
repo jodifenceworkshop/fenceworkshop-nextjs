@@ -193,7 +193,7 @@ export default function VinylFencingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="aspect-[4/3] relative rounded-lg overflow-hidden">
             <Image
-              src="/images/shop-vinyl-fencing-hero.png"
+              src="/images/shop-vinyl-fencing-hero.jpg"
               alt="White vinyl privacy fencing"
               fill
               className="object-cover"

@@ -38,7 +38,7 @@ const repairServices = [
     title: 'Dumpster Gate Repair',
     description: 'Broken hinges, sagging gates, latch failure, frame damage, and full gate replacement for commercial dumpster enclosures. Most repairs completed in a single visit. Fast scheduling for property managers and HOAs.',
     href: '/installation/georgia/dumpster-gate-repair/',
-    image: '/images/repair-dumpster-gate.jpg',
+    image: '/images/dumpster-gate-repair-atlanta-ga.jpg',
     imageAlt: 'Commercial dumpster gate repair in Georgia by Fence Workshop',
     tags: ['Broken Hinges', 'Sagging Gates', 'Latch Repair', 'Frame Damage', 'Full Replacement'],
   },
@@ -46,7 +46,7 @@ const repairServices = [
     title: 'Chain Link Fence Repair',
     description: 'Fabric replacement, post repair and replacement, top rail, tension wire, and barbed wire upgrades for commercial chain link perimeters. Emergency response available for security-critical breaches.',
     href: '/installation/georgia/chain-link-fence-repair/',
-    image: '/images/repair-chain-link.jpg',
+    image: '/images/chain-link-fence-repair-atlanta-ga.jpg',
     imageAlt: 'Commercial chain link fence repair in Georgia by Fence Workshop',
     tags: ['Fabric Replacement', 'Post Repair', 'Storm Damage', 'Vehicle Impact', 'Barbed Wire'],
   },
@@ -54,7 +54,7 @@ const repairServices = [
     title: 'Roll Gate & Slide Gate Repair',
     description: 'Track repair, roller replacement, gate operator service, vehicle damage, and cantilever system repairs for commercial roll and slide gates. All major operator brands serviced — LiftMaster, DoorKing, HySecurity, and more.',
     href: '/installation/georgia/roll-gate-slide-gate-repair/',
-    image: '/images/repair-roll-gate.jpg',
+    image: '/images/roll-gate-repair-atlanta-ga.jpg',
     imageAlt: 'Commercial roll gate and slide gate repair in Georgia by Fence Workshop',
     tags: ['Track & Roller Repair', 'Operator Service', 'Vehicle Damage', 'Safety Devices', 'Cantilever Systems'],
   },
@@ -62,7 +62,7 @@ const repairServices = [
     title: 'Security Fence & Gate Repair',
     description: 'Emergency and scheduled repairs for high-security perimeters — crash damage, breached fencing, gate operator failures, barbed wire and razor ribbon, and access control troubleshooting. 24–48 hour emergency response.',
     href: '/installation/georgia/security-fence-gate-repair/',
-    image: '/images/repair-security-fence.jpg',
+    image: '/images/security-fence-repair-atlanta-ga.jpg',
     imageAlt: 'Security fence and gate repair in Georgia by Fence Workshop',
     tags: ['Crash Damage', 'Razor Ribbon', 'Gate Operators', 'Access Control', 'Emergency Response'],
   },
@@ -70,7 +70,7 @@ const repairServices = [
     title: 'Bollard Repair & Replacement',
     description: 'Vehicle-damaged, leaning, and knocked-over bollards repaired or replaced. Post replacement, footing repair, cover replacement, and removable sleeve repair for commercial properties throughout Georgia.',
     href: '/installation/georgia/bollard-repair/',
-    image: '/images/project-dumpster-gates.png',
+    image: '/images/dumpster-enclosure-gate-atlanta-ga.jpg',
     imageAlt: 'Commercial bollard repair in Georgia by Fence Workshop',
     tags: ['Vehicle Damage', 'Leaning Bollards', 'Post Replacement', 'Cover Replacement', 'Footing Repair'],
   },
@@ -224,7 +224,7 @@ export default function FenceRepairHubPage() {
             <div className="rounded-xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/images/repair-dumpster-gate.jpg"
+                  src="/images/dumpster-gate-repair-atlanta-ga.jpg"
                   alt="Fence Workshop commercial fence repair crew in Georgia"
                   fill
                   className="object-cover"

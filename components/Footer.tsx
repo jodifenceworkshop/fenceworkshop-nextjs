@@ -60,6 +60,9 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/about-us/" className="hover:underline">About Fence Workshop</Link></li>
               <li><Link href="/contact/" className="hover:underline">Contact</Link></li>
+              <li><Link href="/warranty/" className="hover:underline">Warranty</Link></li>
+              <li><Link href="/privacy-policy/" className="hover:underline">Privacy Policy</Link></li>
+              <li><Link href="/terms/" className="hover:underline">Terms &amp; Conditions</Link></li>
             </ul>
           </div>
 

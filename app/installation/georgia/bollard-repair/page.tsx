@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
@@ -107,7 +108,16 @@ export default function BollardRepairPage() {
 
       {/* Hero */}
       <section className="relative bg-gray-900 py-20 lg:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/commercial-bollard-installation-atlanta-ga.jpg"
+            alt="Commercial bollard repair in Atlanta, GA"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gray-900/70" />
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">

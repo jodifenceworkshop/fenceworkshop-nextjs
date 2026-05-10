@@ -15,7 +15,126 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // ── Old WooCommerce /product/ URLs → new /shop/ URLs ──
+
+      // ── Legal pages ────────────────────────────────────────────────────────
+
+      { source: '/privacy-policy', destination: '/privacy-policy/', permanent: true },
+      { source: '/terms-and-conditions', destination: '/terms/', permanent: true },
+      { source: '/terms-and-conditions/', destination: '/terms/', permanent: true },
+      { source: '/warranty', destination: '/warranty/', permanent: true },
+
+      // ── Pages ──────────────────────────────────────────────────────────────
+
+      { source: '/contact-us', destination: '/contact/', permanent: true },
+      { source: '/contact-us/', destination: '/contact/', permanent: true },
+      { source: '/thank-you-for-contacting', destination: '/thank-you/', permanent: true },
+      { source: '/thank-you-for-contacting/', destination: '/thank-you/', permanent: true },
+      { source: '/our-story', destination: '/about-us/', permanent: true },
+      { source: '/our-story/', destination: '/about-us/', permanent: true },
+      { source: '/our-promise', destination: '/about-us/', permanent: true },
+      { source: '/our-promise/', destination: '/about-us/', permanent: true },
+      { source: '/locations', destination: '/installation/service-areas/', permanent: true },
+      { source: '/locations/', destination: '/installation/service-areas/', permanent: true },
+      { source: '/installation', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/installation/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/returns-exchanges', destination: '/contact/', permanent: true },
+      { source: '/returns-exchanges/', destination: '/contact/', permanent: true },
+      { source: '/shipping-information', destination: '/contact/', permanent: true },
+      { source: '/shipping-information/', destination: '/contact/', permanent: true },
+      { source: '/order-tracking', destination: '/contact/', permanent: true },
+      { source: '/order-tracking/', destination: '/contact/', permanent: true },
+      { source: '/pool-regulations-and-codes', destination: '/shop/resources/pool-code-aluminum-fence/', permanent: true },
+      { source: '/pool-regulations-and-codes/', destination: '/shop/resources/pool-code-aluminum-fence/', permanent: true },
+
+      // ── Commercial installation pages ──────────────────────────────────────
+
+      { source: '/commercial', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/industrial', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/industrial/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-fence-installation-georgia', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-fence-installation-georgia/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-fence-installation-services', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-fence-installation-services/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-fence-company', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-fence-company/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/georgia-commercial-fence-installation', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/georgia-commercial-fence-installation/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/residential-fence-installation-services', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/residential-fence-installation-services/', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/residential-fence-company', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/residential-fence-company/', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/residential', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/residential/', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/commercial-chain-link-fence-gate-installation', destination: '/installation/georgia/commercial-chain-link-fence/', permanent: true },
+      { source: '/commercial-chain-link-fence-gate-installation/', destination: '/installation/georgia/commercial-chain-link-fence/', permanent: true },
+      { source: '/commercial-chain-link-fence-atlanta', destination: '/installation/georgia/commercial-chain-link-fence/', permanent: true },
+      { source: '/commercial-chain-link-fence-atlanta/', destination: '/installation/georgia/commercial-chain-link-fence/', permanent: true },
+      { source: '/commercial-ornamental-fence-gate-installation', destination: '/installation/georgia/ornamental-aluminum-fence/', permanent: true },
+      { source: '/commercial-ornamental-fence-gate-installation/', destination: '/installation/georgia/ornamental-aluminum-fence/', permanent: true },
+      { source: '/commercial-parking-deck-fence-installation', destination: '/installation/georgia/parking-garage-fencing/', permanent: true },
+      { source: '/commercial-parking-deck-fence-installation/', destination: '/installation/georgia/parking-garage-fencing/', permanent: true },
+      { source: '/commercial-warehouse-fencing-installation', destination: '/installation/georgia/warehouse-industrial-fencing/', permanent: true },
+      { source: '/commercial-warehouse-fencing-installation/', destination: '/installation/georgia/warehouse-industrial-fencing/', permanent: true },
+      { source: '/commercial-safety-railing-bollard-installation', destination: '/installation/georgia/bollard-installation/', permanent: true },
+      { source: '/commercial-safety-railing-bollard-installation/', destination: '/installation/georgia/bollard-installation/', permanent: true },
+      { source: '/commercial-pedestrian-gate-installation', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-pedestrian-gate-installation/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-driveway-gate-installation', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-driveway-gate-installation/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+
+      // ── Shop / product category pages ──────────────────────────────────────
+
+      { source: '/buy-aluminum-fencing', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/buy-aluminum-fencing/', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/shop-all-aluminum-fence-materials', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/shop-all-aluminum-fence-materials/', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/buy-aluminum-walk-gate-kits', destination: '/shop/walk-gates/', permanent: true },
+      { source: '/buy-aluminum-walk-gate-kits/', destination: '/shop/walk-gates/', permanent: true },
+      { source: '/buy-aluminum-driveway-gates', destination: '/shop/driveway-gates/', permanent: true },
+      { source: '/buy-aluminum-driveway-gates/', destination: '/shop/driveway-gates/', permanent: true },
+      { source: '/buy-aluminum-fence-accessories', destination: '/shop/accessories/', permanent: true },
+      { source: '/buy-aluminum-fence-accessories/', destination: '/shop/accessories/', permanent: true },
+
+      // Old WooCommerce category/taxonomy pages
+      { source: '/fence-supplies/:path*', destination: '/shop/', permanent: true },
+      { source: '/product-category/:path*', destination: '/shop/', permanent: true },
+
+      // ── Missing commercial pages (gaps found during audit) ────────────────
+
+      { source: '/custom-commercial-steel-aluminum-railing-installation', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/custom-commercial-steel-aluminum-railing-installation/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-warehouse-cage-installation', destination: '/installation/georgia/warehouse-industrial-fencing/', permanent: true },
+      { source: '/commercial-warehouse-cage-installation/', destination: '/installation/georgia/warehouse-industrial-fencing/', permanent: true },
+      { source: '/access-control-systems-atlanta-ga', destination: '/installation/georgia/security-gate-systems/', permanent: true },
+      { source: '/access-control-systems-atlanta-ga/', destination: '/installation/georgia/security-gate-systems/', permanent: true },
+      { source: '/electric-gates-atlanta-ga', destination: '/installation/georgia/security-gate-systems/', permanent: true },
+      { source: '/electric-gates-atlanta-ga/', destination: '/installation/georgia/security-gate-systems/', permanent: true },
+      { source: '/security-gates-atlanta-ga', destination: '/installation/georgia/commercial-security-fence/', permanent: true },
+      { source: '/security-gates-atlanta-ga/', destination: '/installation/georgia/commercial-security-fence/', permanent: true },
+      { source: '/wrought-iron-fence-atlanta-ga', destination: '/installation/georgia/ornamental-aluminum-fence/', permanent: true },
+      { source: '/wrought-iron-fence-atlanta-ga/', destination: '/installation/georgia/ornamental-aluminum-fence/', permanent: true },
+      { source: '/fence-companies-atlanta-ga', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/fence-companies-atlanta-ga/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/atlanta-fence-company-reviews', destination: '/about-us/', permanent: true },
+      { source: '/atlanta-fence-company-reviews/', destination: '/about-us/', permanent: true },
+      { source: '/security-fences-atlanta', destination: '/installation/georgia/commercial-security-fence/', permanent: true },
+      { source: '/security-fences-atlanta/', destination: '/installation/georgia/commercial-security-fence/', permanent: true },
+      { source: '/7-benefits-of-aluminum-fencing', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/7-benefits-of-aluminum-fencing/', destination: '/shop/aluminum-fencing/', permanent: true },
+      { source: '/custom-gates-atlanta-ga', destination: '/shop/driveway-gates/', permanent: true },
+      { source: '/custom-gates-atlanta-ga/', destination: '/shop/driveway-gates/', permanent: true },
+      { source: '/custom-wood-driveway-gates-atlanta-ga', destination: '/shop/driveway-gates/', permanent: true },
+      { source: '/custom-wood-driveway-gates-atlanta-ga/', destination: '/shop/driveway-gates/', permanent: true },
+      { source: '/vinyl-privacy-fence-atlanta-ga', destination: '/shop/vinyl-fencing/', permanent: true },
+      { source: '/vinyl-privacy-fence-atlanta-ga/', destination: '/shop/vinyl-fencing/', permanent: true },
+      { source: '/ornamental-metal-fences-atlanta-ga', destination: '/installation/georgia/ornamental-aluminum-fence/', permanent: true },
+      { source: '/ornamental-metal-fences-atlanta-ga/', destination: '/installation/georgia/ornamental-aluminum-fence/', permanent: true },
+      { source: '/atlanta-fences-and-gates', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/atlanta-fences-and-gates/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+
+      // ── Old /product/ URLs → new /shop/ URLs ───────────────────────────────
+
       // Driveway Gates
       { source: '/product/athens-double-driveway-gate', destination: '/shop/driveway-gates/athens-double-driveway-gate/', permanent: true },
       { source: '/product/atlanta-double-driveway-gate', destination: '/shop/driveway-gates/atlanta-double-driveway-gate/', permanent: true },
@@ -23,9 +142,9 @@ const nextConfig = {
       { source: '/product/berkley-double-driveway-gate', destination: '/shop/driveway-gates/berkley-double-driveway-gate/', permanent: true },
       { source: '/product/brookhaven-double-driveway-gate', destination: '/shop/driveway-gates/brookhaven-double-driveway-gate/', permanent: true },
       { source: '/product/buford-double-driveway-gate', destination: '/shop/driveway-gates/buford-double-driveway-gate/', permanent: true },
-      { source: '/product/candler-double-driveway-gate', destination: '/shop/driveway-gates/candler-double-gate/', permanent: true },
+      { source: '/product/candler-double-driveway-gate', destination: '/shop/driveway-gates/candler-double-driveway-gate/', permanent: true },
       { source: '/product/chamblee-double-driveway-gate', destination: '/shop/driveway-gates/chamblee-double-driveway-gate/', permanent: true },
-      { source: '/product/cobb-double-driveway-gate', destination: '/shop/driveway-gates/cobb-double-gate/', permanent: true },
+      { source: '/product/cobb-double-driveway-gate', destination: '/shop/driveway-gates/cobb-double-driveway-gate/', permanent: true },
       { source: '/product/dawson-double-driveway-gate', destination: '/shop/driveway-gates/dawson-double-driveway-gate/', permanent: true },
       { source: '/product/dublin-double-driveway-gate', destination: '/shop/driveway-gates/dublin-double-driveway-gate/', permanent: true },
       { source: '/product/dunwoody-double-driveway-gate', destination: '/shop/driveway-gates/dunwoody-double-driveway-gate/', permanent: true },
@@ -68,21 +187,21 @@ const nextConfig = {
       { source: '/product/savannah-panel', destination: '/shop/aluminum-fencing/savannah-fence-panel/', permanent: true },
       { source: '/product/sharpsburg-panel', destination: '/shop/aluminum-fencing/sharpsburg-fence-panel/', permanent: true },
 
-      // Fence Posts
-      { source: '/product/athens-fence-posts', destination: '/shop/fence-posts/athens-fence-posts/', permanent: true },
-      { source: '/product/atlanta-fence-posts', destination: '/shop/fence-posts/atlanta-fence-posts/', permanent: true },
-      { source: '/product/avalon-fence-posts', destination: '/shop/fence-posts/avalon-fence-posts/', permanent: true },
-      { source: '/product/berkley-fence-posts', destination: '/shop/fence-posts/berkley-fence-posts/', permanent: true },
-      { source: '/product/brookhaven-fence-posts', destination: '/shop/fence-posts/brookhaven-fence-posts/', permanent: true },
-      { source: '/product/buford-fence-posts', destination: '/shop/fence-posts/buford-fence-posts/', permanent: true },
-      { source: '/product/candler-fence-posts', destination: '/shop/fence-posts/candler-fence-posts/', permanent: true },
-      { source: '/product/chamblee-fence-posts', destination: '/shop/fence-posts/chamblee-fence-posts/', permanent: true },
-      { source: '/product/cobb-fence-posts', destination: '/shop/fence-posts/cobb-fence-posts/', permanent: true },
-      { source: '/product/dawson-fence-posts', destination: '/shop/fence-posts/dawson-fence-posts/', permanent: true },
-      { source: '/product/dublin-fence-posts', destination: '/shop/fence-posts/dublin-fence-posts/', permanent: true },
-      { source: '/product/dunwoody-fence-posts', destination: '/shop/fence-posts/dunwoody-fence-posts/', permanent: true },
-      { source: '/product/savannah-fence-posts', destination: '/shop/fence-posts/savannah-fence-posts/', permanent: true },
-      { source: '/product/sharpsburg-fence-posts', destination: '/shop/fence-posts/sharpsburg-fence-posts/', permanent: true },
+      // Fence Posts (no dedicated posts category; redirect to aluminum fencing)
+      { source: '/product/athens-fence-posts', destination: '/shop/aluminum-fencing/athens-fence-panel/', permanent: true },
+      { source: '/product/atlanta-fence-posts', destination: '/shop/aluminum-fencing/atlanta-fence-panel/', permanent: true },
+      { source: '/product/avalon-fence-posts', destination: '/shop/aluminum-fencing/avalon-fence-panel/', permanent: true },
+      { source: '/product/berkley-fence-posts', destination: '/shop/aluminum-fencing/berkley-fence-panel/', permanent: true },
+      { source: '/product/brookhaven-fence-posts', destination: '/shop/aluminum-fencing/brookhaven-fence-panel/', permanent: true },
+      { source: '/product/buford-fence-posts', destination: '/shop/aluminum-fencing/buford-fence-panel/', permanent: true },
+      { source: '/product/candler-fence-posts', destination: '/shop/aluminum-fencing/candler-fence-panel/', permanent: true },
+      { source: '/product/chamblee-fence-posts', destination: '/shop/aluminum-fencing/chamblee-fence-panel/', permanent: true },
+      { source: '/product/cobb-fence-posts', destination: '/shop/aluminum-fencing/cobb-fence-panel/', permanent: true },
+      { source: '/product/dawson-fence-posts', destination: '/shop/aluminum-fencing/dawson-fence-panel/', permanent: true },
+      { source: '/product/dublin-fence-posts', destination: '/shop/aluminum-fencing/dublin-fence-panel/', permanent: true },
+      { source: '/product/dunwoody-fence-posts', destination: '/shop/aluminum-fencing/dunwoody-fence-panel/', permanent: true },
+      { source: '/product/savannah-fence-posts', destination: '/shop/aluminum-fencing/savannah-fence-panel/', permanent: true },
+      { source: '/product/sharpsburg-fence-posts', destination: '/shop/aluminum-fencing/sharpsburg-fence-panel/', permanent: true },
 
       // Accessories
       { source: '/product/aluminum-post-cap', destination: '/shop/accessories/aluminum-post-cap/', permanent: true },
@@ -92,14 +211,19 @@ const nextConfig = {
       { source: '/product/self-tapping-post-screws', destination: '/shop/accessories/self-tapping-post-screws/', permanent: true },
       { source: '/product/standard-drop-rod', destination: '/shop/accessories/standard-drop-rod/', permanent: true },
       { source: '/product/wall-mounts', destination: '/shop/accessories/wall-mounts/', permanent: true },
-      { source: '/product/dd-series-3-top-pull-20-5-magnalatch-gate-latch', destination: '/shop/accessories/d-d-series-3-top-pull-20-5-magnalatch-gate-latch/', permanent: true },
+      { source: '/product/dd-series-3-top-pull-20-5-magnalatch-gate-latch', destination: '/shop/accessories/dd-series-3-top-pull-20-5-magnalatch-gate-latch/', permanent: true },
+      { source: '/product/dd-vertical-pull-10-25-magnalatch-gate-latch', destination: '/shop/accessories/dd-vertical-pull-10-25-magnalatch-gate-latch/', permanent: true },
 
-      // Old WooCommerce category pages
-      { source: '/fence-supplies/:path*', destination: '/shop/', permanent: true },
-      { source: '/product-category/:path*', destination: '/shop/', permanent: true },
+      // Fence Kits (old generic kit slugs → kit landing page)
+      { source: '/product/all-inclusive-100ft-fence-kit', destination: '/shop/fence-kits/', permanent: true },
+      { source: '/product/all-inclusive-150ft-fence-kit', destination: '/shop/fence-kits/', permanent: true },
+      { source: '/product/all-inclusive-200ft-fence-kit', destination: '/shop/fence-kits/', permanent: true },
+      { source: '/product/all-inclusive-250ft-fence-kit', destination: '/shop/fence-kits/', permanent: true },
+      { source: '/product/choose-your-kit', destination: '/shop/fence-kits/', permanent: true },
 
-      // Catch-all: any remaining /product/ URLs → shop
-      { source: '/product/:slug', destination: '/shop/', permanent: false },
+      // Catch-all: any remaining /product/ URL → shop
+      { source: '/product/:slug', destination: '/shop/', permanent: true },
+
     ]
   },
 }

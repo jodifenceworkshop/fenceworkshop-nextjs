@@ -197,7 +197,7 @@ export default function OrnamentalAluminumFencePage() {
 
           <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto">
             <div className="aspect-[16/7] relative bg-gray-200">
-              <Image src="/images/service-ornamental-gate.jpg" alt="Ornamental aluminum fence installed by Fence Workshop at a commercial property in Georgia" fill className="object-cover" />
+              <Image src="/images/commercial-ornamental-fence-atlanta-ga.jpg" alt="Ornamental aluminum fence installed by Fence Workshop at a commercial property in Georgia" fill className="object-cover" />
             </div>
           </div>
 

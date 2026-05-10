@@ -52,8 +52,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                  <a href="mailto:info@fenceworkshop.com" className="text-lg text-brand-orange hover:underline">
-                    info@fenceworkshop.com
+                  <a href="mailto:atlanta@fenceworkshop.com" className="text-lg text-brand-orange hover:underline">
+                    atlanta@fenceworkshop.com
                   </a>
                 </div>
                 <div>
