@@ -146,8 +146,8 @@ const repairServices = [
   {
     title: 'Bollard Repair & Replacement',
     description: 'Vehicle-damaged, leaning, and knocked-over bollards repaired or replaced throughout Georgia. Post replacement, footing repair, and cover replacement.',
-    image: '/images/commercial-bollard-installation-atlanta-ga.jpg',
-    alt: 'Commercial bollard repair in Georgia by Fence Workshop',
+    image: '/images/dumpster-gates-atlanta-ga.jpg',
+    alt: 'Commercial dumpster gates and bollard repair in Atlanta, GA',
     href: '/installation/georgia/bollard-repair/',
   },
 ]
