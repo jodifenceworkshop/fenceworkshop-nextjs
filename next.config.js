@@ -46,6 +46,8 @@ const nextConfig = {
 
       // ── Commercial installation pages ──────────────────────────────────────
 
+      { source: '/dumpster-garbage-enclosures-gates-atlanta', destination: '/installation/georgia/dumpster-enclosure-gates/', permanent: true },
+      { source: '/dumpster-garbage-enclosures-gates-atlanta/', destination: '/installation/georgia/dumpster-enclosure-gates/', permanent: true },
       { source: '/commercial', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
       { source: '/commercial/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
       { source: '/industrial', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },

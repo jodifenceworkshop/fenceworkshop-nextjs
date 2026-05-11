@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
 const serviceSchema = {
@@ -85,8 +86,8 @@ const faqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Commercial Dumpster Enclosure & Gate Installation in Georgia | Fence Workshop',
-  description: 'Commercial dumpster enclosure and gate installation in Metro Atlanta and Georgia. Code-compliant enclosures for property managers and HOAs. Licensed & insured. Free quotes.',
+  title: 'Dumpster Gates Atlanta, GA | Dumpster Enclosure Installation | Fence Workshop',
+  description: 'Dumpster gates and garbage enclosure installation in Atlanta, GA and Metro Georgia. Code-compliant enclosures for property managers, HOAs, and commercial properties. Licensed & insured. Free quotes.',
 }
 
 const faqs = [
@@ -114,9 +115,9 @@ export default function DumpsterEnclosureGatesPage() {
               <span>/</span>
               <span className="text-gray-200">Dumpster Enclosures &amp; Gates</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">Commercial Dumpster Enclosure &amp; Gate Installation in Georgia</h1>
-            <p className="text-2xl md:text-3xl font-bold text-brand-orange mb-6 leading-tight">Code-Compliant Enclosures for Commercial Properties</p>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">One of the only fence companies in Georgia that specializes in both supplying and installing dumpster gates and enclosures. Custom enclosures for commercial properties, HOAs, apartment communities, and retail centers. Built to local code with durable materials designed for heavy daily use. Licensed &amp; insured with 15+ years experience.</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">Dumpster Gates &amp; Enclosures — Atlanta, GA</h1>
+            <p className="text-2xl md:text-3xl font-bold text-brand-orange mb-6 leading-tight">Dumpster Gate Installation, Garbage Enclosures &amp; Trash Enclosures</p>
+            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">One of the only fence companies in Georgia that specializes in both supplying and installing dumpster gates and garbage enclosures. Custom trash enclosures for commercial properties, HOAs, apartment communities, and retail centers throughout Metro Atlanta. Built to local code with durable materials designed for heavy daily use. Licensed &amp; insured with 15+ years experience.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#quote" className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center">Get a Free Quote</a>
               <a href="tel:+14043144419" className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg border border-white/30 transition-colors text-center">Call (404) 314-4419</a>
@@ -433,18 +434,7 @@ export default function DumpsterEnclosureGatesPage() {
               </div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Get a Free Quote</h3>
-              <p className="text-gray-600 mb-6">Tell us about your dumpster enclosure project and we&rsquo;ll respond within one business day.</p>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div><label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name *</label><input type="text" id="name" name="name" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent" /></div>
-                  <div><label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company</label><input type="text" id="company" name="company" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent" /></div>
-                </div>
-                <div><label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email *</label><input type="email" id="email" name="email" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent" /></div>
-                <div><label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label><input type="tel" id="phone" name="phone" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent" /></div>
-                <div><label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Project Details</label><textarea id="message" name="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent resize-none" placeholder="Number of containers, sizes, new install or replacement, etc."></textarea></div>
-                <button type="submit" className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">Request Free Quote</button>
-              </form>
+              <QuoteForm subject="Dumpster Enclosure & Gate Installation Quote" />
             </div>
           </div>
         </div>
