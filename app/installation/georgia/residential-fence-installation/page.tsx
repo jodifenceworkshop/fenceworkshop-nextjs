@@ -203,7 +203,7 @@ export default function ResidentialFenceInstallationPage() {
             <div className="rounded-lg overflow-hidden border border-gray-100 shadow-sm">
               <div className="relative h-52">
                 <Image
-                  src="/images/custom-fence-installation-atlanta-ga.jpg"
+                  src="/images/wrought-iron-ornamental-steel-fence-atlanta-ga.jpg"
                   alt="Custom wrought iron and ornamental steel fence installation in Atlanta, GA"
                   fill
                   className="object-cover"
@@ -223,7 +223,7 @@ export default function ResidentialFenceInstallationPage() {
             <div className="rounded-lg overflow-hidden border border-gray-100 shadow-sm">
               <div className="relative h-52">
                 <Image
-                  src="/images/commercial-ornamental-fence-gate-atlanta-ga.jpg"
+                  src="/images/residential-aluminum-fencing-atlanta-ga.jpg"
                   alt="Residential aluminum fence installation in Atlanta, GA"
                   fill
                   className="object-cover"
@@ -240,14 +240,13 @@ export default function ResidentialFenceInstallationPage() {
 
             {/* Custom Wood */}
             <div className="rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-              <div className="relative h-52 bg-gray-200 flex items-center justify-center">
-                {/* TODO: Replace with a residential custom wood fence photo */}
-                <div className="text-center px-4">
-                  <svg className="w-10 h-10 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                  </svg>
-                  <p className="text-gray-400 text-sm">Custom wood fence photo coming soon</p>
-                </div>
+              <div className="relative h-52">
+                <Image
+                  src="/images/custom-wood-fence-installation-atlanta-ga.jpg"
+                  alt="Custom residential wood fence installation in Atlanta, GA"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Custom Wood Fencing</h3>
@@ -262,7 +261,7 @@ export default function ResidentialFenceInstallationPage() {
             <div className="rounded-lg overflow-hidden border border-gray-100 shadow-sm">
               <div className="relative h-52">
                 <Image
-                  src="/images/shop-vinyl-fencing-hero.jpg"
+                  src="/images/residential-vinyl-fence-installation-atlanta-ga.jpg"
                   alt="Residential vinyl fence installation in Atlanta, GA"
                   fill
                   className="object-cover"
@@ -279,14 +278,13 @@ export default function ResidentialFenceInstallationPage() {
 
             {/* Custom Driveway Gates */}
             <div className="rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-              <div className="relative h-52 bg-gray-200 flex items-center justify-center">
-                {/* TODO: Replace with a residential custom driveway gate photo */}
-                <div className="text-center px-4">
-                  <svg className="w-10 h-10 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                  </svg>
-                  <p className="text-gray-400 text-sm">Custom driveway gate photo coming soon</p>
-                </div>
+              <div className="relative h-52">
+                <Image
+                  src="/images/residential-driveway-gate-installation-atlanta-ga.jpg"
+                  alt="Custom residential driveway gate installation in Atlanta, GA"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Custom Driveway Gates</h3>
@@ -300,14 +298,13 @@ export default function ResidentialFenceInstallationPage() {
 
             {/* Railings */}
             <div className="rounded-lg overflow-hidden border border-gray-100 shadow-sm">
-              <div className="relative h-52 bg-gray-200 flex items-center justify-center">
-                {/* TODO: Replace with a residential railing photo */}
-                <div className="text-center px-4">
-                  <svg className="w-10 h-10 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                  </svg>
-                  <p className="text-gray-400 text-sm">Residential railing photo coming soon</p>
-                </div>
+              <div className="relative h-52">
+                <Image
+                  src="/images/custom-residential-railings-atlanta-ga.jpg"
+                  alt="Custom residential railing installation in Atlanta, GA"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Custom Residential Railings</h3>
