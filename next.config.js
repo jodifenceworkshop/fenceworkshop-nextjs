@@ -18,10 +18,8 @@ const nextConfig = {
 
       // ── Legal pages ────────────────────────────────────────────────────────
 
-      { source: '/privacy-policy', destination: '/privacy-policy/', permanent: true },
       { source: '/terms-and-conditions', destination: '/terms/', permanent: true },
       { source: '/terms-and-conditions/', destination: '/terms/', permanent: true },
-      { source: '/warranty', destination: '/warranty/', permanent: true },
 
       // ── Pages ──────────────────────────────────────────────────────────────
 
