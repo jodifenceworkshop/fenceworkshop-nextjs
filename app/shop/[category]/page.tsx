@@ -421,6 +421,49 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
       </section>
 
+      {/* Looking for Something Else? — Aluminum Fencing only */}
+      {category === 'aluminum-fencing' && (
+        <section className="py-16 bg-white border-t border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Looking for Something Else?</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link
+                href="/shop/walk-gates/"
+                className="group block bg-gray-50 border border-gray-200 rounded-lg p-6 hover:border-brand-orange hover:shadow-md transition-all"
+              >
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors mb-2">Walk Gates</h3>
+                <p className="text-sm text-gray-600">Pedestrian gate kits with self-closing hinges and gravity latch. Pool code ready.</p>
+                <span className="mt-4 inline-block text-brand-orange font-semibold text-sm group-hover:underline">Shop Walk Gates →</span>
+              </Link>
+              <Link
+                href="/shop/driveway-gates/"
+                className="group block bg-gray-50 border border-gray-200 rounded-lg p-6 hover:border-brand-orange hover:shadow-md transition-all"
+              >
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors mb-2">Driveway Gates</h3>
+                <p className="text-sm text-gray-600">Double-swing driveway gate kits with panels, hinges, latch, and drop rod included.</p>
+                <span className="mt-4 inline-block text-brand-orange font-semibold text-sm group-hover:underline">Shop Driveway Gates →</span>
+              </Link>
+              <Link
+                href="/shop/fence-kits/"
+                className="group block bg-gray-50 border border-gray-200 rounded-lg p-6 hover:border-brand-orange hover:shadow-md transition-all"
+              >
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors mb-2">Fence Kits</h3>
+                <p className="text-sm text-gray-600">All-inclusive kits with panels, posts, and hardware sized for your total footage.</p>
+                <span className="mt-4 inline-block text-brand-orange font-semibold text-sm group-hover:underline">Shop Fence Kits →</span>
+              </Link>
+              <Link
+                href="/shop/accessories/"
+                className="group block bg-gray-50 border border-gray-200 rounded-lg p-6 hover:border-brand-orange hover:shadow-md transition-all"
+              >
+                <h3 className="text-lg font-bold text-gray-900 group-hover:text-brand-orange transition-colors mb-2">Hardware &amp; Accessories</h3>
+                <p className="text-sm text-gray-600">Hinges, latches, post caps, deck mounts, and everything else to complete your project.</p>
+                <span className="mt-4 inline-block text-brand-orange font-semibold text-sm group-hover:underline">Shop Accessories →</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA Banner */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
