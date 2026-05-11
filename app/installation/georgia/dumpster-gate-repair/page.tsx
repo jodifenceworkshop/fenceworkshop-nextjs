@@ -112,6 +112,32 @@ export default function DumpsterGateRepairPage() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Work</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Dumpster Gate Repairs &amp; Replacements — Atlanta, GA</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">From broken hinges and sagging gates to full enclosure door replacements, here&rsquo;s a sample of our commercial dumpster gate repair work across Metro Atlanta and Georgia.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { src: '/images/dumpster-gate-repair-replacement-atlanta-ga.jpg', alt: 'Dumpster gate repair and replacement service in Atlanta, GA by Fence Workshop' },
+              { src: '/images/dumpster-gate-replacement-atlanta-ga.jpg', alt: 'Dumpster gate replacement at commercial property in Atlanta, GA' },
+              { src: '/images/dumpster-gate-brick-enclosure-atlanta-ga.jpg', alt: 'Dumpster gate replacement in brick column enclosure, Atlanta, GA' },
+              { src: '/images/dumpster-enclosure-walk-gate-atlanta-ga.jpg', alt: 'Dumpster enclosure gate and hardware detail, Atlanta, GA' },
+              { src: '/images/wood-dumpster-gate-installation-atlanta-ga.jpg', alt: 'Wood dumpster gate repair and replacement in Atlanta, GA' },
+              { src: '/images/chain-link-dumpster-gate-installation-atlanta-ga.jpg', alt: 'Chain link dumpster gate repair with privacy slats, Atlanta, GA' },
+              { src: '/images/steel-panel-dumpster-gate-bollards-georgia.jpg', alt: 'Steel panel dumpster gate with bollards protecting hinges in Georgia' },
+              { src: '/images/large-dumpster-enclosure-gate-atlanta-ga.jpg', alt: 'Large commercial dumpster enclosure gate repair in Atlanta, GA' },
+            ].map((photo) => (
+              <div key={photo.src} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100">
+                <Image src={photo.src} alt={photo.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gray-100"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-12"><p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Who We Serve</p><h2 className="text-4xl font-bold text-gray-900 mb-4">Dumpster Gate Repair for Every Property Type</h2><p className="text-lg text-gray-700 max-w-3xl mx-auto">We repair dumpster enclosure gates for commercial and multi-family properties throughout Georgia.</p></div><div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {[
           { title: 'Apartment Communities & HOAs', description: 'Broken dumpster gates are a top tenant complaint and code enforcement trigger. We get them fixed fast so your property stays compliant and presentable.' },
