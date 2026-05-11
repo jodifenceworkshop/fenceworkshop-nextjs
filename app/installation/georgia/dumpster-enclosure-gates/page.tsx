@@ -182,7 +182,7 @@ export default function DumpsterEnclosureGatesPage() {
           </div>
           <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto">
             <div className="aspect-[16/7] relative bg-gray-200">
-              <Image src="/images/dumpster-gate-installation-bollards-atlanta-ga.jpg" alt="Commercial dumpster gate installation with bollards in Atlanta, GA by Fence Workshop" fill className="object-cover" />
+              <Image src="/images/dumpster-enclosure-cmu-wall-atlanta-ga.jpg" alt="Custom dumpster enclosure gate installation in Atlanta, GA by Fence Workshop" fill className="object-cover" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
