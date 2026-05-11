@@ -81,13 +81,45 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Yes. We build custom enclosures and screening walls for compactors, balers, and recycling containers in addition to standard dumpster enclosures. These are sized to accommodate the specific equipment and hauler access requirements."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a dumpster enclosure cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cost varies significantly based on size, material, and configuration. A basic chain link enclosure with privacy slats starts in the low thousands. Steel panel enclosures with canopy roofs and bollards run higher. We provide free on-site quotes — call (404) 314-4419 or request a quote on our website."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a dumpster gate and a dumpster enclosure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A dumpster gate refers specifically to the swinging doors — the part that opens and closes for hauler access. A dumpster enclosure is the full structure: the walls or screening panels on three sides plus the gates on the front. We build both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you replace just the dumpster enclosure doors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Replacing the doors (gates) on an existing enclosure is one of the most cost-effective repairs we do. If your enclosure walls are still structurally sound but the gates are sagging, the hinges have failed, or the latches are broken, we can replace just the gate panels and hardware without touching the walls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you install dumpster enclosures near me in Atlanta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We install and repair dumpster enclosures throughout Metro Atlanta and surrounding Georgia — including Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Decatur, Dunwoody, Kennesaw, Duluth, Norcross, Tucker, Johns Creek, and Lawrenceville."
+      }
     }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Dumpster Gates Atlanta, GA | Dumpster Enclosure Installation | Fence Workshop',
-  description: 'Dumpster gates and garbage enclosure installation in Atlanta, GA and Metro Georgia. Code-compliant enclosures for property managers, HOAs, and commercial properties. Licensed & insured. Free quotes.',
+  title: 'Dumpster Gates Atlanta, GA | Dumpster Enclosures & Garbage Enclosures | Fence Workshop',
+  description: 'Dumpster gates, garbage enclosures, and trash enclosure installation in Atlanta, GA. Commercial dumpster enclosures for property managers, HOAs, apartments, and retail centers. Licensed & insured. Free quotes.',
 }
 
 const faqs = [
@@ -96,6 +128,10 @@ const faqs = [
   { question: 'What size dumpster enclosure do I need?', answer: 'Enclosure size depends on the number and size of your containers. Standard enclosures fit 2-yard, 4-yard, 6-yard, and 8-yard dumpsters. We measure your containers and build to fit, including clearance for waste hauler access and lid operation.' },
   { question: 'How long do dumpster enclosure gates last?', answer: 'With proper materials (steel frame, heavy-duty hinges), a well-built enclosure gate lasts 10–15+ years. We use commercial-grade hardware designed for daily abuse from waste haulers, tenants, and weather exposure.' },
   { question: 'Do you build enclosures for compactors?', answer: 'Yes. We build custom enclosures and screening walls for compactors, balers, and recycling containers in addition to standard dumpster enclosures. These are sized to accommodate the specific equipment and hauler access requirements.' },
+  { question: 'How much does a dumpster enclosure cost?', answer: 'Cost varies significantly based on size, material, and configuration. A basic chain link enclosure with privacy slats starts in the low thousands. Steel panel enclosures with canopy roofs and bollards run higher. We provide free on-site quotes — pricing over the phone without seeing the property and containers isn\'t something we do, because it leads to surprises for both sides. Call (404) 314-4419 or request a quote above.' },
+  { question: 'What\'s the difference between a dumpster gate and a dumpster enclosure?', answer: 'A dumpster gate refers specifically to the swinging doors — the part that opens and closes for hauler access. A dumpster enclosure is the full structure: the walls or screening panels on three sides plus the gates on the front. We build both. Gate-only replacements are one of our most common jobs when the enclosure walls are still in good condition.' },
+  { question: 'Can you replace just the dumpster enclosure doors?', answer: 'Yes. Replacing the doors (gates) on an existing enclosure is one of the most cost-effective repairs we do. If your enclosure walls are still structurally sound but the gates are sagging, the hinges have failed, or the latches are broken, we can replace just the gate panels and hardware without touching the walls.' },
+  { question: 'Do you install dumpster enclosures near me in Atlanta?', answer: 'Yes. We install and repair dumpster enclosures throughout Metro Atlanta and surrounding Georgia — including Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Decatur, Dunwoody, Kennesaw, Duluth, Norcross, Tucker, Johns Creek, and Lawrenceville. If you\'re not sure whether we serve your area, call us at (404) 314-4419.' },
 ]
 
 export default function DumpsterEnclosureGatesPage() {
@@ -146,7 +182,7 @@ export default function DumpsterEnclosureGatesPage() {
           </div>
           <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto">
             <div className="aspect-[16/7] relative bg-gray-200">
-              <Image src="/images/dumpster-enclosure-gate-installation-atlanta-ga.jpg" alt="Commercial dumpster enclosure gate installed by Fence Workshop in Metro Atlanta" fill className="object-cover" />
+              <Image src="/images/dumpster-gate-installation-bollards-atlanta-ga.jpg" alt="Commercial dumpster gate installation with bollards in Atlanta, GA by Fence Workshop" fill className="object-cover" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -187,6 +223,46 @@ export default function DumpsterEnclosureGatesPage() {
               <div key={app.title} className="flex gap-4">
                 <span className="text-brand-orange font-bold text-2xl mt-1 flex-shrink-0">&bull;</span>
                 <div><h3 className="text-lg font-bold text-gray-900 mb-2">{app.title}</h3><p className="text-gray-600 leading-relaxed">{app.description}</p></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Work</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Commercial Dumpster Enclosures &amp; Gates — Atlanta, GA</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Every dumpster enclosure and gate installation is custom-built to fit the property. Browse our project gallery to see the range of materials, configurations, and property types we work with across Metro Atlanta and Georgia.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { src: '/images/dumpster-gate-installation-bollards-atlanta-ga.jpg', alt: 'Commercial dumpster gate installation with bollards in Atlanta, GA' },
+              { src: '/images/commercial-dumpster-gate-installation-atlanta-ga.jpg', alt: 'Commercial dumpster gate installed under canopy in Atlanta, GA' },
+              { src: '/images/dumpster-enclosure-apartment-complex-atlanta-ga.jpg', alt: 'Dumpster enclosure installation for apartment complex in Atlanta, GA' },
+              { src: '/images/garbage-enclosure-installation-atlanta-ga.jpg', alt: 'Custom garbage enclosure with roof installation in Atlanta, GA' },
+              { src: '/images/dumpster-gate-brick-enclosure-atlanta-ga.jpg', alt: 'Steel panel dumpster gate in brick column enclosure, Atlanta, GA' },
+              { src: '/images/commercial-trash-enclosure-installation-georgia.jpg', alt: 'Commercial trash enclosure with metal canopy roof in Georgia' },
+              { src: '/images/wood-dumpster-gate-installation-atlanta-ga.jpg', alt: 'Wood finish dumpster gate installation in brick columns, Atlanta, GA' },
+              { src: '/images/wood-composite-dumpster-gate-atlanta-ga.jpg', alt: 'Wide wood composite dumpster gate installation, Atlanta, GA' },
+              { src: '/images/steel-dumpster-gate-installation-georgia.jpg', alt: 'Wide steel dumpster gate shown open at commercial property in Georgia' },
+              { src: '/images/dumpster-enclosure-cmu-wall-atlanta-ga.jpg', alt: 'Dumpster enclosure gates installed in CMU block wall, Atlanta, GA' },
+              { src: '/images/dumpster-enclosure-walk-gate-atlanta-ga.jpg', alt: 'Dumpster enclosure with double gate and pedestrian walk gate, Atlanta, GA' },
+              { src: '/images/commercial-dumpster-enclosure-gates-georgia.jpg', alt: 'Commercial dumpster enclosure gates in Georgia' },
+              { src: '/images/dumpster-gate-repair-replacement-atlanta-ga.jpg', alt: 'Dumpster gate repair and replacement installation in Atlanta, GA' },
+              { src: '/images/dumpster-gate-hoa-installation-atlanta-ga.jpg', alt: 'Dumpster gate installation for HOA community in Atlanta, GA' },
+              { src: '/images/large-dumpster-enclosure-gate-atlanta-ga.jpg', alt: 'Large multi-panel dumpster enclosure gate installation in Atlanta, GA' },
+              { src: '/images/chain-link-dumpster-gate-installation-atlanta-ga.jpg', alt: 'Chain link dumpster gate with privacy slats, Atlanta, GA' },
+              { src: '/images/chain-link-dumpster-enclosure-commercial-georgia.jpg', alt: 'Large commercial chain link dumpster enclosure with privacy slats in Georgia' },
+              { src: '/images/steel-panel-dumpster-gate-bollards-georgia.jpg', alt: 'Steel panel dumpster gate with bollard posts in Georgia' },
+              { src: '/images/dumpster-enclosure-block-wall-installation-georgia.jpg', alt: 'Dumpster enclosure gates installed in block wall in Georgia, gate open' },
+              { src: '/images/custom-dumpster-gate-panel-atlanta-ga.jpg', alt: 'Custom X-brace dumpster gate panel detail, Atlanta, GA' },
+              { src: '/images/dumpster-gate-replacement-atlanta-ga.jpg', alt: 'Dumpster gate replacement installation at commercial property, Atlanta, GA' },
+            ].map((photo) => (
+              <div key={photo.src} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100">
+                <Image src={photo.src} alt={photo.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
               </div>
             ))}
           </div>
@@ -260,7 +336,7 @@ export default function DumpsterEnclosureGatesPage() {
           <div className="text-center mb-12">
             <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Materials</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Dumpster Enclosure Materials &amp; Options</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">The right material depends on your budget, property aesthetic, and how much abuse the enclosure will take. Here&rsquo;s how the most common options compare.</p>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">The right material depends on your budget, property aesthetic, and how much abuse the enclosure will take. All options use heavy-gauge steel tube frames — the material choice affects the door panels and screening, not the structural frame. Here&rsquo;s how the most common options compare.</p>
           </div>
 
           {/* Material Comparison Table */}
