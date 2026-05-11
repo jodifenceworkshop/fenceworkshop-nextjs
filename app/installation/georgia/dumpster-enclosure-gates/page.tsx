@@ -118,8 +118,8 @@ const faqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Dumpster Gates Atlanta, GA | Dumpster Enclosures & Garbage Enclosures | Fence Workshop',
-  description: 'Dumpster gates, garbage enclosures, and trash enclosure installation in Atlanta, GA. Commercial dumpster enclosures for property managers, HOAs, apartments, and retail centers. Licensed & insured. Free quotes.',
+  title: 'Dumpster Gates & Trash Enclosure Gates — Atlanta, GA | Fence Workshop',
+  description: 'Dumpster gates, trash enclosure gates, and garbage enclosure installation in Atlanta, GA. Commercial dumpster enclosures for property managers, HOAs, apartments, and retail centers. Licensed & insured. Free quotes.',
 }
 
 const faqs = [
@@ -225,6 +225,30 @@ export default function DumpsterEnclosureGatesPage() {
                 <div><h3 className="text-lg font-bold text-gray-900 mb-2">{app.title}</h3><p className="text-gray-600 leading-relaxed">{app.description}</p></div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Trash Enclosure Gates</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Trash Enclosure Gates for Commercial Properties</h2>
+            <p className="text-lg text-gray-700 mb-5 leading-relaxed">A trash enclosure gate is the hinged front panel of a dumpster enclosure — the part that opens for waste hauler access and closes to screen the waste area from tenants, customers, and the street. When property managers search for trash enclosure gates, they&rsquo;re usually looking for one of two things: a replacement gate for an existing enclosure, or a complete new trash enclosure installation.</p>
+            <p className="text-lg text-gray-700 mb-5 leading-relaxed">We handle both. Whether you need a single trash enclosure gate replaced or a full enclosure built from scratch, Fence Workshop builds to commercial-grade standards — heavy-gauge steel frames, industrial hinges, and hardware designed for daily waste hauler abuse. We serve commercial property managers, HOAs, apartment communities, retail centers, and restaurants throughout Metro Atlanta and Georgia.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
+              {[
+                { title: 'Trash Enclosure Gate Replacement', description: 'Existing enclosure walls still solid? We replace just the gate panels, hinges, and hardware — no need to rebuild the entire enclosure. Fast turnaround for urgent repairs.' },
+                { title: 'New Trash Enclosure Installation', description: 'New construction or full enclosure replacement? We design, fabricate, and install complete trash enclosures including walls, gates, posts, and optional roofing.' },
+                { title: 'Gate Hardware & Latch Repair', description: 'Cane bolts, drop rods, slide bolts, and locking hardware repaired or replaced to keep your enclosure gate latched securely between hauler pickups.' },
+                { title: 'Trash Enclosure Gates Near Me', description: 'We serve Metro Atlanta and all of Georgia. Free on-site quotes — call (404) 314-4419 or request a quote above. Licensed & insured.' },
+              ].map((item) => (
+                <div key={item.title} className="bg-gray-50 p-5 rounded-lg border border-gray-200">
+                  <h3 className="text-base font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -442,7 +466,7 @@ export default function DumpsterEnclosureGatesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Process</p>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">How Dumpster Enclosure Installation Works</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Dumpster Enclosure Installation — How It Works</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">From quote to completion, we manage every step of your dumpster enclosure project.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
