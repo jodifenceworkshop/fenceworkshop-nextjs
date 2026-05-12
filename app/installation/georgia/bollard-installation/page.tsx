@@ -291,6 +291,10 @@ export default function BollardInstallationPage() {
               { src: '/images/industrial-safety-railing-concrete-wall-georgia.jpg', alt: 'Industrial safety railing along concrete retaining wall in Georgia' },
               { src: '/images/steel-safety-railing-panel-infill-georgia.jpg', alt: 'Steel safety railing with panel infill along concrete wall in Georgia' },
               { src: '/images/commercial-safety-railing-installation-georgia.jpg', alt: 'Commercial safety railing installation along concrete wall in Georgia' },
+              { src: '/images/chain-link-swing-gate-bollards-commercial-georgia.jpg', alt: 'Chain link swing gate with yellow bollards at commercial property in Georgia' },
+              { src: '/images/chain-link-security-fence-barbed-wire-bollards-georgia.jpg', alt: 'Commercial chain link security fence with bollards in Georgia' },
+              { src: '/images/black-chain-link-swing-gate-operator-bollards-georgia.jpg', alt: 'Black chain link gate with operator and yellow bollards in Georgia' },
+              { src: '/images/black-chain-link-cantilever-gate-operator-atlanta-ga.jpg', alt: 'Black chain link cantilever gate with bollards in Atlanta, GA' },
             ].map((photo) => (
               <div key={photo.src} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100">
                 <Image src={photo.src} alt={photo.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />

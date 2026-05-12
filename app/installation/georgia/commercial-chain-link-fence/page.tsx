@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
 const serviceSchema = {
@@ -345,6 +346,41 @@ export default function CommercialChainLinkFencePage() {
         </div>
       </section>
 
+      {/* Photo Gallery */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Work</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Chain Link Security Gates &amp; Fence Installations — Georgia</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Project photos from commercial and industrial chain link fence and gate installations throughout Metro Atlanta and Georgia.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { src: '/images/black-chain-link-double-swing-gate-atlanta-ga.jpg', alt: 'Black chain link double swing gate installation in Atlanta, GA' },
+              { src: '/images/chain-link-double-swing-gate-commercial-georgia.jpg', alt: 'Commercial chain link double swing gate at property entrance in Georgia' },
+              { src: '/images/commercial-chain-link-double-gate-installation-georgia.jpg', alt: 'Commercial chain link double gate installation in Georgia' },
+              { src: '/images/chain-link-double-gate-walk-gate-georgia.jpg', alt: 'Chain link double gate with pedestrian walk gate in Georgia' },
+              { src: '/images/chain-link-cantilever-gate-installation-atlanta-ga.jpg', alt: 'Chain link cantilever slide gate installation in Atlanta, GA' },
+              { src: '/images/chain-link-cantilever-slide-gate-warehouse-georgia.jpg', alt: 'Chain link cantilever slide gate at warehouse in Georgia' },
+              { src: '/images/commercial-chain-link-slide-gate-warehouse-atlanta-ga.jpg', alt: 'Commercial chain link slide gate at warehouse in Atlanta, GA' },
+              { src: '/images/chain-link-slide-gate-operator-barbed-wire-georgia.jpg', alt: 'Chain link slide gate with gate operator and barbed wire in Georgia' },
+              { src: '/images/chain-link-security-fence-barbed-wire-bollards-georgia.jpg', alt: 'Commercial chain link security fence with barbed wire and bollards in Georgia' },
+              { src: '/images/commercial-chain-link-perimeter-fence-barbed-wire-georgia.jpg', alt: 'Commercial chain link perimeter fence with barbed wire in Georgia' },
+              { src: '/images/industrial-chain-link-fence-barbed-wire-installation-georgia.jpg', alt: 'Industrial chain link fence with barbed wire installation in Georgia' },
+              { src: '/images/chain-link-swing-gate-bollards-commercial-georgia.jpg', alt: 'Chain link swing gate with yellow bollards at commercial property in Georgia' },
+              { src: '/images/black-chain-link-security-fence-gate-commercial-georgia.jpg', alt: 'Black chain link security fence and gate at commercial property in Georgia' },
+              { src: '/images/black-chain-link-swing-gate-operator-bollards-georgia.jpg', alt: 'Black chain link swing gate with operator and yellow bollards in Georgia' },
+              { src: '/images/black-chain-link-cantilever-gate-operator-atlanta-ga.jpg', alt: 'Black chain link cantilever gate with gate operator and bollards in Atlanta, GA' },
+              { src: '/images/chain-link-swing-gate-self-storage-georgia.jpg', alt: 'Chain link swing gate at self-storage facility in Georgia' },
+            ].map((photo) => (
+              <div key={photo.src} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100">
+                <Image src={photo.src} alt={photo.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -569,66 +605,7 @@ export default function CommercialChainLinkFencePage() {
 
             {/* Right: Quote form */}
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Get a Free Quote</h3>
-              <p className="text-gray-600 mb-6">Tell us about your chain link fence project and we&rsquo;ll respond within one business day.</p>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name *</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company</label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Project Details</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent resize-none"
-                    placeholder="Approximate footage, height, location, timeline, etc."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-                >
-                  Request Free Quote
-                </button>
-              </form>
+              <QuoteForm subject="Commercial Chain Link Fence Quote" />
             </div>
           </div>
         </div>
