@@ -294,6 +294,14 @@ export default function OrnamentalAluminumFencePage() {
               { src: '/images/black-aluminum-fence-swing-gate-hotel-georgia.jpg', alt: 'Black aluminum fence with swing gate at hotel in Georgia' },
               { src: '/images/black-aluminum-fence-gate-parking-bollards-georgia.jpg', alt: 'Black aluminum fence and gate with parking bollards in Georgia' },
               { src: '/images/commercial-ornamental-fence-gate-atlanta-ga.jpg', alt: 'Commercial ornamental fence and gate in Atlanta Georgia' },
+              { src: '/images/ornamental-fence-retaining-wall-atlanta-ga.jpg', alt: 'Black ornamental fence on stone retaining wall in Atlanta Georgia' },
+              { src: '/images/ornamental-fence-stone-retaining-wall-georgia.jpg', alt: 'Ornamental fence on curved stone retaining wall in Georgia' },
+              { src: '/images/black-ornamental-fence-hillside-installation-georgia.jpg', alt: 'Black ornamental fence installed on hillside in Georgia' },
+              { src: '/images/black-ornamental-fence-brick-wall-atlanta-ga.jpg', alt: 'Black ornamental fence on brick retaining wall in Atlanta Georgia' },
+              { src: '/images/ornamental-fence-retaining-wall-staircase-georgia.jpg', alt: 'Ornamental fence on brick retaining wall with staircase in Georgia' },
+              { src: '/images/ornamental-fence-retaining-wall-corner-gate-georgia.jpg', alt: 'Ornamental fence with corner gate on brick retaining wall in Georgia' },
+              { src: '/images/black-fence-brick-retaining-wall-commercial-georgia.jpg', alt: 'Black ornamental fence on brick retaining wall at commercial property in Georgia' },
+              { src: '/images/ornamental-aluminum-fence-retaining-wall-georgia.jpg', alt: 'Ornamental aluminum fence on stone retaining wall with landscaping in Georgia' },
             ].map((img) => (
               <div key={img.src} className="aspect-[4/3] relative rounded-lg overflow-hidden bg-gray-200">
                 <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" />

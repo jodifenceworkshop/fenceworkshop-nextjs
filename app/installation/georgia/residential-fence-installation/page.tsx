@@ -338,6 +338,7 @@ export default function ResidentialFenceInstallationPage() {
               { src: '/images/custom-residential-fencing-atlanta-ga.jpg', alt: 'Custom residential fencing in Atlanta Georgia' },
               { src: '/images/custom-residential-railings-atlanta-ga.jpg', alt: 'Custom residential railings in Atlanta Georgia' },
               { src: '/images/wrought-iron-ornamental-steel-fence-atlanta-ga.jpg', alt: 'Custom wrought iron and ornamental steel fence in Atlanta Georgia' },
+              { src: '/images/ornamental-aluminum-fence-retaining-wall-georgia.jpg', alt: 'Ornamental aluminum fence on retaining wall at residential property in Georgia' },
             ].map((img) => (
               <div key={img.src} className="aspect-[4/3] relative rounded-lg overflow-hidden bg-gray-200">
                 <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" />
