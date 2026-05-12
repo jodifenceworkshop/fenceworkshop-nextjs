@@ -273,6 +273,33 @@ export default function BollardInstallationPage() {
         </div>
       </section>
 
+      {/* Photo Gallery */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Work</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Bollard &amp; Safety Railing Installations — Georgia</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Project photos from commercial bollard and safety railing installations throughout Metro Atlanta and Georgia.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { src: '/images/yellow-steel-bollards-security-gate-georgia.jpg', alt: 'Yellow steel bollard installation at commercial security gate in Georgia' },
+              { src: '/images/yellow-safety-railing-parking-lot-atlanta-ga.jpg', alt: 'Yellow commercial safety railing installation in parking lot, Atlanta, GA' },
+              { src: '/images/yellow-safety-railing-loading-dock-georgia.jpg', alt: 'Yellow safety railing at commercial loading dock in Georgia' },
+              { src: '/images/commercial-loading-dock-safety-railing-georgia.jpg', alt: 'Commercial safety railings at loading dock bays in Georgia' },
+              { src: '/images/commercial-safety-railing-parking-area-atlanta-ga.jpg', alt: 'Commercial safety railing installation in parking area, Atlanta, GA' },
+              { src: '/images/industrial-safety-railing-concrete-wall-georgia.jpg', alt: 'Industrial safety railing along concrete retaining wall in Georgia' },
+              { src: '/images/steel-safety-railing-panel-infill-georgia.jpg', alt: 'Steel safety railing with panel infill along concrete wall in Georgia' },
+              { src: '/images/commercial-safety-railing-installation-georgia.jpg', alt: 'Commercial safety railing installation along concrete wall in Georgia' },
+            ].map((photo) => (
+              <div key={photo.src} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100">
+                <Image src={photo.src} alt={photo.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
