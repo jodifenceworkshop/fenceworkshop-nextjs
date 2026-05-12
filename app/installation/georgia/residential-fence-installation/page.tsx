@@ -320,6 +320,33 @@ export default function ResidentialFenceInstallationPage() {
         </div>
       </section>
 
+      {/* Photo Gallery */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Our Work</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Residential Fence Projects in Georgia</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Custom residential fencing, gates, and railings installed throughout Metro Atlanta and Georgia.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { src: '/images/black-ornamental-arched-gate-granite-pillars-georgia.jpg', alt: 'Black ornamental arched gate with granite pillars at residential property in Georgia' },
+              { src: '/images/residential-fence-installation-atlanta-ga.jpg', alt: 'Residential fence installation in Atlanta Georgia' },
+              { src: '/images/residential-aluminum-fencing-atlanta-ga.jpg', alt: 'Residential aluminum fence installation in Atlanta Georgia' },
+              { src: '/images/residential-driveway-gate-installation-atlanta-ga.jpg', alt: 'Residential driveway gate installation in Atlanta Georgia' },
+              { src: '/images/residential-vinyl-fence-installation-atlanta-ga.jpg', alt: 'Residential vinyl fence installation in Atlanta Georgia' },
+              { src: '/images/custom-residential-fencing-atlanta-ga.jpg', alt: 'Custom residential fencing in Atlanta Georgia' },
+              { src: '/images/custom-residential-railings-atlanta-ga.jpg', alt: 'Custom residential railings in Atlanta Georgia' },
+              { src: '/images/wrought-iron-ornamental-steel-fence-atlanta-ga.jpg', alt: 'Custom wrought iron and ornamental steel fence in Atlanta Georgia' },
+            ].map((img) => (
+              <div key={img.src} className="aspect-[4/3] relative rounded-lg overflow-hidden bg-gray-200">
+                <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Wrought Iron / Steel Callout */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
