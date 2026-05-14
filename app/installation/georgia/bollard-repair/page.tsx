@@ -345,7 +345,7 @@ export default function BollardRepairPage() {
             <div>
               <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Service Areas</p>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Bollard Repair Across Georgia</h2>
-              <p className="text-lg text-gray-700 mb-6">We repair and replace commercial bollards throughout Metro Atlanta and across the state of Georgia. Most repairs scheduled within a few business days.</p>
+              <p className="text-lg text-gray-700 mb-6">We repair and replace commercial bollards throughout <Link href="/installation/georgia/atlanta-fence-installation/" className="text-brand-orange hover:underline">Metro Atlanta</Link> and across Georgia. Most repairs scheduled within a few business days. When you need new bollards installed alongside the repair, our <Link href="/installation/georgia/bollard-installation/" className="text-brand-orange hover:underline">bollard installation</Link> team handles both in a single visit.</p>
               <p className="text-lg text-gray-700 mb-4">Serving commercial properties throughout Metro Atlanta including:</p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
                 {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Smyrna', 'Kennesaw', 'Decatur', 'Tucker', 'Chamblee', 'Duluth', 'Norcross', 'Johns Creek', 'Woodstock', 'Stone Mountain', 'Lawrenceville'].map((city) => (

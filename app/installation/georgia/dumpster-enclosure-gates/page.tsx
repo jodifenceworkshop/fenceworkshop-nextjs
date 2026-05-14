@@ -515,7 +515,7 @@ export default function DumpsterEnclosureGatesPage() {
             <div>
               <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Service Areas</p>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Dumpster Enclosure Installation Across Georgia</h2>
-              <p className="text-lg text-gray-700 mb-6">We install and repair dumpster enclosures throughout Metro Atlanta and across the state of Georgia for commercial properties, apartment communities, and retail centers.</p>
+              <p className="text-lg text-gray-700 mb-6">We install and repair dumpster enclosures throughout <Link href="/installation/georgia/atlanta-fence-installation/" className="text-brand-orange hover:underline">Metro Atlanta</Link> and across Georgia for commercial properties, apartment communities, and retail centers. When the gate is already gone, our <Link href="/installation/georgia/dumpster-gate-repair/" className="text-brand-orange hover:underline">dumpster gate repair</Link> service handles broken hinges, bent frames, and latches — fast turnaround for code enforcement situations.</p>
               <p className="text-lg text-gray-700 mb-4">Our crews are active throughout Metro Atlanta including:</p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
                 {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Smyrna', 'Kennesaw', 'Decatur', 'Tucker', 'Chamblee', 'Stone Mountain', 'Duluth', 'Norcross', 'Johns Creek', 'Woodstock', 'Lawrenceville'].map((city) => (

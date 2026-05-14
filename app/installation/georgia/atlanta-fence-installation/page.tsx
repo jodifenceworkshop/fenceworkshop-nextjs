@@ -456,7 +456,8 @@ export default function AtlantaInstallationPage() {
               <p className="text-lg text-gray-700 mb-6">
                 Fence Workshop is a commercial fencing company based in Atlanta, with our shop located
                 at 1522 Huber St NW. We serve commercial clients throughout the city and surrounding communities,
-                including property managers, general contractors, municipalities, and business owners.
+                including property managers, general contractors, municipalities, and business owners. We also serve
+                neighboring communities like <Link href="/installation/georgia/marietta-fence-installation/" className="text-brand-orange hover:underline">Marietta</Link> and <Link href="/installation/georgia/alpharetta-fence-installation/" className="text-brand-orange hover:underline">Alpharetta</Link> — and handle <Link href="/installation/georgia/fence-repair/" className="text-brand-orange hover:underline">fence and gate repair</Link> throughout Atlanta alongside new installations.
               </p>
               <p className="text-lg text-gray-700 mb-4">Serving commercial properties throughout Metro Atlanta including:</p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">

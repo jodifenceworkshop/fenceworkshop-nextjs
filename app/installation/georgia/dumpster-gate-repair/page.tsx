@@ -232,7 +232,7 @@ export default function DumpsterGateRepairPage() {
         <div>
           <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Service Areas</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Dumpster Gate Repair Across Georgia</h2>
-          <p className="text-lg text-gray-700 mb-6">We repair commercial dumpster gates throughout Metro Atlanta and across the state of Georgia. Fast scheduling for urgent repairs — code enforcement notices and broken gates that won&rsquo;t close get priority.</p>
+          <p className="text-lg text-gray-700 mb-6">We repair commercial dumpster gates throughout <Link href="/installation/georgia/atlanta-fence-installation/" className="text-brand-orange hover:underline">Metro Atlanta</Link> and across Georgia. Fast scheduling for urgent repairs — code enforcement notices and broken gates that won&rsquo;t close get priority. If the enclosure itself needs rebuilding, our <Link href="/installation/georgia/dumpster-enclosure-gates/" className="text-brand-orange hover:underline">dumpster enclosure installation</Link> team handles new construction as well.</p>
           <p className="text-lg text-gray-700 mb-4">Serving commercial properties in:</p>
           <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
             {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Smyrna', 'Kennesaw', 'Decatur', 'Duluth', 'Norcross', 'Johns Creek', 'Peachtree City', 'Woodstock', 'Canton', 'Gainesville', 'Lawrenceville'].map((city) => (

@@ -95,7 +95,7 @@ export default function FenceRepairHubPage() {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">Commercial Fence Repair in Georgia</h1>
             <p className="text-2xl md:text-3xl font-bold text-brand-orange mb-6 leading-tight">Fast, Reliable Repairs for Every Fence &amp; Gate Type</p>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">Fence Workshop repairs commercial fencing and gate systems throughout Metro Atlanta and Georgia. Dumpster gates, chain link perimeters, roll and slide gates, and high-security fencing. Licensed &amp; insured with 15+ years experience — most repairs scheduled within a few business days.</p>
+            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">Fence Workshop repairs commercial fencing and gate systems throughout Metro Atlanta and Georgia. <Link href="/installation/georgia/dumpster-gate-repair/" className="text-brand-orange hover:underline">Dumpster gates</Link>, <Link href="/installation/georgia/chain-link-fence-repair/" className="text-brand-orange hover:underline">chain link perimeters</Link>, <Link href="/installation/georgia/roll-gate-slide-gate-repair/" className="text-brand-orange hover:underline">roll and slide gates</Link>, and <Link href="/installation/georgia/security-fence-gate-repair/" className="text-brand-orange hover:underline">high-security fencing</Link>. Licensed &amp; insured with 15+ years experience — most repairs scheduled within a few business days.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#quote" className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center">Request Repair Service</a>
               <a href="tel:+14043144419" className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg border border-white/30 transition-colors text-center">Call (404) 314-4419</a>
@@ -220,6 +220,7 @@ export default function FenceRepairHubPage() {
                   </div>
                 ))}
               </div>
+              <p className="text-lg text-gray-700 mt-6">When repair isn't enough, we also handle full <Link href="/installation/georgia/commercial-fence-installation/" className="text-brand-orange hover:underline">commercial fence installation throughout Georgia</Link> — same crew, same standards, no need to find a second contractor.</p>
             </div>
             <div className="rounded-xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] relative">

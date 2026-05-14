@@ -423,7 +423,7 @@ export default function ResidentialFenceInstallationPage() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Residential Fence Installation Across Metro Atlanta</h2>
               <p className="text-lg text-gray-700 mb-6">
                 We install custom residential fences, gates, and railings throughout Metro Atlanta and
-                the greater Georgia area. Contact us for availability in your city.
+                the greater Georgia area. Our residential work connects to our full range of <Link href="/installation/georgia/commercial-fence-installation/" className="text-brand-orange hover:underline">commercial fence installation services in Georgia</Link> — general contractors often bring us in for both on mixed-use and multi-family projects. Contact us for availability in your city.
               </p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
                 {[

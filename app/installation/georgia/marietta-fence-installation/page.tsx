@@ -454,9 +454,9 @@ export default function MariettaInstallationPage() {
                 Marietta &amp; Cobb County Areas We Serve
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Fence Workshop is based in Atlanta and regularly serves commercial clients throughout Marietta
+                Fence Workshop is based in <Link href="/installation/georgia/atlanta-fence-installation/" className="text-brand-orange hover:underline">Atlanta</Link> and regularly serves commercial clients throughout Marietta
                 and Cobb County — including property managers, general contractors, industrial operators,
-                and business owners along the I-75 corridor.
+                and business owners along the I-75 corridor. We handle <Link href="/installation/georgia/fence-repair/" className="text-brand-orange hover:underline">commercial fence and gate repair</Link> in Marietta as well as new installations.
               </p>
               <p className="text-lg text-gray-700 mb-4">Serving commercial properties throughout Metro Atlanta including:</p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">

@@ -454,9 +454,9 @@ export default function AlpharettaInstallationPage() {
                 Alpharetta &amp; North Fulton Areas We Serve
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Fence Workshop is based in Atlanta and regularly serves commercial clients throughout Alpharetta
+                Fence Workshop is based in <Link href="/installation/georgia/atlanta-fence-installation/" className="text-brand-orange hover:underline">Atlanta</Link> and regularly serves commercial clients throughout Alpharetta
                 and North Fulton County — including tech companies, office parks, property management firms,
-                and general contractors working along the GA-400 corridor.
+                and general contractors working along the GA-400 corridor. We also serve neighboring <Link href="/installation/georgia/marietta-fence-installation/" className="text-brand-orange hover:underline">Marietta and Cobb County</Link> and handle <Link href="/installation/georgia/fence-repair/" className="text-brand-orange hover:underline">commercial fence and gate repair</Link> alongside installations.
               </p>
               <p className="text-lg text-gray-700 mb-4">Serving commercial properties throughout Metro Atlanta including:</p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">

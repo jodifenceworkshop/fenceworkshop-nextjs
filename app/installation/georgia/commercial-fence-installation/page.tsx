@@ -386,13 +386,16 @@ export default function GeorgiaInstallationPage() {
                 Serving Metro Atlanta &amp; Georgia
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Fence Workshop is a commercial fencing contractor based in Atlanta, serving clients across Georgia
+                Fence Workshop is a commercial fencing contractor based in <Link href="/installation/georgia/atlanta-fence-installation/" className="text-brand-orange hover:underline">Atlanta</Link>, serving clients across Georgia
                 for over 15 years. We work with property managers, general contractors, municipalities, and business
                 owners to deliver code-compliant fence installations on time and on budget.
               </p>
-              <p className="text-lg text-gray-700 mb-8">
-                Our most active service areas include Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs,
+              <p className="text-lg text-gray-700 mb-4">
+                Our most active service areas include <Link href="/installation/georgia/atlanta-fence-installation/" className="text-brand-orange hover:underline">Atlanta</Link>, <Link href="/installation/georgia/marietta-fence-installation/" className="text-brand-orange hover:underline">Marietta</Link>, <Link href="/installation/georgia/alpharetta-fence-installation/" className="text-brand-orange hover:underline">Alpharetta</Link>, Roswell, Smyrna, Sandy Springs,
                 Kennesaw, and surrounding communities. We also take on larger projects statewide.
+              </p>
+              <p className="text-lg text-gray-700 mb-8">
+                We also offer <Link href="/installation/georgia/residential-fence-installation/" className="text-brand-orange hover:underline">residential fence installation in Georgia</Link> for custom ornamental and high-end projects through general contractors.
               </p>
               <div className="space-y-3">
                 <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">

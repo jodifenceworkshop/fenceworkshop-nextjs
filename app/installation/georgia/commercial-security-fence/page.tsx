@@ -573,8 +573,9 @@ export default function CommercialSecurityFencePage() {
                 Security Fence Installation Across Georgia
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                We install high-security fencing throughout Metro Atlanta and across the state of Georgia.
+                We install high-security fencing throughout <Link href="/installation/georgia/atlanta-fence-installation/" className="text-brand-orange hover:underline">Metro Atlanta</Link> and across the state of Georgia.
                 From data centers to government facilities, our experienced crews deliver secure, code-compliant installations.
+                We also handle <Link href="/installation/georgia/security-fence-gate-repair/" className="text-brand-orange hover:underline">security fence and gate repair</Link> for facilities that need fast response when perimeter integrity is compromised.
               </p>
               <p className="text-lg text-gray-700 mb-4">Serving commercial properties throughout Metro Atlanta including:</p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">

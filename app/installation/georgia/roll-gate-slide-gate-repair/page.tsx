@@ -219,7 +219,7 @@ export default function RollGateSlideGateRepairPage() {
         <div>
           <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Service Areas</p>
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Gate Repair Across Georgia</h2>
-          <p className="text-lg text-gray-700 mb-6">We repair commercial roll gates and slide gates throughout Metro Atlanta and across the state of Georgia. Fast response for gates that are stuck or non-operational.</p>
+          <p className="text-lg text-gray-700 mb-6">We repair commercial roll gates and slide gates throughout <Link href="/installation/georgia/atlanta-fence-installation/" className="text-brand-orange hover:underline">Metro Atlanta</Link> and across Georgia. Fast response for gates that are stuck or non-operational. When the gate is beyond repair, our <Link href="/installation/georgia/slide-gates/" className="text-brand-orange hover:underline">slide gate installation</Link> team handles full replacements including new operators and access control.</p>
           <p className="text-lg text-gray-700 mb-4">Serving commercial properties throughout Metro Atlanta including:</p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
                 {['Atlanta', 'Marietta', 'Alpharetta', 'Roswell', 'Sandy Springs', 'Smyrna', 'Kennesaw', 'Decatur', 'Tucker', 'Chamblee', 'Duluth', 'Norcross', 'Johns Creek', 'Woodstock', 'Stone Mountain', 'Lawrenceville'].map((city) => (

@@ -582,8 +582,9 @@ export default function CommercialChainLinkFencePage() {
                 Chain Link Fence Installation Across Georgia
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                We install commercial chain link fencing throughout Metro Atlanta and across the state of Georgia.
+                We install commercial chain link fencing throughout <Link href="/installation/georgia/atlanta-fence-installation/" className="text-brand-orange hover:underline">Metro Atlanta</Link> and across the state of Georgia.
                 Whether you need 200 feet or 2,000 feet, our experienced crews deliver on time and on budget.
+                Need repair instead of a new install? Our <Link href="/installation/georgia/chain-link-fence-repair/" className="text-brand-orange hover:underline">chain link fence repair</Link> team handles fabric, posts, gates, and hardware throughout Georgia.
               </p>
               <p className="text-lg text-gray-700 mb-4">Serving commercial properties throughout Metro Atlanta including:</p>
               <div className="grid grid-cols-2 gap-x-6 gap-y-1 mb-8 text-gray-700">
