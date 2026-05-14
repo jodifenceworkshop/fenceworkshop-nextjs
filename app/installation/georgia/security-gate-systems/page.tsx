@@ -242,7 +242,9 @@ export default function SecurityGateSystemsPage() {
             <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Security Gate Systems in Atlanta, GA</Link>
             <Link href="/installation/georgia/marietta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Security Gate Systems in Marietta, GA</Link>
             <Link href="/installation/georgia/alpharetta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Security Gate Systems in Alpharetta, GA</Link>
-            <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium mt-6">&larr; All Commercial Fence Services in Georgia</Link>
+            <Link href="/installation/georgia/roll-gate-slide-gate-repair/" className="block text-brand-orange hover:underline font-medium">&rarr; Roll Gate &amp; Slide Gate Repair in Georgia</Link>
+            <Link href="/installation/service-areas/" className="block text-brand-orange hover:underline font-medium">&rarr; View All Service Areas</Link>
+            <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium mt-4">&larr; All Commercial Fence Services in Georgia</Link>
           </div>
         </div>
         <div className="bg-white p-8 rounded-lg shadow-lg">

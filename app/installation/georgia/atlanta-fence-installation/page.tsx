@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
 const serviceSchema = {
@@ -481,87 +482,7 @@ export default function AtlantaInstallationPage() {
 
             {/* Right: Quote form */}
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Get a Free Quote</h3>
-              <p className="text-gray-600 mb-6">Tell us about your Atlanta project and we&rsquo;ll respond within one business day.</p>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name *</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company</label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Type of Project *</label>
-                  <select
-                    id="service"
-                    name="service"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent bg-white"
-                  >
-                    <option value="">Select a service...</option>
-                    <option value="chain-link">Chain Link Fence Installation</option>
-                    <option value="security-fence">Security Fence Installation</option>
-                    <option value="ornamental">Ornamental / Aluminum Fence Installation</option>
-                    <option value="dumpster-gate">Dumpster Gate Installation</option>
-                    <option value="roll-gate">Roll Gate / Slide Gate Installation</option>
-                    <option value="warehouse">Warehouse / Industrial Fencing</option>
-                    <option value="parking">Parking Deck / Garage Fencing</option>
-                    <option value="security-gate">Security Gate System</option>
-                    <option value="repair">Fence or Gate Repair</option>
-                    <option value="other">Other / Not Sure</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Project Details</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-transparent resize-none"
-                    placeholder="Location, approximate footage, timeline, etc."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-                >
-                  Request Free Quote
-                </button>
-              </form>
+              <QuoteForm subject="Commercial Fence Installation Quote - Atlanta" />
             </div>
           </div>
         </div>

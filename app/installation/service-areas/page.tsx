@@ -77,10 +77,12 @@ const services = [
   { title: 'Dumpster Enclosure Gates', href: '/installation/georgia/dumpster-enclosure-gates/' },
   { title: 'Warehouse & Industrial Fencing', href: '/installation/georgia/warehouse-industrial-fencing/' },
   { title: 'Parking Garage Fencing', href: '/installation/georgia/parking-garage-fencing/' },
+  { title: 'Bollard Installation', href: '/installation/georgia/bollard-installation/' },
   { title: 'Dumpster Gate Repair', href: '/installation/georgia/dumpster-gate-repair/' },
   { title: 'Chain Link Fence Repair', href: '/installation/georgia/chain-link-fence-repair/' },
   { title: 'Roll Gate & Slide Gate Repair', href: '/installation/georgia/roll-gate-slide-gate-repair/' },
   { title: 'Security Fence & Gate Repair', href: '/installation/georgia/security-fence-gate-repair/' },
+  { title: 'Bollard Repair & Replacement', href: '/installation/georgia/bollard-repair/' },
 ]
 
 export default function ServiceAreasPage() {

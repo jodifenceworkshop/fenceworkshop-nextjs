@@ -598,6 +598,7 @@ export default function CommercialChainLinkFencePage() {
                 <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Chain Link Fence Installation in Atlanta, GA</Link>
                 <Link href="/installation/georgia/marietta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Chain Link Fence Installation in Marietta, GA</Link>
                 <Link href="/installation/georgia/alpharetta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Chain Link Fence Installation in Alpharetta, GA</Link>
+                <Link href="/installation/georgia/chain-link-fence-repair/" className="block text-brand-orange hover:underline font-medium">&rarr; Chain Link Fence Repair in Georgia</Link>
                 <Link href="/installation/service-areas/" className="block text-brand-orange hover:underline font-medium">&rarr; View All Service Areas</Link>
                 <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium mt-2">&larr; All Commercial Fence Services in Georgia</Link>
               </div>
