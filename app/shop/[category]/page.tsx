@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/components/Navbar'
@@ -12,7 +13,7 @@ type CategoryConfig = {
   heading: string
   intro: string
   features: { label: string; detail: string }[]
-  sections: { heading: string; body: string }[]
+  sections: { heading: string; body: React.ReactNode }[]
   faqs: { q: string; a: string }[]
 }
 
@@ -86,10 +87,10 @@ const categories: Record<string, CategoryConfig> = {
     ],
   },
   'aluminum-fencing': {
-    title: 'Aluminum Fence Panels | Residential & Commercial Fencing | Fence Workshop',
-    description: 'Shop American-made aluminum fence panels in multiple styles and heights. Professional-grade 6063-T5 aluminum with TGIC powder coating. Ships nationwide.',
+    title: 'Buy Aluminum Fence Panels | Wholesale Pricing | Ships Nationwide',
+    description: 'Residential aluminum fence panels for sale at wholesale pricing. American-made 6063-T5 aluminum in black, bronze, and white. Multiple styles and heights. Ships nationwide.',
     heading: 'Aluminum Fence Panels',
-    intro: 'Professional-grade aluminum fence panels manufactured from 6063-T5 aluminum with TGIC polyester powder coating. Choose from over a dozen styles in 3ft, 4ft, and 5ft heights.',
+    intro: 'Shop residential aluminum fence panels for sale at wholesale pricing. American-made from 6063-T5 aluminum with TGIC polyester powder coating — available in black, bronze, and white in over a dozen styles and three heights.',
     features: [
       { label: '6063-T5 Aluminum', detail: 'Structural-grade alloy that won\'t rust, rot, or warp — ever' },
       { label: 'TGIC Powder Coating', detail: 'Industrial finish rated for UV resistance, corrosion, and impact' },
@@ -99,11 +100,11 @@ const categories: Record<string, CategoryConfig> = {
     sections: [
       {
         heading: 'Why Choose Aluminum Fencing?',
-        body: 'Aluminum fencing gives you the elegant look of traditional wrought iron without any of the maintenance. Unlike iron or steel, aluminum doesn\'t rust — period. There\'s no sanding, priming, or repainting. Our 6063-T5 aluminum alloy provides excellent structural strength while remaining lightweight enough for easy installation. The TGIC polyester powder coating adds an additional layer of protection against UV fading, scratching, and environmental exposure, keeping your fence looking factory-new for decades.',
+        body: 'Aluminum fencing gives you the elegant look of traditional wrought iron without any of the maintenance. Unlike iron or steel, aluminum doesn\'t rust — period. There\'s no sanding, priming, or repainting. Our 6063-T5 aluminum alloy provides excellent structural strength while remaining lightweight enough for easy installation. The TGIC polyester powder coating adds an additional layer of protection against UV fading, scratching, and environmental exposure, keeping your fence looking factory-new for decades. Not sure whether aluminum or steel is right for your project? See our <Link href="/shop/resources/aluminum-vs-steel-fencing/" className="text-brand-orange hover:underline">aluminum vs. steel fencing comparison</Link> for a full breakdown.',
       },
       {
         heading: 'Residential vs. Commercial Grade Aluminum Fence',
-        body: 'We carry aluminum fence panels in both residential and commercial grades. Residential-grade panels use 5/8-inch pickets and 1-inch rails — ideal for property boundaries, garden enclosures, and decorative applications. Commercial-grade panels feature thicker 3/4-inch pickets and 1.5-inch rails for added strength and security, making them suitable for pool enclosures, HOA communities, and commercial properties. Both grades are available in multiple styles and heights.',
+        body: 'We carry aluminum fence panels in both residential and commercial grades. Residential-grade panels use 5/8-inch pickets and 1-inch rails — ideal for property boundaries, garden enclosures, and decorative applications. Commercial-grade panels feature thicker 3/4-inch pickets and 1.5-inch rails for added strength and security, making them suitable for pool enclosures, HOA communities, and commercial properties. Both grades are available in multiple styles and heights. Need help choosing? Read our <Link href="/shop/resources/residential-vs-commercial-aluminum-fence/" className="text-brand-orange hover:underline">residential vs. commercial aluminum fence guide</Link>.',
       },
       {
         heading: 'Choosing the Right Fence Height',
@@ -111,16 +112,17 @@ const categories: Record<string, CategoryConfig> = {
       },
       {
         heading: 'Aluminum Fence Styles Explained',
-        body: 'Our fence panels come in three main design categories. Flat-top styles have level picket tops for a clean, modern look — popular in contemporary homes and commercial settings. Spear-top (or pointed-top) styles feature traditional finial points for a classic wrought-iron appearance and added security. Staggered-top designs alternate picket heights for a distinctive, elegant profile. Within each category, you\'ll find variations in picket spacing, rail design, and decorative elements to match your property\'s architecture. Shopping for a specific use case? See our pool code aluminum fence guide for pool barrier compliance, or our pet fence guide for styles with tighter picket spacing to contain small dogs, puppies, and cats.',
+        body: <>Our fence panels come in three main design categories. Flat-top styles have level picket tops for a clean, modern look — popular in contemporary homes and commercial settings. Spear-top (or pointed-top) styles feature traditional finial points for a classic wrought-iron appearance and added security. Staggered-top designs alternate picket heights for a distinctive, elegant profile. Within each category, you&apos;ll find variations in picket spacing, rail design, and decorative elements to match your property&apos;s architecture. Shopping for a specific use case? See our <Link href="/shop/resources/pool-code-aluminum-fence/" className="text-brand-orange hover:underline">pool code aluminum fence guide</Link> for pool barrier compliance, or our <Link href="/shop/resources/pet-fence/" className="text-brand-orange hover:underline">pet fence guide</Link> for styles with tighter picket spacing to contain small dogs, puppies, and cats.</>,
       },
     ],
     faqs: [
+      { q: 'How much do aluminum fence panels cost?', a: 'Aluminum fence panels are priced per panel and vary by style, height, and grade. Residential-grade panels are the most affordable; commercial-grade panels with thicker pickets cost more. We offer wholesale pricing on all orders — shop the full selection above or call (404) 314-4419 for a project quote.' },
       { q: 'How long do aluminum fence panels last?', a: 'With virtually zero maintenance, aluminum fence panels typically last 30+ years. The aluminum won\'t rust and the TGIC powder coating resists fading and peeling far longer than paint.' },
       { q: 'How wide is each fence panel?', a: 'Each panel spans 6 feet between posts. This is the standard width used across the aluminum fencing industry and makes layout and installation straightforward. Panels can easily be cut down on-site with a hacksaw or miter saw for custom widths.' },
       { q: 'Can aluminum fence panels be cut to a custom width?', a: 'Yes. Our 6ft panels can be cut down on-site using a standard hacksaw or miter saw. This is useful for finishing the end of a run, fitting between tight obstacles, or adjusting around existing landscaping.' },
       { q: 'Can aluminum fencing be installed on a slope?', a: 'Yes. Aluminum fence panels can be "racked" (angled) to follow the slope of your yard. Most of our panels rack up to a certain degree without modification. For steep slopes, stair-stepping panels is another common approach.' },
       { q: 'Is aluminum fencing strong enough for security?', a: 'Commercial-grade aluminum panels with 3/4-inch pickets provide excellent security. The aluminum alloy is strong enough that pickets cannot be easily bent or broken. Spear-top styles add additional deterrence.' },
-      { q: 'What colors are available?', a: 'Our aluminum fence panels are available in Black, Bronze, and White. All colors use the same TGIC powder coating process for consistent durability.' },
+      { q: 'What colors are available?', a: 'Our aluminum fence panels are available in three colors: Black, Bronze, and White. Black aluminum fence panels are our most popular — they deliver a classic wrought-iron look that suits virtually any home or landscape. Bronze aluminum fence panels offer a warm, traditional appearance. White aluminum fence panels are a clean, bright option popular for pool enclosures and coastal properties. All three colors use the same TGIC powder coating process for consistent, long-lasting durability.' },
     ],
   },
   'fence-posts': {
@@ -241,12 +243,44 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     })),
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
+      { '@type': 'ListItem', position: 2, name: cat.heading, item: `https://fenceworkshop.com/shop/${category}/` },
+    ],
+  }
+
+  const itemListSchema = products.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: cat.heading,
+    numberOfItems: products.length,
+    itemListElement: products.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: product.title,
+      url: `https://fenceworkshop.com${getProductUrl(product)}`,
+    })),
+  } : null
+
   return (
     <main className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {itemListSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+      )}
       <Navbar />
       <div className="h-20" />
 
