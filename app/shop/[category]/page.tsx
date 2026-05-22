@@ -526,7 +526,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Need Help With Your Project?</h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Our team of professional fence installers has been helping homeowners and contractors across the country since 2008. We can help you choose the right products, plan your layout, and answer any installation questions.
+            Our team of professional fence installers has been helping homeowners and contractors across the country since 2008. We can help you choose the right products, plan your layout, and answer any installation questions. Browse our full <Link href="/shop/" className="text-brand-orange hover:underline">online fence shop</Link> to see everything we carry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
