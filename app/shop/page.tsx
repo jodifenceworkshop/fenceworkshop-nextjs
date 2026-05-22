@@ -5,13 +5,75 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Shop Aluminum Fencing, Gates & Accessories | Fence Workshop',
-  description: 'Buy American-made aluminum fences, driveway gates, walk gates, and accessories online from Fence Workshop. Premium materials designed by installers, shipped nationwide.',
+  title: 'Aluminum Fence Panels & Gates for Sale | Wholesale Pricing | Ships Nationwide',
+  description: 'Shop aluminum fence panels, driveway gates, walk gates, posts, and accessories for sale at wholesale pricing. American-made, ships nationwide. Panels from $80.35.',
+  alternates: {
+    canonical: 'https://fenceworkshop.com/shop/',
+  },
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Do you offer wholesale pricing on aluminum fencing?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. We sell aluminum fence panels, gates, posts, and accessories at wholesale pricing — factory-direct to homeowners, contractors, and property managers nationwide. Panels start at $80.35 and complete fence kits start at $2,693.59.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you ship aluminum fencing nationwide?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. We ship to all 50 states via freight carrier. Quick-ship styles in black ship within a few business days. Made-to-order styles ship within 2–3 weeks. If you\'ve been searching for aluminum fence for sale near me and can\'t find the right styles locally, we ship directly to your door.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you sell aluminum gates?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. We carry aluminum driveway gates (double-swing kits) and aluminum walk gates (pedestrian gate kits) in multiple sizes and styles. Driveway gate kits include panels, posts, hinges, latch, and drop rod. Walk gate kits include the gate panel, posts, self-closing hinges, and gravity latch. Both can be automated.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you sell black aluminum fencing?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Black aluminum fence panels are our most popular color — available across all styles and heights in both quick-ship and made-to-order options. We also carry bronze and white aluminum fencing.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you sell aluminum pool fencing?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Several of our aluminum fence styles meet pool barrier code requirements including self-closing, self-latching gates and compliant picket spacing. See our pool code aluminum fence guide for the full list of compliant styles and heights.' },
+    },
+  ],
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
+  ],
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Fence Workshop',
+  url: 'https://fenceworkshop.com',
+  telephone: '+14043144419',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '1522 Huber St NW',
+    addressLocality: 'Atlanta',
+    addressRegion: 'GA',
+    postalCode: '30318',
+    addressCountry: 'US',
+  },
 }
 
 export default function ShopPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <Navbar />
 
       {/* Spacer for fixed navbar */}
@@ -32,16 +94,16 @@ export default function ShopPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">
-              Shop Fencing &amp; Gates Online
+              Aluminum Fence Panels &amp; Gates for Sale
             </h1>
             <p className="text-2xl md:text-3xl font-bold text-brand-orange mb-6 leading-tight">
-              Premium Aluminum Fencing — Shipped Nationwide
+              Wholesale Pricing — Ships Nationwide to Your Door
             </p>
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-              Fence Workshop sells American-made aluminum fencing, driveway gates, walk gates, and accessories
-              online to homeowners, contractors, and property managers across the U.S. Every product we
-              sell is designed using real-world installation experience — so you get materials that perform
-              and install the way they should.
+              Shop American-made aluminum fence panels, driveway gates, walk gates, posts, and accessories
+              at wholesale pricing — delivered to homeowners, contractors, and property managers across the U.S.
+              Every product we sell is designed using real-world installation experience — so you get materials
+              that perform and install the way they should.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -108,13 +170,13 @@ export default function ShopPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {/* Aluminum Fencing */}
             <Link href="/shop/aluminum-fencing/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
               <div className="aspect-square relative overflow-hidden bg-gray-50">
                 <Image
                   src="/images/shop-brookhaven-fence-panel.jpg"
-                  alt="Brookhaven aluminum fence panel"
+                  alt="Smooth-top residential aluminum fence panel for sale"
                   fill
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                 />
@@ -174,7 +236,7 @@ export default function ShopPage() {
               <div className="aspect-square relative overflow-hidden bg-gray-50">
                 <Image
                   src="/images/shop-aluminum-fencing.jpg"
-                  alt="Brookhaven aluminum fence kit"
+                  alt="Complete aluminum fence kit with panels, posts, gate, and hardware"
                   fill
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                 />
@@ -185,6 +247,44 @@ export default function ShopPage() {
                   All-inclusive fence kits with panels, posts, gate, and hardware — everything needed for a complete DIY installation.
                 </p>
                 <span className="text-brand-green font-semibold group-hover:underline">Shop Fence Kits →</span>
+              </div>
+            </Link>
+
+            {/* Fence Posts */}
+            <Link href="/shop/fence-posts/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
+              <div className="aspect-square relative overflow-hidden bg-gray-50">
+                <Image
+                  src="/images/shop-aluminum-fencing.jpg"
+                  alt="Aluminum fence posts — line, corner, end, and gate posts"
+                  fill
+                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Fence Posts</h3>
+                <p className="text-gray-600 mb-3">
+                  Color-matched aluminum line posts, corner posts, end posts, and gate posts for every fence layout.
+                </p>
+                <span className="text-brand-green font-semibold group-hover:underline">Shop Fence Posts →</span>
+              </div>
+            </Link>
+
+            {/* Accessories */}
+            <Link href="/shop/accessories/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
+              <div className="aspect-square relative overflow-hidden bg-gray-50">
+                <Image
+                  src="/images/shop-accessories.jpg"
+                  alt="Aluminum fence hardware and accessories — hinges, latches, post caps, deck mounts"
+                  fill
+                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Hardware &amp; Accessories</h3>
+                <p className="text-gray-600 mb-3">
+                  Gate hinges, latches, post caps, deck mounts, and everything else to complete your fence project.
+                </p>
+                <span className="text-brand-green font-semibold group-hover:underline">Shop Accessories →</span>
               </div>
             </Link>
           </div>
@@ -202,9 +302,11 @@ export default function ShopPage() {
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 Unlike big-box retailers, every product in our shop is selected and vetted by professional
-                fence installers. We don&#39;t just sell fencing — we install it every day across Georgia.
-                That hands-on experience means better material specs, practical system designs, and real
-                support when you have questions.
+                fence installers. We don&#39;t just sell aluminum fencing — we install it every day. That
+                hands-on experience means better material specs, practical system designs, and real support
+                when you have questions. Whether you&#39;re shopping for black aluminum fence panels, a
+                driveway gate kit, or everything for a complete DIY installation, you&#39;re buying at
+                wholesale pricing direct from people who build with this material for a living.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -340,6 +442,25 @@ export default function ShopPage() {
               <span className="text-brand-orange font-semibold hover:underline">Learn More →</span>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-green font-semibold uppercase tracking-wide mb-2">FAQ</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">Common questions about buying aluminum fencing online from Fence Workshop.</p>
+          </div>
+          <dl className="space-y-6">
+            {faqSchema.mainEntity.map((faq, i) => (
+              <div key={i} className="border-b border-gray-200 pb-6 last:border-b-0">
+                <dt className="text-lg font-semibold text-gray-900 mb-2">{faq.name}</dt>
+                <dd className="text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
