@@ -14,7 +14,7 @@ type CategoryConfig = {
   intro: string
   features: { label: string; detail: string }[]
   sections: { heading: string; body: React.ReactNode }[]
-  faqs: { q: string; a: string }[]
+  faqs: { q: string; a: React.ReactNode; aSchema?: string }[]
 }
 
 const categories: Record<string, CategoryConfig> = {
@@ -116,7 +116,7 @@ const categories: Record<string, CategoryConfig> = {
       },
     ],
     faqs: [
-      { q: 'How much do aluminum fence panels cost?', a: 'Aluminum fence panels are priced per panel and vary by style, height, and grade. Residential-grade panels are the most affordable; commercial-grade panels with thicker pickets cost more. We offer wholesale pricing on all orders — shop the full selection above or call (404) 314-4419 for a project quote.' },
+      { q: 'How much do aluminum fence panels cost?', aSchema: 'Aluminum fence panels start at $80.35 per panel for quick-ship styles — smooth-top 2-rail and smooth-top 3-rail designs in black at 4ft and 5ft heights. More complex designs including spear-top, puppy picket, and double picket styles are made to order and ship within 2 weeks. Bronze or white aluminum and custom sizes typically take 3 weeks. Commercial-grade aluminum fencing ships in 2–3 weeks. Aluminum fence kits (panels, posts, walk gate, and hardware) start at $2,693.59.', a: <>Aluminum fence panels start at $80.35 per panel for our quick-ship styles — smooth-top 2-rail and smooth-top 3-rail designs in black at 4ft and 5ft heights. These are our most popular and most affordable options, and they ship the fastest. More complex designs — including spear-top, puppy picket, and double picket styles — are made to order and priced higher to reflect the additional fabrication; most ship within 2 weeks. Bronze or white aluminum and custom sizes typically take 3 weeks. Commercial-grade aluminum fencing ships in 2–3 weeks. If you want everything for your project in one order, our <Link href="/shop/fence-kits/" className="text-brand-orange hover:underline">aluminum fence kits</Link> start at $2,693.59 and include panels, <Link href="/shop/fence-posts/" className="text-brand-orange hover:underline">posts</Link>, a <Link href="/shop/walk-gates/" className="text-brand-orange hover:underline">walk gate</Link>, and <Link href="/shop/accessories/" className="text-brand-orange hover:underline">hardware accessories</Link> — everything sized for your total footage.</> },
       { q: 'How long do aluminum fence panels last?', a: 'With virtually zero maintenance, aluminum fence panels typically last 30+ years. The aluminum won\'t rust and the TGIC powder coating resists fading and peeling far longer than paint.' },
       { q: 'How wide is each fence panel?', a: 'Each panel spans 6 feet between posts. This is the standard width used across the aluminum fencing industry and makes layout and installation straightforward. Panels can easily be cut down on-site with a hacksaw or miter saw for custom widths.' },
       { q: 'Can aluminum fence panels be cut to a custom width?', a: 'Yes. Our 6ft panels can be cut down on-site using a standard hacksaw or miter saw. This is useful for finishing the end of a run, fitting between tight obstacles, or adjusting around existing landscaping.' },
@@ -238,7 +238,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       name: faq.q,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.a,
+        text: faq.aSchema ?? (typeof faq.a === 'string' ? faq.a : ''),
       },
     })),
   }
