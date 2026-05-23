@@ -4,8 +4,9 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Residential vs Commercial Aluminum Fence: Which Grade Do You Need? | Fence Workshop',
-  description: 'Aluminum fence grades explained — compare residential grade vs commercial grade specifications, wall thickness, post sizes, and when each grade is appropriate.',
+  title: 'Residential vs Commercial Aluminum Fence | Which Grade Do You Need?',
+  description: 'Residential vs commercial aluminum fence panels explained — compare grades by picket size, wall thickness, post size, and application. Ships nationwide.',
+  alternates: { canonical: 'https://fenceworkshop.com/shop/resources/residential-vs-commercial-aluminum-fence/' },
 }
 
 const faqSchema = {
@@ -78,6 +79,16 @@ const articleSchema = {
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://fenceworkshop.com/shop/resources/' },
+    { '@type': 'ListItem', position: 3, name: 'Residential vs Commercial Aluminum Fence', item: 'https://fenceworkshop.com/shop/resources/residential-vs-commercial-aluminum-fence/' },
+  ],
+}
+
 const comparisonRows = [
   { spec: 'Picket size', residential: '5/8" or 3/4" square', commercial: '1" square or larger' },
   { spec: 'Picket wall thickness', residential: '~0.055"–0.062"', commercial: '~0.070"–0.125"' },
@@ -100,6 +111,10 @@ export default function ResidentialVsCommercialFencePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <div className="h-20" />
 
@@ -108,6 +123,8 @@ export default function ResidentialVsCommercialFencePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-gray-400 mb-4">
             <Link href="/shop/" className="hover:text-brand-orange">Shop</Link>
+            <span className="mx-2">&rsaquo;</span>
+            <span className="hover:text-brand-orange cursor-default">Resources</span>
             <span className="mx-2">&rsaquo;</span>
             <span className="text-gray-300">Residential vs Commercial Grade</span>
           </nav>
@@ -192,10 +209,15 @@ export default function ResidentialVsCommercialFencePage() {
           </ul>
           <p className="text-lg text-gray-700 leading-relaxed">
             For homeowners, contractors doing residential installs, property managers,
-            and small commercial projects, residential grade is the right answer.{' '}
+            and small commercial projects, residential grade is the right answer. Browse{' '}
+            <Link href="/shop/fence-kits/" className="text-brand-orange font-semibold hover:underline">
+              aluminum fence kits
+            </Link>{' '}
+            for a complete panel + post package, or shop{' '}
             <Link href="/shop/aluminum-fencing/" className="text-brand-orange font-semibold hover:underline">
-              Shop residential aluminum fence panels →
-            </Link>
+              individual aluminum fence panels
+            </Link>{' '}
+            if you&apos;re mixing styles or topping off an existing fence.
           </p>
         </div>
       </section>
@@ -300,6 +322,36 @@ export default function ResidentialVsCommercialFencePage() {
                 <p className="text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link
+              href="/shop/fence-kits/"
+              className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-orange hover:shadow-md transition-all"
+            >
+              <h3 className="text-lg font-bold text-gray-900 mb-1">DIY Aluminum Fence Kits</h3>
+              <p className="text-gray-600 text-sm">Panels + posts bundled by linear footage — ships nationwide</p>
+            </Link>
+            <Link
+              href="/shop/resources/pool-code-aluminum-fence/"
+              className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-orange hover:shadow-md transition-all"
+            >
+              <h3 className="text-lg font-bold text-gray-900 mb-1">Pool Fence Requirements</h3>
+              <p className="text-gray-600 text-sm">Which aluminum styles and heights meet pool code</p>
+            </Link>
+            <Link
+              href="/shop/resources/how-to-install-aluminum-fence/"
+              className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-orange hover:shadow-md transition-all"
+            >
+              <h3 className="text-lg font-bold text-gray-900 mb-1">How to Install Aluminum Fence</h3>
+              <p className="text-gray-600 text-sm">Step-by-step DIY installation guide with video</p>
+            </Link>
           </div>
         </div>
       </section>
