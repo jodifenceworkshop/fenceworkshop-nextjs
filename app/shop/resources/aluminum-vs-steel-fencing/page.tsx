@@ -4,8 +4,9 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Aluminum vs Steel Fence: Which Is Better? | Expert Comparison | Fence Workshop',
+  title: 'Aluminum vs Steel Fence | Aluminum vs Wrought Iron | Which Is Best?',
   description: 'Aluminum vs steel (wrought iron) fencing — cost, durability, maintenance, and security compared by professional fence installers. Find out which fence is right for your property.',
+  alternates: { canonical: 'https://fenceworkshop.com/shop/resources/aluminum-vs-steel-fencing/' },
 }
 
 const faqSchema = {
@@ -71,6 +72,16 @@ const faqSchema = {
   ]
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://fenceworkshop.com/shop/resources/' },
+    { '@type': 'ListItem', position: 3, name: 'Aluminum vs Steel Fence', item: 'https://fenceworkshop.com/shop/resources/aluminum-vs-steel-fencing/' },
+  ],
+}
+
 const comparisonData = [
   { category: 'Cost (per linear foot)', aluminum: '$20–$35 installed', steel: '$28–$45+ installed', winner: 'aluminum' },
   { category: '20-Year Total Cost', aluminum: 'Minimal — no maintenance costs', steel: 'Add $3–$8/ft for repainting & rust repair', winner: 'aluminum' },
@@ -94,6 +105,10 @@ export default function AluminumVsSteelFencingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
 
       {/* Spacer for fixed navbar */}
@@ -104,9 +119,9 @@ export default function AluminumVsSteelFencingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-gray-400 mb-4">
             <Link href="/shop/" className="hover:text-brand-orange">Shop</Link>
-            <span className="mx-2">›</span>
-            <Link href="/shop/resources/aluminum-vs-steel-fencing/" className="hover:text-brand-orange">Resources</Link>
-            <span className="mx-2">›</span>
+            <span className="mx-2">&rsaquo;</span>
+            <span className="hover:text-brand-orange cursor-default">Resources</span>
+            <span className="mx-2">&rsaquo;</span>
             <span className="text-gray-300">Aluminum vs Steel Fencing</span>
           </nav>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
@@ -597,17 +612,17 @@ export default function AluminumVsSteelFencingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/shop/#products"
+              href="/shop/fence-kits/"
               className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
             >
-              Shop Aluminum Fencing
+              Shop DIY Aluminum Fence Kits
             </Link>
-            <Link
-              href="/installation/georgia/commercial-fence-installation/"
+            <a
+              href="tel:+14043144419"
               className="inline-block bg-gray-900 hover:bg-gray-800 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
             >
-              Commercial Steel Installation
-            </Link>
+              Call (404) 314-4419
+            </a>
           </div>
         </div>
       </section>
@@ -640,11 +655,11 @@ export default function AluminumVsSteelFencingPage() {
               <p className="text-gray-600 text-sm">Step-by-step guide with video from professional installers</p>
             </Link>
             <Link
-              href="/shop/#products"
+              href="/shop/fence-kits/"
               className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-brand-orange hover:shadow-md transition-all"
             >
-              <h3 className="text-lg font-bold text-gray-900 mb-1">Shop Aluminum Fencing & Gates</h3>
-              <p className="text-gray-600 text-sm">American-made aluminum fencing shipped nationwide</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-1">Shop DIY Aluminum Fence Kits</h3>
+              <p className="text-gray-600 text-sm">Panels + posts bundled by linear footage — ships nationwide</p>
             </Link>
           </div>
         </div>
