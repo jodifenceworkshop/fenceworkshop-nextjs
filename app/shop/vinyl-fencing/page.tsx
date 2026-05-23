@@ -5,14 +5,23 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Vinyl Fencing — Privacy, Picket & Post-and-Rail | Fence Workshop',
-  description: 'Shop vinyl fencing from Fence Workshop. PVC privacy fence, picket fence, post-and-rail, and split-rail styles in white, tan, and gray. Ships nationwide. Call (404) 314-4419 for a quote.',
+  title: 'White Vinyl Fence & Privacy Fence for Sale | Ships Nationwide',
+  description: 'Shop white vinyl fence, vinyl privacy fence, vinyl picket fence, and post-and-rail styles. PVC fencing in white, tan, and gray. Contact us for pricing. Ships nationwide.',
+  alternates: { canonical: 'https://fenceworkshop.com/shop/vinyl-fencing/' },
 }
 
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Do you sell white vinyl fencing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. White vinyl fencing is our most popular color and is available across all styles — privacy, semi-privacy, picket, and post-and-rail. White vinyl delivers the classic painted-wood look without any painting or maintenance. Pricing is by quote — call (404) 314-4419 or use our contact form for a written quote sized to your project.',
+      },
+    },
     {
       '@type': 'Question',
       name: 'How long does vinyl fencing last?',
@@ -84,7 +93,7 @@ export default function VinylFencingPage() {
               Vinyl Fencing
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              Vinyl Fencing: Privacy, Picket &amp; Post-and-Rail
+              White Vinyl Fence — Privacy, Picket &amp; Post-and-Rail
             </h1>
             <p className="text-xl md:text-2xl font-semibold text-brand-orange mb-5 leading-snug">
               The Look of Wood — Without the Maintenance

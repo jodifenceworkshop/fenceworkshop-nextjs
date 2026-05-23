@@ -6,32 +6,45 @@ import Footer from '@/components/Footer'
 import { getProductsByCategory, formatPrice, getProductUrl } from '@/lib/shopify'
 
 export const metadata: Metadata = {
-  title: 'Aluminum Fence Kits — Buy Online, Ships Nationwide | Fence Workshop',
-  description: 'Buy a complete aluminum fence kit online — panels, posts, gate, and all hardware included. 100ft to 250ft kits for DIY homeowners and contractors. Ships nationwide via freight.',
+  title: 'DIY Aluminum Fence Kits | Pool Fence Kits | Ships Nationwide',
+  description: 'Shop DIY aluminum fence kits — complete kits with panels, posts, walk gate, and hardware sized to your total footage. Pool fence kits available. Kits start at $2,693.59. Ships nationwide.',
+  alternates: { canonical: 'https://fenceworkshop.com/shop/fence-kits/' },
 }
 
 export const revalidate = 60
 
 const faqItems = [
   {
-    question: 'Do fence kits include gates?',
-    answer: 'Yes, every kit includes one walk gate with hinges and latch. Upgrade options available.',
+    question: 'How much does a DIY aluminum fence kit cost?',
+    answer: 'DIY aluminum fence kits start at $2,693.59 for our most popular styles in black. Pricing varies based on total footage, fence style, height, and color. Call (404) 314-4419 for a custom kit quote sized to your exact footage.',
+  },
+  {
+    question: 'Do fence kits include a gate?',
+    answer: 'Yes. Every fence kit includes a walk gate with self-closing hinges and gravity latch. If you also need a driveway gate, those are available separately in our driveway gates section.',
+  },
+  {
+    question: 'Do you sell aluminum pool fence kits?',
+    answer: 'Yes. Pool fence kits include panels, posts, a walk gate, and pool code compliant hardware including a MagnaLatch pool gate latch. See our pool code aluminum fence guide for compliant styles and heights, or call (404) 314-4419 to build the right kit for your pool enclosure.',
+  },
+  {
+    question: 'What fence styles are available in kits?',
+    answer: 'Kits are currently available in smooth-top 3-rail and spear-top 3-rail styles in black. More styles coming soon. Call (404) 314-4419 if you need a specific style not yet listed.',
   },
   {
     question: "What if my perimeter doesn't match a standard kit size?",
-    answer: 'Contact us — we can adjust kit contents for non-standard footage.',
+    answer: "No problem — we build custom kits for any footage. Tell us your total linear footage, style, height, color, and number of gate openings, and we'll put together a kit sized to your exact project. Call (404) 314-4419 for custom kit pricing.",
   },
   {
-    question: 'Can I choose my fence style?',
-    answer: 'Currently available in Brookhaven and Atlanta. More styles coming soon.',
+    question: "What's the difference between a fence kit and buying parts separately?",
+    answer: "A fence kit is the easiest option — we calculate all the quantities for your footage and ship everything together. Buying parts separately gives more flexibility for projects with custom angles, partial panels, or unusual layouts. Both options use the same materials at the same wholesale pricing.",
   },
   {
     question: 'How are fence kits shipped?',
-    answer: 'Freight carrier, directly to your address. Typically 7–10 business days.',
+    answer: 'Via freight carrier, directly to your address. Typical lead time is 7–10 business days for in-stock styles. Made-to-order styles may take 2–3 weeks.',
   },
   {
     question: 'Do kits include installation instructions?',
-    answer: 'Yes, every kit ships with professional installation instructions.',
+    answer: 'Yes. Every kit ships with professional installation instructions prepared by our installation team.',
   },
 ]
 
@@ -74,9 +87,14 @@ export default async function FenceKitsPage() {
     return { styleName, products }
   }).filter((group) => group.products.length > 0)
 
+  const styleDisplayNames: Record<string, string> = {
+    brookhaven: 'Smooth-Top 3-Rail',
+    atlanta: 'Spear-Top 3-Rail',
+  }
+
   const styleDescriptions: Record<string, string> = {
-    brookhaven: '3-rail smooth top aluminum fence — HOA-friendly, residential and commercial. Pool-code approved at 5ft and 6ft heights.',
-    atlanta: '3-rail spear-top aluminum fence — classic picket style for residential and commercial properties. Pool-code approved at 6ft height.',
+    brookhaven: 'Smooth-top 3-rail aluminum fence — clean, modern look. HOA-friendly, residential and commercial. Pool-code approved at 5ft and 6ft heights.',
+    atlanta: 'Spear-top 3-rail aluminum fence — classic wrought-iron style for residential and commercial properties. Pool-code approved at 6ft height.',
   }
 
   return (
@@ -88,7 +106,7 @@ export default async function FenceKitsPage() {
       <section className="bg-gray-900 py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-            All-Inclusive Aluminum Fence Kits
+            DIY Aluminum Fence Kits
           </h1>
           <p className="text-2xl md:text-3xl font-bold text-brand-orange mb-6 leading-tight">
             Everything You Need. One Order. Ships Nationwide.
@@ -167,7 +185,7 @@ export default async function FenceKitsPage() {
               Choose Your Fence Kit
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Available in Brookhaven and Atlanta styles. Select your footage below.
+              Available in smooth-top 3-rail and spear-top 3-rail styles. Select your footage below.
             </p>
           </div>
 
@@ -176,7 +194,7 @@ export default async function FenceKitsPage() {
               {kitsByStyle.map(({ styleName, products }) => (
                 <div key={styleName}>
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-1 capitalize">{styleName}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-1">{styleDisplayNames[styleName] ?? styleName}</h3>
                     <p className="text-gray-600">{styleDescriptions[styleName]}</p>
                   </div>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">

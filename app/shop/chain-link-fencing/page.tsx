@@ -5,14 +5,23 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Chain Link Fencing — Galvanized & Vinyl Coated | Fence Workshop',
-  description: 'Chain link fencing for residential and commercial properties. Galvanized and vinyl-coated chain link in 3ft–12ft heights, multiple gauges. Ships nationwide. Call (404) 314-4419 for a quote.',
+  title: 'Black Chain Link Fence for Sale | Vinyl Coated & Galvanized | Ships Nationwide',
+  description: 'Shop black chain link fence and galvanized chain link fencing for residential and commercial properties. Vinyl coated and galvanized in 3ft–12ft heights, multiple gauges. Ships nationwide.',
+  alternates: { canonical: 'https://fenceworkshop.com/shop/chain-link-fencing/' },
 }
 
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Do you sell black chain link fence?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Black chain link fence — vinyl coated over a galvanized steel core — is our most popular chain link option. It delivers a clean, modern look that suits residential backyards, commercial properties, and sports facilities. Available in residential gauges (11.5 and 11 gauge) and commercial grade (9 gauge), in heights from 3ft to 12ft. Pricing is by quote — call (404) 314-4419 for a written quote on your project.',
+      },
+    },
     {
       '@type': 'Question',
       name: 'What is the difference between galvanized and vinyl-coated chain link?',
@@ -76,7 +85,7 @@ export default function ChainLinkFencingPage() {
                 Chain Link Fencing
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-                Chain Link Fencing — Residential &amp; Commercial
+                Black Chain Link Fence — Residential &amp; Commercial
               </h1>
               <p className="text-xl md:text-2xl font-semibold text-brand-orange mb-5 leading-snug">
                 The Most Affordable, Durable Fencing Option Available
