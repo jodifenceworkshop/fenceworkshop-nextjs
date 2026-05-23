@@ -1,14 +1,80 @@
 import Link from 'next/link'
+import React from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'How to Install Aluminum Fence Panels | Step-by-Step Guide | Fence Workshop',
+  title: 'How to Install Aluminum Fence | Step-by-Step DIY Guide',
   description: 'Learn how to install aluminum fence panels with this step-by-step guide from professional installers. Covers planning, post installation, panel mounting, and gate hanging.',
+  alternates: { canonical: 'https://fenceworkshop.com/shop/resources/how-to-install-aluminum-fence/' },
 }
 
-const steps = [
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How long does it take to install an aluminum fence?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most homeowners can install a standard residential aluminum fence in 1–2 days. A 100-foot fence with one gate is typically a full weekend project: half a day for posts, half a day to let concrete cure, then a half day to hang panels and the gate. Larger projects or complex layouts with multiple gates or significant grade changes take longer.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How deep should aluminum fence posts be set?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Aluminum fence posts should be set at a depth equal to approximately one-third the total post length. For a 4ft fence using 6ft posts (2ft in ground, 4ft above), a 24-inch depth is standard. Check local building codes — some jurisdictions require deeper footings, especially for gate posts or in frost-heave climates.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do aluminum fence posts need concrete?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Aluminum fence posts should be set in concrete for a permanent, stable installation. One 80lb bag of fast-setting concrete per post is standard for residential line posts. Gate posts and corner posts benefit from a larger footing — use two 80lb bags or a wider diameter hole. Allow concrete to cure 24 hours before hanging panels.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can aluminum fence be installed on a slope?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Aluminum fence panels can be racked (angled) to follow a gradual slope, or stepped to accommodate steeper grades. Racking adjusts the panel angle within the post brackets and works for gradual, consistent slopes. Stepping installs panels in a staircase pattern with level panels at different heights — better for steeper or uneven terrain. Most aluminum panels can rack several inches per panel before stepping becomes necessary.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What tools do I need to install aluminum fencing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Basic aluminum fence installation requires: a post hole digger or power auger (rental recommended), 48-inch level, measuring tape, string line and stakes, drill with bits, 80lb bags of fast-setting concrete, wheelbarrow and hoe for mixing, and safety glasses. For gates, also have a plumb bob or secondary level for checking gate posts.',
+      },
+    },
+  ],
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://fenceworkshop.com/shop/resources/' },
+    { '@type': 'ListItem', position: 3, name: 'How to Install Aluminum Fence', item: 'https://fenceworkshop.com/shop/resources/how-to-install-aluminum-fence/' },
+  ],
+}
+
+type Step = {
+  number: number
+  title: string
+  content: React.ReactNode
+  tips: React.ReactNode[]
+}
+
+const steps: Step[] = [
   {
     number: 1,
     title: 'Pre-Plan Your Fence Layout',
@@ -22,14 +88,19 @@ const steps = [
   {
     number: 2,
     title: 'Order Your Materials',
-    content: `With your layout and measurements in hand, order the right components. A complete aluminum fence system includes more than just panels and posts — make sure you have everything before installation day.`,
+    content: <>With your layout and measurements in hand, order the right components. A complete aluminum fence system includes more than just{' '}
+      <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">aluminum fence panels</Link>{' '}
+      and <Link href="/shop/fence-posts/" className="text-brand-orange hover:underline">fence posts</Link>{' '}
+      — make sure you have everything before installation day. The easiest way to order is with a{' '}
+      <Link href="/shop/fence-kits/" className="text-brand-orange hover:underline">fence kit</Link>{' '}
+      that bundles panels and posts together by linear footage.</>,
     tips: [
-      'Posts: line posts, corner posts, end posts, and gate posts (gate posts are larger)',
-      'Panels with horizontal rails in your chosen style and height',
-      'Hinges (typically two per gate) and latches',
+      <>Line posts, corner posts, end posts, and gate posts — order from our <Link href="/shop/fence-posts/" className="text-brand-orange hover:underline">fence posts page</Link> (gate posts are larger diameter)</>,
+      <>Panels in your chosen style and height — browse <Link href="/shop/fence-kits/" className="text-brand-orange hover:underline">fence kits</Link> or <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">individual panels</Link></>,
+      <><Link href="/shop/accessories/" className="text-brand-orange hover:underline">Hinges</Link> (typically two per gate) and <Link href="/shop/accessories/" className="text-brand-orange hover:underline">gate latches</Link></>,
       'Post caps — flat or ball style',
       'Deck mounts if installing on concrete or hard surfaces',
-      'Drop rods for double-swing driveway gates',
+      <>Drop rods for double-swing <Link href="/shop/driveway-gates/" className="text-brand-orange hover:underline">driveway gates</Link></>,
       'Touch-up paint for any field cuts or scratches',
     ],
   },
@@ -78,10 +149,12 @@ const steps = [
   {
     number: 7,
     title: 'Hang Gates Last',
-    content: `Gates are always the final step. Hang gate panels on their hinges, adjust for proper swing clearance, and install latches. Self-closing hinges are required for pool areas in most jurisdictions. For driveway gates, install the drop rod on the stationary leaf first, then adjust the active gate for smooth operation.`,
+    content: <>Gates are always the final step. Hang gate panels on their hinges, adjust for proper swing clearance, and install latches. Self-closing hinges are required for pool areas in most jurisdictions. For{' '}
+      <Link href="/shop/driveway-gates/" className="text-brand-orange hover:underline">driveway gates</Link>,
+      install the drop rod on the stationary leaf first, then adjust the active gate for smooth operation.</>,
     tips: [
       'Maintain 1–2 inches of clearance under the gate for swing',
-      'Self-closing hinges are code-required for pool enclosures',
+      <>Self-closing hinges are code-required for pool enclosures — see our <Link href="/shop/accessories/" className="text-brand-orange hover:underline">gate hardware & latches</Link></>,
       'Test the latch from both sides before considering the job done',
       'For automated driveway gates, consult an electrician for the operator installation',
     ],
@@ -118,6 +191,14 @@ const relatedGuides = [
 export default function HowToInstallAluminumFencePage() {
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
 
       {/* Spacer for fixed navbar */}
@@ -128,10 +209,10 @@ export default function HowToInstallAluminumFencePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-gray-400 mb-4">
             <Link href="/shop/" className="hover:text-brand-orange">Shop</Link>
-            <span className="mx-2">›</span>
-            <Link href="/shop/resources/how-to-install-aluminum-fence/" className="hover:text-brand-orange">Resources</Link>
-            <span className="mx-2">›</span>
-            <span className="text-gray-300">Installation Guide</span>
+            <span className="mx-2">&rsaquo;</span>
+            <span className="hover:text-brand-orange cursor-default">Resources</span>
+            <span className="mx-2">&rsaquo;</span>
+            <span className="text-gray-300">How to Install Aluminum Fence</span>
           </nav>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
             How to Install Aluminum Fence Panels
@@ -144,10 +225,9 @@ export default function HowToInstallAluminumFencePage() {
         </div>
       </section>
 
-      {/* Video Placeholder + Intro */}
+      {/* Video + Intro */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Aluminum Fence Installation Video */}
           <div className="aspect-video rounded-lg overflow-hidden mb-8">
             <iframe
               src="https://www.youtube.com/embed/MRj1qi1H8Wk?start=5"
@@ -215,18 +295,22 @@ export default function HowToInstallAluminumFencePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-900 rounded-lg p-8 md:p-12 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to Start Your Fence Project?
+              Ready to Order Your Fence Materials?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Shop American-made aluminum fence panels, posts, gates, and hardware — all selected
-              and vetted by professional installers.
+              Our{' '}
+              <Link href="/shop/fence-kits/" className="text-brand-orange hover:underline">aluminum fence kits</Link>
+              {' '}bundle panels and posts together by linear footage — the easiest way to order everything you need in one shot. Or browse{' '}
+              <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">individual panels</Link>
+              {' '}and <Link href="/shop/fence-posts/" className="text-brand-orange hover:underline">posts</Link>{' '}
+              if you&apos;re mixing styles or topping off an existing fence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/shop/#products"
+                href="/shop/fence-kits/"
                 className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
               >
-                Shop Aluminum Fencing
+                Shop Fence Kits
               </Link>
               <a
                 href="tel:+14043144419"
@@ -239,8 +323,23 @@ export default function HowToInstallAluminumFencePage() {
         </div>
       </section>
 
-      {/* Related Guides */}
+      {/* FAQ */}
       <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {faqSchema.mainEntity.map((faq) => (
+              <div key={faq.name} className="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.name}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Guides */}
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">More Installation Guides</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
