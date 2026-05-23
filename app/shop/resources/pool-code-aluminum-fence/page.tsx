@@ -4,8 +4,9 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pool Code Aluminum Fence: Which Styles & Heights Qualify? | Fence Workshop',
-  description: 'Aluminum pool fence guide — which fence styles and heights meet typical pool code requirements including the 45-inch rail spacing "no climbable footholds" rule.',
+  title: 'Pool Fence Requirements | Aluminum Pool Fence Guide',
+  description: 'Complete guide to aluminum pool fence requirements — minimum heights, picket spacing, the 45-inch rail rule, self-closing gate requirements, and which fence styles meet typical pool barrier codes.',
+  alternates: { canonical: 'https://fenceworkshop.com/shop/resources/pool-code-aluminum-fence/' },
 }
 
 const faqSchema = {
@@ -33,7 +34,23 @@ const faqSchema = {
       name: 'Which aluminum fence styles meet pool code?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our pool-code-compliant styles include Athens and Atlanta in 6ft height, Brookhaven and Buford in 5ft or 6ft, Candler and Chamblee in 5ft or 6ft, Dawson and Dunwoody in 6ft, and Savannah in 4ft or 5ft. These combinations maintain the required 45-inch minimum between horizontal rails.',
+        text: 'Pool-code-compliant aluminum fence styles include: spear-top 3-rail styles at 6ft height, flat-top 3-rail styles at 5ft or 6ft, staggered-top 3-rail styles at 5ft or 6ft, and our 2-rail smooth-top design at 4ft or 5ft. The 2-rail design qualifies at lower heights because removing the middle rail eliminates the climbable foothold issue that disqualifies shorter 3-rail panels. See the compliant styles table on this page for the full list.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What height does a pool fence need to be?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most pool codes require a minimum fence height of 48 inches (4ft), measured from the outside (non-pool) side. However, the 45-inch rail spacing rule means most 3-rail aluminum panels only qualify at 5ft or 6ft — a 4ft 3-rail panel cannot meet the no-climbable-footholds requirement. A 4ft pool fence is achievable with a 2-rail design, which eliminates the middle rail foothold issue. A 5ft or 6ft pool fence covers the widest range of style options.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does above ground pool fencing have different requirements?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Above ground pool fence requirements vary by jurisdiction. Many local codes require a barrier around above ground pools just like in-ground pools — especially if the pool is permanently installed. Some codes exempt above ground pools if the pool wall itself is at least 48 inches tall with a removable ladder, since the pool wall functions as the barrier. Always verify with your local building department. If a fence is required, the same aluminum pool fence styles and heights that comply for in-ground pools will comply for above ground pools.',
       },
     },
     {
@@ -41,7 +58,7 @@ const faqSchema = {
       name: 'Do I need a special gate for a pool fence?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Pool enclosure gates must be self-closing, self-latching, and the latch must typically be mounted at least 54 inches from the ground on the pool side. Our walk gate kits include self-closing spring hinges, but you will need to upgrade the standard gravity latch to a MagnaLatch — a key-lockable magnetic latch specifically designed for pool code compliance. We carry the D&D Series 3 MagnaLatch in our accessories section.',
+        text: 'Yes. Pool enclosure gates must be self-closing and self-latching with the latch mounted at least 54 inches from the ground on the pool side. Walk gate kits include self-closing spring hinges, but the included gravity latch must be upgraded to a MagnaLatch — a key-lockable magnetic latch designed for pool code compliance. The D&D Series 3 MagnaLatch is the industry standard for pool gate latches.',
       },
     },
     {
@@ -52,6 +69,16 @@ const faqSchema = {
         text: 'Aluminum fencing is used for pool enclosures in every US state, but specific requirements vary by local jurisdiction. Most states follow the IRC Appendix G baseline but may add stricter requirements. Always check with your local building department or pool inspector before installing. Fence Workshop can help you identify compliant styles — call (404) 314-4419 for guidance.',
       },
     },
+  ],
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://fenceworkshop.com/shop/resources/' },
+    { '@type': 'ListItem', position: 3, name: 'Pool Fence Requirements', item: 'https://fenceworkshop.com/shop/resources/pool-code-aluminum-fence/' },
   ],
 }
 
@@ -101,6 +128,10 @@ export default function PoolCodeFencePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <div className="h-20" />
 
@@ -110,10 +141,12 @@ export default function PoolCodeFencePage() {
           <nav className="text-sm text-gray-400 mb-4">
             <Link href="/shop/" className="hover:text-brand-orange">Shop</Link>
             <span className="mx-2">&rsaquo;</span>
-            <span className="text-gray-300">Pool Code Aluminum Fence</span>
+            <span className="hover:text-brand-orange cursor-default">Resources</span>
+            <span className="mx-2">&rsaquo;</span>
+            <span className="text-gray-300">Pool Fence Requirements</span>
           </nav>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-            Pool Code Aluminum Fence: Which Styles &amp; Heights Qualify?
+            Pool Fence Requirements: Which Aluminum Fence Styles &amp; Heights Qualify?
           </h1>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
             Not every aluminum fence panel meets pool code. The 45-inch rail spacing rule
@@ -266,22 +299,22 @@ export default function PoolCodeFencePage() {
             from the ground on the pool side.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            Every walk gate kit we sell includes self-closing spring hinges as standard. However, the
+            Every <Link href="/shop/walk-gates/" className="text-brand-orange hover:underline">walk gate kit</Link> we sell includes self-closing spring hinges as standard. However, the
             included gravity latch is <strong>not</strong> a pool-code latch. For pool enclosures, you&apos;ll need
             to upgrade to a MagnaLatch — a key-lockable magnetic latch engineered specifically for pool
-            barrier compliance. The D&amp;D Series 3 MagnaLatch is the industry standard and is available
-            in our accessories section.
+            barrier compliance. The <Link href="/shop/accessories/" className="text-brand-orange hover:underline">D&amp;D Series 3 MagnaLatch is available in our accessories section</Link>.
+            For a complete pool enclosure package, our <Link href="/shop/fence-kits/" className="text-brand-orange hover:underline">aluminum fence kits</Link> can be configured with pool-code-compliant styles and MagnaLatch hardware.
           </p>
           <div className="bg-white border border-gray-200 rounded-lg p-6 mt-6">
             <p className="font-semibold text-gray-900 mb-2">Pool Gate Shopping List:</p>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start gap-2">
                 <span className="text-brand-orange font-bold">→</span>
-                Walk gate kit in a pool-code-compliant style &amp; height (5ft or 6ft)
+                <Link href="/shop/walk-gates/" className="text-brand-orange hover:underline">Walk gate kit</Link> in a pool-code-compliant style &amp; height (5ft or 6ft)
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-brand-orange font-bold">→</span>
-                D&amp;D Series 3 MagnaLatch (replaces the included gravity latch)
+                <Link href="/shop/accessories/" className="text-brand-orange hover:underline">D&amp;D Series 3 MagnaLatch</Link> (replaces the included gravity latch)
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-brand-orange font-bold">→</span>
