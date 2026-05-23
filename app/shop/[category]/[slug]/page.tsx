@@ -68,13 +68,14 @@ interface ProductPageProps {
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const { slug } = await params
+  const { category, slug } = await params
   const product = await getProductByHandle(slug)
   if (!product) return { title: 'Product Not Found | Fence Workshop' }
 
   return {
     title: `${product.title} | Fence Workshop`,
     description: product.description.slice(0, 160),
+    alternates: { canonical: `https://fenceworkshop.com/shop/${category}/${slug}/` },
   }
 }
 
@@ -102,12 +103,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
     name: product.title,
     description: product.description,
     image: images.map((img) => img.url),
+    sku: variants[0]?.sku || product.handle,
     brand: {
       '@type': 'Brand',
       name: 'Fence Workshop',
     },
     offers: {
       '@type': 'AggregateOffer',
+      url: `https://fenceworkshop.com/shop/${category}/${slug}/`,
       priceCurrency: product.priceRange.minVariantPrice.currencyCode,
       lowPrice: product.priceRange.minVariantPrice.amount,
       highPrice: product.priceRange.maxVariantPrice.amount,
@@ -122,12 +125,26 @@ export default async function ProductPage({ params }: ProductPageProps) {
     },
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
+      { '@type': 'ListItem', position: 2, name: categoryLabel, item: `https://fenceworkshop.com/shop/${category}/` },
+      { '@type': 'ListItem', position: 3, name: product.title, item: `https://fenceworkshop.com/shop/${category}/${slug}/` },
+    ],
+  }
+
 
   return (
     <main className="min-h-screen bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Navbar />
       <div className="h-20" />

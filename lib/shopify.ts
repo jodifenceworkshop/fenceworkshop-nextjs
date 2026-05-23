@@ -55,6 +55,7 @@ export type ShopifyPrice = {
 export type ShopifyVariant = {
   id: string
   title: string
+  sku: string
   availableForSale: boolean
   price: ShopifyPrice
   compareAtPrice: ShopifyPrice | null
@@ -129,6 +130,7 @@ const PRODUCT_FRAGMENT = `
         node {
           id
           title
+          sku
           availableForSale
           price {
             amount
