@@ -4,8 +4,9 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pet & Puppy Fence: Best Aluminum Fence Styles for Dogs | Fence Workshop',
-  description: 'Aluminum pet fence guide — which fence styles have the tight picket spacing needed to keep small dogs, puppies, cats, and other pets safely contained.',
+  title: 'Dog Fence & Pet Fence | Aluminum Fence for Dogs | Ships Nationwide',
+  description: 'Aluminum dog fence guide — which fence styles have the tight picket spacing to keep small dogs, puppies, and cats safely contained. Pet-friendly fence styles for every yard.',
+  alternates: { canonical: 'https://fenceworkshop.com/shop/resources/pet-fence/' },
 }
 
 const faqSchema = {
@@ -25,7 +26,15 @@ const faqSchema = {
       name: 'Which aluminum fence styles are best for dogs?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our pet-friendly aluminum fence styles include Athens, Avalon, Berkley, Buford, Chamblee, Cobb, Dublin, and Dunwoody. These styles either use tighter picket spacing by design or offer a puppy picket variant that adds shorter secondary pickets between the main pickets to close the gap.',
+        text: 'The best aluminum fence styles for dogs are those with double picket or puppy picket construction — these reduce the standard 4-inch picket gap to about 1-1/2 to 2 inches, preventing small dogs and puppies from slipping through. Double picket styles run the tight spacing the full height of the panel. Puppy picket styles add tight spacing only along the bottom section where pets are most likely to escape. See the pet-friendly styles table on this page for the full list from our catalog.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the best fence for small dogs?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The best fence for small dogs combines tight picket spacing with appropriate height. A puppy picket or double picket aluminum fence at 4ft height works well for most small breeds. The tight 1-1/2 to 2 inch picket spacing prevents small dogs from squeezing through, and 4ft is high enough to contain non-jumping small breeds. For small dogs that are athletic jumpers or escape artists, size up to 5ft. Aluminum is ideal because it has no sharp edges, no toxic coatings, and cannot be chewed through.',
       },
     },
     {
@@ -52,6 +61,16 @@ const faqSchema = {
         text: 'Yes. Aluminum fencing is one of the safest materials for containing pets. It has no splinters like wood, no sharp wire ends like chain-link, and no toxic chemical treatments. The powder-coated finish is pet-safe, and the smooth pickets cannot be chewed or damaged by most dogs. There are no points, barbs, or hazards at dog level.',
       },
     },
+  ],
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://fenceworkshop.com/shop/resources/' },
+    { '@type': 'ListItem', position: 3, name: 'Dog Fence & Pet Fence Guide', item: 'https://fenceworkshop.com/shop/resources/pet-fence/' },
   ],
 }
 
@@ -100,6 +119,10 @@ export default function PetFencePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <div className="h-20" />
 
@@ -109,10 +132,12 @@ export default function PetFencePage() {
           <nav className="text-sm text-gray-400 mb-4">
             <Link href="/shop/" className="hover:text-brand-orange">Shop</Link>
             <span className="mx-2">&rsaquo;</span>
-            <span className="text-gray-300">Pet &amp; Puppy Fence Guide</span>
+            <span className="hover:text-brand-orange cursor-default">Resources</span>
+            <span className="mx-2">&rsaquo;</span>
+            <span className="text-gray-300">Dog Fence &amp; Pet Fence Guide</span>
           </nav>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-            Pet &amp; Puppy Fence: Best Aluminum Styles for Dogs
+            Dog Fence &amp; Pet Fence: Best Aluminum Styles for Dogs
           </h1>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
             Small dogs, puppies, and cats can slip right through a standard 4-inch picket gap.
@@ -143,7 +168,7 @@ export default function PetFencePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">What Makes a Fence &ldquo;Pet Friendly&rdquo;?</h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            A standard aluminum fence panel has vertical pickets spaced roughly 4 inches apart.
+            A standard <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">aluminum fence panel</Link> has vertical pickets spaced roughly 4 inches apart.
             That&apos;s narrow enough to keep children and larger dogs contained, but small dogs,
             puppies, and cats can easily fit through — especially along the bottom of the fence
             where the gap is most accessible. There are two ways to solve this:
@@ -227,6 +252,13 @@ export default function PetFencePage() {
               than replacing a fence a year later because your dog keeps clearing it.
             </p>
           </div>
+          <p className="mt-6 text-gray-700">
+            Ready to order? Browse{' '}
+            <Link href="/shop/fence-kits/" className="text-brand-orange hover:underline">aluminum fence kits</Link>
+            {' '}for a complete panel + post package, or shop{' '}
+            <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">individual fence panels</Link>
+            {' '}if you&apos;re mixing styles or filling a specific linear footage.
+          </p>
         </div>
       </section>
 
