@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
@@ -43,6 +44,29 @@ const faqSchema = {
     },
   ],
 }
+
+const shopFaqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: 'Do you offer wholesale pricing on aluminum fencing?',
+    a: <>Yes. We sell aluminum fence panels, gates, posts, and accessories at wholesale pricing — factory-direct to homeowners, contractors, and property managers nationwide. Panels start at $80.35 and complete <Link href="/shop/fence-kits/" className="text-brand-orange hover:underline">fence kits</Link> start at $2,693.59.</>,
+  },
+  {
+    q: 'Do you ship aluminum fencing nationwide?',
+    a: "Yes. We ship to all 50 states via freight carrier. Quick-ship styles in black ship within a few business days. Made-to-order styles ship within 2–3 weeks. If you've been searching for aluminum fence for sale near me and can't find the right styles locally, we ship directly to your door.",
+  },
+  {
+    q: 'Do you sell aluminum gates?',
+    a: <>Yes. We carry <Link href="/shop/driveway-gates/" className="text-brand-orange hover:underline">aluminum driveway gates</Link> (double-swing kits) and <Link href="/shop/walk-gates/" className="text-brand-orange hover:underline">aluminum walk gates</Link> (pedestrian gate kits) in multiple sizes and styles. Driveway gate kits include panels, posts, hinges, latch, and drop rod. Walk gate kits include the gate panel, posts, self-closing hinges, and gravity latch. Both can be automated.</>,
+  },
+  {
+    q: 'Do you sell black aluminum fencing?',
+    a: <>Yes. <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">Black aluminum fence panels</Link> are our most popular color — available across all styles and heights in both quick-ship and made-to-order options. We also carry bronze and white aluminum fencing.</>,
+  },
+  {
+    q: 'Do you sell aluminum pool fencing?',
+    a: <>Yes. Several of our aluminum fence styles meet pool barrier code requirements including self-closing, self-latching gates and compliant picket spacing. See our <Link href="/shop/resources/pool-code-aluminum-fence/" className="text-brand-orange hover:underline">pool code aluminum fence guide</Link> for the full list of compliant styles and heights.</>,
+  },
+]
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -454,10 +478,10 @@ export default function ShopPage() {
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">Common questions about buying aluminum fencing online from Fence Workshop.</p>
           </div>
           <dl className="space-y-6">
-            {faqSchema.mainEntity.map((faq, i) => (
+            {shopFaqs.map((faq, i) => (
               <div key={i} className="border-b border-gray-200 pb-6 last:border-b-0">
-                <dt className="text-lg font-semibold text-gray-900 mb-2">{faq.name}</dt>
-                <dd className="text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</dd>
+                <dt className="text-lg font-semibold text-gray-900 mb-2">{faq.q}</dt>
+                <dd className="text-gray-700 leading-relaxed">{faq.a}</dd>
               </div>
             ))}
           </dl>

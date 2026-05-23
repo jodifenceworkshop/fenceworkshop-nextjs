@@ -19,8 +19,8 @@ type CategoryConfig = {
 
 const categories: Record<string, CategoryConfig> = {
   'driveway-gates': {
-    title: 'Aluminum Driveway Gates for Sale | Black & Custom Sizes | Ships Nationwide',
-    description: 'Shop aluminum driveway gates for sale at wholesale pricing — black, custom sizes, and double-swing kits. American-made, ships nationwide. Gate kits start at $985.16.',
+    title: 'Aluminum Driveway Gate Kits | Black & Custom Sizes | Ships Nationwide',
+    description: 'Shop aluminum driveway gate kits at wholesale pricing — black, custom sizes, and double-swing kits. American-made, ships nationwide. Gate kits start at $985.16.',
     heading: 'Aluminum Driveway Gates for Sale',
     intro: 'Shop aluminum driveway gate kits for sale at wholesale pricing — double-swing entry gates in black and custom sizes, American-made from 6063-T5 aluminum with TGIC powder coating. Standard sizes ship within 5–7 business days.',
     features: [
@@ -59,33 +59,46 @@ const categories: Record<string, CategoryConfig> = {
     ],
   },
   'walk-gates': {
-    title: 'Aluminum Walk Gates | Pedestrian Gate Kits | Fence Workshop',
-    description: 'Shop American-made aluminum walk gates for pedestrian entry. Complete kits with gate panel, gate posts, self-closing hinges, and latch. Multiple styles and sizes.',
-    heading: 'Aluminum Walk Gates',
-    intro: 'Pedestrian walk gate kits complete with gate panel, gate posts, self-closing hinges, and gravity latch. Available in multiple styles and sizes to match your fence panels.',
+    title: 'Aluminum Walk Gate Kits | Self-Closing Pool Fence Gates | Ships Nationwide',
+    description: 'Shop aluminum walk gate kits — self-closing pool fence gates and pedestrian gate kits with gate panel, posts, hinges, and latch. American-made, ships nationwide.',
+    heading: 'Aluminum Walk Gates for Sale',
+    intro: 'Self-closing aluminum walk gate kits with gate panel, gate posts, spring hinges, and gravity latch. Pool fence gates available with MagnaLatch upgrade for full pool barrier code compliance. Multiple styles and sizes to match your fence panels.',
     features: [
-      { label: 'Self-Closing Hinges', detail: 'Spring-loaded hinges automatically close the gate behind you' },
-      { label: 'Gravity Latch', detail: 'Included latch engages automatically when the gate swings shut' },
+      { label: 'Self-Closing Hinges', detail: 'Spring-loaded hinges automatically return the gate to the closed position' },
+      { label: 'Self-Latching Design', detail: 'Gravity latch engages automatically when the gate swings shut' },
+      { label: 'Pool Code Ready', detail: 'Add MagnaLatch upgrade for full pool barrier code compliance' },
       { label: 'Style Matched', detail: 'Every walk gate matches our fence panel designs for a seamless look' },
-      { label: 'Pool Code Ready', detail: 'Self-closing, self-latching design meets most local pool fence codes' },
     ],
     sections: [
       {
         heading: 'What\'s Included in a Walk Gate Kit?',
-        body: 'Each walk gate kit includes a single swing gate panel, two gate posts, a pair of self-closing spring hinges, and a gravity latch. The self-closing hinges ensure the gate always returns to the closed position — a critical safety feature for pool enclosures and yards with children or pets. The gravity latch engages automatically when the gate swings shut, so you never have to worry about forgetting to latch it. All hardware and posts are color-matched to your gate panel.',
+        body: <>Each walk gate kit includes a single swing gate panel, two gate posts, a pair of self-closing spring hinges, and a gravity latch. The self-closing hinges ensure the gate always returns to the closed position — a critical safety feature for pool enclosures and yards with children or pets. The gravity latch engages automatically when the gate swings shut, so you never have to worry about forgetting to latch it. All hardware and posts are color-matched to your gate panel. For pool code compliance, add the <Link href="/shop/accessories/" className="text-brand-orange hover:underline">D&amp;D Series 3 MagnaLatch from our accessories section</Link> — a magnetic, key-lockable latch specifically designed to meet pool barrier requirements.</>,
+      },
+      {
+        heading: 'Self-Closing Pool Fence Gates',
+        body: <>Pool gates have stricter requirements than standard pedestrian gates — they must be self-closing, self-latching, and have the latch positioned so it cannot be reached by a small child. Our walk gate kits are self-closing by default. For full pool barrier compliance, upgrade to the <Link href="/shop/accessories/" className="text-brand-orange hover:underline">D&amp;D Series 3 MagnaLatch</Link> — a magnetic gate latch with a key lock that mounts at the top of the gate, well above a child&apos;s reach. See our <Link href="/shop/resources/pool-code-aluminum-fence/" className="text-brand-orange hover:underline">pool code aluminum fence guide</Link> for the full list of compliant fence styles, rail heights, and picket spacing requirements. Always verify specific height and latch placement requirements with your local building department before installation.</>,
       },
       {
         heading: 'Walk Gate Sizes and How to Measure',
-        body: 'Walk gates are available in standard widths of 3ft, 4ft, and 5ft. Each gate is built 1 inch narrower than its nominal width to allow exactly 1 inch of total clearance between the gate posts for hinge and latch hardware. For example, order a 4ft-wide gate and the actual gate panel measures 47 inches, designed to fit a 48-inch rough opening between posts. Height options match our fence panels at 3ft, 4ft, and 5ft. For most pedestrian entries, a 4ft-wide gate provides comfortable access. If you need to move lawn equipment or wheelbarrows through the gate, consider a 5ft-wide panel. Need a custom size? We build custom walk gates for an additional charge — call (404) 314-4419 for custom pricing.',
-      },
-      {
-        heading: 'Pool Fence Gate Requirements',
-        body: 'Most local building codes require pool enclosure gates to be self-closing and self-latching with the latch positioned at least 54 inches from the ground on the pool side. Our walk gate kits include self-closing hinges, but for pool code compliance you\'ll need to upgrade to a MagnaLatch — a key-lockable, magnetic gate latch specifically designed to meet pool barrier codes. We carry the D&D Series 3 MagnaLatch in our accessories section. See our pool code aluminum fence guide for the full list of styles and heights that meet typical pool barrier requirements, including the 45-inch rail spacing rule. Always check your local code requirements before installation, and feel free to call us at (404) 314-4419 if you need help with pool fence compliance.',
+        body: <>Walk gates are available in standard widths of 3ft, 4ft, and 5ft. Each gate is built 1 inch narrower than its nominal width to allow exactly 1 inch of total clearance between the gate posts for hinge and latch hardware. For example, order a 4ft-wide gate and the actual gate panel measures 47 inches, designed to fit a 48-inch rough opening between posts. Height options match our fence panels at 3ft, 4ft, and 5ft. For most pedestrian entries, a 4ft-wide gate provides comfortable access. If you need to move lawn equipment or wheelbarrows through the gate, consider a 5ft-wide panel. Pair your walk gate with matching <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">aluminum fence panels</Link> for a complete, cohesive system. Need a custom size? We build custom walk gates for an additional charge — call (404) 314-4419 for custom pricing.</>,
       },
     ],
     faqs: [
+      {
+        q: 'Do you sell self-closing pool gates?',
+        aSchema: 'Yes. Our walk gate kits include self-closing spring hinges that automatically close the gate. For full pool barrier code compliance, add the D&D Series 3 MagnaLatch — a magnetic, key-lockable latch designed to meet pool code height and security requirements. See our pool code aluminum fence guide for compliant styles and heights.',
+        a: <>Yes. Our walk gate kits include self-closing spring hinges that automatically close the gate. For full pool barrier code compliance, add the <Link href="/shop/accessories/" className="text-brand-orange hover:underline">D&amp;D Series 3 MagnaLatch</Link> — a magnetic, key-lockable latch designed to meet pool code height and security requirements. See our <Link href="/shop/resources/pool-code-aluminum-fence/" className="text-brand-orange hover:underline">pool code aluminum fence guide</Link> for compliant styles and heights.</>,
+      },
+      {
+        q: 'What is a self-latching pool gate?',
+        a: 'A self-latching gate uses a latch that engages automatically when the gate swings shut — no manual latching required. Pool codes require self-latching gates to prevent unsupervised pool access. Our walk gates include a gravity latch, which is self-latching. For full pool code compliance, upgrade to a MagnaLatch for key-lockable security and code-compliant latch placement at the top of the gate.',
+      },
       { q: 'Are walk gates self-closing?', a: 'Yes. Every walk gate kit includes spring-loaded self-closing hinges that automatically return the gate to the closed position.' },
-      { q: 'Do walk gates meet pool code requirements?', a: 'Walk gate kits include self-closing hinges, which is one requirement. For full pool code compliance, you\'ll also need a MagnaLatch — a key-lockable magnetic latch that mounts at least 54 inches from the ground. We carry the D&D Series 3 MagnaLatch in our accessories section.' },
+      {
+        q: 'Do walk gates meet pool code requirements?',
+        aSchema: "Walk gate kits include self-closing hinges, which satisfies one pool code requirement. For full compliance, you'll also need a MagnaLatch — a key-lockable magnetic latch that mounts at least 54 inches from the ground on the pool side. Always verify specific requirements with your local building department.",
+        a: <>Walk gate kits include self-closing hinges, which satisfies one pool code requirement. For full compliance, you&apos;ll also need a <Link href="/shop/accessories/" className="text-brand-orange hover:underline">MagnaLatch</Link> — a key-lockable magnetic latch that mounts at least 54 inches from the ground on the pool side. Always verify specific requirements with your local building department.</>,
+      },
       { q: 'Can I match my walk gate to my fence panels?', a: 'Absolutely. Every fence style we carry has a matching walk gate in the same design, height options, and color choices.' },
       { q: 'What width walk gate should I choose?', a: 'A 4ft gate works well for standard pedestrian access. Choose 5ft if you need to move lawn equipment, strollers, or wheelchairs through the opening. Keep in mind that gates are built 1 inch narrower than the nominal width — a 4ft gate actually measures 47 inches to fit a 48-inch rough opening between posts.' },
       { q: 'Can I order a custom-size walk gate?', a: 'Yes. We build custom walk gates in any size for an additional charge. Call (404) 314-4419 for custom pricing.' },
@@ -132,10 +145,10 @@ const categories: Record<string, CategoryConfig> = {
     ],
   },
   'fence-posts': {
-    title: 'Aluminum Fence Posts | Line, Corner & Gate Posts | Fence Workshop',
-    description: 'Shop aluminum fence posts — line posts, corner posts, end posts, T-posts, and gate posts. Color-matched to your fence panels. Ships nationwide.',
-    heading: 'Aluminum Fence Posts',
-    intro: 'Color-matched aluminum fence posts available in every post type — line, corner, end, T-post, and blank. Gate posts are also available for walk gate and driveway gate installations.',
+    title: 'Aluminum Fence Posts for Sale | Line, Corner & Gate Posts | Ships Nationwide',
+    description: 'Buy aluminum fence posts online — line posts, corner posts, end posts, T-posts, and gate posts. Color-matched to your fence panels in black, bronze, and white. Ships nationwide.',
+    heading: 'Aluminum Fence Posts for Sale',
+    intro: 'Color-matched aluminum fence posts available in every post type — line, corner, end, T-post, and blank. Gate posts available for walk gate and driveway gate installations. All posts powder-coated to match your fence panels in black, bronze, and white.',
     features: [
       { label: 'Color Matched', detail: 'Posts powder-coated to match your fence panels in Black, Bronze, or White' },
       { label: 'Every Post Type', detail: 'Line, corner, end, T-post, blank, and gate posts all available' },
@@ -145,15 +158,15 @@ const categories: Record<string, CategoryConfig> = {
     sections: [
       {
         heading: 'Types of Aluminum Fence Posts',
-        body: 'Choosing the right post type is essential for a professional-looking fence installation. Line posts are used between panels along straight runs. End posts terminate a fence run at the end of a line. Corner posts connect two panels at a 90-degree angle. T-posts (or tee posts) connect three panels in a T-shaped junction. Blank posts have no pre-routed holes and are used for custom applications. Gate posts are built with thicker walls and reinforced construction to handle the weight and stress of a swinging gate.',
+        body: <>Choosing the right post type is essential for a professional-looking fence installation. Line posts are used between <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">aluminum fence panels</Link> along straight runs. End posts terminate a fence run at the end of a line. Corner posts connect two panels at a 90-degree angle. T-posts (or tee posts) connect three panels in a T-shaped junction. Blank posts have no pre-routed holes and are used for custom applications. Gate posts are built with thicker walls and reinforced construction to handle the weight and stress of a swinging gate — required for both <Link href="/shop/walk-gates/" className="text-brand-orange hover:underline">walk gates</Link> and <Link href="/shop/driveway-gates/" className="text-brand-orange hover:underline">driveway gates</Link>.</>,
       },
       {
         heading: 'How to Determine Which Posts You Need',
-        body: 'Start by sketching your fence layout. Count the number of straight runs, corners, ends, and gate openings. Each straight run needs line posts spaced every 6 feet (matching your panel width). Each corner gets a corner post. Each fence termination point gets an end post. Each gate needs two gate posts — one for hinges, one for the latch. Add one post to your count as a spare, and you have your shopping list. If you need help planning your layout, our team of professional fence installers can walk you through it — call (404) 314-4419.',
+        body: <>Start by sketching your fence layout. Count the number of straight runs, corners, ends, and gate openings. Each straight run needs line posts spaced every 6 feet (matching your panel width). Each corner gets a corner post. Each fence termination point gets an end post. Each gate needs two gate posts — one for hinges, one for the latch. Add one post to your count as a spare, and you have your shopping list. If you want everything sized and packaged together, our <Link href="/shop/fence-kits/" className="text-brand-orange hover:underline">aluminum fence kits</Link> include the right posts for your total footage. If you need help planning your layout, our team of professional fence installers can walk you through it — call (404) 314-4419.</>,
       },
       {
         heading: 'Setting Fence Posts: Concrete vs. Deck Mounts',
-        body: 'The most common installation method is setting posts in concrete footings. Dig a hole approximately 3 times the post width and one-third the total post length deep (plus 6 inches for gravel drainage). Set the post plumb, fill with concrete, and allow it to cure before attaching panels. For installations on existing concrete pads, decks, or other hard surfaces, use our deck-mount bases — they bolt directly to the surface and accept standard fence posts without any digging.',
+        body: <>The most common installation method is setting posts in concrete footings. Dig a hole approximately 3 times the post width and one-third the total post length deep (plus 6 inches for gravel drainage). Set the post plumb, fill with concrete, and allow it to cure before attaching panels. For installations on existing concrete pads, decks, or other hard surfaces, use our <Link href="/shop/accessories/" className="text-brand-orange hover:underline">deck-mount bases from our accessories section</Link> — they bolt directly to the surface and accept standard fence posts without any digging.</>,
       },
     ],
     faqs: [
@@ -165,36 +178,157 @@ const categories: Record<string, CategoryConfig> = {
     ],
   },
   'accessories': {
-    title: 'Fence Hardware & Accessories | Hinges, Latches & More | Fence Workshop',
-    description: 'Shop aluminum fence accessories — gate hinges, latches, drop rods, post caps, deck mounts, decorative finials, and more. Everything you need to complete your fence project.',
-    heading: 'Fence Hardware & Accessories',
-    intro: 'Everything you need to complete your fence installation — gate latches, self-closing hinges, drop rods, post caps, deck mounts, and decorative accessories.',
+    title: 'Gate Hinges, Gate Latches & Fence Hardware | Ships Nationwide',
+    description: 'Shop gate hinges, gate latches, gate locks, MagnaLatch pool gate latches, drop rods, post caps, and fence post brackets. Professional-grade aluminum fence hardware, ships nationwide.',
+    heading: 'Gate Hinges, Gate Latches & Fence Hardware',
+    intro: 'Professional-grade gate hinges, gate latches, gate locks, drop rods, post caps, fence post brackets, and mounting hardware for aluminum fence. Everything you need to complete your installation — the same hardware our installation crews use every day.',
     features: [
-      { label: 'Gate Hardware', detail: 'Self-closing hinges, gravity latches, magna-latches, and drop rods' },
-      { label: 'Post Accessories', detail: 'Post caps, deck-mount bases, and wall-mount brackets' },
-      { label: 'Mounting Hardware', detail: 'Self-tapping screws and fasteners designed for aluminum fence' },
-      { label: 'Professional Grade', detail: 'Same commercial-quality hardware used by professional installers' },
+      { label: 'Gate Hinges', detail: 'Self-closing spring hinges and heavy-duty options for walk and driveway gates' },
+      { label: 'Gate Latches & Locks', detail: 'Gravity latches, MagnaLatch pool gate latches, and key-lockable gate locks' },
+      { label: 'Post Caps & Brackets', detail: 'Post caps, fence post brackets, deck-mount bases, and wall-mount brackets' },
+      { label: 'Professional Grade', detail: 'Same commercial-quality hardware used by professional fence installers' },
     ],
     sections: [
       {
-        heading: 'Gate Hardware: Hinges, Latches, and Drop Rods',
-        body: 'Gate hardware is what makes your gate function properly and securely. Self-closing hinges use an internal spring mechanism to automatically return the gate to the closed position — essential for pool code compliance and convenient for everyday use. Gravity latches engage when the gate swings shut, providing secure closure without manual latching. For driveway gates, a drop rod secures one gate panel to the ground while the latch secures the other. Magna-latches provide enhanced security with a magnetic, key-lockable latch system.',
+        heading: 'Gate Hinges & Self-Closing Hinges',
+        body: <>Gate hinges are what control how your gate swings and whether it closes on its own. Self-closing gate hinges use an internal spring mechanism to automatically return the gate to the closed position — essential for pool code compliance and convenient for everyday use. Heavy duty gate hinges are available for larger panels, heavier gates, and high-traffic applications where standard hinges would wear prematurely. A gate closer is built into the hinge on self-closing models — there&apos;s no separate closer mechanism to install or adjust. Gate hinges are included in our <Link href="/shop/walk-gates/" className="text-brand-orange hover:underline">walk gate kits</Link> and <Link href="/shop/driveway-gates/" className="text-brand-orange hover:underline">driveway gate kits</Link> — order replacements or heavy-duty upgrades here.</>,
       },
       {
-        heading: 'Post Caps and Decorative Finials',
-        body: 'Post caps serve both a functional and decorative purpose. They cover the open top of your fence posts to prevent water infiltration, debris accumulation, and insect nesting. Beyond protection, post caps add a finished, polished appearance to your fence. Choose from flat caps for a clean modern look or decorative finial-style caps for a more traditional appearance. All of our post caps are designed to friction-fit onto standard aluminum fence posts for tool-free installation.',
+        heading: 'Gate Latches, Gate Locks & MagnaLatch',
+        body: <>Gate latch hardware comes in several types, each suited to different uses. A gravity latch is the simplest — it drops into the locked position automatically when the gate closes, no manual latching required, and lifts to open. An outdoor gate lock adds key-lockable security over the standard latch function, keeping the gate closed from both sides. For pool enclosures, the MagnaLatch is the professional standard — it&apos;s a magnetic gate latch with a powerful positive-closure magnet and a key lock that positions at the top of the gate, well above a child&apos;s reach, to meet pool barrier code requirements. The D&amp;D Series 3 MagnaLatch is what our installation crews specify for every pool fence gate. See our <Link href="/shop/resources/pool-code-aluminum-fence/" className="text-brand-orange hover:underline">pool code aluminum fence guide</Link> for full compliance requirements.</>,
       },
       {
-        heading: 'Deck Mounts and Wall Mounts',
-        body: 'Deck-mount bases allow you to install fence posts on existing hard surfaces — concrete patios, wooden decks, brick walls, and more — without digging post holes. The base plate bolts to the surface, and the post slides into the mount. Wall-mount brackets serve a similar purpose for attaching fence panels directly to an existing wall or structure. Both mounting options are ideal for rooftop installations, pool deck enclosures, and any location where traditional in-ground post setting isn\'t possible.',
+        heading: 'Post Caps, Fence Post Brackets & Deck Mounts',
+        body: <>Post caps cover the open top of your <Link href="/shop/fence-posts/" className="text-brand-orange hover:underline">aluminum fence posts</Link> to prevent water infiltration and add a finished look — choose flat caps for a clean modern appearance or finial-style caps for a traditional profile. Fence post brackets and deck-mount bases let you install posts on existing hard surfaces — concrete patios, wooden decks, and brick walls — without digging post holes. The base plate bolts to the surface, and the post slides into the bracket. Wall-mount brackets attach fence panels directly to an existing structure. These mounting options are ideal for pool deck enclosures, rooftop installations, and anywhere in-ground post setting isn&apos;t possible.</>,
       },
     ],
     faqs: [
-      { q: 'What hinges do I need for a walk gate?', a: 'Walk gates use self-closing spring hinges that automatically return the gate to the closed position. Each walk gate kit includes a pair, but replacements are available individually.' },
-      { q: 'What\'s the difference between a gravity latch and a magna-latch?', a: 'A gravity latch uses its own weight to drop into the locked position when the gate closes — simple and reliable. A magna-latch uses a powerful magnet for positive closure and includes a key lock for added security.' },
-      { q: 'Do I need a drop rod for a driveway gate?', a: 'Yes. On a double-swing driveway gate, the drop rod secures one panel (the "stationary" side) to the ground. The other panel latches to it. Driveway gate kits include a drop rod.' },
-      { q: 'Can I mount fence posts on a concrete slab?', a: 'Yes — use our deck-mount bases. They bolt directly to concrete, wood, or composite surfaces and accept standard fence posts. No digging required.' },
-      { q: 'What screws should I use for aluminum fence?', a: 'Use our self-tapping post screws, which are specifically designed for aluminum fence installation. They create their own pilot hole and provide a secure hold without cracking or splitting the aluminum.' },
+      {
+        q: 'What is a MagnaLatch and do you carry it?',
+        a: 'Yes. The MagnaLatch (made by D&D Technologies) is a magnetic gate latch with a key lock designed specifically for pool barrier code compliance. Its powerful magnet ensures positive closure every time the gate swings shut, and the latch mounts at the top of the gate — well above a child\'s reach — to meet pool code height requirements. We carry the D&D Series 3 MagnaLatch.',
+      },
+      {
+        q: 'What are the different types of gate latches?',
+        a: 'The three main gate latch types are: (1) Gravity latch — drops automatically when the gate closes, lifts to open, no key required. Good for everyday pedestrian gates. (2) Outdoor gate lock — adds key-lockable security to the standard latch function. (3) Magnetic gate latch (MagnaLatch) — uses a magnet for positive closure plus a key lock that positions at the top of the gate for pool code compliance. Choose based on your security needs and whether the gate is part of a pool enclosure.',
+      },
+      {
+        q: 'Do you sell pool gate latches?',
+        aSchema: 'Yes. We carry the D&D Series 3 MagnaLatch — the professional standard for pool gate latches. It\'s a magnetic, self-latching gate lock that mounts at the top of the gate to meet pool barrier code height requirements. See our pool code aluminum fence guide for full compliance details.',
+        a: <>Yes. We carry the D&amp;D Series 3 MagnaLatch — the professional standard for pool gate latches. It&apos;s a magnetic, self-latching gate lock that mounts at the top of the gate to meet pool barrier code height requirements. See our <Link href="/shop/resources/pool-code-aluminum-fence/" className="text-brand-orange hover:underline">pool code aluminum fence guide</Link> for full compliance details.</>,
+      },
+      { q: 'Do you sell heavy duty gate hinges?', a: 'Yes. We carry heavy duty gate hinges for larger panels and high-traffic applications. Standard self-closing hinges are included in our walk gate and driveway gate kits — heavy-duty replacements and upgrades are available individually.' },
+      { q: 'What hinges do I need for a walk gate?', a: 'Walk gates use self-closing spring hinges that automatically return the gate to the closed position. Each walk gate kit includes a pair. Replacements and heavy-duty upgrades are available individually in our accessories section.' },
+      { q: 'Do I need a drop rod for a driveway gate?', a: 'Yes. On a double-swing driveway gate, the drop rod secures one panel (the "stationary" side) to the ground. The other panel latches to it. Drop rods are included in driveway gate kits but are also available individually.' },
+      { q: 'Can I mount fence posts on a concrete slab?', a: 'Yes — use our fence post brackets or deck-mount bases. They bolt directly to concrete, wood, or composite surfaces and accept standard fence posts. No digging required.' },
+      { q: 'What screws should I use for aluminum fence?', a: 'Use our self-tapping post screws, specifically designed for aluminum fence installation. They create their own pilot hole and provide a secure hold without cracking or splitting the aluminum.' },
+    ],
+  },
+  'fence-kits': {
+    title: 'DIY Aluminum Fence Kits | Pool Fence Kits | Ships Nationwide',
+    description: 'Shop DIY aluminum fence kits — complete kits with panels, posts, walk gate, and hardware sized to your total footage. Pool fence kits available. Kits start at $2,693.59. Ships nationwide.',
+    heading: 'DIY Aluminum Fence Kits',
+    intro: 'Complete DIY aluminum fence kits with panels, posts, walk gate, and all hardware — everything sized for your total footage in one order. Available in all styles, heights, and colors. Pool fence kits available. Kits start at $2,693.59.',
+    features: [
+      { label: 'Everything Included', detail: 'Panels, posts, walk gate, and hardware — nothing to hunt for separately' },
+      { label: 'Sized to Your Footage', detail: 'Kit quantities calculated for your exact total linear footage' },
+      { label: 'Pool Fence Ready', detail: 'Pool code compliant styles available with MagnaLatch upgrade' },
+      { label: 'Quick Ship Available', detail: 'Black aluminum fence kits in popular styles ship within days' },
+    ],
+    sections: [
+      {
+        heading: "What's Included in an Aluminum Fence Kit?",
+        body: <>An aluminum fence kit bundles everything you need into one order — <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">aluminum fence panels</Link>, <Link href="/shop/fence-posts/" className="text-brand-orange hover:underline">fence posts</Link> (line, corner, end, and gate posts), a <Link href="/shop/walk-gates/" className="text-brand-orange hover:underline">walk gate kit</Link> with self-closing hinges and latch, and all <Link href="/shop/accessories/" className="text-brand-orange hover:underline">hardware and accessories</Link> needed for a complete installation. Every component is color-matched and sized to your total linear footage. Kits are available in all the same styles, heights, and colors as our individual panels — black aluminum fence kits are the most popular and ship the fastest.</>,
+      },
+      {
+        heading: 'Fence Kit vs. Buying Parts Separately',
+        body: 'A fence kit is the right choice if you want everything in one order without calculating individual part quantities. We size the kit to your total footage — you tell us how many linear feet you\'re fencing and we put together the right number of panels, posts, and hardware pieces. If your project has a lot of custom angles, obstacles, or partial panels, buying components individually gives you more flexibility. Either way, you\'re getting the same professional-grade materials at the same wholesale pricing.',
+      },
+      {
+        heading: 'Aluminum Pool Fence Kits',
+        body: <>Pool fence kits include everything in a standard fence kit plus the hardware needed for pool barrier code compliance — a self-closing walk gate with <Link href="/shop/accessories/" className="text-brand-orange hover:underline">MagnaLatch pool gate latch</Link>, compliant picket spacing, and the appropriate fence height for your local code. Pool barrier requirements vary by municipality, so always verify your local code before ordering. See our <Link href="/shop/resources/pool-code-aluminum-fence/" className="text-brand-orange hover:underline">pool code aluminum fence guide</Link> for the full list of compliant styles and heights, or call us at (404) 314-4419 and we&apos;ll help you build the right kit for your pool enclosure.</>,
+      },
+    ],
+    faqs: [
+      { q: 'How much does a DIY aluminum fence kit cost?', a: 'DIY aluminum fence kits start at $2,693.59 for our most popular styles in black. Pricing varies based on total footage, fence style, height, and color. Call (404) 314-4419 for a custom kit quote sized to your exact footage.' },
+      {
+        q: "What's included in an aluminum fence kit?",
+        aSchema: 'Every aluminum fence kit includes fence panels, posts (line, corner, end, and gate posts), a walk gate with self-closing hinges and latch, and all installation hardware. All components are color-matched and sized for your total linear footage.',
+        a: <>Every aluminum fence kit includes <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">fence panels</Link>, <Link href="/shop/fence-posts/" className="text-brand-orange hover:underline">posts</Link> (line, corner, end, and gate posts), a <Link href="/shop/walk-gates/" className="text-brand-orange hover:underline">walk gate</Link> with self-closing hinges and latch, and all installation hardware. All components are color-matched and sized for your total linear footage.</>,
+      },
+      {
+        q: 'Do you sell aluminum pool fence kits?',
+        aSchema: "Yes. Pool fence kits include panels, posts, a walk gate, and pool code compliant hardware including a MagnaLatch pool gate latch. See our pool code aluminum fence guide for compliant styles and heights, or call (404) 314-4419 to build the right kit for your pool enclosure.",
+        a: <>Yes. Pool fence kits include panels, posts, a walk gate, and pool code compliant hardware including a <Link href="/shop/accessories/" className="text-brand-orange hover:underline">MagnaLatch pool gate latch</Link>. See our <Link href="/shop/resources/pool-code-aluminum-fence/" className="text-brand-orange hover:underline">pool code aluminum fence guide</Link> for compliant styles and heights, or call (404) 314-4419 to build the right kit for your pool enclosure.</>,
+      },
+      { q: "What's the difference between a fence kit and buying parts separately?", a: "A fence kit is the easiest option — we calculate all the quantities for your footage and ship everything together. Buying parts separately gives more flexibility for projects with custom angles, partial panels, or unusual layouts. Both options use the same materials at the same wholesale pricing." },
+      { q: 'Can I get a custom fence kit sized to my footage?', a: "Yes. Call (404) 314-4419 and we'll build a custom kit for any footage, fence style, height, and color. We can accommodate projects with multiple sections, corners, and gate openings." },
+      { q: 'Do fence kits include a gate?', a: 'Yes. Every fence kit includes a walk gate with self-closing hinges and gravity latch. If you also need a driveway gate, those are available separately in our driveway gates section.' },
+    ],
+  },
+  'chain-link-fencing': {
+    title: 'Black Chain Link Fence for Sale | Vinyl Coated & Galvanized | Ships Nationwide',
+    description: 'Shop black chain link fence and galvanized chain link fencing. Vinyl coated black chain link and galvanized options available. Contact us for pricing and availability. Ships nationwide.',
+    heading: 'Black Chain Link Fence & Galvanized Chain Link',
+    intro: 'Black vinyl coated chain link fence and galvanized chain link fencing in multiple gauges and heights. Pricing and availability by quote — call (404) 314-4419 or contact us below for a custom package sized to your project.',
+    features: [
+      { label: 'Black Vinyl Coated', detail: 'Black chain link fence with vinyl coating for a modern, polished look' },
+      { label: 'Galvanized Options', detail: 'Traditional galvanized chain link in standard gauges and heights' },
+      { label: 'Multiple Heights', detail: 'Available in 3ft, 4ft, 5ft, 6ft, and commercial heights' },
+      { label: 'Ships Nationwide', detail: 'Delivered to your door via freight carrier' },
+    ],
+    sections: [
+      {
+        heading: 'Black Chain Link Fence',
+        body: 'Black chain link fence has overtaken traditional galvanized as the most popular chain link option — the black vinyl coating gives it a clean, modern look that pairs well with contemporary home styles, black aluminum fencing, and commercial properties where appearance matters. The vinyl coating also adds a layer of corrosion resistance on top of the galvanized steel core, giving black chain link better long-term durability than bare galvanized in harsh weather conditions. Available in residential gauges (11.5 and 11 gauge) and commercial gauges (9 gauge), in heights from 3ft to 12ft. Contact us at (404) 314-4419 for pricing on black chain link fence rolls, posts, and complete installation packages.',
+      },
+      {
+        heading: 'Vinyl Coated Chain Link vs. Galvanized Chain Link',
+        body: 'Galvanized chain link is the traditional standard — a steel wire mesh with a zinc coating that resists rust and corrosion. It\'s the most economical chain link option and holds up well in most climates. Vinyl coated chain link adds a layer of PVC over the galvanized wire for additional corrosion resistance and a color finish. Black is by far the most popular vinyl coated color, followed by green (common in sports facilities) and brown. If you\'re choosing between the two, galvanized is the value option; vinyl coated black chain link is the upgrade for curb appeal and longevity.',
+      },
+      {
+        heading: 'Chain Link Fence Cost',
+        body: <>Chain link fence cost varies by gauge (wire thickness), height, total footage, and whether you choose galvanized or vinyl coated. Heavier gauge wire (lower number) and taller heights cost more. Black vinyl coated chain link runs higher than galvanized due to the additional coating process. For a project quote that covers fence fabric, posts, top rail, tension wire, and all hardware, call us at (404) 314-4419. If you&apos;re primarily focused on cost and aesthetics for a residential boundary fence, our <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">aluminum fence panels</Link> are competitively priced, available online with immediate pricing, and require zero maintenance.</>,
+      },
+    ],
+    faqs: [
+      { q: 'Do you sell black chain link fence?', a: 'Yes. We carry black vinyl coated chain link fence in residential and commercial gauges, in heights from 3ft to 12ft. Black chain link is priced by quote — call (404) 314-4419 for pricing on rolls, posts, and complete packages.' },
+      { q: 'What\'s the difference between vinyl coated and galvanized chain link?', a: 'Galvanized chain link has a zinc coating for rust resistance — it\'s the standard, economical option. Vinyl coated chain link adds a layer of PVC over the galvanized wire for added corrosion resistance and a color finish. Black vinyl coated is the most popular choice for its appearance and longevity.' },
+      { q: 'How much does black chain link fence cost?', a: 'Black chain link fence cost depends on gauge, height, and total footage. It runs higher than galvanized due to the vinyl coating process. Call (404) 314-4419 for a quote sized to your specific project dimensions.' },
+      { q: 'What gauges of chain link do you carry?', a: 'We carry residential gauge (11.5 and 11 gauge) and commercial grade (9 gauge) chain link in both galvanized and black vinyl coated. Heavier gauge (lower number) means thicker, stronger wire.' },
+      { q: 'Do you sell chain link fence by the roll?', a: 'Yes. Chain link fence fabric is available by the roll in standard 50ft lengths. Posts, top rail, tension wire, and hardware are also available separately. Contact us for current pricing and availability.' },
+    ],
+  },
+  'vinyl-fencing': {
+    title: 'Vinyl Fence for Sale | White Vinyl Fence & Privacy Fence | Ships Nationwide',
+    description: 'Shop vinyl fence panels — white vinyl fence, vinyl privacy fence, and vinyl picket fence in multiple styles and colors. Contact us for pricing and availability. Ships nationwide.',
+    heading: 'Vinyl Fence for Sale',
+    intro: 'White vinyl fence, vinyl privacy fence, and vinyl picket fence in multiple styles and colors. Pricing and availability by quote — call (404) 314-4419 or contact us below and we\'ll build the right package for your project.',
+    features: [
+      { label: 'Low Maintenance', detail: 'Vinyl fencing never needs painting, staining, or sealing' },
+      { label: 'Multiple Styles', detail: 'Privacy, picket, post-and-rail, and semi-privacy styles available' },
+      { label: 'White & Color Options', detail: 'Classic white vinyl fence plus tan, gray, and woodgrain finishes' },
+      { label: 'Ships Nationwide', detail: 'Delivered to your door via freight carrier' },
+    ],
+    sections: [
+      {
+        heading: 'Vinyl Privacy Fence',
+        body: <>Vinyl privacy fence panels feature tongue-and-groove or lap-board construction that creates a solid wall with no gaps — ideal for backyard privacy, pool enclosures, and properties bordering busy streets or neighbors. Standard privacy fence heights run 4ft, 6ft, and 8ft. White is the most popular color, but privacy fence is also available in tan, gray, and woodgrain finishes. For a complete vinyl privacy fence package including panels, posts, and gate, contact us at (404) 314-4419 for a quote. If privacy isn&apos;t your primary requirement, our <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">aluminum fence panels</Link> are available online with immediate pricing and ship within days.</>,
+      },
+      {
+        heading: 'White Vinyl Fence & Color Options',
+        body: 'White vinyl fence is by far the most popular color — it delivers a classic, clean look that holds up better than painted wood without any maintenance. Unlike paint, the color is molded throughout the vinyl material, so it won\'t chip, peel, or fade. Beyond white, vinyl fencing is available in tan, gray, and woodgrain finishes that mimic the appearance of natural wood. Color availability varies by style — contact us to confirm options for the specific fence style you\'re considering.',
+      },
+      {
+        heading: 'Vinyl Picket Fence & Panel Styles',
+        body: 'Vinyl picket fence delivers the classic American front-yard look — individual vertical pickets with gaps between them, typically in white, for front yards, garden borders, and decorative property lines. Standard picket heights run 2ft, 3ft, and 4ft. Beyond picket, vinyl fencing comes in privacy (solid), semi-privacy (small gaps), shadowbox (alternating boards), and post-and-rail styles. Each style suits different applications — call (404) 314-4419 and we\'ll help you match the right style to your project.',
+      },
+    ],
+    faqs: [
+      { q: 'Do you sell vinyl fencing?', a: 'Yes. We carry vinyl privacy fence, vinyl picket fence, and post-and-rail styles in white and other colors. Vinyl fencing is available by quote — call (404) 314-4419 or use the contact form for pricing and availability on your specific project.' },
+      { q: 'How much does vinyl fencing cost?', a: 'Vinyl fencing pricing depends on the style, height, total footage, and color. Call (404) 314-4419 for a quote sized to your project. If you\'re looking for online pricing with immediate checkout, our aluminum fence panels start at $80.35 and are available to order directly in our shop.' },
+      { q: 'What vinyl fence styles do you carry?', a: 'We carry vinyl privacy fence, vinyl picket fence, semi-privacy, shadowbox, and post-and-rail styles. White is available across all styles; tan, gray, and woodgrain finishes are available on select styles. Call (404) 314-4419 to confirm availability for your specific style and color.' },
+      { q: 'Is vinyl fencing low maintenance?', a: 'Yes. Vinyl fencing never needs painting, staining, or sealing. The color is molded throughout the material so it won\'t chip or peel. An occasional rinse with a garden hose is all that\'s needed to keep it looking clean.' },
+      { q: 'How long does vinyl fencing last?', a: 'Quality vinyl fencing typically lasts 20–30 years with minimal maintenance. It won\'t rot, warp, or be damaged by insects the way wood can.' },
     ],
   },
 }
@@ -207,7 +341,11 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const { category } = await params
   const cat = categories[category]
   if (!cat) return { title: 'Shop | Fence Workshop' }
-  return { title: cat.title, description: cat.description }
+  return {
+    title: cat.title,
+    description: cat.description,
+    alternates: { canonical: `https://fenceworkshop.com/shop/${category}/` },
+  }
 }
 
 export const revalidate = 60
