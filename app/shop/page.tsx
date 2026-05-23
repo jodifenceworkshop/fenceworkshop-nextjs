@@ -254,7 +254,7 @@ export default function ShopPage() {
             <Link href="/shop/fence-posts/" className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
               <div className="aspect-square relative overflow-hidden bg-gray-50">
                 <Image
-                  src="/images/shop-aluminum-fencing.jpg"
+                  src="/images/shop-aluminum-fence-posts.jpg"
                   alt="Aluminum fence posts — line, corner, end, and gate posts"
                   fill
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
