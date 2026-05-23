@@ -19,37 +19,43 @@ type CategoryConfig = {
 
 const categories: Record<string, CategoryConfig> = {
   'driveway-gates': {
-    title: 'Aluminum Driveway Gates | Double Swing Gate Kits | Fence Workshop',
-    description: 'Shop American-made aluminum double driveway gates. Complete gate kits with panels, hinges, and latch hardware. Multiple styles, heights, and widths available.',
-    heading: 'Aluminum Driveway Gates',
-    intro: 'Our double-swing driveway gate kits include everything you need — gate panels, hinges, latch, and drop rod. American-made from 6063-T5 aluminum with TGIC powder coating for lasting durability.',
+    title: 'Aluminum Driveway Gates for Sale | Black & Custom Sizes | Ships Nationwide',
+    description: 'Shop aluminum driveway gates for sale at wholesale pricing — black, custom sizes, and double-swing kits. American-made, ships nationwide. Gate kits start at $985.16.',
+    heading: 'Aluminum Driveway Gates for Sale',
+    intro: 'Shop aluminum driveway gate kits for sale at wholesale pricing — double-swing entry gates in black and custom sizes, American-made from 6063-T5 aluminum with TGIC powder coating. Standard sizes ship within 5–7 business days.',
     features: [
       { label: 'Complete Kit', detail: 'Gate panels, hinges, latch, and drop rod included — no hunting for parts' },
-      { label: 'American Made', detail: 'Manufactured in the USA from 6063-T5 structural aluminum' },
+      { label: 'Black & Custom Sizes', detail: 'Black aluminum driveway gates in stock; custom sizes built to order' },
       { label: 'TGIC Powder Coat', detail: 'Industrial-grade finish resists fading, chipping, and corrosion' },
-      { label: 'Multiple Widths', detail: 'Available in 8ft, 10ft, 12ft, 14ft, and 16ft total openings' },
+      { label: 'Multiple Widths', detail: 'Standard 8ft–16ft openings; custom widths available' },
     ],
     sections: [
       {
         heading: 'What\'s Included in a Driveway Gate Kit?',
-        body: 'Every Fence Workshop driveway gate kit ships as a complete package. You receive two swing gate panels (sized to your opening width), two gate posts, a pair of heavy-duty self-closing hinges, a center gravity latch, and a drop rod for securing one panel in place. All hardware and posts are color-matched to your gate panels. Simply set the posts, hang the panels, and your driveway entrance is complete.',
+        body: <>Every driveway gate kit ships as a complete package — two double-swing gate panels sized to your opening width, two gate posts, a pair of heavy-duty self-closing hinges, a center gravity latch, and a drop rod for securing one panel in place. All hardware and posts are color-matched to your gate panels. Pair your gate with our <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">aluminum fence panels</Link> for a complete, matched entry system.</>,
       },
       {
-        heading: 'Choosing the Right Driveway Gate Size',
-        body: 'Driveway gates are measured by the total opening width — the clear distance between your two gate posts. Our most popular sizes are 10ft and 12ft openings, which accommodate standard residential driveways. For wider driveways or RV access, 14ft and 16ft options are available. Gate height matches your fence panel height (3ft, 4ft, or 5ft), creating a seamless look across your property line. Need a custom size? We build custom driveway gates for an additional charge — call (404) 314-4419 for custom pricing. If you\'re unsure which size fits your driveway, our team of professional installers can help.',
+        heading: 'Standard Sizes, 16ft Gates & Custom Aluminum Driveway Gates',
+        body: 'Driveway gates are measured by the total opening width — the clear distance between your two gate posts. Standard sizes run from 8ft to 16ft total openings. Our 10ft and 12ft gates fit most residential driveways; 14ft and 16ft aluminum driveway gates accommodate RV access, boat storage, and wider commercial entries. Need something outside standard sizing? We build custom aluminum driveway gates in any width — call (404) 314-4419 for custom pricing and lead times.',
+      },
+      {
+        heading: 'Black Aluminum Driveway Gates',
+        body: <>Black aluminum driveway gates are our most popular option — the finish delivers a classic wrought-iron look that works with virtually any home style, fence design, or landscape. Black is available across all standard sizes and most custom sizes, and holds up far better than painted iron over time. Available in both standard and automation-ready configurations. We also carry <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">matching black aluminum fence panels</Link> so your full entry system looks cohesive.</>,
       },
       {
         heading: 'Aluminum vs. Iron Driveway Gates',
-        body: 'Traditional wrought iron gates look beautiful on day one, but they require ongoing maintenance — sanding, priming, and repainting every few years to prevent rust. Our aluminum driveway gates deliver the same classic look with none of the upkeep. The 6063-T5 aluminum alloy is naturally rust-proof, and our TGIC polyester powder coating provides superior UV and weather resistance compared to standard paint. The result is a gate that looks new for decades without a single coat of paint.',
+        body: 'Traditional wrought iron gates look beautiful on day one, but they require ongoing maintenance — sanding, priming, and repainting every few years to prevent rust. Our aluminum entry gates deliver the same classic look with none of the upkeep. The 6063-T5 aluminum alloy is naturally rust-proof, and our TGIC polyester powder coating provides superior UV and weather resistance compared to standard paint. The result is a gate that looks new for decades without a single coat of paint.',
       },
     ],
     faqs: [
-      { q: 'How wide should a driveway gate be?', a: 'Most residential driveways need a 10ft or 12ft total opening. Measure the clear distance between where your posts will be set. For RV or boat access, choose a 14ft or 16ft opening.' },
-      { q: 'Can I order a custom-size driveway gate?', a: 'Yes. We build custom driveway gates in any size for an additional charge. Call (404) 314-4419 for custom pricing.' },
+      { q: 'How much do aluminum driveway gates cost?', a: 'Aluminum driveway gate kits start at $985.16 for standard sizes in black. Larger openings, custom sizes, and automation-ready configurations are priced higher. Call (404) 314-4419 or shop above for current pricing on specific sizes and styles.' },
+      { q: 'Do you sell black aluminum driveway gates?', a: 'Yes — black aluminum driveway gates are our most popular color and are available in all standard widths from 8ft to 16ft. Black is available in both standard and automation-ready configurations and ships within 5–7 business days for standard sizes.' },
+      { q: 'Do you sell custom aluminum driveway gates?', a: 'Yes. We build custom aluminum driveway gates in any size — including widths beyond our standard 16ft maximum. Custom gates are fabricated to your exact opening width and height. Call (404) 314-4419 for custom sizing, pricing, and lead times.' },
+      { q: 'Do you sell 16ft aluminum driveway gates?', a: 'Yes. Our 16ft aluminum driveway gate kits are a standard size — no custom order required. They\'re a popular choice for RV access, boat storage, and wide residential or commercial entries. Shop the full selection above.' },
+      { q: 'How wide should a driveway gate be?', a: 'Most residential driveways need a 10ft or 12ft total opening. Measure the clear distance between where your posts will be set. For RV, boat, or commercial vehicle access, choose a 14ft or 16ft opening.' },
       { q: 'Do driveway gate kits include posts?', a: 'Yes. Every driveway gate kit includes two gate posts along with the gate panels, hinges, latch, and drop rod — everything you need for a complete installation.' },
       { q: 'Can aluminum driveway gates be automated?', a: 'Yes. When ordering, select the "Automation" option to get gate panels built with an oversized bottom rail designed to accept gate operator arms. This ensures a clean, factory-engineered mounting point for your automatic opener. The lightweight aluminum also puts less strain on motors compared to heavy iron or steel gates.' },
       { q: 'What maintenance do aluminum driveway gates need?', a: 'Virtually none. The TGIC powder-coated finish won\'t rust, fade, or peel. An occasional rinse with a garden hose is all that\'s needed to keep your gate looking new.' },
-      { q: 'How are driveway gate kits shipped?', a: 'Gates ship nationwide via freight carrier directly to your address. Panels are carefully packaged to prevent damage in transit. Most orders ship within 5–7 business days.' },
     ],
   },
   'walk-gates': {
