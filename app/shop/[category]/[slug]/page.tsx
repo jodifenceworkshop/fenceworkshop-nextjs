@@ -28,6 +28,66 @@ function detectStyle(slug: string): string | null {
   return FENCE_STYLES.find((s) => slug.startsWith(s)) ?? null
 }
 
+type StyleDescriptor = { short: string; full: string }
+
+const STYLE_DESCRIPTORS: Record<string, StyleDescriptor> = {
+  atlanta:    { short: 'Spear-Top 3-Rail',                  full: 'Spear-Top 3-Rail Aluminum Fence' },
+  avalon:     { short: 'Spear-Top Puppy Picket',            full: 'Spear-Top 4-Rail Puppy Picket Aluminum Fence' },
+  athens:     { short: 'Spear-Top Double Picket',           full: 'Spear-Top 3-Rail Double Picket Aluminum Fence' },
+  brookhaven: { short: 'Smooth-Top 3-Rail',                 full: 'Smooth-Top 3-Rail Aluminum Fence' },
+  berkley:    { short: 'Smooth-Top Puppy Picket',           full: 'Smooth-Top 4-Rail Puppy Picket Aluminum Fence' },
+  buford:     { short: 'Smooth-Top Double Picket',          full: 'Smooth-Top 3-Rail Double Picket Aluminum Fence' },
+  candler:    { short: 'Decorative Spear',                  full: 'Smooth-Top Aluminum Fence with Decorative Spears' },
+  cobb:       { short: 'Decorative Spear Puppy Picket',     full: 'Smooth-Top Aluminum Fence with Decorative Spears & Puppy Pickets' },
+  chamblee:   { short: 'Decorative Spear Double Picket',    full: 'Smooth-Top Aluminum Fence with Decorative Spears & Double Pickets' },
+  dawson:     { short: 'Staggered Spear-Top',               full: 'Staggered Spear-Top 3-Rail Aluminum Fence' },
+  dublin:     { short: 'Staggered Spear-Top Puppy Picket',  full: 'Staggered Spear-Top 3-Rail Aluminum Fence with Puppy Pickets' },
+  dunwoody:   { short: 'Staggered Spear-Top Double Picket', full: 'Staggered Spear-Top 3-Rail Aluminum Fence with Double Pickets' },
+  savannah:   { short: 'Smooth-Top 2-Rail',                 full: 'Smooth-Top 2-Rail Aluminum Fence' },
+  sharpsburg: { short: 'Smooth-Top 2-Rail Double Picket',   full: 'Smooth-Top 2-Rail Double Picket Aluminum Fence' },
+}
+
+const CATEGORY_PRODUCT_TYPES: Record<string, string> = {
+  'driveway-gates':   'Driveway Gate',
+  'walk-gates':       'Walk Gate',
+  'aluminum-fencing': 'Fence Panel',
+  'fence-posts':      'Fence Post',
+  'fence-kits':       'Fence Kit',
+}
+
+const KNOWN_COLORS = ['Black', 'Bronze', 'White', 'Silver']
+
+function extractAttributes(title: string): { height: string | null; color: string | null } {
+  const heightMatch = title.match(/(\d+)\s*ft/i)
+  const height = heightMatch ? `${heightMatch[1]}ft` : null
+  const color = KNOWN_COLORS.find((c) => title.includes(c)) ?? null
+  return { height, color }
+}
+
+function buildKeywordMeta(
+  slug: string,
+  category: string,
+  productTitle: string,
+): { pageTitle: string; schemaName: string } {
+  const style = detectStyle(slug)
+  const descriptor = style ? STYLE_DESCRIPTORS[style] : null
+  const productType = CATEGORY_PRODUCT_TYPES[category]
+
+  if (!descriptor || !productType) {
+    return { pageTitle: `${productTitle} | Fence Workshop`, schemaName: productTitle }
+  }
+
+  const { height, color } = extractAttributes(productTitle)
+  const styleName = style!.charAt(0).toUpperCase() + style!.slice(1)
+  const parts = [descriptor.short, 'Aluminum', productType, height, color].filter(Boolean) as string[]
+  const base = parts.join(' ')
+
+  return {
+    pageTitle: `${base} | ${styleName} Style`,
+    schemaName: base,
+  }
+}
+
 // Pool-code compliant style + height combos (45" rail spacing rule)
 const POOL_CODE_COMBOS: Array<{ style: string; heights: string[] }> = [
   { style: 'athens', heights: ['6'] },
@@ -72,8 +132,9 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   const product = await getProductByHandle(slug)
   if (!product) return { title: 'Product Not Found | Fence Workshop' }
 
+  const { pageTitle } = buildKeywordMeta(slug, category, product.title)
   return {
-    title: `${product.title} | Fence Workshop`,
+    title: pageTitle,
     description: product.description.slice(0, 160),
     alternates: { canonical: `https://fenceworkshop.com/shop/${category}/${slug}/` },
   }
@@ -97,10 +158,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
     ? await getRelatedProductsByStyle(style, slug)
     : []
 
+  const { schemaName } = buildKeywordMeta(slug, category, product.title)
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: product.title,
+    name: schemaName,
     description: product.description,
     image: images.map((img) => img.url),
     sku: variants[0]?.sku || product.handle,
