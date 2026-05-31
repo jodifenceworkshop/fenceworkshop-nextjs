@@ -22,7 +22,7 @@ const STATIC_PATHS = [
   '/installation/georgia/atlanta-fence-installation/',
   '/installation/georgia/marietta-fence-installation/',
   '/installation/georgia/alpharetta-fence-installation/',
-  '/installation/georgia/ornamental-aluminum-fence/',
+  '/installation/georgia/aluminum-fence-installation/',
   '/installation/georgia/commercial-chain-link-fence/',
   '/installation/georgia/commercial-security-fence/',
   '/installation/georgia/security-gate-systems/',

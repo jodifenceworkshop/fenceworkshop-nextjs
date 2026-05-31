@@ -128,7 +128,7 @@ const installationServices = [
     description: 'Architectural-grade ornamental and aluminum fencing for Marietta commercial properties, office parks, and HOA communities through general contractors and property managers.',
     image: '/images/commercial-ornamental-fence-atlanta-ga.jpg',
     alt: 'Ornamental aluminum fence installation in Marietta, GA',
-    href: '/installation/georgia/ornamental-aluminum-fence/',
+    href: '/installation/georgia/aluminum-fence-installation/',
   },
   {
     title: 'Dumpster Gate Installation',

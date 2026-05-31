@@ -120,7 +120,7 @@ const installationServices = [
     description: 'Architectural-grade ornamental and aluminum fencing for Alpharetta office parks, tech campuses, and HOA communities through general contractors and property managers.',
     image: '/images/commercial-ornamental-fence-atlanta-ga.jpg',
     alt: 'Ornamental aluminum fence installation in Alpharetta, GA',
-    href: '/installation/georgia/ornamental-aluminum-fence/',
+    href: '/installation/georgia/aluminum-fence-installation/',
   },
   {
     title: 'Dumpster Gate Installation',

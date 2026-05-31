@@ -103,7 +103,7 @@ const installationServices = [
     description: 'Architectural-grade ornamental and aluminum fencing for commercial properties, municipalities, and high-end residential projects through general contractors.',
     image: '/images/commercial-ornamental-fence-atlanta-ga.jpg',
     alt: 'Ornamental fence installation in Atlanta, GA',
-    href: '/installation/georgia/ornamental-aluminum-fence/',
+    href: '/installation/georgia/aluminum-fence-installation/',
   },
   {
     title: 'Dumpster Gate Installation',

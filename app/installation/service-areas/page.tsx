@@ -148,7 +148,7 @@ const additionalAreas = [
 const services = [
   { title: 'Commercial Chain Link Fence', href: '/installation/georgia/commercial-chain-link-fence/' },
   { title: 'Commercial Security Fence', href: '/installation/georgia/commercial-security-fence/' },
-  { title: 'Ornamental Aluminum Fence', href: '/installation/georgia/ornamental-aluminum-fence/' },
+  { title: 'Ornamental Aluminum Fence', href: '/installation/georgia/aluminum-fence-installation/' },
   { title: 'Security Gate Systems', href: '/installation/georgia/security-gate-systems/' },
   { title: 'Slide Gates', href: '/installation/georgia/slide-gates/' },
   { title: 'Dumpster Enclosure Gates', href: '/installation/georgia/dumpster-enclosure-gates/' },
