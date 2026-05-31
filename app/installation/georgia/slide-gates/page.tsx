@@ -5,6 +5,16 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Slide Gates", "item": "https://fenceworkshop.com/installation/georgia/slide-gates/" }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -46,13 +56,17 @@ const faqSchema = {
     { "@type": "Question", "name": "How wide can a slide gate opening be?", "acceptedAnswer": { "@type": "Answer", "text": "Standard commercial slide gates cover openings from 12 to 40 feet. For wider openings, we install telescoping slide gates that stack sections to cover 60+ feet while requiring less stacking space. We'll recommend the right configuration based on your opening width and available space." } },
     { "@type": "Question", "name": "Do you install gate operators and openers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install commercial-grade gate operators from LiftMaster, DoorKing, Linear, and HySecurity, complete with safety sensors, loop detectors, and access control integration. We handle the full installation including operator, wiring, and programming." } },
     { "@type": "Question", "name": "Can a slide gate be automated after initial installation?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We can retrofit manual slide gates with gate operators and access control at any time. The gate frame must be in good condition and properly sized for the operator. We assess the existing gate and recommend the right operator for the retrofit." } },
-    { "@type": "Question", "name": "How much maintenance does a slide gate need?", "acceptedAnswer": { "@type": "Answer", "text": "Cantilever gates need very little — periodic lubrication of rollers and inspection of the operator. V-track gates require occasional track cleaning. We recommend annual maintenance for all motorized gates to ensure reliable operation and extend equipment life." } }
+    { "@type": "Question", "name": "How much maintenance does a slide gate need?", "acceptedAnswer": { "@type": "Answer", "text": "Cantilever gates need very little — periodic lubrication of rollers and inspection of the operator. V-track gates require occasional track cleaning. We recommend annual maintenance for all motorized gates to ensure reliable operation and extend equipment life." } },
+    { "@type": "Question", "name": "Do you install motorized slide gates in Georgia?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install motorized slide gates throughout Georgia for commercial and industrial facilities. Our motorized slide gate systems include the gate frame, commercial-grade operator, and full access control integration — keypads, card readers, loop detectors, and safety sensors. We install both cantilever and V-track motorized slide gates configured for your opening width and traffic volume." } },
+    { "@type": "Question", "name": "Do you install rolling gate motors and operators?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We supply and install rolling gate motors and operators for commercial rolling and slide gates throughout Georgia. We work with LiftMaster, HySecurity, DoorKing, and Linear commercial operators. Whether you need a new installation or a rolling gate opener retrofit on an existing gate, we handle the complete installation including wiring and programming." } },
+    { "@type": "Question", "name": "Do you install the LiftMaster CSL24UL sliding gate operator?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The LiftMaster CSL24UL is a commercial slide gate operator rated for high-cycle applications and Class I through Class IV gate systems. We install the CSL24UL and other LiftMaster commercial gate operators throughout Georgia. If you're comparing LiftMaster models for a commercial or industrial slide gate, we can recommend the right unit for your opening size and cycle frequency." } }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Commercial Slide Gate & Rolling Gate Installation in Georgia | Fence Workshop',
-  description: 'Commercial slide gate and rolling gate installation in Metro Atlanta and Georgia. Manual and motorized with gate openers. Licensed & insured. Free quotes.',
+  title: 'Commercial Slide Gate Installation Georgia | Motorized & Rolling Gates',
+  description: 'Commercial slide gate and motorized rolling gate installation in Metro Atlanta and Georgia. LiftMaster operators, cantilever and V-track systems. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/slide-gates/' },
 }
 
 const faqs = [
@@ -61,11 +75,15 @@ const faqs = [
   { question: 'Do you install gate operators and openers?', answer: 'Yes. We install commercial-grade gate operators from LiftMaster, DoorKing, Linear, and HySecurity, complete with safety sensors, loop detectors, and access control integration. We handle the full installation including operator, wiring, and programming.' },
   { question: 'Can a slide gate be automated after initial installation?', answer: 'Yes. We can retrofit manual slide gates with gate operators and access control at any time. The gate frame must be in good condition and properly sized for the operator. We assess the existing gate and recommend the right operator for the retrofit.' },
   { question: 'How much maintenance does a slide gate need?', answer: 'Cantilever gates need very little — periodic lubrication of rollers and inspection of the operator. V-track gates require occasional track cleaning. We recommend annual maintenance for all motorized gates to ensure reliable operation and extend equipment life.' },
+  { question: 'Do you install motorized slide gates in Georgia?', answer: 'Yes. We install motorized slide gates throughout Georgia for commercial and industrial facilities. Our motorized slide gate systems include the gate frame, commercial-grade operator, and full access control integration — keypads, card readers, loop detectors, and safety sensors. We install both cantilever and V-track motorized slide gates configured for your opening width and traffic volume.' },
+  { question: 'Do you install rolling gate motors and operators?', answer: 'Yes. We supply and install rolling gate motors and operators for commercial rolling and slide gates throughout Georgia. We work with LiftMaster, HySecurity, DoorKing, and Linear commercial operators. Whether you need a new installation or a rolling gate opener retrofit on an existing gate, we handle the complete installation including wiring and programming.' },
+  { question: 'Do you install the LiftMaster CSL24UL sliding gate operator?', answer: "Yes. The LiftMaster CSL24UL is a commercial slide gate operator rated for high-cycle applications and Class I through Class IV gate systems. We install the CSL24UL and other LiftMaster commercial gate operators throughout Georgia. If you're comparing LiftMaster models for a commercial or industrial slide gate, we can recommend the right unit for your opening size and cycle frequency." },
 ]
 
 export default function SlideGatesPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navbar />
