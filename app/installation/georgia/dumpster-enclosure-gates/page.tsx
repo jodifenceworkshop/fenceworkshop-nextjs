@@ -5,6 +5,16 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Dumpster Enclosure Gates", "item": "https://fenceworkshop.com/installation/georgia/dumpster-enclosure-gates/" }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -113,13 +123,22 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Yes. We install and repair dumpster enclosures throughout Metro Atlanta and surrounding Georgia — including Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Decatur, Dunwoody, Kennesaw, Duluth, Norcross, Tucker, Johns Creek, and Lawrenceville."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a dumpster fence enclosure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A dumpster fence enclosure is a fenced screening structure built around commercial dumpsters and waste containers. Most are three-sided with a gated front panel for waste hauler access — the fence panels screen the waste area from tenants, customers, and the street. We build commercial dumpster fence enclosures in chain link with privacy slats, steel panel, wood composite, vinyl, and ornamental steel throughout Metro Atlanta and Georgia. All enclosures use heavy-gauge steel tube frames and industrial-grade hinges and latch hardware designed for daily waste hauler use."
+      }
     }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Dumpster Gates & Trash Enclosure Gates — Atlanta, GA | Fence Workshop',
-  description: 'Dumpster gates, trash enclosure gates, and garbage enclosure installation in Atlanta, GA. Commercial dumpster enclosures for property managers, HOAs, apartments, and retail centers. Licensed & insured. Free quotes.',
+  title: 'Dumpster Enclosure Gates Atlanta, GA | Commercial Garbage & Trash Enclosures',
+  description: 'Custom dumpster fence enclosures, trash enclosure gates, and commercial garbage enclosure installation in Atlanta, GA. Property managers, HOAs, apartments, and retail centers. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/dumpster-enclosure-gates/' },
 }
 
 const faqs = [
@@ -132,11 +151,13 @@ const faqs = [
   { question: 'What\'s the difference between a dumpster gate and a dumpster enclosure?', answer: 'A dumpster gate refers specifically to the swinging doors — the part that opens and closes for hauler access. A dumpster enclosure is the full structure: the walls or screening panels on three sides plus the gates on the front. We build both. Gate-only replacements are one of our most common jobs when the enclosure walls are still in good condition.' },
   { question: 'Can you replace just the dumpster enclosure doors?', answer: 'Yes. Replacing the doors (gates) on an existing enclosure is one of the most cost-effective repairs we do. If your enclosure walls are still structurally sound but the gates are sagging, the hinges have failed, or the latches are broken, we can replace just the gate panels and hardware without touching the walls.' },
   { question: 'Do you install dumpster enclosures near me in Atlanta?', answer: 'Yes. We install and repair dumpster enclosures throughout Metro Atlanta and surrounding Georgia — including Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Decatur, Dunwoody, Kennesaw, Duluth, Norcross, Tucker, Johns Creek, and Lawrenceville. If you\'re not sure whether we serve your area, call us at (404) 314-4419.' },
+  { question: 'What is a dumpster fence enclosure?', answer: 'A dumpster fence enclosure is a fenced screening structure built around commercial dumpsters and waste containers. Most are three-sided with a gated front panel for waste hauler access — the fence panels screen the waste area from tenants, customers, and the street. We build commercial dumpster fence enclosures in chain link with privacy slats, steel panel, wood composite, vinyl, and ornamental steel throughout Metro Atlanta and Georgia. All enclosures use heavy-gauge steel tube frames and industrial-grade hinges and latch hardware designed for daily waste hauler use.' },
 ]
 
 export default function DumpsterEnclosureGatesPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
