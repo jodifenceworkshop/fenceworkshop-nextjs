@@ -5,6 +5,15 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Georgia Commercial Fence Installation', item: 'https://fenceworkshop.com/installation/georgia/commercial-fence-installation/' },
+    { '@type': 'ListItem', position: 2, name: 'Fence Company in Alpharetta, GA', item: 'https://fenceworkshop.com/installation/georgia/alpharetta-fence-installation/' },
+  ],
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -73,13 +82,22 @@ const faqSchema = {
         "@type": "Answer",
         "text": "After a site visit and quote approval, most commercial projects are scheduled within 1–3 weeks depending on material lead times and crew availability. Emergency fence and gate repairs can often be handled faster — call us to discuss your timeline."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you a fence company in Alpharetta, GA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Fence Workshop is a fence company serving Alpharetta and North Fulton County with 15+ years of commercial fencing experience. We're based in Atlanta and regularly work throughout Alpharetta — from office parks and tech campuses along the GA-400 corridor to HOA communities, commercial properties, and distribution facilities in Johns Creek, Milton, and Roswell. We install chain link, security fencing, ornamental aluminum, dumpster gates, and slide gates, and we handle commercial fence and gate repairs throughout the area. Call (404) 314-4419 for a free quote."
+      }
     }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Commercial Fence Installation in Alpharetta, GA | Fence Workshop',
-  description: 'Fence Workshop provides commercial fence installation throughout Alpharetta and North Fulton County, GA — chain link, security, ornamental, and gate systems. Licensed & insured. Free quotes.',
+  title: 'Alpharetta Fence Company | Fence Installation in Alpharetta, GA',
+  description: 'Alpharetta fence company serving North Fulton County — commercial chain link, security, ornamental, and gate installation. Licensed & insured. Free quotes — (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/alpharetta-fence-installation/' },
 }
 
 const installationServices = [
@@ -189,11 +207,19 @@ const faqs = [
     question: 'How quickly can you start a commercial fence project in Alpharetta?',
     answer: 'After a site visit and quote approval, most commercial projects are scheduled within 1–3 weeks depending on material lead times and crew availability. Emergency fence and gate repairs can often be handled faster — call us to discuss your timeline.',
   },
+  {
+    question: 'Are you a fence company in Alpharetta, GA?',
+    answer: 'Yes. Fence Workshop is a fence company serving Alpharetta and North Fulton County with 15+ years of commercial fencing experience. We\'re based in Atlanta and regularly work throughout Alpharetta — from office parks and tech campuses along the GA-400 corridor to HOA communities, commercial properties, and distribution facilities in Johns Creek, Milton, and Roswell. We install chain link, security fencing, ornamental aluminum, dumpster gates, and slide gates, and we handle commercial fence and gate repairs throughout the area. Call (404) 314-4419 for a free quote.',
+  },
 ]
 
 export default function AlpharettaInstallationPage() {
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -387,39 +413,6 @@ export default function AlpharettaInstallationPage() {
                 <div className="text-6xl font-bold text-brand-orange/20 mb-2 leading-none">{item.step}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Reviews</p>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Commercial property owners, HOAs, and contractors throughout Alpharetta trust Fence Workshop for installation and repair.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { quote: "We needed ornamental aluminum fencing installed around our Alpharetta office campus. Fence Workshop matched the style exactly, handled the permit, and the installation looks exceptional.", name: "Sarah T.", role: "Corporate Facilities Manager, Alpharetta GA" },
-              { quote: "Our Alpharetta HOA needed new dumpster enclosures at three community locations. Fence Workshop handled all three efficiently, coordinated with our residents, and the quality is excellent.", name: "Michael R.", role: "HOA Board President, Alpharetta GA" },
-              { quote: "Fence Workshop repaired and upgraded our security gate system at our Alpharetta office park. The team was professional, explained everything, and the system has worked perfectly since.", name: "Karen W.", role: "Office Park Property Manager, Alpharetta GA" },
-            ].map((t) => (
-              <div key={t.name} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-4 italic">&ldquo;{t.quote}&rdquo;</p>
-                <div>
-                  <p className="font-semibold text-gray-900">{t.name}</p>
-                  <p className="text-sm text-gray-500">{t.role}</p>
-                </div>
               </div>
             ))}
           </div>
