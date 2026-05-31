@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pool Fence Requirements | Aluminum Pool Fence Guide',
+  title: 'Pool Fence Requirements | Aluminum Pool Fence 4ft, 5ft & 6ft',
   description: 'Complete guide to aluminum pool fence requirements — minimum heights, picket spacing, the 45-inch rail rule, self-closing gate requirements, and which fence styles meet typical pool barrier codes.',
   alternates: { canonical: 'https://fenceworkshop.com/shop/resources/pool-code-aluminum-fence/' },
 }
@@ -69,6 +69,22 @@ const faqSchema = {
         text: 'Aluminum fencing is used for pool enclosures in every US state, but specific requirements vary by local jurisdiction. Most states follow the IRC Appendix G baseline but may add stricter requirements. Always check with your local building department or pool inspector before installing. Fence Workshop can help you identify compliant styles — call (404) 314-4419 for guidance.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'What is a self-closing pool gate?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A self-closing pool gate automatically swings shut after every use without being manually closed. Pool codes require self-closing gates on all pool enclosure openings to prevent a child from entering through an accidentally left-open gate. Self-closing gates use heavy-duty spring hinges that pull the gate closed regardless of how forcefully it was opened. Pool code also requires the gate to be self-latching — meaning it automatically engages the latch when it closes. Walk gate kits include self-closing spring hinges as standard; you\'ll also need to upgrade to a MagnaLatch (available in our accessories section) for full pool-code compliance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the best pool fence for an inground pool?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Black aluminum fencing is the most popular choice for inground pools. It\'s rust-free (important near water), maintenance-free, and the dark color provides visual contrast against landscaping. Pool-code-compliant options include our smooth-top 3-rail styles in 5ft or 6ft, our 2-rail Savannah style in 4ft or 5ft, and spear-top styles in 6ft. The 5ft or 6ft smooth-top styles are the most common choice for residential inground pool enclosures — they satisfy the 45-inch rail rule and look clean with most landscaping.',
+      },
+    },
   ],
 }
 
@@ -98,7 +114,7 @@ const articleSchema = {
     url: 'https://www.fenceworkshop.com',
   },
   datePublished: '2026-04-05',
-  dateModified: '2026-04-05',
+  dateModified: '2026-05-31',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://www.fenceworkshop.com/shop/resources/pool-code-aluminum-fence/',
@@ -141,7 +157,7 @@ export default function PoolCodeFencePage() {
           <nav className="text-sm text-gray-400 mb-4">
             <Link href="/shop/" className="hover:text-brand-orange">Shop</Link>
             <span className="mx-2">&rsaquo;</span>
-            <span className="hover:text-brand-orange cursor-default">Resources</span>
+            <Link href="/shop/resources/" className="hover:text-brand-orange">Resources</Link>
             <span className="mx-2">&rsaquo;</span>
             <span className="text-gray-300">Pool Fence Requirements</span>
           </nav>
@@ -286,13 +302,23 @@ export default function PoolCodeFencePage() {
             Note: This list reflects standard catalog configurations. Custom orders can be engineered to
             meet pool code in other styles — call (404) 314-4419 for custom pricing.
           </p>
+          <div className="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-6">
+            <h3 className="font-bold text-gray-900 mb-2">Black Aluminum Pool Fence</h3>
+            <p className="text-gray-700">
+              Black is by far the most popular color for aluminum pool fences. The dark powder-coat
+              finish provides clear visual contrast against pool decking and landscaping — making the
+              barrier highly visible while keeping the aesthetic clean and modern. All styles in the
+              table above are available in black, and black is our standard stock color for
+              faster lead times. <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">Browse black aluminum fence panels</Link>.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Gate Requirements */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pool-Code-Compliant Gate Hardware</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Self-Closing Pool Gate Requirements</h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
             The fence panels are only half of the equation. Your pool gate must also meet code, which
             means self-closing hinges, a self-latching mechanism, and a latch mounted at least 54 inches
@@ -341,10 +367,16 @@ export default function PoolCodeFencePage() {
               Call (404) 314-4419
             </a>
             <Link
-              href="/shop/aluminum-fencing/"
+              href="/shop/fence-kits/"
               className="inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors"
             >
-              Shop Aluminum Fence Panels
+              Shop Aluminum Fence Kits
+            </Link>
+            <Link
+              href="/shop/aluminum-fencing/"
+              className="inline-flex items-center justify-center bg-white border border-gray-300 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              Shop Fence Panels
             </Link>
           </div>
         </div>
@@ -361,6 +393,27 @@ export default function PoolCodeFencePage() {
                 <p className="text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="py-16 bg-white border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Resources</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/shop/resources/how-to-install-aluminum-fence/" className="block bg-gray-50 border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow group">
+              <h3 className="font-bold text-gray-900 group-hover:text-brand-orange transition-colors mb-1">How to Install Aluminum Fence</h3>
+              <p className="text-sm text-gray-600">Step-by-step DIY installation guide — post setting, panel hanging, gate installation.</p>
+            </Link>
+            <Link href="/shop/resources/residential-vs-commercial-aluminum-fence/" className="block bg-gray-50 border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow group">
+              <h3 className="font-bold text-gray-900 group-hover:text-brand-orange transition-colors mb-1">Residential vs Commercial Grade</h3>
+              <p className="text-sm text-gray-600">Which aluminum fence grade do you need for a pool enclosure? Understand the difference.</p>
+            </Link>
+            <Link href="/shop/resources/aluminum-vs-steel-fencing/" className="block bg-gray-50 border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow group">
+              <h3 className="font-bold text-gray-900 group-hover:text-brand-orange transition-colors mb-1">Aluminum vs Steel Fencing</h3>
+              <p className="text-sm text-gray-600">Why aluminum is the standard choice for pool fences — rust-free, lightweight, low maintenance.</p>
+            </Link>
           </div>
         </div>
       </section>
