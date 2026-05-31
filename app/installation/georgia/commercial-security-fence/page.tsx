@@ -5,6 +5,15 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Georgia Commercial Fence Installation', item: 'https://fenceworkshop.com/installation/georgia/commercial-fence-installation/' },
+    { '@type': 'ListItem', position: 2, name: 'Commercial Security Fence Installation', item: 'https://fenceworkshop.com/installation/georgia/commercial-security-fence/' },
+  ],
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -81,13 +90,30 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Yes. Fence Workshop is experienced with security fence installations for government and military facilities, including projects with specific compliance requirements. We work with general contractors and facility managers on clearance-level projects throughout Georgia."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you an industrial fencing contractor in Georgia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Fence Workshop is an industrial fencing contractor serving Metro Atlanta and Georgia with 15+ years of commercial and industrial security fence experience. We install high-security perimeter fencing for manufacturing facilities, warehouses, distribution centers, utilities, and industrial yards throughout the state. If you're searching for industrial fencing contractors near me in Georgia, we serve Atlanta, Marietta, Alpharetta, Smyrna, Kennesaw, Decatur, Duluth, Norcross, and surrounding areas. Call (404) 314-4419 for a free quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you install security fence for construction sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We install construction security fencing for active job sites throughout Georgia — including temporary chain link perimeters, permanent anti-climb security fence for completed facilities, and high-security panels for sites requiring controlled access. Construction site security fencing can be installed quickly around active sites and upgraded to permanent systems as projects complete. Call (404) 314-4419 to discuss your construction site security requirements."
+      }
     }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Commercial & Industrial Security Fence Installation in Georgia | Fence Workshop',
-  description: 'High-security commercial and industrial fence installation in Metro Atlanta and Georgia. Anti-climb, barbed wire, razor ribbon. Licensed & insured. Free quotes.',
+  title: 'Commercial Security Fence Installation Georgia | Industrial & Anti-Climb Fencing',
+  description: 'Industrial security fence installation throughout Metro Atlanta and Georgia — anti-climb mesh, barbed wire, razor ribbon, and 358 mesh panels. Licensed & insured. Free quotes — (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/commercial-security-fence/' },
 }
 
 const faqs = [
@@ -111,6 +137,14 @@ const faqs = [
     question: 'Do you handle government and military security fence projects?',
     answer: 'Yes. Fence Workshop is experienced with security fence installations for government and military facilities, including projects with specific compliance requirements. We work with general contractors and facility managers on clearance-level projects throughout Georgia.',
   },
+  {
+    question: 'Are you an industrial fencing contractor in Georgia?',
+    answer: 'Yes. Fence Workshop is an industrial fencing contractor serving Metro Atlanta and Georgia with 15+ years of commercial and industrial security fence experience. We install high-security perimeter fencing for manufacturing facilities, warehouses, distribution centers, utilities, and industrial yards throughout the state. If you\'re searching for industrial fencing contractors near me in Georgia, we serve Atlanta, Marietta, Alpharetta, Smyrna, Kennesaw, Decatur, Duluth, Norcross, and surrounding areas. Call (404) 314-4419 for a free quote.',
+  },
+  {
+    question: 'Do you install security fence for construction sites?',
+    answer: 'Yes. We install construction security fencing for active job sites throughout Georgia — including temporary chain link perimeters, permanent anti-climb security fence for completed facilities, and high-security panels for sites requiring controlled access. Construction site security fencing can be installed quickly around active sites and upgraded to permanent systems as projects complete. Call (404) 314-4419 to discuss your construction site security requirements.',
+  },
 ]
 
 export default function CommercialSecurityFencePage() {
@@ -118,9 +152,16 @@ export default function CommercialSecurityFencePage() {
     <main className="min-h-screen">
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
 
       {/* Spacer for fixed navbar */}
