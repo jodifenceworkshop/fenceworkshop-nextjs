@@ -46,6 +46,10 @@ const faqItems = [
     question: 'Do kits include installation instructions?',
     answer: 'Yes. Every kit ships with professional installation instructions prepared by our installation team.',
   },
+  {
+    question: 'Do you sell wrought iron fence kits?',
+    answer: "We don't sell traditional wrought iron fence kits — but our black aluminum fence kits deliver the same classic wrought iron look without any of the maintenance. Aluminum is rust-free, powder-coated, and holds its finish for decades with no painting or rust treatment required. If you've been searching for wrought iron fence kits, our complete aluminum fence kits include panels, posts, a walk gate, and all hardware sized to your total footage — starting at $2,693.59. Ships nationwide.",
+  },
 ]
 
 const faqSchema = {

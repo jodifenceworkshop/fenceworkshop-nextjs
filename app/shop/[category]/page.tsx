@@ -19,8 +19,8 @@ type CategoryConfig = {
 
 const categories: Record<string, CategoryConfig> = {
   'driveway-gates': {
-    title: 'Aluminum Driveway Gate Kits | Black & Custom Sizes | Ships Nationwide',
-    description: 'Shop aluminum driveway gate kits at wholesale pricing — black, custom sizes, and double-swing kits. American-made, ships nationwide. Gate kits start at $985.16.',
+    title: 'Aluminum Driveway Gate Kits | Wrought Iron Style Gates | Ships Nationwide',
+    description: 'Shop aluminum driveway gate kits — wrought iron style double-swing entry gates in black and custom sizes. American-made, ships nationwide. Gate kits start at $985.16.',
     heading: 'Aluminum Driveway Gates for Sale',
     intro: 'Shop aluminum driveway gate kits for sale at wholesale pricing — double-swing entry gates in black and custom sizes, American-made from 6063-T5 aluminum with TGIC powder coating. Standard sizes ship within 5–7 business days.',
     features: [
@@ -56,6 +56,7 @@ const categories: Record<string, CategoryConfig> = {
       { q: 'Do driveway gate kits include posts?', a: 'Yes. Every driveway gate kit includes two gate posts along with the gate panels, hinges, latch, and drop rod — everything you need for a complete installation.' },
       { q: 'Can aluminum driveway gates be automated?', a: 'Yes. When ordering, select the "Automation" option to get gate panels built with an oversized bottom rail designed to accept gate operator arms. This ensures a clean, factory-engineered mounting point for your automatic opener. The lightweight aluminum also puts less strain on motors compared to heavy iron or steel gates.' },
       { q: 'What maintenance do aluminum driveway gates need?', a: 'Virtually none. The TGIC powder-coated finish won\'t rust, fade, or peel. An occasional rinse with a garden hose is all that\'s needed to keep your gate looking new.' },
+      { q: 'Do you sell wrought iron driveway gates?', a: 'We don\'t sell traditional wrought iron driveway gates — but our black aluminum driveway gate kits deliver the same classic wrought iron look without the rust or repainting. Aluminum is naturally rust-free, and the TGIC powder coating outlasts painted iron by decades. If you\'ve been searching for wrought iron gates or rod iron gates for sale, black aluminum is the alternative most homeowners and landscapers choose today. Gate kits start at $985.16 and ship within 5–7 business days for standard sizes.' },
     ],
   },
   'walk-gates': {
@@ -103,6 +104,7 @@ const categories: Record<string, CategoryConfig> = {
       { q: 'What width walk gate should I choose?', a: 'A 4ft gate works well for standard pedestrian access. Choose 5ft if you need to move lawn equipment, strollers, or wheelchairs through the opening. Keep in mind that gates are built 1 inch narrower than the nominal width — a 4ft gate actually measures 47 inches to fit a 48-inch rough opening between posts.' },
       { q: 'Can I order a custom-size walk gate?', a: 'Yes. We build custom walk gates in any size for an additional charge. Call (404) 314-4419 for custom pricing.' },
       { q: 'Do walk gate kits include posts?', a: 'Yes. Every walk gate kit includes two gate posts along with the gate panel, self-closing hinges, and gravity latch — everything you need for installation.' },
+      { q: 'Do you sell wrought iron walk gates or iron gates?', a: 'We don\'t sell traditional wrought iron walk gates — but our black aluminum walk gate kits deliver the same classic iron gate look with no rust and no repainting. If you\'ve been searching for iron gates near me and can\'t find the right style locally, we ship aluminum walk gate kits nationwide. Black aluminum gates have replaced wrought iron as the standard for residential and commercial pedestrian entries.' },
     ],
   },
   'aluminum-fencing': {
@@ -142,6 +144,7 @@ const categories: Record<string, CategoryConfig> = {
       { q: 'Can aluminum fencing be installed on a slope?', a: 'Yes. Aluminum fence panels can be "racked" (angled) to follow the slope of your yard. Most of our panels rack up to a certain degree without modification. For steep slopes, stair-stepping panels is another common approach.' },
       { q: 'Is aluminum fencing strong enough for security?', a: 'Commercial-grade aluminum panels with 3/4-inch pickets provide excellent security. The aluminum alloy is strong enough that pickets cannot be easily bent or broken. Spear-top styles add additional deterrence.' },
       { q: 'What colors are available?', a: 'Our aluminum fence panels are available in three colors: Black, Bronze, and White. Black aluminum fence panels are our most popular — they deliver a classic wrought-iron look that suits virtually any home or landscape. Bronze aluminum fence panels offer a warm, traditional appearance. White aluminum fence panels are a clean, bright option popular for pool enclosures and coastal properties. All three colors use the same TGIC powder coating process for consistent, long-lasting durability.' },
+      { q: 'Do you sell wrought iron fence panels?', a: 'We don\'t sell traditional wrought iron fence panels — but our black aluminum fence panels deliver the same classic wrought iron look without any maintenance. Wrought iron fence panels require periodic painting and rust treatment; aluminum is rust-free and holds its powder-coat finish for decades. If you\'ve been searching for wrought iron fence panels or iron fence panels for sale, our aluminum panels are the modern industry-standard alternative. Panels start at $80.35 and ship nationwide.' },
     ],
   },
   'fence-posts': {

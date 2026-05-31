@@ -42,6 +42,11 @@ const faqSchema = {
       name: 'Do you sell aluminum pool fencing?',
       acceptedAnswer: { '@type': 'Answer', text: 'Yes. Several of our aluminum fence styles meet pool barrier code requirements including self-closing, self-latching gates and compliant picket spacing. See our pool code aluminum fence guide for the full list of compliant styles and heights.' },
     },
+    {
+      '@type': 'Question',
+      name: 'Do you sell wrought iron fence?',
+      acceptedAnswer: { '@type': 'Answer', text: "We don't sell traditional wrought iron fence — but our black aluminum fencing delivers the same classic look without the maintenance. Real wrought iron requires periodic sanding, priming, and repainting to prevent rust. Aluminum is rust-free, powder-coated, and holds its finish for decades with no upkeep. If you've been searching for wrought iron fence for sale, our aluminum fence panels and gates are the modern alternative most homeowners and contractors prefer. Panels start at $80.35. Ships nationwide." },
+    },
   ],
 }
 
@@ -65,6 +70,10 @@ const shopFaqs: { q: string; a: React.ReactNode }[] = [
   {
     q: 'Do you sell aluminum pool fencing?',
     a: <>Yes. Several of our aluminum fence styles meet pool barrier code requirements including self-closing, self-latching gates and compliant picket spacing. See our <Link href="/shop/resources/pool-code-aluminum-fence/" className="text-brand-orange hover:underline">pool code aluminum fence guide</Link> for the full list of compliant styles and heights.</>,
+  },
+  {
+    q: 'Do you sell wrought iron fence?',
+    a: <>We don&apos;t sell traditional wrought iron fence — but our black aluminum fencing delivers the same classic look without the maintenance. Real wrought iron requires periodic sanding, priming, and repainting to prevent rust. Aluminum is rust-free, powder-coated, and holds its finish for decades with no upkeep. If you&apos;ve been searching for wrought iron fence for sale, our <Link href="/shop/aluminum-fencing/" className="text-brand-orange hover:underline">aluminum fence panels</Link> and <Link href="/shop/driveway-gates/" className="text-brand-orange hover:underline">aluminum gates</Link> are the modern alternative most homeowners and contractors prefer. Panels start at $80.35. Ships nationwide.</>,
   },
 ]
 
