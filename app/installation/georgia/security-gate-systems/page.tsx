@@ -5,6 +5,15 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Georgia Commercial Fence Installation', item: 'https://fenceworkshop.com/installation/georgia/commercial-fence-installation/' },
+    { '@type': 'ListItem', position: 2, name: 'Security Gate Systems & Access Control', item: 'https://fenceworkshop.com/installation/georgia/security-gate-systems/' },
+  ],
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -46,13 +55,17 @@ const faqSchema = {
     { "@type": "Question", "name": "What gate operator brands do you install?", "acceptedAnswer": { "@type": "Answer", "text": "We install commercial-grade gate operators from LiftMaster, DoorKing, HySecurity, Linear, and other leading manufacturers. We recommend the right operator based on your gate type, size, usage frequency, and security requirements." } },
     { "@type": "Question", "name": "What is UL 325 compliance for gate operators?", "acceptedAnswer": { "@type": "Answer", "text": "UL 325 is the safety standard for gate operators and access control systems. It requires safety devices including photo eyes, sensing edges, and entrapment protection to prevent injury. All our gate operator installations comply with UL 325 requirements." } },
     { "@type": "Question", "name": "Can you add access control to an existing gate?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We retrofit existing manual or automated gates with access control systems including keypads, card readers, telephone entry, license plate recognition, and remote control. We assess your existing gate and recommend compatible access control hardware." } },
-    { "@type": "Question", "name": "Do you offer gate maintenance and repair services?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide gate operator repair, access control troubleshooting, and preventive maintenance for commercial gate systems throughout Georgia. Regular maintenance extends equipment life and prevents costly breakdowns." } }
+    { "@type": "Question", "name": "Do you offer gate maintenance and repair services?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide gate operator repair, access control troubleshooting, and preventive maintenance for commercial gate systems throughout Georgia. Regular maintenance extends equipment life and prevents costly breakdowns." } },
+    { "@type": "Question", "name": "Are you an electric gate company near me in Georgia?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fence Workshop is an electric gate company serving Metro Atlanta and Georgia — if you've been searching for electric gate installers near me or an electric gate company near me, we serve Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, Decatur, Duluth, Norcross, and surrounding areas. We install electric gates, automated swing gates, sliding gates, barrier arms, and gate operators for commercial and industrial facilities throughout the state. Call (404) 314-4419 for a free quote." } },
+    { "@type": "Question", "name": "Do you install LiftMaster gate operators?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. LiftMaster is one of our primary gate operator brands for commercial installations. We install LiftMaster swing gate operators (LA400, LA500 series), LiftMaster sliding gate operators (CSL24UL and related models), and LiftMaster commercial gate operators across a range of duty cycles and facility types. LiftMaster operators are known for reliability, parts availability, and compatibility with a wide range of access control systems. We source, install, program, and service LiftMaster gate operators throughout Georgia." } },
+    { "@type": "Question", "name": "Do you install sliding gate motors and operators?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install sliding gate motors and operators for commercial and industrial facilities throughout Georgia. Sliding gate operators (also called sliding gate motors) drive chain-driven or rack-and-pinion slide gates for wide facility entrances, warehouse yards, and truck access points. We install LiftMaster, HySecurity, and other commercial-grade sliding gate operators sized to your gate weight, usage frequency, and security requirements. We handle the full installation including electrical, loop detectors, and safety edge compliance." } }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Security Gate Systems & Access Control Installation in Georgia | Fence Workshop',
-  description: 'Commercial security gate systems and access control installation in Metro Atlanta and Georgia. Swing gates, slide gates, barrier arms, gate operators. Licensed & insured. Free quotes.',
+  title: 'Commercial Gate Installation Georgia | Electric Gate Company Near Me',
+  description: 'Commercial gate installation throughout Metro Atlanta and Georgia — electric gates, LiftMaster operators, slide gates, and access control. Licensed & insured. Free quotes — (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/security-gate-systems/' },
 }
 
 const faqs = [
@@ -61,11 +74,15 @@ const faqs = [
   { question: 'What is UL 325 compliance for gate operators?', answer: 'UL 325 is the safety standard for gate operators and access control systems. It requires safety devices including photo eyes, sensing edges, and entrapment protection to prevent injury. All our gate operator installations comply with UL 325 requirements.' },
   { question: 'Can you add access control to an existing gate?', answer: 'Yes. We retrofit existing manual or automated gates with access control systems including keypads, card readers, telephone entry, license plate recognition, and remote control. We assess your existing gate and recommend compatible access control hardware.' },
   { question: 'Do you offer gate maintenance and repair services?', answer: 'Yes. We provide gate operator repair, access control troubleshooting, and preventive maintenance for commercial gate systems throughout Georgia. Regular maintenance extends equipment life and prevents costly breakdowns.' },
+  { question: 'Are you an electric gate company near me in Georgia?', answer: 'Yes. Fence Workshop is an electric gate company serving Metro Atlanta and Georgia — if you\'ve been searching for electric gate installers near me or an electric gate company near me, we serve Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, Decatur, Duluth, Norcross, and surrounding areas. We install electric gates, automated swing gates, sliding gates, barrier arms, and gate operators for commercial and industrial facilities throughout the state. Call (404) 314-4419 for a free quote.' },
+  { question: 'Do you install LiftMaster gate operators?', answer: 'Yes. LiftMaster is one of our primary gate operator brands for commercial installations. We install LiftMaster swing gate operators (LA400, LA500 series), LiftMaster sliding gate operators (CSL24UL and related models), and LiftMaster commercial gate operators across a range of duty cycles and facility types. LiftMaster operators are known for reliability, parts availability, and compatibility with a wide range of access control systems. We source, install, program, and service LiftMaster gate operators throughout Georgia.' },
+  { question: 'Do you install sliding gate motors and operators?', answer: 'Yes. We install sliding gate motors and operators for commercial and industrial facilities throughout Georgia. Sliding gate operators (also called sliding gate motors) drive chain-driven or rack-and-pinion slide gates for wide facility entrances, warehouse yards, and truck access points. We install LiftMaster, HySecurity, and other commercial-grade sliding gate operators sized to your gate weight, usage frequency, and security requirements. We handle the full installation including electrical, loop detectors, and safety edge compliance.' },
 ]
 
 export default function SecurityGateSystemsPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navbar />
