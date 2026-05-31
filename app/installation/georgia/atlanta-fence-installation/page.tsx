@@ -5,6 +5,15 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Georgia Commercial Fence Installation', item: 'https://fenceworkshop.com/installation/georgia/commercial-fence-installation/' },
+    { '@type': 'ListItem', position: 2, name: 'Fence Installation in Atlanta, GA', item: 'https://fenceworkshop.com/installation/georgia/atlanta-fence-installation/' },
+  ],
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -73,13 +82,30 @@ const faqSchema = {
         "@type": "Answer",
         "text": "After an initial site visit and quote approval, most commercial projects are scheduled within 1–3 weeks depending on material lead times and crew availability. Emergency repairs can often be handled faster — call us directly to discuss your timeline."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you a fence company in Atlanta, GA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Fence Workshop is a commercial fence company and fence builder based in Atlanta, GA at 1522 Huber St NW. We are a local fencing company — not a national chain or referral network. We install and repair commercial chain link, security fencing, ornamental aluminum, dumpster gates, slide gates, and bollards throughout Atlanta and Metro. Call (404) 314-4419 or submit a quote request online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you fence contractors in Atlanta, GA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Fence Workshop is a licensed and insured fence contractor based in Atlanta with 15+ years of commercial fencing experience. Our fence contractors work throughout Atlanta — Buckhead, Midtown, West Midtown, Downtown, Old Fourth Ward, and surrounding communities — as well as throughout Metro Atlanta for general contractors, property managers, municipalities, and business owners."
+      }
     }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Commercial Fence Installation in Atlanta, GA | Fence Workshop',
-  description: 'Fence Workshop provides commercial fence installation throughout Atlanta, GA — chain link, security, ornamental, and gate systems. Licensed & insured. Free quotes.',
+  title: 'Fence Installation Atlanta, GA | Fence Company & Fence Contractors',
+  description: 'Fence company in Atlanta, GA specializing in commercial fence installation — chain link, security, ornamental, and gate systems. Licensed & insured fence contractors. Free quotes — (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/atlanta-fence-installation/' },
 }
 
 const installationServices = [
@@ -189,6 +215,14 @@ const faqs = [
     question: 'How quickly can you start a commercial fence project in Atlanta?',
     answer: 'After an initial site visit and quote approval, most commercial projects are scheduled within 1–3 weeks depending on material lead times and crew availability. Emergency repairs can often be handled faster — call us directly to discuss your timeline.',
   },
+  {
+    question: 'Are you a fence company in Atlanta, GA?',
+    answer: 'Yes. Fence Workshop is a commercial fence company and fence builder based in Atlanta, GA at 1522 Huber St NW. We are a local fencing company — not a national chain or referral network. We install and repair commercial chain link, security fencing, ornamental aluminum, dumpster gates, slide gates, and bollards throughout Atlanta and Metro. Call (404) 314-4419 or submit a quote request online.',
+  },
+  {
+    question: 'Are you fence contractors in Atlanta, GA?',
+    answer: 'Yes. Fence Workshop is a licensed and insured fence contractor based in Atlanta with 15+ years of commercial fencing experience. Our fence contractors work throughout Atlanta — Buckhead, Midtown, West Midtown, Downtown, Old Fourth Ward, and surrounding communities — as well as throughout Metro Atlanta for general contractors, property managers, municipalities, and business owners.',
+  },
 ]
 
 export default function AtlantaInstallationPage() {
@@ -202,6 +236,7 @@ export default function AtlantaInstallationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
 
       {/* Spacer for fixed navbar */}
