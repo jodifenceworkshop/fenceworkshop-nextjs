@@ -5,6 +5,16 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Parking Garage Fencing", "item": "https://fenceworkshop.com/installation/georgia/parking-garage-fencing/" }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -46,13 +56,16 @@ const faqSchema = {
     { "@type": "Question", "name": "Does parking garage fencing need to meet building codes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Parking garage barriers and guard systems must comply with the International Building Code (IBC), which sets requirements for vehicle barrier height, impact resistance, and fall protection. In Georgia, local jurisdictions may have additional requirements. We design and install systems that meet all applicable codes." } },
     { "@type": "Question", "name": "Can you install cable railing systems in parking garages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cable railing systems are a popular choice for parking garages because they provide fall protection and vehicle containment while maintaining visibility and airflow. We install stainless steel cable systems with steel or aluminum posts designed for commercial parking structure applications." } },
     { "@type": "Question", "name": "What is the difference between a vehicle barrier and a pedestrian guard rail?", "acceptedAnswer": { "@type": "Answer", "text": "Vehicle barriers are designed to withstand vehicle impact and prevent cars from breaking through garage openings. They must meet IBC impact-load requirements. Pedestrian guard rails protect people from falls and need to meet height and spacing requirements but are not designed for vehicle impact. Many garages need both systems in different locations." } },
-    { "@type": "Question", "name": "Do you repair existing parking garage fencing and barriers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We repair and replace damaged cable systems, guard rails, mesh panels, and vehicle barriers in parking garages throughout Georgia. Impact damage, corrosion, and code upgrades are the most common repair needs we handle." } }
+    { "@type": "Question", "name": "Do you repair existing parking garage fencing and barriers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We repair and replace damaged cable systems, guard rails, mesh panels, and vehicle barriers in parking garages throughout Georgia. Impact damage, corrosion, and code upgrades are the most common repair needs we handle." } },
+    { "@type": "Question", "name": "Do you install traffic barriers and vehicle barrier systems in Georgia?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install traffic barriers and vehicle barrier systems throughout Metro Atlanta and Georgia for parking structures, commercial facilities, pedestrian zones, and building perimeters. Our vehicle barrier systems include IBC-rated steel tube guards, cable railing vehicle barriers, concrete wheel stops, and bollard arrays. We design each system to meet the specific impact-load and code requirements for your site." } },
+    { "@type": "Question", "name": "Do you install anti-ram vehicle barriers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Anti-ram vehicle barriers are designed to stop or significantly slow unauthorized vehicle intrusion at building entrances, parking structure access points, and pedestrian-protected areas. We install certified anti-ram bollard systems, crash-rated vehicle barriers, and perimeter protection systems for commercial, government, and institutional facilities throughout Georgia." } }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Parking Garage Fencing & Barrier Installation in Georgia | Fence Workshop',
-  description: 'Parking garage fencing, cable railing systems, vehicle barriers, and guard rails in Metro Atlanta and Georgia. IBC compliant. Licensed & insured. Free quotes.',
+  title: 'Parking Garage Fencing & Traffic Barriers Georgia | Vehicle Barrier Systems',
+  description: 'Parking garage fencing, traffic barriers, and vehicle barrier systems throughout Metro Atlanta and Georgia. Cable railing, IBC-rated vehicle barriers, pedestrian barriers, and guard rails. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/parking-garage-fencing/' },
 }
 
 const faqs = [
@@ -61,11 +74,14 @@ const faqs = [
   { question: 'Can you install cable railing systems in parking garages?', answer: 'Yes. Cable railing systems are a popular choice for parking garages because they provide fall protection and vehicle containment while maintaining visibility and airflow. We install stainless steel cable systems with steel or aluminum posts designed for commercial parking structure applications.' },
   { question: 'What is the difference between a vehicle barrier and a pedestrian guard rail?', answer: 'Vehicle barriers are designed to withstand vehicle impact and prevent cars from breaking through garage openings. They must meet IBC impact-load requirements. Pedestrian guard rails protect people from falls and need to meet height and spacing requirements but are not designed for vehicle impact. Many garages need both systems in different locations.' },
   { question: 'Do you repair existing parking garage fencing and barriers?', answer: 'Yes. We repair and replace damaged cable systems, guard rails, mesh panels, and vehicle barriers in parking garages throughout Georgia. Impact damage, corrosion, and code upgrades are the most common repair needs we handle.' },
+  { question: 'Do you install traffic barriers and vehicle barrier systems in Georgia?', answer: 'Yes. We install traffic barriers and vehicle barrier systems throughout Metro Atlanta and Georgia for parking structures, commercial facilities, pedestrian zones, and building perimeters. Our vehicle barrier systems include IBC-rated steel tube guards, cable railing vehicle barriers, concrete wheel stops, and bollard arrays. We design each system to meet the specific impact-load and code requirements for your site.' },
+  { question: 'Do you install anti-ram vehicle barriers?', answer: 'Yes. Anti-ram vehicle barriers are designed to stop or significantly slow unauthorized vehicle intrusion at building entrances, parking structure access points, and pedestrian-protected areas. We install certified anti-ram bollard systems, crash-rated vehicle barriers, and perimeter protection systems for commercial, government, and institutional facilities throughout Georgia.' },
 ]
 
 export default function ParkingGarageFencingPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navbar />
