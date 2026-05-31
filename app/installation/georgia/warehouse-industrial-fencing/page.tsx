@@ -5,6 +5,16 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Warehouse & Industrial Fencing", "item": "https://fenceworkshop.com/installation/georgia/warehouse-industrial-fencing/" }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -46,13 +56,15 @@ const faqSchema = {
     { "@type": "Question", "name": "Can you install interior fence partitions in an existing warehouse?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install interior wire partitions and cage systems in existing warehouses, distribution centers, and industrial buildings. Our systems are modular and can be configured around existing racking, columns, and equipment without disrupting your operations." } },
     { "@type": "Question", "name": "What materials are used for warehouse fencing?", "acceptedAnswer": { "@type": "Answer", "text": "Most warehouse and industrial interior fencing uses welded wire mesh panels in 10-gauge or heavier steel, mounted on steel posts with powder-coat or galvanized finish. We also install chain link partitions, expanded metal panels, and solid steel panels depending on security requirements and application." } },
     { "@type": "Question", "name": "How tall can interior warehouse partitions be?", "acceptedAnswer": { "@type": "Answer", "text": "Standard warehouse partitions range from 8 to 12 feet, but we can build floor-to-ceiling enclosures up to 20+ feet for high-bay warehouses. Ceiling panels can be added to fully enclose storage areas and prevent over-the-top access." } },
-    { "@type": "Question", "name": "Do you install machine guarding and safety barriers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install OSHA-compliant machine guarding, safety barriers, and perimeter fencing around industrial equipment, robotic cells, and hazardous work areas. Our systems meet safety standards while allowing visibility and ventilation." } }
+    { "@type": "Question", "name": "Do you install machine guarding and safety barriers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install OSHA-compliant machine guarding, safety barriers, and perimeter fencing around industrial equipment, robotic cells, and hazardous work areas. Our systems meet safety standards while allowing visibility and ventilation." } },
+    { "@type": "Question", "name": "Do you build warehouse partition walls and divider walls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build and install warehouse partition walls, warehouse divider walls, and warehouse partitioning systems throughout Metro Atlanta and Georgia. Our interior wire mesh partition systems divide warehouse and industrial spaces into secure, separately accessible zones — secure storage areas, tenant separation, restricted inventory sections, and office partitions within the warehouse. Panels are modular and reconfigurable, ceiling panels are available for full enclosure, and all systems configure around existing racking, columns, and equipment without permanent construction." } }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Warehouse & Industrial Fencing Installation in Georgia | Fence Workshop',
-  description: 'Warehouse partitions, interior cage systems, DEA compliance cages, and industrial fencing in Metro Atlanta and Georgia. Licensed & insured. Free quotes.',
+  title: 'Warehouse Partition Walls & Dividers Georgia | Industrial Fencing Installation',
+  description: 'Custom warehouse partition walls, divider walls, and wire cage systems throughout Metro Atlanta and Georgia. DEA compliance cages, machine guarding, and modular warehouse partitioning systems. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/warehouse-industrial-fencing/' },
 }
 
 const faqs = [
@@ -61,11 +73,13 @@ const faqs = [
   { question: 'What materials are used for warehouse fencing?', answer: 'Most warehouse and industrial interior fencing uses welded wire mesh panels in 10-gauge or heavier steel, mounted on steel posts with powder-coat or galvanized finish. We also install chain link partitions, expanded metal panels, and solid steel panels depending on security requirements and application.' },
   { question: 'How tall can interior warehouse partitions be?', answer: 'Standard warehouse partitions range from 8 to 12 feet, but we can build floor-to-ceiling enclosures up to 20+ feet for high-bay warehouses. Ceiling panels can be added to fully enclose storage areas and prevent over-the-top access.' },
   { question: 'Do you install machine guarding and safety barriers?', answer: 'Yes. We install OSHA-compliant machine guarding, safety barriers, and perimeter fencing around industrial equipment, robotic cells, and hazardous work areas. Our systems meet safety standards while allowing visibility and ventilation.' },
+  { question: 'Do you build warehouse partition walls and divider walls?', answer: 'Yes. We build and install warehouse partition walls, warehouse divider walls, and warehouse partitioning systems throughout Metro Atlanta and Georgia. Our interior wire mesh partition systems divide warehouse and industrial spaces into secure, separately accessible zones — secure storage areas, tenant separation, restricted inventory sections, and office partitions within the warehouse. Panels are modular and reconfigurable, ceiling panels are available for full enclosure, and all systems configure around existing racking, columns, and equipment without permanent construction.' },
 ]
 
 export default function WarehouseIndustrialFencingPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navbar />
