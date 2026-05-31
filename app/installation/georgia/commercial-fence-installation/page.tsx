@@ -5,6 +5,15 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Fence Installation Service Areas', item: 'https://fenceworkshop.com/installation/service-areas/' },
+    { '@type': 'ListItem', position: 2, name: 'Commercial Fence Installation in Georgia', item: 'https://fenceworkshop.com/installation/georgia/commercial-fence-installation/' },
+  ],
+}
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -40,13 +49,38 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Use the form on this page or give us a call. We'll ask a few questions about your project and schedule a site visit if needed. Most commercial projects receive a detailed quote within a few business days."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you a commercial fence company near me in Metro Atlanta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Fence Workshop is a commercial fence company based in Atlanta, GA, serving Metro Atlanta and surrounding Georgia communities. We are a local commercial fencing contractor — not a national company or referral service. When you contact us, you're speaking directly with the team that will manage and install your project. Call (404) 314-4419 or submit a quote request to get started."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you install commercial chain link fence in Georgia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Commercial chain link fence installation is our most frequently requested service. We install heavy-gauge galvanized and vinyl-coated chain link for job sites, warehouses, industrial facilities, schools, storage facilities, and commercial properties throughout Metro Atlanta and Georgia. Available in multiple gauges, heights, and post configurations engineered for commercial and industrial use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle industrial fencing projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Fence Workshop has extensive experience with industrial fencing for warehouses, distribution centers, manufacturing facilities, and logistics properties. Industrial projects often require heavier-gauge materials, larger post footings, or specialized perimeter systems. We assess each project on-site before quoting and can accommodate most commercial and industrial specifications throughout Georgia."
+      }
     }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Commercial Fence Installation in Georgia | Fence Workshop',
-  description: "Georgia's commercial fence contractor for 15+ years. Chain link, security, ornamental, gate systems, and repairs throughout Metro Atlanta. Licensed & insured. Free quotes.",
+  title: 'Commercial Fence Installation | Commercial Fencing Contractor | Georgia',
+  description: 'Commercial fence installation and repair throughout Metro Atlanta, GA. Commercial fencing contractor for chain link, security, ornamental, and gate systems. Licensed & insured. Free quotes — (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/commercial-fence-installation/' },
 }
 
 const installationServices = [
@@ -170,6 +204,18 @@ const faqs = [
     question: 'How do I get a quote for a fence installation project?',
     answer: 'Use the form on this page or give us a call. We\'ll ask a few questions about your project and schedule a site visit if needed. Most commercial projects receive a detailed quote within a few business days.',
   },
+  {
+    question: 'Are you a commercial fence company near me in Metro Atlanta?',
+    answer: 'Yes. Fence Workshop is a commercial fence company based in Atlanta, GA, serving Metro Atlanta and surrounding Georgia communities. We are a local commercial fencing contractor — not a national company or referral service. When you contact us, you\'re speaking directly with the team that will manage and install your project. Call (404) 314-4419 or submit a quote request to get started.',
+  },
+  {
+    question: 'Do you install commercial chain link fence in Georgia?',
+    answer: 'Yes. Commercial chain link fence installation is our most frequently requested service. We install heavy-gauge galvanized and vinyl-coated chain link for job sites, warehouses, industrial facilities, schools, storage facilities, and commercial properties throughout Metro Atlanta and Georgia. Available in multiple gauges, heights, and post configurations engineered for commercial and industrial use.',
+  },
+  {
+    question: 'Do you handle industrial fencing projects?',
+    answer: 'Yes. Fence Workshop has extensive experience with industrial fencing for warehouses, distribution centers, manufacturing facilities, and logistics properties. Industrial projects often require heavier-gauge materials, larger post footings, or specialized perimeter systems. We assess each project on-site before quoting and can accommodate most commercial and industrial specifications throughout Georgia.',
+  },
 ]
 
 export default function GeorgiaInstallationPage() {
@@ -179,6 +225,7 @@ export default function GeorgiaInstallationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
 
       {/* Spacer for fixed navbar */}
@@ -488,7 +535,7 @@ export default function GeorgiaInstallationPage() {
           <div className="text-center mb-12">
             <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">FAQ</p>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
+              Commercial Fencing Contractor — Frequently Asked Questions
             </h2>
           </div>
           <ul className="space-y-8">
