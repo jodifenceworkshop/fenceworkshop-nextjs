@@ -5,6 +5,15 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Georgia Commercial Fence Installation', item: 'https://fenceworkshop.com/installation/georgia/commercial-fence-installation/' },
+    { '@type': 'ListItem', position: 2, name: 'Commercial Chain Link Fence Installation', item: 'https://fenceworkshop.com/installation/georgia/commercial-chain-link-fence/' },
+  ],
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -81,13 +90,22 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Yes. We install barbed wire, razor ribbon, and concertina wire topping on commercial chain link fences where permitted by local code. These additions are common for industrial sites, construction yards, and high-security facilities. We'll confirm what's allowed in your jurisdiction before installation."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you install galvanized steel chain link fence in Georgia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Galvanized steel chain link is our most common commercial installation — it's the industry-standard material for commercial and industrial perimeter fencing throughout Georgia. Hot-dip galvanized or electro-galvanized zinc coating protects the steel from rust and corrosion for decades with minimal maintenance. We install galvanized chain link in 6-gauge (heavy industrial), 9-gauge (standard commercial), and 11-gauge (light commercial) fabric in heights from 4 to 12+ feet. We also offer vinyl-coated chain link over galvanized steel in black, green, brown, and other colors. Call (404) 314-4419 for a free quote on your Georgia project."
+      }
     }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Commercial Chain Link Fence Installation in Georgia | Fence Workshop',
-  description: 'Commercial and industrial chain link fence installation throughout Metro Atlanta and Georgia. Galvanized & vinyl-coated. Licensed & insured. Free quotes.',
+  title: 'Commercial Chain Link Fence Installation Georgia | Galvanized & Industrial',
+  description: 'Galvanized steel chain link fence installation for commercial and industrial properties throughout Metro Atlanta and Georgia. Licensed & insured. Free quotes — (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/commercial-chain-link-fence/' },
 }
 
 const faqs = [
@@ -111,6 +129,10 @@ const faqs = [
     question: 'Do you install barbed wire or razor wire on chain link fences?',
     answer: 'Yes. We install barbed wire, razor ribbon, and concertina wire topping on commercial chain link fences where permitted by local code. These additions are common for industrial sites, construction yards, and high-security facilities. We\'ll confirm what\'s allowed in your jurisdiction before installation.',
   },
+  {
+    question: 'Do you install galvanized steel chain link fence in Georgia?',
+    answer: 'Yes. Galvanized steel chain link is our most common commercial installation — it\'s the industry-standard material for commercial and industrial perimeter fencing throughout Georgia. Hot-dip galvanized or electro-galvanized zinc coating protects the steel from rust and corrosion for decades with minimal maintenance. We install galvanized chain link in 6-gauge (heavy industrial), 9-gauge (standard commercial), and 11-gauge (light commercial) fabric in heights from 4 to 12+ feet. We also offer vinyl-coated chain link over galvanized steel in black, green, brown, and other colors. Call (404) 314-4419 for a free quote on your Georgia project.',
+  },
 ]
 
 export default function CommercialChainLinkFencePage() {
@@ -118,9 +140,16 @@ export default function CommercialChainLinkFencePage() {
     <main className="min-h-screen">
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar />
 
       {/* Spacer for fixed navbar */}
