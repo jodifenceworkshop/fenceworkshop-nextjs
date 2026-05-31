@@ -5,6 +5,16 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Bollard Installation", "item": "https://fenceworkshop.com/installation/georgia/bollard-installation/" }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -89,13 +99,30 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Yes. Standard steel pipe bollards are primed and painted in your choice of color — safety yellow is most common for high-visibility applications, but we can match any color. We also install bollard covers (plastic sleeves) for properties that want a cleaner, finished appearance."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you install parking lot bollards in Georgia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We install parking lot bollards throughout Metro Atlanta and Georgia for commercial properties, parking garages, apartment communities, and retail centers. Our parking lot bollard installations use schedule 40 or schedule 80 steel pipe set in concrete — primed and painted safety yellow or your color choice. We also install removable parking lot bollards where vehicle access flexibility is needed for delivery vehicles or emergency access points. Call (404) 314-4419 for a free on-site quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you install parking garage bollards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Parking garage bollards protect structural columns, stairwells, mechanical rooms, and pedestrian pathways from vehicle and forklift damage. We install both fixed and removable bollards in parking garages and structured parking facilities throughout Georgia. Parking garage bollard work is often completed alongside our commercial parking garage fencing and barrier installations."
+      }
     }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Bollard Installation in Georgia | Commercial Vehicle Barriers | Fence Workshop',
-  description: 'Commercial bollard installation throughout Metro Atlanta and Georgia. Steel pipe bollards, removable bollards, storefront protection, parking lot barriers. Licensed & insured. Free quotes.',
+  title: 'Parking Lot Bollards Georgia | Commercial Bollard Installation Near Me',
+  description: 'Steel parking lot bollards and commercial bollard installation throughout Metro Atlanta and Georgia. Fixed, removable, and surface-mount options for parking lots, storefronts, and loading docks. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/bollard-installation/' },
 }
 
 const faqs = [
@@ -105,11 +132,14 @@ const faqs = [
   { question: 'Can bollards be installed in existing concrete?', answer: 'Yes. We core drill existing concrete to set bollard sleeves or install surface-mount bollard systems designed for retrofit applications. This is common for storefront protection, parking lot upgrades, and adding bollards to existing dumpster enclosures without full demolition.' },
   { question: 'Do you install bollards around dumpster enclosures?', answer: 'Yes. Bollards around dumpster enclosures are one of our most common installations. They protect gate hinges, posts, and enclosure walls from waste hauler truck damage — extending the life of the enclosure significantly. We typically install them in conjunction with new enclosure builds or as an add-on to existing enclosures.' },
   { question: 'Do you paint or finish bollards?', answer: 'Yes. Standard steel pipe bollards are primed and painted in your choice of color — safety yellow is most common for high-visibility applications, but we can match any color. We also install bollard covers (plastic sleeves) for properties that want a cleaner, finished appearance.' },
+  { question: 'Do you install parking lot bollards in Georgia?', answer: 'Yes. We install parking lot bollards throughout Metro Atlanta and Georgia for commercial properties, parking garages, apartment communities, and retail centers. Our parking lot bollard installations use schedule 40 or schedule 80 steel pipe set in concrete — primed and painted safety yellow or your color choice. We also install removable parking lot bollards where vehicle access flexibility is needed for delivery vehicles or emergency access points. Call (404) 314-4419 for a free on-site quote.' },
+  { question: 'Do you install parking garage bollards?', answer: 'Yes. Parking garage bollards protect structural columns, stairwells, mechanical rooms, and pedestrian pathways from vehicle and forklift damage. We install both fixed and removable bollards in parking garages and structured parking facilities throughout Georgia. Parking garage bollard work is often completed alongside our commercial parking garage fencing and barrier installations.' },
 ]
 
 export default function BollardInstallationPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navbar />
