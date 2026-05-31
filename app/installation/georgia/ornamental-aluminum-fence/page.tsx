@@ -127,7 +127,14 @@ export default function OrnamentalAluminumFencePage() {
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-20 lg:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
+        <Image
+          src="/images/spear-top-3-rail-black-aluminum-fencing-between-columns-georgia.jpg"
+          alt="Spear-top 3-rail black aluminum fence installed between columns at a Georgia property"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
@@ -198,7 +205,7 @@ export default function OrnamentalAluminumFencePage() {
 
           <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto">
             <div className="aspect-[16/7] relative bg-gray-200">
-              <Image src="/images/commercial-ornamental-fence-atlanta-ga.jpg" alt="Ornamental aluminum fence installed by Fence Workshop at a commercial property in Georgia" fill className="object-cover" />
+              <Image src="/images/spear-top-rainbow-arch-aluminum-fence-gate-georgia.jpg" alt="Spear-top aluminum fence with rainbow arch gate installed at a Georgia property" fill className="object-cover" />
             </div>
           </div>
 
@@ -294,14 +301,14 @@ export default function OrnamentalAluminumFencePage() {
               { src: '/images/black-aluminum-fence-swing-gate-hotel-georgia.jpg', alt: 'Black aluminum fence with swing gate at hotel in Georgia' },
               { src: '/images/black-aluminum-fence-gate-parking-bollards-georgia.jpg', alt: 'Black aluminum fence and gate with parking bollards in Georgia' },
               { src: '/images/commercial-ornamental-fence-gate-atlanta-ga.jpg', alt: 'Commercial ornamental fence and gate in Atlanta Georgia' },
-              { src: '/images/ornamental-fence-retaining-wall-atlanta-ga.jpg', alt: 'Black ornamental fence on stone retaining wall in Atlanta Georgia' },
-              { src: '/images/ornamental-fence-stone-retaining-wall-georgia.jpg', alt: 'Ornamental fence on curved stone retaining wall in Georgia' },
-              { src: '/images/black-ornamental-fence-hillside-installation-georgia.jpg', alt: 'Black ornamental fence installed on hillside in Georgia' },
-              { src: '/images/black-ornamental-fence-brick-wall-atlanta-ga.jpg', alt: 'Black ornamental fence on brick retaining wall in Atlanta Georgia' },
-              { src: '/images/ornamental-fence-retaining-wall-staircase-georgia.jpg', alt: 'Ornamental fence on brick retaining wall with staircase in Georgia' },
-              { src: '/images/ornamental-fence-retaining-wall-corner-gate-georgia.jpg', alt: 'Ornamental fence with corner gate on brick retaining wall in Georgia' },
-              { src: '/images/black-fence-brick-retaining-wall-commercial-georgia.jpg', alt: 'Black ornamental fence on brick retaining wall at commercial property in Georgia' },
-              { src: '/images/ornamental-aluminum-fence-retaining-wall-georgia.jpg', alt: 'Ornamental aluminum fence on stone retaining wall with landscaping in Georgia' },
+              { src: '/images/smooth-top-2-rail-black-aluminum-fence-georgia.jpg', alt: 'Smooth-top 2-rail black aluminum fence in Georgia' },
+              { src: '/images/smooth-top-2-rail-black-aluminum-fencing-atlanta-ga.jpg', alt: 'Smooth-top 2-rail black aluminum fencing installed in Atlanta Georgia' },
+              { src: '/images/smooth-top-3-rail-black-aluminum-fencing-hoa-sloped-georgia.jpg', alt: 'Smooth-top 3-rail black aluminum fence on sloped terrain at HOA community in Georgia' },
+              { src: '/images/smooth-top-3-rail-black-aluminum-fence-walk-gate-georgia.jpg', alt: 'Smooth-top 3-rail black aluminum fence with walk gate in Georgia' },
+              { src: '/images/smooth-top-3-rail-black-aluminum-fencing-residential.jpg', alt: 'Smooth-top 3-rail black aluminum fencing at residential property in Georgia' },
+              { src: '/images/spear-top-3-rail-black-aluminum-fencing-between-columns-georgia.jpg', alt: 'Spear-top 3-rail black aluminum fence installed between columns in Georgia' },
+              { src: '/images/spear-top-black-aluminum-driveway-gate-finials-georgia.jpg', alt: 'Spear-top black aluminum driveway gate with decorative finials in Georgia' },
+              { src: '/images/custom-fence-installation-atlanta-ga.jpg', alt: 'Custom fence installation in Atlanta Georgia by Fence Workshop' },
             ].map((img) => (
               <div key={img.src} className="aspect-[4/3] relative rounded-lg overflow-hidden bg-gray-200">
                 <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" />
