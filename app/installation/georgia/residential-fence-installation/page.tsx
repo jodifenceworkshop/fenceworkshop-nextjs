@@ -223,8 +223,8 @@ export default function ResidentialFenceInstallationPage() {
             <div className="rounded-lg overflow-hidden border border-gray-100 shadow-sm">
               <div className="relative h-52">
                 <Image
-                  src="/images/residential-aluminum-fencing-atlanta-ga.jpg"
-                  alt="Residential aluminum fence installation in Atlanta, GA"
+                  src="/images/smooth-top-3-rail-black-aluminum-fencing-residential.jpg"
+                  alt="Smooth-top 3-rail black aluminum fence installation in Atlanta, GA"
                   fill
                   className="object-cover"
                 />
@@ -331,14 +331,13 @@ export default function ResidentialFenceInstallationPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { src: '/images/black-ornamental-arched-gate-granite-pillars-georgia.jpg', alt: 'Black ornamental arched gate with granite pillars at residential property in Georgia' },
-              { src: '/images/residential-fence-installation-atlanta-ga.jpg', alt: 'Residential fence installation in Atlanta Georgia' },
-              { src: '/images/residential-aluminum-fencing-atlanta-ga.jpg', alt: 'Residential aluminum fence installation in Atlanta Georgia' },
-              { src: '/images/residential-driveway-gate-installation-atlanta-ga.jpg', alt: 'Residential driveway gate installation in Atlanta Georgia' },
-              { src: '/images/residential-vinyl-fence-installation-atlanta-ga.jpg', alt: 'Residential vinyl fence installation in Atlanta Georgia' },
-              { src: '/images/custom-residential-fencing-atlanta-ga.jpg', alt: 'Custom residential fencing in Atlanta Georgia' },
-              { src: '/images/custom-residential-railings-atlanta-ga.jpg', alt: 'Custom residential railings in Atlanta Georgia' },
-              { src: '/images/wrought-iron-ornamental-steel-fence-atlanta-ga.jpg', alt: 'Custom wrought iron and ornamental steel fence in Atlanta Georgia' },
-              { src: '/images/ornamental-aluminum-fence-retaining-wall-georgia.jpg', alt: 'Ornamental aluminum fence on retaining wall at residential property in Georgia' },
+              { src: '/images/residential-fence-installation-atlanta-ga.jpg', alt: 'Residential fence installation in Atlanta, Georgia' },
+              { src: '/images/residential-vinyl-fence-installation-atlanta-ga.jpg', alt: 'Residential vinyl fence installation in Atlanta, Georgia' },
+              { src: '/images/smooth-top-2-rail-black-aluminum-fence-georgia.jpg', alt: 'Smooth-top 2-rail black aluminum fence installation in Georgia' },
+              { src: '/images/smooth-top-2-rail-black-aluminum-fencing-atlanta-ga.jpg', alt: 'Smooth-top 2-rail black aluminum fencing installed in Atlanta, GA' },
+              { src: '/images/smooth-top-3-rail-black-aluminum-fence-walk-gate-georgia.jpg', alt: 'Smooth-top 3-rail black aluminum fence with walk gate installed in Georgia' },
+              { src: '/images/spear-top-black-aluminum-driveway-gate-finials-georgia.jpg', alt: 'Spear-top black aluminum driveway gate with finials installed in Georgia' },
+              { src: '/images/spear-top-rainbow-arch-aluminum-fence-gate-georgia.jpg', alt: 'Spear-top rainbow arch aluminum fence with gate installed in Georgia' },
             ].map((img) => (
               <div key={img.src} className="aspect-[4/3] relative rounded-lg overflow-hidden bg-gray-200">
                 <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-300" />
