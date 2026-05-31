@@ -5,6 +5,70 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Georgia Services', item: 'https://fenceworkshop.com/installation/georgia/commercial-fence-installation/' },
+    { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://fenceworkshop.com/installation/service-areas/' },
+  ],
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do I find a fence company near me in Metro Atlanta?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fence Workshop is a licensed commercial fence contractor based in Atlanta, GA, serving Metro Atlanta and surrounding communities. If you\'re searching for a fence company near me in the Atlanta area, call (404) 314-4419 for a same-day response or submit a quote request online. We serve Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Kennesaw, Decatur, and dozens of other Metro Atlanta communities.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are you local fence contractors near me in Georgia?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Fence Workshop is a local fence contractor based in Atlanta, GA with 15+ years installing commercial fencing in Metro Atlanta. Unlike national fence companies, we operate locally — we can respond quickly, provide accurate local quotes, and stand behind our work with a workmanship guarantee. We are not a referral network or lead-generation service; when you call us, you\'re talking directly to the fence company that will install your project.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What areas does Fence Workshop serve?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fence Workshop serves Metro Atlanta and surrounding North Georgia communities including Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Kennesaw, Decatur, Duluth, Norcross, Lawrenceville, Woodstock, Johns Creek, Canton, Cumming, and Gainesville. We also take on larger commercial projects statewide throughout Georgia.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you install chain link fence near me in Atlanta?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Commercial chain link fence installation is one of our most requested services throughout Metro Atlanta. We install heavy-gauge commercial chain link for job sites, industrial facilities, commercial properties, warehouses, and schools throughout Atlanta, Marietta, Alpharetta, and the surrounding area.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I get a fence estimate near me?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Getting a fence estimate from Fence Workshop is simple: submit a quote request on our website or call (404) 314-4419. We respond within one business day for most requests. For larger commercial projects, we schedule a site visit to take measurements and assess the scope before providing a detailed written quote. There is no charge for estimates.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you install gate systems near me in Metro Atlanta?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Fence Workshop installs automated gate systems, slide gates, swing gates, and access control systems throughout Metro Atlanta. Gate installation is available for commercial properties, warehouses, parking facilities, apartment communities, and industrial sites across the Atlanta area.',
+      },
+    },
+  ],
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -29,13 +93,26 @@ const serviceSchema = {
     { "@type": "City", "name": "Sandy Springs", "addressRegion": "GA" },
     { "@type": "City", "name": "Smyrna", "addressRegion": "GA" },
     { "@type": "City", "name": "Kennesaw", "addressRegion": "GA" },
+    { "@type": "City", "name": "Decatur", "addressRegion": "GA" },
+    { "@type": "City", "name": "Duluth", "addressRegion": "GA" },
+    { "@type": "City", "name": "Norcross", "addressRegion": "GA" },
+    { "@type": "City", "name": "Lawrenceville", "addressRegion": "GA" },
+    { "@type": "City", "name": "Woodstock", "addressRegion": "GA" },
+    { "@type": "City", "name": "Johns Creek", "addressRegion": "GA" },
+    { "@type": "City", "name": "Canton", "addressRegion": "GA" },
+    { "@type": "City", "name": "Cumming", "addressRegion": "GA" },
+    { "@type": "City", "name": "Gainesville", "addressRegion": "GA" },
+    { "@type": "City", "name": "College Park", "addressRegion": "GA" },
+    { "@type": "City", "name": "East Point", "addressRegion": "GA" },
+    { "@type": "City", "name": "Peachtree City", "addressRegion": "GA" },
   ],
   "description": "Commercial fence installation and repair throughout Metro Atlanta and Georgia. Serving Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Kennesaw, and surrounding communities."
 }
 
 export const metadata: Metadata = {
-  title: 'Fence Installation Service Areas in Georgia | Fence Workshop',
-  description: 'Commercial fence installation and repair throughout Metro Atlanta and Georgia. Serving Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Kennesaw, and surrounding areas.',
+  title: 'Fence Company Near Me | Local Fence Contractors in Metro Atlanta, GA',
+  description: 'Local fence contractors near me in Metro Atlanta and Georgia. Fence Workshop installs and repairs commercial chain link, security fence, ornamental, and gate systems. Licensed & insured. Free quotes.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/service-areas/' },
 }
 
 const primaryAreas = [
@@ -89,6 +166,8 @@ export default function ServiceAreasPage() {
   return (
     <main className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
       <div className="h-20" />
 
@@ -113,7 +192,7 @@ export default function ServiceAreasPage() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 leading-tight">Fence Installation Service Areas in Georgia</h1>
             <p className="text-xl md:text-2xl font-bold text-brand-orange mb-6 leading-tight">Metro Atlanta &amp; Surrounding Georgia Communities</p>
-            <p className="text-lg text-gray-200 mb-8">Fence Workshop installs and repairs commercial fencing throughout Metro Atlanta and across the state of Georgia. Based in Atlanta, we serve commercial clients from small businesses to large industrial facilities.</p>
+            <p className="text-lg text-gray-200 mb-8">Fence Workshop is a local fence contractor based in Atlanta, GA — not a national company or referral service. We install and repair commercial fencing throughout Metro Atlanta and across Georgia, serving commercial clients from small businesses to large industrial facilities. When you search for a fence company near me in the Atlanta area, we&rsquo;re the local fence installers who answer the phone and show up.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#quote" className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center">Get a Free Quote</a>
               <a href="tel:+14043144419" className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg text-lg border border-white/30 transition-colors text-center">Call (404) 314-4419</a>
@@ -238,6 +317,27 @@ export default function ServiceAreasPage() {
               <QuoteForm subject="Service Area Quote Request" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">FAQ</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Local Fence Contractors Near Me — Frequently Asked Questions</h2>
+          </div>
+          <ul className="space-y-8">
+            {faqSchema.mainEntity.map((faq) => (
+              <li key={faq.name} className="flex gap-4">
+                <span className="text-brand-orange font-bold text-xl mt-0.5">&bull;</span>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.name}</h3>
+                  <p className="text-gray-600 leading-relaxed">{faq.acceptedAnswer.text}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
