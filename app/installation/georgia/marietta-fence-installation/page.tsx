@@ -5,6 +5,15 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Georgia Commercial Fence Installation', item: 'https://fenceworkshop.com/installation/georgia/commercial-fence-installation/' },
+    { '@type': 'ListItem', position: 2, name: 'Fence Company in Marietta, GA', item: 'https://fenceworkshop.com/installation/georgia/marietta-fence-installation/' },
+  ],
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -73,13 +82,30 @@ const faqSchema = {
         "@type": "Answer",
         "text": "After a site visit and quote approval, most commercial projects are scheduled within 1–3 weeks depending on material lead times and crew availability. Emergency fence and gate repairs can often be handled faster — call us to discuss your timeline."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you a fence company in Marietta, GA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Fence Workshop is a fence company serving Marietta and Cobb County with 15+ years of commercial fencing experience. We're based in Atlanta at 1522 Huber St NW and regularly work throughout Marietta — from properties near Marietta Square and East Cobb to industrial facilities along the I-75 corridor. We install chain link, security fencing, ornamental aluminum, dumpster gates, and slide gates, and we handle fence and gate repairs throughout Cobb County. Call (404) 314-4419 for a free quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you install chain link fence in Marietta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Chain link fence installation in Marietta is one of our most requested services. We install commercial and industrial chain link throughout Marietta and Cobb County — for warehouses, manufacturing facilities, job sites, commercial properties, and schools. Available in multiple gauges, heights, and galvanized or vinyl-coated finishes. We also handle chain link fence repair in Marietta for damaged sections, broken posts, and worn fabric."
+      }
     }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Commercial Fence Installation in Marietta, GA | Fence Workshop',
-  description: 'Fence Workshop provides commercial fence installation throughout Marietta and Cobb County, GA — chain link, security, ornamental, and gate systems. Licensed & insured. Free quotes.',
+  title: 'Marietta Fence Company | Fence Installation in Marietta, GA',
+  description: 'Marietta fence company serving Cobb County for 15+ years — commercial chain link, security, ornamental, and gate installation. Licensed & insured fence contractors. Free quotes — (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/marietta-fence-installation/' },
 }
 
 const installationServices = [
@@ -189,19 +215,22 @@ const faqs = [
     question: 'How quickly can you start a commercial fence project in Marietta?',
     answer: 'After a site visit and quote approval, most commercial projects are scheduled within 1–3 weeks depending on material lead times and crew availability. Emergency fence and gate repairs can often be handled faster — call us to discuss your timeline.',
   },
+  {
+    question: 'Are you a fence company in Marietta, GA?',
+    answer: 'Yes. Fence Workshop is a fence company serving Marietta and Cobb County with 15+ years of commercial fencing experience. We\'re based in Atlanta at 1522 Huber St NW and regularly work throughout Marietta — from properties near Marietta Square and East Cobb to industrial facilities along the I-75 corridor. We install chain link, security fencing, ornamental aluminum, dumpster gates, and slide gates, and we handle fence and gate repairs throughout Cobb County. Call (404) 314-4419 for a free quote.',
+  },
+  {
+    question: 'Do you install chain link fence in Marietta?',
+    answer: 'Yes. Chain link fence installation in Marietta is one of our most requested services. We install commercial and industrial chain link throughout Marietta and Cobb County — for warehouses, manufacturing facilities, job sites, commercial properties, and schools. Available in multiple gauges, heights, and galvanized or vinyl-coated finishes. We also handle chain link fence repair in Marietta for damaged sections, broken posts, and worn fabric.',
+  },
 ]
 
 export default function MariettaInstallationPage() {
   return (
     <main className="min-h-screen">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
 
       {/* Spacer for fixed navbar */}
@@ -387,39 +416,6 @@ export default function MariettaInstallationPage() {
                 <div className="text-6xl font-bold text-brand-orange/20 mb-2 leading-none">{item.step}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">Reviews</p>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">Commercial property owners, general contractors, and facility managers throughout Marietta trust Fence Workshop for installation and repair.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { quote: "We hired Fence Workshop for a large chain link perimeter at our Marietta warehouse. They pulled the permits, coordinated with our operations schedule, and finished on time. Excellent work.", name: "Robert H.", role: "Warehouse Facilities Director, Marietta GA" },
-              { quote: "Fence Workshop installed a dumpster enclosure and security gate at our Marietta shopping center. Fast installation, clean work, and everything passed inspection first time.", name: "Deborah N.", role: "Property Manager, Marietta GA" },
-              { quote: "I've used Fence Workshop for fence repair and installation at multiple Marietta properties over the years. Reliable, fairly priced, and they stand behind their work.", name: "James C.", role: "Commercial Property Owner, Marietta GA" },
-            ].map((t) => (
-              <div key={t.name} className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-4 italic">&ldquo;{t.quote}&rdquo;</p>
-                <div>
-                  <p className="font-semibold text-gray-900">{t.name}</p>
-                  <p className="text-sm text-gray-500">{t.role}</p>
-                </div>
               </div>
             ))}
           </div>
