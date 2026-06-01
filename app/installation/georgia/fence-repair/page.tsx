@@ -5,6 +5,26 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Fence Repair", "item": "https://fenceworkshop.com/installation/georgia/fence-repair/" }
+  ]
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Do you offer fence repair in Atlanta, GA?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fence Workshop offers commercial fence repair throughout Metro Atlanta and Georgia — including Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Kennesaw, Decatur, Duluth, and Norcross. We repair dumpster gates, chain link perimeters, roll gates and slide gates, security fencing, and bollards. Most repairs are scheduled within a few business days. Emergency response is available for urgent situations — call (404) 314-4419." } },
+    { "@type": "Question", "name": "Do you repair all types of commercial fencing and gates?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We repair the full range of commercial fence and gate systems: dumpster enclosure gates (broken hinges, latch failure, frame damage), chain link fencing (fabric, posts, top rail, barbed wire), roll gates and slide gates (track, rollers, operators), security fencing and razor ribbon, and bollards. If you're not sure which service applies to your situation, call us and we'll point you in the right direction." } },
+    { "@type": "Question", "name": "Do you do commercial chain link fence repair in Atlanta?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Commercial chain link fence repair is one of our most common services throughout Metro Atlanta and Georgia. We repair damaged fabric, bent or broken posts, top rail, tension wire, barbed wire, and gate hardware. We also respond to storm damage and vehicle impact with emergency scheduling when the breach creates a security risk." } }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -29,8 +49,9 @@ const serviceSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Commercial Fence Repair in Georgia | Fence Workshop',
-  description: 'Commercial fence and gate repair throughout Metro Atlanta and Georgia. Dumpster gates, chain link, roll gates, slide gates, and security fencing. Fast response. Licensed & insured.',
+  title: 'Fence Repair Atlanta, GA | Commercial Fence & Gate Repair Georgia',
+  description: 'Commercial fence repair in Atlanta, GA and throughout Georgia. Chain link fence repair, dumpster gate repair, roll gate repair, and security fence repair. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/fence-repair/' },
 }
 
 const repairServices = [
@@ -79,6 +100,8 @@ const repairServices = [
 export default function FenceRepairHubPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Navbar />
       <div className="h-20" />
@@ -317,6 +340,30 @@ export default function FenceRepairHubPage() {
               <QuoteForm subject="Fence Repair Request" />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand-orange font-semibold uppercase tracking-wide mb-2">FAQ</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Fence Repair — Frequently Asked Questions</h2>
+          </div>
+          <ul className="space-y-8">
+            {[
+              { question: 'Do you offer fence repair in Atlanta, GA?', answer: 'Yes. Fence Workshop offers commercial fence repair throughout Metro Atlanta and Georgia — including Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Kennesaw, Decatur, Duluth, and Norcross. We repair dumpster gates, chain link perimeters, roll gates and slide gates, security fencing, and bollards. Most repairs are scheduled within a few business days. Emergency response is available for urgent situations — call (404) 314-4419.' },
+              { question: 'Do you repair all types of commercial fencing and gates?', answer: "Yes. We repair the full range of commercial fence and gate systems: dumpster enclosure gates (broken hinges, latch failure, frame damage), chain link fencing (fabric, posts, top rail, barbed wire), roll gates and slide gates (track, rollers, operators), security fencing and razor ribbon, and bollards. If you're not sure which service applies to your situation, call us and we'll point you in the right direction." },
+              { question: 'Do you do commercial chain link fence repair in Atlanta?', answer: 'Yes. Commercial chain link fence repair is one of our most common services throughout Metro Atlanta and Georgia. We repair damaged fabric, bent or broken posts, top rail, tension wire, barbed wire, and gate hardware. We also respond to storm damage and vehicle impact with emergency scheduling when the breach creates a security risk.' },
+            ].map((faq) => (
+              <li key={faq.question} className="flex gap-4">
+                <span className="text-brand-orange font-bold text-xl mt-0.5">&bull;</span>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.question}</h3>
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
