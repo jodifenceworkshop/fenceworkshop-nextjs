@@ -5,6 +5,17 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Fence Repair", "item": "https://fenceworkshop.com/installation/georgia/fence-repair/" },
+    { "@type": "ListItem", "position": 4, "name": "Dumpster Gate Repair", "item": "https://fenceworkshop.com/installation/georgia/dumpster-gate-repair/" }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -47,13 +58,15 @@ const faqSchema = {
     { "@type": "Question", "name": "Do you replace dumpster gates or just repair them?", "acceptedAnswer": { "@type": "Answer", "text": "Both. If a gate can be repaired cost-effectively, we'll fix it on-site. If the frame is too far gone or the enclosure doesn't meet current code, we'll recommend a full replacement and provide a quote. We handle both repairs and new installations." } },
     { "@type": "Question", "name": "What does a dumpster gate repair typically cost?", "acceptedAnswer": { "@type": "Answer", "text": "Repair costs depend on the type of damage — hinge replacements and latch repairs are on the lower end, while frame straightening or post replacement costs more. We provide a quote before starting any work so there are no surprises." } },
     { "@type": "Question", "name": "Do you work with property management companies?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A large portion of our dumpster gate repair work comes from property managers, HOAs, and commercial facility managers. We understand the urgency — code enforcement notices, tenant complaints, and waste hauler damage all need quick resolution. We're set up to handle PO-based billing and multi-property accounts." } },
-    { "@type": "Question", "name": "Can you repair dumpster enclosure doors?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. 'Dumpster enclosure doors' and 'dumpster gates' refer to the same thing — the hinged panels that swing open for hauler access. Whether yours are dragging, failing to latch, or too damaged to repair, we fix or replace them. If the door panels are intact but the hinges and hardware have failed, we replace just the hardware. If the panels themselves are bent or deteriorated beyond repair, we fabricate new ones to match your enclosure." } }
+    { "@type": "Question", "name": "Can you repair dumpster enclosure doors?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. 'Dumpster enclosure doors' and 'dumpster gates' refer to the same thing — the hinged panels that swing open for hauler access. Whether yours are dragging, failing to latch, or too damaged to repair, we fix or replace them. If the door panels are intact but the hinges and hardware have failed, we replace just the hardware. If the panels themselves are bent or deteriorated beyond repair, we fabricate new ones to match your enclosure." } },
+    { "@type": "Question", "name": "Do you offer commercial gate repair near me in Atlanta, GA?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fence Workshop offers commercial gate repair based in Atlanta, GA serving Metro Atlanta and all of Georgia. We specialize in dumpster enclosure gate repair — broken hinges, sagging gates, latch failure, frame damage, and full gate replacement. We also repair roll gates, slide gates, and commercial swing gates throughout the region. Call (404) 314-4419 for fast scheduling — code enforcement situations and gates that won't close or latch are prioritized." } }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Dumpster Gate & Enclosure Door Repair in Georgia | Fence Workshop',
-  description: 'Fast dumpster gate and enclosure door repair for commercial properties in Metro Atlanta and Georgia. Broken hinges, sagging gates, door panel replacement, latch repair. Licensed & insured. Call today.',
+  title: 'Commercial Gate Repair Near Me | Dumpster Gate Repair Atlanta, GA',
+  description: 'Commercial gate repair near me in Atlanta, GA and throughout Georgia. Dumpster gate repair — broken hinges, sagging gates, latch failure, and full gate replacement. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/dumpster-gate-repair/' },
 }
 
 const faqs = [
@@ -63,11 +76,13 @@ const faqs = [
   { question: 'What does a dumpster gate repair typically cost?', answer: 'Repair costs depend on the type of damage — hinge replacements and latch repairs are on the lower end, while frame straightening or post replacement costs more. We provide a quote before starting any work so there are no surprises.' },
   { question: 'Do you work with property management companies?', answer: 'Yes. A large portion of our dumpster gate repair work comes from property managers, HOAs, and commercial facility managers. We understand the urgency — code enforcement notices, tenant complaints, and waste hauler damage all need quick resolution. We\'re set up to handle PO-based billing and multi-property accounts.' },
   { question: 'Can you repair dumpster enclosure doors?', answer: 'Yes. "Dumpster enclosure doors" and "dumpster gates" refer to the same thing — the hinged panels that swing open for hauler access. Whether yours are dragging, failing to latch, or too damaged to repair, we fix or replace them. If the door panels are intact but the hinges and hardware have failed, we replace just the hardware. If the panels themselves are bent or deteriorated beyond repair, we fabricate new ones to match your enclosure.' },
+  { question: 'Do you offer commercial gate repair near me in Atlanta, GA?', answer: "Yes. Fence Workshop offers commercial gate repair based in Atlanta, GA serving Metro Atlanta and all of Georgia. We specialize in dumpster enclosure gate repair — broken hinges, sagging gates, latch failure, frame damage, and full gate replacement. We also repair roll gates, slide gates, and commercial swing gates throughout the region. Call (404) 314-4419 for fast scheduling — code enforcement situations and gates that won't close or latch are prioritized." },
 ]
 
 export default function DumpsterGateRepairPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
