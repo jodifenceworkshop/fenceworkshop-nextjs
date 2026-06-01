@@ -139,9 +139,9 @@ const installationServices = [
   {
     title: 'Warehouse & Industrial Fencing',
     description: 'Interior and exterior fencing for Alpharetta-area warehouses, distribution centers, and tech facilities along the GA-400 corridor. Partition fencing, cage systems, and perimeter security.',
-    image: '/images/warehouse-industrial-fencing-atlanta-ga.jpg',
+    image: '/images/warehouse-partitions-atlanta-ga.jpg',
     alt: 'Warehouse and industrial fence installation in Alpharetta, GA',
-    href: '/installation/georgia/warehouse-industrial-fencing/',
+    href: '/installation/georgia/warehouse-partitions/',
   },
   {
     title: 'Parking Deck & Garage Fencing',

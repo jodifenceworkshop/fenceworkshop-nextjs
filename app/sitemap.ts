@@ -30,7 +30,7 @@ const STATIC_PATHS = [
   '/installation/georgia/dumpster-enclosure-gates/',
   '/installation/georgia/dumpster-gate-repair/',
   '/installation/georgia/parking-garage-fencing/',
-  '/installation/georgia/warehouse-industrial-fencing/',
+  '/installation/georgia/warehouse-partitions/',
   '/installation/georgia/slide-gates/',
   '/installation/georgia/roll-gate-slide-gate-repair/',
   '/installation/georgia/chain-link-fence-repair/',

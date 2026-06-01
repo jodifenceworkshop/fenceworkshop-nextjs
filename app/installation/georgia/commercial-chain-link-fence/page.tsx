@@ -587,7 +587,7 @@ export default function CommercialChainLinkFencePage() {
               {
                 title: 'Warehouse & Industrial Fencing',
                 description: 'Interior and exterior fencing for warehouses, distribution centers, and industrial facilities including partition and cage systems.',
-                href: '/installation/georgia/warehouse-industrial-fencing/',
+                href: '/installation/georgia/warehouse-partitions/',
               },
             ].map((service) => (
               <Link key={service.title} href={service.href} className="block bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow group">

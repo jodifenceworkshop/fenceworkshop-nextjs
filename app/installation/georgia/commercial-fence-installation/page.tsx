@@ -122,9 +122,9 @@ const installationServices = [
   {
     title: 'Warehouse & Industrial Fencing',
     description: 'Interior and exterior fencing for warehouses, distribution centers, and industrial facilities. Partition fencing, cage systems, and perimeter security.',
-    image: '/images/warehouse-industrial-fencing-atlanta-ga.jpg',
+    image: '/images/warehouse-partitions-atlanta-ga.jpg',
     alt: 'Commercial chain link fence installation for warehouse in Georgia',
-    href: '/installation/georgia/warehouse-industrial-fencing/',
+    href: '/installation/georgia/warehouse-partitions/',
   },
   {
     title: 'Parking Deck & Garage Fencing',

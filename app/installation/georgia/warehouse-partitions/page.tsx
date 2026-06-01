@@ -11,7 +11,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
     { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
-    { "@type": "ListItem", "position": 3, "name": "Warehouse & Industrial Fencing", "item": "https://fenceworkshop.com/installation/georgia/warehouse-industrial-fencing/" }
+    { "@type": "ListItem", "position": 3, "name": "Warehouse & Industrial Fencing", "item": "https://fenceworkshop.com/installation/georgia/warehouse-partitions/" }
   ]
 }
 
@@ -64,7 +64,7 @@ const faqSchema = {
 export const metadata: Metadata = {
   title: 'Warehouse Partition Walls & Dividers Georgia | Industrial Fencing Installation',
   description: 'Custom warehouse partition walls, divider walls, and wire cage systems throughout Metro Atlanta and Georgia. DEA compliance cages, machine guarding, and modular warehouse partitioning systems. Call (404) 314-4419.',
-  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/warehouse-industrial-fencing/' },
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/warehouse-partitions/' },
 }
 
 const faqs = [
@@ -110,7 +110,7 @@ export default function WarehouseIndustrialFencingPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Warehouse &amp; Industrial Fencing?</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">Interior fencing and cage systems protect inventory, secure restricted areas, and help facilities meet compliance requirements — all without permanent construction.</p>
           </div>
-          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/warehouse-industrial-fencing-atlanta-ga.jpg" alt="Warehouse interior wire partition and cage system installed by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
+          <div className="mb-12 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto"><div className="aspect-[16/7] relative bg-gray-200"><Image src="/images/warehouse-partitions-atlanta-ga.jpg" alt="Warehouse interior wire partition and cage system installed by Fence Workshop in Georgia" fill className="object-cover" /></div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: 'Inventory Protection', description: 'Secure high-value inventory, tools, and materials with locked cage systems that prevent unauthorized access and reduce shrinkage.', icon: (<svg className="w-8 h-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>) },

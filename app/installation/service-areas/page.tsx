@@ -152,7 +152,7 @@ const services = [
   { title: 'Security Gate Systems', href: '/installation/georgia/security-gate-systems/' },
   { title: 'Slide Gates', href: '/installation/georgia/slide-gates/' },
   { title: 'Dumpster Enclosure Gates', href: '/installation/georgia/dumpster-enclosure-gates/' },
-  { title: 'Warehouse & Industrial Fencing', href: '/installation/georgia/warehouse-industrial-fencing/' },
+  { title: 'Warehouse & Industrial Fencing', href: '/installation/georgia/warehouse-partitions/' },
   { title: 'Parking Garage Fencing', href: '/installation/georgia/parking-garage-fencing/' },
   { title: 'Bollard Installation', href: '/installation/georgia/bollard-installation/' },
   { title: 'Dumpster Gate Repair', href: '/installation/georgia/dumpster-gate-repair/' },
