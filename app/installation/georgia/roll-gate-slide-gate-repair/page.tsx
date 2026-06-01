@@ -5,6 +5,17 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Fence Repair", "item": "https://fenceworkshop.com/installation/georgia/fence-repair/" },
+    { "@type": "ListItem", "position": 4, "name": "Roll Gate & Slide Gate Repair", "item": "https://fenceworkshop.com/installation/georgia/roll-gate-slide-gate-repair/" }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -46,13 +57,15 @@ const faqSchema = {
     { "@type": "Question", "name": "My gate is off the track — can you fix it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Gates jumping the track is one of the most common repair calls we receive. We re-align the gate, inspect and repair the track or roller system, and identify what caused the derailment — whether it's debris, a bent track, worn rollers, or operator misalignment." } },
     { "@type": "Question", "name": "How quickly can you respond to a gate that won't open or close?", "acceptedAnswer": { "@type": "Answer", "text": "For commercial gates that are stuck open or closed — creating a security or access issue — we prioritize scheduling and can typically respond within 24 to 48 hours. We carry common replacement parts on our trucks to resolve most issues on the first visit." } },
     { "@type": "Question", "name": "Can you repair a gate that was hit by a vehicle?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Vehicle impact is a common cause of gate damage. Depending on the severity, we can straighten the gate frame, replace damaged sections, re-align the track, and repair or replace the operator. We can also provide documentation for insurance claims." } },
-    { "@type": "Question", "name": "Do you offer preventive maintenance for commercial gates?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Regular maintenance extends the life of your gate and operator, prevents costly breakdowns, and keeps safety devices functioning properly. We offer scheduled maintenance programs for commercial gate systems including lubrication, safety device testing, and operator inspection." } }
+    { "@type": "Question", "name": "Do you offer preventive maintenance for commercial gates?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Regular maintenance extends the life of your gate and operator, prevents costly breakdowns, and keeps safety devices functioning properly. We offer scheduled maintenance programs for commercial gate systems including lubrication, safety device testing, and operator inspection." } },
+    { "@type": "Question", "name": "Do you repair rolling gates and sliding gates near me in Georgia?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fence Workshop, based in Atlanta, GA, repairs rolling gates and sliding gates for commercial properties throughout Metro Atlanta and Georgia. We handle track repairs, roller replacement, gate operator service, vehicle impact damage, and full gate restoration. We serve Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, Decatur, Norcross, Duluth, and surrounding communities." } }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Roll Gate & Slide Gate Repair in Georgia | Commercial Service | Fence Workshop',
-  description: 'Commercial roll gate and slide gate repair in Metro Atlanta and Georgia. Track repair, operator service, vehicle damage, roller replacement. Fast response. Licensed & insured.',
+  title: 'Rolling Gate & Sliding Gate Repair Georgia | Commercial Gate Repair Near Me',
+  description: 'Rolling gate repair and sliding gate repair for commercial properties in Atlanta, GA and throughout Georgia. Track repair, roller replacement, operator service, vehicle damage. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/roll-gate-slide-gate-repair/' },
 }
 
 const faqs = [
@@ -61,11 +74,13 @@ const faqs = [
   { question: 'How quickly can you respond to a gate that won\'t open or close?', answer: 'For commercial gates that are stuck open or closed — creating a security or access issue — we prioritize scheduling and can typically respond within 24 to 48 hours. We carry common replacement parts on our trucks to resolve most issues on the first visit.' },
   { question: 'Can you repair a gate that was hit by a vehicle?', answer: 'Yes. Vehicle impact is a common cause of gate damage. Depending on the severity, we can straighten the gate frame, replace damaged sections, re-align the track, and repair or replace the operator. We can also provide documentation for insurance claims.' },
   { question: 'Do you offer preventive maintenance for commercial gates?', answer: 'Yes. Regular maintenance extends the life of your gate and operator, prevents costly breakdowns, and keeps safety devices functioning properly. We offer scheduled maintenance programs for commercial gate systems including lubrication, safety device testing, and operator inspection.' },
+  { question: 'Do you repair rolling gates and sliding gates near me in Georgia?', answer: 'Yes. Fence Workshop, based in Atlanta, GA, repairs rolling gates and sliding gates for commercial properties throughout Metro Atlanta and Georgia. We handle track repairs, roller replacement, gate operator service, vehicle impact damage, and full gate restoration. We serve Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, Decatur, Norcross, Duluth, and surrounding communities.' },
 ]
 
 export default function RollGateSlideGateRepairPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
