@@ -13,6 +13,7 @@ const STATIC_PATHS = [
   '/shop/walk-gates/',
   '/shop/fence-posts/',
   '/shop/accessories/',
+  '/shop/resources/',
   '/shop/resources/pool-code-aluminum-fence/',
   '/shop/resources/pet-fence/',
   '/shop/resources/residential-vs-commercial-aluminum-fence/',
