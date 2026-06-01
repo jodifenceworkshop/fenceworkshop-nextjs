@@ -71,18 +71,18 @@ const nextConfig = {
       { source: '/commercial-chain-link-fence-gate-installation/', destination: '/installation/georgia/commercial-chain-link-fence/', permanent: true },
       { source: '/commercial-chain-link-fence-atlanta', destination: '/installation/georgia/commercial-chain-link-fence/', permanent: true },
       { source: '/commercial-chain-link-fence-atlanta/', destination: '/installation/georgia/commercial-chain-link-fence/', permanent: true },
-      { source: '/commercial-ornamental-fence-gate-installation', destination: '/installation/georgia/ornamental-aluminum-fence/', permanent: true },
-      { source: '/commercial-ornamental-fence-gate-installation/', destination: '/installation/georgia/ornamental-aluminum-fence/', permanent: true },
+      { source: '/commercial-ornamental-fence-gate-installation', destination: '/installation/georgia/aluminum-fence-installation/', permanent: true },
+      { source: '/commercial-ornamental-fence-gate-installation/', destination: '/installation/georgia/aluminum-fence-installation/', permanent: true },
       { source: '/commercial-parking-deck-fence-installation', destination: '/installation/georgia/parking-garage-fencing/', permanent: true },
       { source: '/commercial-parking-deck-fence-installation/', destination: '/installation/georgia/parking-garage-fencing/', permanent: true },
-      { source: '/commercial-warehouse-fencing-installation', destination: '/installation/georgia/warehouse-industrial-fencing/', permanent: true },
-      { source: '/commercial-warehouse-fencing-installation/', destination: '/installation/georgia/warehouse-industrial-fencing/', permanent: true },
+      { source: '/commercial-warehouse-fencing-installation', destination: '/installation/georgia/warehouse-partitions/', permanent: true },
+      { source: '/commercial-warehouse-fencing-installation/', destination: '/installation/georgia/warehouse-partitions/', permanent: true },
       { source: '/commercial-safety-railing-bollard-installation', destination: '/installation/georgia/bollard-installation/', permanent: true },
       { source: '/commercial-safety-railing-bollard-installation/', destination: '/installation/georgia/bollard-installation/', permanent: true },
-      { source: '/commercial-pedestrian-gate-installation', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
-      { source: '/commercial-pedestrian-gate-installation/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
-      { source: '/commercial-driveway-gate-installation', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
-      { source: '/commercial-driveway-gate-installation/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
+      { source: '/commercial-pedestrian-gate-installation', destination: '/installation/georgia/security-gate-systems/', permanent: true },
+      { source: '/commercial-pedestrian-gate-installation/', destination: '/installation/georgia/security-gate-systems/', permanent: true },
+      { source: '/commercial-driveway-gate-installation', destination: '/installation/georgia/slide-gates/', permanent: true },
+      { source: '/commercial-driveway-gate-installation/', destination: '/installation/georgia/slide-gates/', permanent: true },
 
       // ── Shop / product category pages ──────────────────────────────────────
 
@@ -103,10 +103,10 @@ const nextConfig = {
 
       // ── Missing commercial pages (gaps found during audit) ────────────────
 
-      { source: '/custom-commercial-steel-aluminum-railing-installation', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
-      { source: '/custom-commercial-steel-aluminum-railing-installation/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
-      { source: '/commercial-warehouse-cage-installation', destination: '/installation/georgia/warehouse-industrial-fencing/', permanent: true },
-      { source: '/commercial-warehouse-cage-installation/', destination: '/installation/georgia/warehouse-industrial-fencing/', permanent: true },
+      { source: '/custom-commercial-steel-aluminum-railing-installation', destination: '/installation/georgia/bollard-installation/', permanent: true },
+      { source: '/custom-commercial-steel-aluminum-railing-installation/', destination: '/installation/georgia/bollard-installation/', permanent: true },
+      { source: '/commercial-warehouse-cage-installation', destination: '/installation/georgia/warehouse-partitions/', permanent: true },
+      { source: '/commercial-warehouse-cage-installation/', destination: '/installation/georgia/warehouse-partitions/', permanent: true },
       { source: '/access-control-systems-atlanta-ga', destination: '/installation/georgia/security-gate-systems/', permanent: true },
       { source: '/access-control-systems-atlanta-ga/', destination: '/installation/georgia/security-gate-systems/', permanent: true },
       { source: '/electric-gates-atlanta-ga', destination: '/installation/georgia/security-gate-systems/', permanent: true },
@@ -129,8 +129,8 @@ const nextConfig = {
       { source: '/custom-wood-driveway-gates-atlanta-ga/', destination: '/installation/georgia/residential-fence-installation/', permanent: true },
       { source: '/vinyl-privacy-fence-atlanta-ga', destination: '/installation/georgia/residential-fence-installation/', permanent: true },
       { source: '/vinyl-privacy-fence-atlanta-ga/', destination: '/installation/georgia/residential-fence-installation/', permanent: true },
-      { source: '/ornamental-metal-fences-atlanta-ga', destination: '/installation/georgia/ornamental-aluminum-fence/', permanent: true },
-      { source: '/ornamental-metal-fences-atlanta-ga/', destination: '/installation/georgia/ornamental-aluminum-fence/', permanent: true },
+      { source: '/ornamental-metal-fences-atlanta-ga', destination: '/installation/georgia/aluminum-fence-installation/', permanent: true },
+      { source: '/ornamental-metal-fences-atlanta-ga/', destination: '/installation/georgia/aluminum-fence-installation/', permanent: true },
       { source: '/atlanta-fences-and-gates', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
       { source: '/atlanta-fences-and-gates/', destination: '/installation/georgia/commercial-fence-installation/', permanent: true },
       { source: '/perimeter-security-fence', destination: '/installation/georgia/commercial-security-fence/', permanent: true },
@@ -223,12 +223,17 @@ const nextConfig = {
       { source: '/product/dd-series-3-top-pull-20-5-magnalatch-gate-latch', destination: '/shop/accessories/dd-series-3-top-pull-20-5-magnalatch-gate-latch/', permanent: true },
       { source: '/product/dd-vertical-pull-10-25-magnalatch-gate-latch', destination: '/shop/accessories/dd-vertical-pull-10-25-magnalatch-gate-latch/', permanent: true },
 
-      // Fence Kits (old generic kit slugs → kit landing page)
-      { source: '/product/all-inclusive-100ft-fence-kit', destination: '/shop/fence-kits/', permanent: true },
-      { source: '/product/all-inclusive-150ft-fence-kit', destination: '/shop/fence-kits/', permanent: true },
-      { source: '/product/all-inclusive-200ft-fence-kit', destination: '/shop/fence-kits/', permanent: true },
-      { source: '/product/all-inclusive-250ft-fence-kit', destination: '/shop/fence-kits/', permanent: true },
+      // Fence Kits (old generic kit slugs → specific Brookhaven kits)
+      { source: '/product/all-inclusive-100ft-fence-kit', destination: '/shop/fence-kits/brookhaven-100ft-fence-kit/', permanent: true },
+      { source: '/product/all-inclusive-100ft-fence-kit/', destination: '/shop/fence-kits/brookhaven-100ft-fence-kit/', permanent: true },
+      { source: '/product/all-inclusive-150ft-fence-kit', destination: '/shop/fence-kits/brookhaven-150ft-fence-kit/', permanent: true },
+      { source: '/product/all-inclusive-150ft-fence-kit/', destination: '/shop/fence-kits/brookhaven-150ft-fence-kit/', permanent: true },
+      { source: '/product/all-inclusive-200ft-fence-kit', destination: '/shop/fence-kits/brookhaven-200ft-fence-kit/', permanent: true },
+      { source: '/product/all-inclusive-200ft-fence-kit/', destination: '/shop/fence-kits/brookhaven-200ft-fence-kit/', permanent: true },
+      { source: '/product/all-inclusive-250ft-fence-kit', destination: '/shop/fence-kits/brookhaven-250ft-fence-kit/', permanent: true },
+      { source: '/product/all-inclusive-250ft-fence-kit/', destination: '/shop/fence-kits/brookhaven-250ft-fence-kit/', permanent: true },
       { source: '/product/choose-your-kit', destination: '/shop/fence-kits/', permanent: true },
+      { source: '/product/choose-your-kit/', destination: '/shop/fence-kits/', permanent: true },
 
       // Catch-all: any remaining /product/ URL → shop
       { source: '/product/:slug', destination: '/shop/', permanent: true },
