@@ -5,6 +5,17 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Fence Repair", "item": "https://fenceworkshop.com/installation/georgia/fence-repair/" },
+    { "@type": "ListItem", "position": 4, "name": "Chain Link Fence Repair", "item": "https://fenceworkshop.com/installation/georgia/chain-link-fence-repair/" }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -46,13 +57,16 @@ const faqSchema = {
     { "@type": "Question", "name": "Can you repair a section of chain link fence without replacing the whole thing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Section repairs are the most common service we provide. We can patch or replace damaged fabric, swap out bent or broken posts, replace top rail, and re-tension the system — all without tearing out and replacing the entire fence line." } },
     { "@type": "Question", "name": "Do you repair chain link fence after vehicle damage?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Vehicle impact is one of the most common reasons we get called for commercial chain link repair. We straighten or replace bent posts, re-hang fabric, and get the fence line back to its original condition. We can also provide documentation for insurance claims if needed." } },
     { "@type": "Question", "name": "Can you add barbed wire or razor ribbon to an existing chain link fence?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install barbed wire arms, razor ribbon, and privacy slats on existing commercial chain link fences. This is a common upgrade for facilities looking to increase perimeter security without replacing the entire fence." } },
-    { "@type": "Question", "name": "Do you handle emergency fence repairs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. For commercial facilities with compromised perimeter security — storm damage, vehicle impact, or vandalism — we prioritize scheduling and can often respond within 24 to 48 hours to secure the breach and schedule full repair." } }
+    { "@type": "Question", "name": "Do you handle emergency fence repairs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. For commercial facilities with compromised perimeter security — storm damage, vehicle impact, or vandalism — we prioritize scheduling and can often respond within 24 to 48 hours to secure the breach and schedule full repair." } },
+    { "@type": "Question", "name": "Are you a fence repair company near me in Metro Atlanta, GA?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fence Workshop is a commercial fence repair company serving Metro Atlanta and all of Georgia. We repair chain link fence, commercial gates, security fencing, dumpster enclosure gates, and bollards. Our service area includes Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Kennesaw, Decatur, Duluth, Norcross, and surrounding communities. Call (404) 314-4419 to schedule a repair." } },
+    { "@type": "Question", "name": "Do you repair iron gates and metal fences near me in Georgia?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We repair metal gate and fence systems throughout Metro Atlanta and Georgia — including chain link gates, commercial steel gates, and ornamental aluminum gate systems. For wrought iron style and decorative metal gate repair, including iron-style aluminum gates and rod iron fence systems, call (404) 314-4419 and we'll assess the damage and provide a repair quote." } }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Chain Link Fence Repair in Georgia | Commercial Service | Fence Workshop',
-  description: 'Commercial chain link fence repair in Metro Atlanta and Georgia. Storm damage, vehicle impact, fabric replacement, post repair. Fast service. Licensed & insured. Call today.',
+  title: 'Chain Link Fence Repair Near Me | Commercial Fence Repair Georgia',
+  description: 'Chain link fence repair near me in Metro Atlanta and Georgia. Commercial fence repair company — storm damage, vehicle impact, post and fabric repair. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/chain-link-fence-repair/' },
 }
 
 const faqs = [
@@ -61,11 +75,14 @@ const faqs = [
   { question: 'Do you repair chain link fence after vehicle damage?', answer: 'Yes. Vehicle impact is one of the most common reasons we get called for commercial chain link repair. We straighten or replace bent posts, re-hang fabric, and get the fence line back to its original condition. We can also provide documentation for insurance claims if needed.' },
   { question: 'Can you add barbed wire or razor ribbon to an existing chain link fence?', answer: 'Yes. We install barbed wire arms, razor ribbon, and privacy slats on existing commercial chain link fences. This is a common upgrade for facilities looking to increase perimeter security without replacing the entire fence.' },
   { question: 'Do you handle emergency fence repairs?', answer: 'Yes. For commercial facilities with compromised perimeter security — storm damage, vehicle impact, or vandalism — we prioritize scheduling and can often respond within 24 to 48 hours to secure the breach and schedule full repair.' },
+  { question: 'Are you a fence repair company near me in Metro Atlanta, GA?', answer: 'Yes. Fence Workshop is a commercial fence repair company serving Metro Atlanta and all of Georgia. We repair chain link fence, commercial gates, security fencing, dumpster enclosure gates, and bollards. Our service area includes Atlanta, Marietta, Alpharetta, Roswell, Sandy Springs, Smyrna, Kennesaw, Decatur, Duluth, Norcross, and surrounding communities. Call (404) 314-4419 to schedule a repair.' },
+  { question: 'Do you repair iron gates and metal fences near me in Georgia?', answer: 'Yes. We repair metal gate and fence systems throughout Metro Atlanta and Georgia — including chain link gates, commercial steel gates, and ornamental aluminum gate systems. For wrought iron style and decorative metal gate repair, including iron-style aluminum gates and rod iron fence systems, call (404) 314-4419 and we\'ll assess the damage and provide a repair quote.' },
 ]
 
 export default function ChainLinkFenceRepairPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
