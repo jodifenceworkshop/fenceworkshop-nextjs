@@ -5,6 +5,17 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Fence Repair", "item": "https://fenceworkshop.com/installation/georgia/fence-repair/" },
+    { "@type": "ListItem", "position": 4, "name": "Security Fence & Gate Repair", "item": "https://fenceworkshop.com/installation/georgia/security-fence-gate-repair/" }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -46,13 +57,15 @@ const faqSchema = {
     { "@type": "Question", "name": "Can you repair anti-climb and high-security fencing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We repair 358 mesh (prison mesh), palisade fencing, expanded metal panels, and other high-security fence systems. We match the original materials and specifications to maintain the security rating of the perimeter." } },
     { "@type": "Question", "name": "Do you repair crash-damaged security gates?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Vehicle impact damage to security gates is one of the most common emergency calls we receive. We can often temporarily secure the opening on the first visit, then fabricate and install a replacement gate or repair the existing one depending on the extent of damage." } },
     { "@type": "Question", "name": "Can you repair or replace barbed wire and razor ribbon?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We replace damaged barbed wire arms, install new razor ribbon (concertina wire), and repair or add barbed wire topping to existing security fences. This is one of our most common security fence repairs." } },
-    { "@type": "Question", "name": "Do you provide documentation for insurance claims?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. For storm damage, vehicle impact, and vandalism repairs, we can provide detailed documentation including photos, damage assessments, and itemized repair invoices to support your insurance claim." } }
+    { "@type": "Question", "name": "Do you provide documentation for insurance claims?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. For storm damage, vehicle impact, and vandalism repairs, we can provide detailed documentation including photos, damage assessments, and itemized repair invoices to support your insurance claim." } },
+    { "@type": "Question", "name": "Do you offer emergency fence repair near me in Georgia?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fence Workshop, based in Atlanta, GA, provides emergency fence repair and emergency fencing repairs for commercial properties throughout Metro Atlanta and Georgia. We prioritize same-day or next-day response for breached perimeters, storm damage, vehicle impact, and non-operational security gates. We serve Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, Decatur, Norcross, Duluth, and surrounding areas." } }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Security Fence & Gate Repair in Georgia | Emergency Service | Fence Workshop',
-  description: 'Security fence and gate repair in Metro Atlanta and Georgia. Emergency response for crash damage, breached perimeters, gate operator failure. Licensed & insured. Call now.',
+  title: 'Emergency Fence Repair Near Me | Security Fence & Gate Repair Georgia',
+  description: 'Emergency fence repair near me in Atlanta, GA and throughout Georgia. Security fence and gate repair for crash damage, breached perimeters, storm damage, gate operator failure. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/security-fence-gate-repair/' },
 }
 
 const faqs = [
@@ -61,11 +74,13 @@ const faqs = [
   { question: 'Do you repair crash-damaged security gates?', answer: 'Yes. Vehicle impact damage to security gates is one of the most common emergency calls we receive. We can often temporarily secure the opening on the first visit, then fabricate and install a replacement gate or repair the existing one depending on the extent of damage.' },
   { question: 'Can you repair or replace barbed wire and razor ribbon?', answer: 'Yes. We replace damaged barbed wire arms, install new razor ribbon (concertina wire), and repair or add barbed wire topping to existing security fences. This is one of our most common security fence repairs.' },
   { question: 'Do you provide documentation for insurance claims?', answer: 'Yes. For storm damage, vehicle impact, and vandalism repairs, we can provide detailed documentation including photos, damage assessments, and itemized repair invoices to support your insurance claim.' },
+  { question: 'Do you offer emergency fence repair near me in Georgia?', answer: 'Yes. Fence Workshop, based in Atlanta, GA, provides emergency fence repair and emergency fencing repairs for commercial properties throughout Metro Atlanta and Georgia. We prioritize same-day or next-day response for breached perimeters, storm damage, vehicle impact, and non-operational security gates. We serve Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, Decatur, Norcross, Duluth, and surrounding areas.' },
 ]
 
 export default function SecurityFenceGateRepairPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
