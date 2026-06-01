@@ -5,6 +5,17 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
+    { "@type": "ListItem", "position": 3, "name": "Fence Repair", "item": "https://fenceworkshop.com/installation/georgia/fence-repair/" },
+    { "@type": "ListItem", "position": 4, "name": "Bollard Repair", "item": "https://fenceworkshop.com/installation/georgia/bollard-repair/" }
+  ]
+}
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -81,13 +92,15 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Yes. Damaged or faded bollard covers are an easy, low-cost fix that makes a big difference in property appearance. We replace plastic bollard covers and sleeves on existing posts — no concrete work required for most cover replacements."
       }
-    }
+    },
+    { "@type": "Question", "name": "Do you offer bollard repair and bollard replacement near me in Georgia?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fence Workshop, based in Atlanta, GA, provides bollard repair and bollard replacement for commercial properties throughout Metro Atlanta and Georgia. We serve Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, Decatur, Norcross, Duluth, and surrounding areas." } }
   ]
 }
 
 export const metadata: Metadata = {
-  title: 'Bollard Repair & Replacement in Georgia | Commercial Service | Fence Workshop',
-  description: 'Commercial bollard repair and replacement throughout Metro Atlanta and Georgia. Vehicle damage, leaning bollards, cover replacement. Fast service. Licensed & insured.',
+  title: 'Bollard Repair & Replacement Georgia | Commercial Bollard Service Near Me',
+  description: 'Commercial bollard repair and bollard replacement in Atlanta, GA and throughout Georgia. Vehicle damage, leaning bollards, footing repair, cover replacement. Call (404) 314-4419.',
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/bollard-repair/' },
 }
 
 const faqs = [
@@ -96,11 +109,13 @@ const faqs = [
   { question: 'My bollard is leaning — does it need to be replaced?', answer: 'Not necessarily. A leaning bollard is often caused by a damaged or shifted concrete footing rather than the post itself. We can excavate, reset the footing, and re-plumb the bollard in many cases without full replacement. If the post is bent or the base is cracked, replacement is typically the better option.' },
   { question: 'How quickly can you respond to a bollard repair?', answer: 'Most bollard repairs are scheduled within a few business days. If a downed bollard is creating an urgent safety or security issue — such as an unprotected storefront or exposed loading dock — we prioritize scheduling to address it quickly.' },
   { question: 'Do you replace bollard covers and sleeves?', answer: 'Yes. Damaged or faded bollard covers are an easy, low-cost fix that makes a big difference in property appearance. We replace plastic bollard covers and sleeves on existing posts — no concrete work required for most cover replacements.' },
+  { question: 'Do you offer bollard repair and bollard replacement near me in Georgia?', answer: 'Yes. Fence Workshop, based in Atlanta, GA, provides bollard repair and bollard replacement for commercial properties throughout Metro Atlanta and Georgia. We serve Atlanta, Marietta, Alpharetta, Roswell, Smyrna, Sandy Springs, Kennesaw, Decatur, Norcross, Duluth, and surrounding areas.' },
 ]
 
 export default function BollardRepairPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
