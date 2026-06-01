@@ -381,7 +381,7 @@ export default function BollardRepairPage() {
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Request Repair Service</h3>
               <p className="text-gray-600 mb-6">Describe the damage and we&rsquo;ll get back to you quickly — usually the same business day.</p>
-              <QuoteForm subject="Bollard Repair Request" />
+              <QuoteForm subject="Bollard Replacement Service Request" />
             </div>
           </div>
         </div>
