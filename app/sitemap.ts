@@ -27,6 +27,7 @@ const STATIC_PATHS = [
   '/installation/georgia/commercial-security-fence/',
   '/installation/georgia/security-gate-systems/',
   '/installation/georgia/security-fence-gate-repair/',
+  '/installation/georgia/fence-repair/',
   '/installation/georgia/dumpster-enclosure-gates/',
   '/installation/georgia/dumpster-gate-repair/',
   '/installation/georgia/parking-garage-fencing/',
@@ -34,7 +35,10 @@ const STATIC_PATHS = [
   '/installation/georgia/slide-gates/',
   '/installation/georgia/roll-gate-slide-gate-repair/',
   '/installation/georgia/chain-link-fence-repair/',
+  '/installation/georgia/bollard-installation/',
   '/installation/georgia/bollard-replacement/',
+  '/installation/georgia/residential-fence-installation/',
+  '/installation/service-areas/',
   '/ameristar/',
 ]
 
