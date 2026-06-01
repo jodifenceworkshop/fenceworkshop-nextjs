@@ -12,7 +12,7 @@ const breadcrumbSchema = {
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fenceworkshop.com/" },
     { "@type": "ListItem", "position": 2, "name": "Georgia Installation", "item": "https://fenceworkshop.com/installation/georgia/commercial-fence-installation/" },
     { "@type": "ListItem", "position": 3, "name": "Fence Repair", "item": "https://fenceworkshop.com/installation/georgia/fence-repair/" },
-    { "@type": "ListItem", "position": 4, "name": "Bollard Repair", "item": "https://fenceworkshop.com/installation/georgia/bollard-repair/" }
+    { "@type": "ListItem", "position": 4, "name": "Bollard Repair", "item": "https://fenceworkshop.com/installation/georgia/bollard-replacement/" }
   ]
 }
 
@@ -100,7 +100,7 @@ const faqSchema = {
 export const metadata: Metadata = {
   title: 'Bollard Repair & Replacement Georgia | Commercial Bollard Service Near Me',
   description: 'Commercial bollard repair and bollard replacement in Atlanta, GA and throughout Georgia. Vehicle damage, leaning bollards, footing repair, cover replacement. Call (404) 314-4419.',
-  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/bollard-repair/' },
+  alternates: { canonical: 'https://fenceworkshop.com/installation/georgia/bollard-replacement/' },
 }
 
 const faqs = [

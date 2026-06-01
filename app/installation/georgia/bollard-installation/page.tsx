@@ -421,7 +421,7 @@ export default function BollardInstallationPage() {
             {[
               { title: 'Dumpster Enclosure & Gate Installation', description: 'Custom dumpster enclosures built to code — bollards installed alongside to protect gates and posts from hauler damage.', href: '/installation/georgia/dumpster-enclosure-gates/' },
               { title: 'Parking Garage Fencing & Barriers', description: 'Cable railing, vehicle barriers, and guard rails for commercial parking structures — often combined with bollard perimeters.', href: '/installation/georgia/parking-garage-fencing/' },
-              { title: 'Bollard Repair & Replacement', description: 'Damaged or knocked-over bollards repaired and replaced. Fast service for commercial properties throughout Georgia.', href: '/installation/georgia/bollard-repair/' },
+              { title: 'Bollard Repair & Replacement', description: 'Damaged or knocked-over bollards repaired and replaced. Fast service for commercial properties throughout Georgia.', href: '/installation/georgia/bollard-replacement/' },
             ].map((s) => (
               <Link key={s.title} href={s.href} className="block bg-white p-6 rounded-lg hover:shadow-lg transition-shadow group">
                 <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-orange transition-colors">{s.title}</h3>
@@ -454,7 +454,7 @@ export default function BollardInstallationPage() {
                 <Link href="/installation/georgia/atlanta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Bollard Installation in Atlanta, GA</Link>
                 <Link href="/installation/georgia/marietta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Bollard Installation in Marietta, GA</Link>
                 <Link href="/installation/georgia/alpharetta-fence-installation/" className="block text-brand-orange hover:underline font-medium">&rarr; Bollard Installation in Alpharetta, GA</Link>
-                <Link href="/installation/georgia/bollard-repair/" className="block text-brand-orange hover:underline font-medium">&rarr; Bollard Repair &amp; Replacement in Georgia</Link>
+                <Link href="/installation/georgia/bollard-replacement/" className="block text-brand-orange hover:underline font-medium">&rarr; Bollard Repair &amp; Replacement in Georgia</Link>
                 <Link href="/installation/service-areas/" className="block text-brand-orange hover:underline font-medium">&rarr; View All Service Areas</Link>
                 <Link href="/installation/georgia/commercial-fence-installation/" className="block text-brand-orange hover:underline font-medium mt-2">&larr; All Commercial Fence Services in Georgia</Link>
               </div>

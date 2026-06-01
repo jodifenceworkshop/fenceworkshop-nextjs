@@ -183,7 +183,7 @@ const repairServices = [
     description: 'Vehicle-damaged, leaning, and knocked-over bollards repaired or replaced throughout Georgia. Post replacement, footing repair, and cover replacement.',
     image: '/images/yellow-steel-bollards-security-gate-georgia.jpg',
     alt: 'Yellow steel bollard repair and replacement in Georgia',
-    href: '/installation/georgia/bollard-repair/',
+    href: '/installation/georgia/bollard-replacement/',
   },
 ]
 

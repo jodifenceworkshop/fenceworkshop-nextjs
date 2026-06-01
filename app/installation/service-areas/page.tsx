@@ -159,7 +159,7 @@ const services = [
   { title: 'Chain Link Fence Repair', href: '/installation/georgia/chain-link-fence-repair/' },
   { title: 'Roll Gate & Slide Gate Repair', href: '/installation/georgia/roll-gate-slide-gate-repair/' },
   { title: 'Security Fence & Gate Repair', href: '/installation/georgia/security-fence-gate-repair/' },
-  { title: 'Bollard Repair & Replacement', href: '/installation/georgia/bollard-repair/' },
+  { title: 'Bollard Repair & Replacement', href: '/installation/georgia/bollard-replacement/' },
 ]
 
 export default function ServiceAreasPage() {

@@ -34,6 +34,7 @@ const STATIC_PATHS = [
   '/installation/georgia/slide-gates/',
   '/installation/georgia/roll-gate-slide-gate-repair/',
   '/installation/georgia/chain-link-fence-repair/',
+  '/installation/georgia/bollard-replacement/',
   '/ameristar/',
 ]
 
