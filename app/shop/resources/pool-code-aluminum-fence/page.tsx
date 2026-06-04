@@ -106,18 +106,18 @@ const articleSchema = {
   author: {
     '@type': 'Organization',
     name: 'Fence Workshop',
-    url: 'https://www.fenceworkshop.com',
+    url: 'https://fenceworkshop.com',
   },
   publisher: {
     '@type': 'Organization',
     name: 'Fence Workshop',
-    url: 'https://www.fenceworkshop.com',
+    url: 'https://fenceworkshop.com',
   },
   datePublished: '2026-04-05',
   dateModified: '2026-05-31',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://www.fenceworkshop.com/shop/resources/pool-code-aluminum-fence/',
+    '@id': 'https://fenceworkshop.com/shop/resources/pool-code-aluminum-fence/',
   },
 }
 

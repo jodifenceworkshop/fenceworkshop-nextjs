@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllProductHandles, getProductUrl } from '@/lib/shopify'
 
-const SITE_URL = 'https://www.fenceworkshop.com'
+const SITE_URL = 'https://fenceworkshop.com'
 
 const STATIC_PATHS = [
   '/',

@@ -64,18 +64,18 @@ const articleSchema = {
   author: {
     '@type': 'Organization',
     name: 'Fence Workshop',
-    url: 'https://www.fenceworkshop.com',
+    url: 'https://fenceworkshop.com',
   },
   publisher: {
     '@type': 'Organization',
     name: 'Fence Workshop',
-    url: 'https://www.fenceworkshop.com',
+    url: 'https://fenceworkshop.com',
   },
   datePublished: '2026-04-05',
   dateModified: '2026-04-05',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://www.fenceworkshop.com/shop/resources/residential-vs-commercial-aluminum-fence/',
+    '@id': 'https://fenceworkshop.com/shop/resources/residential-vs-commercial-aluminum-fence/',
   },
 }
 
