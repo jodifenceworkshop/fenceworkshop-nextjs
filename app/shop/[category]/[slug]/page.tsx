@@ -171,12 +171,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
       name: 'Fence Workshop',
     },
     offers: {
-      '@type': 'AggregateOffer',
+      '@type': 'Offer',
       url: `https://fenceworkshop.com/shop/${category}/${slug}/`,
       priceCurrency: product.priceRange.minVariantPrice.currencyCode,
-      lowPrice: product.priceRange.minVariantPrice.amount,
-      highPrice: product.priceRange.maxVariantPrice.amount,
-      offerCount: variants.length,
+      price: product.priceRange.minVariantPrice.amount,
       availability: variants.some((v) => v.availableForSale)
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
