@@ -197,7 +197,7 @@ export default function CartDrawer() {
               Shipping and taxes calculated at checkout.
             </p>
             <a
-              href={`${cart.checkoutUrl}${cart.checkoutUrl.includes('?') ? '&' : '?'}return_to=${encodeURIComponent('https://fenceworkshop.com/shop/')}`}
+              href={cart.checkoutUrl}
               className="block w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold py-4 rounded-lg text-center transition-colors text-lg"
             >
               Checkout
