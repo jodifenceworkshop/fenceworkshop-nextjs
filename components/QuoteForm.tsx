@@ -26,11 +26,13 @@ export default function QuoteForm({
   const [phone, setPhone] = useState('')
   const [projectType, setProjectType] = useState('')
   const [message, setMessage] = useState('')
+  const [honeypot, setHoneypot] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (honeypot) return
     setSubmitting(true)
     setError('')
 
@@ -54,6 +56,18 @@ export default function QuoteForm({
 
   return (
     <form className="space-y-4" onSubmit={handleSubmit}>
+      <div style={{ display: 'none' }} aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          type="text"
+          id="website"
+          name="website"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
         <input

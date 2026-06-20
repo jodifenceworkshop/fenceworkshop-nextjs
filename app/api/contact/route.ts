@@ -5,7 +5,11 @@ export async function POST(request: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY)
   try {
     const body = await request.json()
-    const { name, email, phone, projectType, message, subject } = body
+    const { name, email, phone, projectType, message, subject, website } = body
+
+    if (website) {
+      return NextResponse.json({ success: true })
+    }
 
     if (!name || !email) {
       return NextResponse.json({ error: 'Name and email are required.' }, { status: 400 })
