@@ -1,7 +1,18 @@
 'use client'
 
-import { useState, FormEvent } from 'react'
+import { useState, FormEvent, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (cb: () => void) => void
+      execute: (siteKey: string, options: { action: string }) => Promise<string>
+    }
+  }
+}
+
+const RECAPTCHA_SITE_KEY = '6LcN4SstAAAAANrY_s3xlaQ4G070QwV6VHfVbKSc'
 
 const PROJECT_TYPES: { value: string; label: string }[] = [
   { value: 'installation-ga', label: 'Fence Installation (Georgia)' },
@@ -26,21 +37,35 @@ export default function QuoteForm({
   const [phone, setPhone] = useState('')
   const [projectType, setProjectType] = useState('')
   const [message, setMessage] = useState('')
-  const [honeypot, setHoneypot] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
 
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`
+    script.async = true
+    document.head.appendChild(script)
+    return () => {
+      if (document.head.contains(script)) document.head.removeChild(script)
+    }
+  }, [])
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (honeypot) return
     setSubmitting(true)
     setError('')
 
     try {
+      const recaptchaToken = await new Promise<string>((resolve, reject) => {
+        window.grecaptcha.ready(() => {
+          window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit' }).then(resolve).catch(reject)
+        })
+      })
+
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, phone, projectType, message, subject }),
+        body: JSON.stringify({ name, email, phone, projectType, message, subject, recaptchaToken }),
       })
 
       if (!res.ok) {
@@ -56,18 +81,6 @@ export default function QuoteForm({
 
   return (
     <form className="space-y-4" onSubmit={handleSubmit}>
-      <div style={{ display: 'none' }} aria-hidden="true">
-        <label htmlFor="website">Website</label>
-        <input
-          type="text"
-          id="website"
-          name="website"
-          value={honeypot}
-          onChange={(e) => setHoneypot(e.target.value)}
-          tabIndex={-1}
-          autoComplete="off"
-        />
-      </div>
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
         <input

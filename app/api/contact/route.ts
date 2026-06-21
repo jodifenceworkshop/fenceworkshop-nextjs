@@ -5,9 +5,19 @@ export async function POST(request: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY)
   try {
     const body = await request.json()
-    const { name, email, phone, projectType, message, subject, website } = body
+    const { name, email, phone, projectType, message, subject, recaptchaToken } = body
 
-    if (website) {
+    if (!recaptchaToken) {
+      return NextResponse.json({ success: true })
+    }
+
+    const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+    })
+    const verifyData = await verifyRes.json() as { success: boolean; score: number }
+    if (!verifyData.success || verifyData.score < 0.5) {
       return NextResponse.json({ success: true })
     }
 
