@@ -110,7 +110,7 @@ const categories: Record<string, CategoryConfig> = {
   'aluminum-fencing': {
     title: 'Buy Aluminum Fence Panels | Wholesale Pricing | Ships Nationwide',
     description: 'Residential aluminum fence panels for sale at wholesale pricing. American-made 6063-T5 aluminum in black, bronze, and white. Multiple styles and heights. Ships nationwide.',
-    heading: 'Aluminum Fence Panels',
+    heading: 'Aluminum Fencing & Fence Panels',
     intro: 'Shop residential aluminum fence panels for sale at wholesale pricing. American-made from 6063-T5 aluminum with TGIC polyester powder coating — available in black, bronze, and white in over a dozen styles and three heights.',
     features: [
       { label: '6063-T5 Aluminum', detail: 'Structural-grade alloy that won\'t rust, rot, or warp — ever' },
