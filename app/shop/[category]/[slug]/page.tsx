@@ -175,6 +175,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       url: `https://fenceworkshop.com/shop/${category}/${slug}/`,
       priceCurrency: product.priceRange.minVariantPrice.currencyCode,
       price: product.priceRange.minVariantPrice.amount,
+      itemCondition: 'https://schema.org/NewCondition',
       availability: variants.some((v) => v.availableForSale)
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
