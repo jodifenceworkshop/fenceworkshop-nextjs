@@ -19,8 +19,8 @@ type CategoryConfig = {
 
 const categories: Record<string, CategoryConfig> = {
   'driveway-gates': {
-    title: 'Aluminum Driveway Gate Kits | Wrought Iron Style Gates | Ships Nationwide',
-    description: 'Shop aluminum driveway gate kits — wrought iron style double-swing entry gates in black and custom sizes. American-made, ships nationwide. Gate kits start at $985.16.',
+    title: 'Aluminum Driveway Gates for Sale | Double-Swing Gate Kits | Ships Nationwide',
+    description: 'Shop aluminum driveway gate kits in 8ft to 16ft widths — wrought iron style double-swing entry gates, American-made, TGIC powder coated black. Gate kits from $985.16, ships nationwide.',
     heading: 'Aluminum Driveway Gates for Sale',
     intro: 'Shop aluminum driveway gate kits for sale at wholesale pricing — double-swing entry gates in black and custom sizes, American-made from 6063-T5 aluminum with TGIC powder coating. Standard sizes ship within 5–7 business days.',
     features: [
