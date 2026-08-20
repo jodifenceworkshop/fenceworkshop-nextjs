@@ -164,7 +164,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     '@type': 'Product',
     name: schemaName,
     description: product.description,
-    image: images.map((img) => img.url),
+    image: images[0]?.url,
     sku: variants[0]?.sku || product.handle,
     brand: {
       '@type': 'Brand',
