@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://fenceworkshop.com/shop/chain-link-fencing/' },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
+    { '@type': 'ListItem', position: 2, name: 'Chain Link Fencing', item: 'https://fenceworkshop.com/shop/chain-link-fencing/' },
+  ],
+}
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -68,6 +77,10 @@ const faqSchema = {
 export default function ChainLinkFencingPage() {
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

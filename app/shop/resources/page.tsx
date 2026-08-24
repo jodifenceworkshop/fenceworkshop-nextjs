@@ -13,9 +13,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fenceworkshop.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
-    { '@type': 'ListItem', position: 3, name: 'Resources', item: 'https://fenceworkshop.com/shop/resources/' },
+    { '@type': 'ListItem', position: 1, name: 'Shop', item: 'https://fenceworkshop.com/shop/' },
+    { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://fenceworkshop.com/shop/resources/' },
   ],
 }
 
