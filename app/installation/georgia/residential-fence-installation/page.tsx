@@ -5,6 +5,15 @@ import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
 import type { Metadata } from 'next'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Fence Installation in Georgia', item: 'https://fenceworkshop.com/installation/georgia/' },
+    { '@type': 'ListItem', position: 2, name: 'Residential Fence Installation in Georgia', item: 'https://fenceworkshop.com/installation/georgia/residential-fence-installation/' },
+  ],
+}
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -116,6 +125,7 @@ export const metadata: Metadata = {
 export default function ResidentialFenceInstallationPage() {
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
@@ -136,7 +146,7 @@ export default function ResidentialFenceInstallationPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
-              <Link href="/installation/georgia/commercial-fence-installation/" className="hover:text-white transition-colors">Georgia Services</Link>
+              <Link href="/installation/georgia/" className="hover:text-white transition-colors">Fence Installation in Georgia</Link>
               <span>/</span>
               <span className="text-gray-200">Residential Fence Installation</span>
             </div>

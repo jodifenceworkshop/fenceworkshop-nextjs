@@ -9,7 +9,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Georgia Commercial Fence Installation', item: 'https://fenceworkshop.com/installation/georgia/commercial-fence-installation/' },
+    { '@type': 'ListItem', position: 1, name: 'Fence Installation in Georgia', item: 'https://fenceworkshop.com/installation/georgia/' },
     { '@type': 'ListItem', position: 2, name: 'Fence Company in Alpharetta, GA', item: 'https://fenceworkshop.com/installation/georgia/alpharetta-fence-installation/' },
   ],
 }
