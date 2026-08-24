@@ -45,7 +45,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/installation/georgia/commercial-fence-installation/"
+                href="/installation/georgia/"
                 className="inline-block bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg text-center"
               >
                 Get Fence Installation
