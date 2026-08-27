@@ -190,7 +190,7 @@ const repairServices = [
   {
     title: 'Fence Repair',
     description: 'Commercial fence repair for damaged aluminum, chain link, and security fencing throughout Metro Atlanta.',
-    image: '/images/chain-link-fence-repair-atlanta-ga.jpg',
+    image: '/images/security-fence-repair-atlanta-ga.jpg',
     alt: 'Commercial fence repair in Atlanta, GA',
     href: '/installation/georgia/fence-repair/',
   },
